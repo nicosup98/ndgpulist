@@ -4,6 +4,14 @@ export interface GpuBenchmarks {
   passmarkG3D: number;
 }
 
+export interface VastAiMetrics {
+  dlperf: number;
+  hourlyRateUSD: number;
+  dlperfPerDollar: number;
+  availableOffers: number;
+  verifiedFlops: number;
+}
+
 export interface GpuSpec {
   id: string;
   name: string;
@@ -23,6 +31,7 @@ export interface GpuSpec {
   tflopsFP32: number;
   msrpUSD: number;
   benchmarks: GpuBenchmarks;
+  vastai?: VastAiMetrics;
 }
 
 export interface PCGamingWikiData {

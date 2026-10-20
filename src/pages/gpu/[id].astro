@@ -29,6 +29,7 @@ const rankPosition = sortedByPassmark.findIndex((g) => g.id === gpu.id) + 1;
 const maxPassmark = sortedByPassmark[0].benchmarks.passmarkG3D;
 const maxGeekbenchCL = Math.max(...allGpus.map((g) => g.benchmarks.geekbenchOpenCL));
 const maxGeekbenchVk = Math.max(...allGpus.map((g) => g.benchmarks.geekbenchVulkan));
+const maxVastDlperf = Math.max(...allGpus.map((g) => g.vastai?.dlperf || 1));
 const compositeScore = getCompositeGpuScore(gpu);
 
 const brandColorClass =
@@ -226,6 +227,41 @@ const brandColorClass =
               ></div>
             </div>
           </div>
+
+          <!-- Vast.ai DLPerf & Cloud GPU Bundles -->
+          {gpu.vastai && (
+            <div class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800/80">
+              <div class="flex justify-between items-baseline">
+                <div>
+                  <span class="text-sm font-bold text-slate-900 dark:text-white">Vast.ai DLPerf (AI / Deep Learning)</span>
+                  <span class="text-xs text-slate-500 ml-2">cloud.vast.ai/api/v0/bundles/</span>
+                </div>
+                <span class="font-mono text-lg font-bold text-cyan-600 dark:text-cyan-400">
+                  {gpu.vastai.dlperf} DLP
+                </span>
+              </div>
+              <div class="w-full h-3 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+                <div
+                  class="h-full rounded-full bg-cyan-500"
+                  style={`width: ${Math.round((gpu.vastai.dlperf / maxVastDlperf) * 100)}%`}
+                ></div>
+              </div>
+              <div class="grid grid-cols-3 gap-2 pt-2 text-xs font-mono">
+                <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-800">
+                  <span class="text-[10px] text-slate-400 block">TARIFA CLOUD</span>
+                  <span class="font-bold text-emerald-600 dark:text-emerald-400">${gpu.vastai.hourlyRateUSD.toFixed(2)} / hr</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-800">
+                  <span class="text-[10px] text-slate-400 block">EFICIENCIA CLOUD</span>
+                  <span class="font-bold text-slate-900 dark:text-white">{gpu.vastai.dlperfPerDollar} DLP/$</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-800">
+                  <span class="text-[10px] text-slate-400 block">OFERTAS ACTIVAS</span>
+                  <span class="font-bold text-slate-900 dark:text-white">{gpu.vastai.availableOffers} nodos</span>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 font-mono">

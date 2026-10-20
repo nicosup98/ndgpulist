@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 /**
- * Script de sincronización e ingesta de datos de GPUs, Benchmarks y Juegos
+ * Script de sincronización e ingesta de datos de GPUs, Benchmarks, Cloud y Juegos
  * Fuentes integradas:
  * 1. Geekbench 6 Compute Benchmarks (OpenCL / Vulkan): https://browser.geekbench.com/v6/compute
  * 2. Especificaciones de GPUs: https://raw.githubusercontent.com/voidful/gpu-info-api/gpu-data/gpu.json
  * 3. PassMark G3D Mark Scraper (videocardbenchmark.net)
- * 4. Steam Store API: https://store.steampowered.com/api/appdetails?appids={appid}
- * 5. PCGamingWiki Cargo API: https://www.pcgamingwiki.com/w/api.php?action=cargoquery
- * 6. ProtonDB Reports API: https://www.protondb.com/api/v1/reports/summaries/{appid}.json
+ * 4. Vast.ai Cloud GPU Bundles API: https://cloud.vast.ai/api/v0/bundles/
+ * 5. Steam Store API: https://store.steampowered.com/api/appdetails?appids={appid}
+ * 6. PCGamingWiki Cargo API: https://www.pcgamingwiki.com/w/api.php?action=cargoquery
+ * 7. ProtonDB Reports API: https://www.protondb.com/api/v1/reports/summaries/{appid}.json
  */
 
 import fs from 'node:fs/promises';
@@ -22,16 +23,19 @@ function normalizeGpuName(name) {
   return name
     .toLowerCase()
     .replace(/nvidia|amd|intel|geforce|radeon|arc/gi, '')
+    .replace(/\bsuper\b/gi, 'super')
+    .replace(/(\d{4})s\b/gi, '$1super')
+    .replace(/(\d{4})ti\b/gi, '$1ti')
     .replace(/[^a-z0-9]/g, '')
     .trim();
 }
 
 async function fetchGeekbenchCompute() {
-  console.log('⚡ [1/6] Consultando Geekbench 6 Compute Benchmarks (browser.geekbench.com/v6/compute)...');
+  console.log('⚡ [1/7] Consultando Geekbench 6 Compute Benchmarks (browser.geekbench.com/v6/compute)...');
   const scores = new Map();
   try {
     const res = await fetch('https://browser.geekbench.com/v6/compute', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; NDGPUList/2.0)' }
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; NDGPUList/2.1)' }
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const html = await res.text();
@@ -56,7 +60,7 @@ async function fetchGeekbenchCompute() {
 }
 
 async function fetchVoidfulGpuSpecs() {
-  console.log('📦 [2/6] Consultando especificaciones desde voidful/gpu-info-api...');
+  console.log('📦 [2/7] Consultando especificaciones desde voidful/gpu-info-api...');
   const specs = new Map();
   try {
     const res = await fetch('https://raw.githubusercontent.com/voidful/gpu-info-api/gpu-data/gpu.json');
@@ -77,7 +81,7 @@ async function fetchVoidfulGpuSpecs() {
 }
 
 async function fetchPassmarkScores() {
-  console.log('📊 [3/6] Consultando PassMark G3D Mark (passmark-scraper)...');
+  console.log('📊 [3/7] Consultando PassMark G3D Mark (passmark-scraper)...');
   const scores = new Map();
   try {
     const res = await fetch('https://www.videocardbenchmark.net/high_end_gpus.html', {
@@ -101,8 +105,75 @@ async function fetchPassmarkScores() {
   return scores;
 }
 
+/**
+ * Consulta Vast.ai Bundles API: https://cloud.vast.ai/api/v0/bundles/
+ * Extrae telemetría real de Deep Learning Performance (dlperf), precio por hora ($/hr),
+ * eficiencia (dlperf_per_dphtotal), TFLOPS medidos y disponibilidad de instancias por GPU.
+ */
+async function fetchVastAiBundles() {
+  console.log('☁️ [4/7] Consultando Vast.ai Cloud Bundles API (https://cloud.vast.ai/api/v0/bundles/)...');
+  const vastMap = new Map();
+  try {
+    const res = await fetch('https://cloud.vast.ai/api/v0/bundles/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'User-Agent': 'NDGPUList/2.1'
+      },
+      body: JSON.stringify({
+        verified: { eq: true },
+        external: { eq: false },
+        rentable: { eq: true },
+        num_gpus: { eq: 1 },
+        type: 'on-demand',
+        order: [['dlperf', 'desc']],
+        limit: 600
+      })
+    });
+
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const offers = Array.isArray(data?.offers) ? data.offers : [];
+
+    const grouped = new Map();
+    for (const offer of offers) {
+      if (!offer.gpu_name || !offer.dph_total || !offer.dlperf) continue;
+      const numGpus = Number(offer.num_gpus || 1);
+      const key = normalizeGpuName(offer.gpu_name);
+      if (!grouped.has(key)) {
+        grouped.set(key, []);
+      }
+      grouped.get(key).push({
+        dlperf: Number(offer.dlperf) / numGpus,
+        dph: Number(offer.dph_total) / numGpus,
+        flops: Number(offer.total_flops || 0) / numGpus
+      });
+    }
+
+    for (const [key, list] of grouped.entries()) {
+      const sortedDph = list.map((x) => x.dph).sort((a, b) => a - b);
+      const medianDph = sortedDph[Math.floor(sortedDph.length * 0.35)] || sortedDph[0];
+      const avgDlperf = list.reduce((acc, x) => acc + x.dlperf, 0) / list.length;
+      const maxFlops = Math.max(...list.map((x) => x.flops));
+
+      vastMap.set(key, {
+        dlperf: Number(avgDlperf.toFixed(1)),
+        hourlyRateUSD: Number(medianDph.toFixed(2)),
+        dlperfPerDollar: Number((avgDlperf / medianDph).toFixed(1)),
+        availableOffers: list.length,
+        verifiedFlops: Number(maxFlops.toFixed(1))
+      });
+    }
+    console.log(`✅ Vast.ai Bundles: ${vastMap.size} modelos de GPU con telemetría cloud y DLPerf.`);
+  } catch (err) {
+    console.warn(`⚠️ Aviso en Vast.ai API: ${err.message}. Usando datos locales.`);
+  }
+  return vastMap;
+}
+
 async function fetchSteamGames(appIds) {
-  console.log('🎮 [4/6] Consultando detalles de juegos desde Steam Store API...');
+  console.log('🎮 [5/7] Consultando detalles de juegos desde Steam Store API...');
   const gamesMap = new Map();
   for (const appid of appIds) {
     try {
@@ -133,12 +204,8 @@ async function fetchSteamGames(appIds) {
   return gamesMap;
 }
 
-/**
- * Consulta PCGamingWiki mediante su API Cargo (MediaWiki Cargo extension)
- * Documentación: https://www.pcgamingwiki.com/wiki/PCGamingWiki:API
- */
 async function fetchPCGamingWikiCargo(appIds) {
-  console.log('🛠️ [5/6] Consultando PCGamingWiki Cargo API (APIs gráficas, Upscaling, RT, Frame Cap)...');
+  console.log('🛠️ [6/7] Consultando PCGamingWiki Cargo API (APIs gráficas, Upscaling, RT, Frame Cap)...');
   const pcgwMap = new Map();
 
   for (const appid of appIds) {
@@ -166,7 +233,7 @@ async function fetchPCGamingWikiCargo(appIds) {
 
       const url = `https://www.pcgamingwiki.com/w/api.php?${params.toString()}`;
       const res = await fetch(url, {
-        headers: { 'User-Agent': 'NDGPUList/2.0 (https://github.com/ndgpulist)' }
+        headers: { 'User-Agent': 'NDGPUList/2.1 (https://github.com/nicosup98/ndgpulist)' }
       });
       if (!res.ok) continue;
       const json = await res.json();
@@ -204,19 +271,15 @@ async function fetchPCGamingWikiCargo(appIds) {
   return pcgwMap;
 }
 
-/**
- * Consulta ProtonDB Summaries API para obtener el estado de compatibilidad y rendimiento en Linux / SteamOS
- * Endpoint: https://www.protondb.com/api/v1/reports/summaries/{appid}.json
- */
 async function fetchProtonDbData(appIds) {
-  console.log('🐧 [6/6] Consultando ProtonDB API (Tier, Score y Reportes en Linux/SteamOS)...');
+  console.log('🐧 [7/7] Consultando ProtonDB API (Tier, Score y Reportes en Linux/SteamOS)...');
   const protonMap = new Map();
 
   for (const appid of appIds) {
     try {
       const url = `https://www.protondb.com/api/v1/reports/summaries/${appid}.json`;
       const res = await fetch(url, {
-        headers: { 'User-Agent': 'NDGPUList/2.0' }
+        headers: { 'User-Agent': 'NDGPUList/2.1' }
       });
       if (!res.ok) continue;
       const data = await res.json();
@@ -250,16 +313,17 @@ async function main() {
   const games = JSON.parse(existingGamesRaw);
   const appIds = games.map((g) => g.steamAppId);
 
-  const [geekbenchMap, voidfulMap, passmarkMap, steamGamesMap, pcgwMap, protonMap] = await Promise.all([
+  const [geekbenchMap, voidfulMap, passmarkMap, vastMap, steamGamesMap, pcgwMap, protonMap] = await Promise.all([
     fetchGeekbenchCompute(),
     fetchVoidfulGpuSpecs(),
     fetchPassmarkScores(),
+    fetchVastAiBundles(),
     fetchSteamGames(appIds),
     fetchPCGamingWikiCargo(appIds),
     fetchProtonDbData(appIds)
   ]);
 
-  // Actualizar GPUs
+  // Actualizar GPUs con Geekbench, PassMark, voidful y Vast.ai Cloud Bundles
   for (const gpu of gpus) {
     const normKey = normalizeGpuName(gpu.name);
     if (geekbenchMap.has(normKey)) {
@@ -272,6 +336,9 @@ async function main() {
       const spec = voidfulMap.get(normKey);
       gpu.rawSourceSynced = true;
       if (spec['Launch']) gpu.launchDate = spec['Launch'];
+    }
+    if (vastMap.has(normKey)) {
+      gpu.vastai = vastMap.get(normKey);
     }
   }
 
@@ -308,7 +375,7 @@ async function main() {
 
   await fs.writeFile(gpusPath, JSON.stringify(gpus, null, 2), 'utf-8');
   await fs.writeFile(gamesPath, JSON.stringify(games, null, 2), 'utf-8');
-  console.log(`🎉 Sincronización completada: ${gpus.length} GPUs y ${games.length} juegos con datos de Steam, PCGamingWiki Cargo y ProtonDB.`);
+  console.log(`🎉 Sincronización completada: ${gpus.length} GPUs (con Vast.ai Bundles) y ${games.length} juegos guardados.`);
 }
 
 main().catch((err) => {

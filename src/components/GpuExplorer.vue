@@ -21,7 +21,7 @@ const props = defineProps<{
 const selectedBrandFilter = ref<'ALL' | 'NVIDIA' | 'AMD' | 'Intel'>('ALL');
 const selectedVramFilter = ref<number>(0);
 const searchQuery = ref('');
-const sortBy = ref<'passmark' | 'geekbenchOpenCL' | 'geekbenchVulkan' | 'vram' | 'value'>('passmark');
+const sortBy = ref<'passmark' | 'geekbenchOpenCL' | 'geekbenchVulkan' | 'vastDlperf' | 'vastCloudPrice' | 'vram' | 'value'>('passmark');
 const showAllGpus = ref(false);
 
 // Comparador (soporta de 2 hasta 4 GPUs simultáneamente)
@@ -44,6 +44,7 @@ const gameFeatureFilter = ref<'ALL' | 'PROTON_TOP' | 'UPSCALING' | 'FRAME_GEN' |
 
 const maxPassmark = computed(() => Math.max(...props.gpus.map((g) => g.benchmarks.passmarkG3D)));
 const maxGeekbenchCL = computed(() => Math.max(...props.gpus.map((g) => g.benchmarks.geekbenchOpenCL)));
+const maxVastDlperf = computed(() => Math.max(...props.gpus.map((g) => g.vastai?.dlperf || 1)));
 
 const filteredGpus = computed(() => {
   return props.gpus
@@ -62,6 +63,8 @@ const filteredGpus = computed(() => {
       if (sortBy.value === 'passmark') return b.benchmarks.passmarkG3D - a.benchmarks.passmarkG3D;
       if (sortBy.value === 'geekbenchOpenCL') return b.benchmarks.geekbenchOpenCL - a.benchmarks.geekbenchOpenCL;
       if (sortBy.value === 'geekbenchVulkan') return b.benchmarks.geekbenchVulkan - a.benchmarks.geekbenchVulkan;
+      if (sortBy.value === 'vastDlperf') return (b.vastai?.dlperf || 0) - (a.vastai?.dlperf || 0);
+      if (sortBy.value === 'vastCloudPrice') return (a.vastai?.hourlyRateUSD || 999) - (b.vastai?.hourlyRateUSD || 999);
       if (sortBy.value === 'vram') return b.vramGB - a.vramGB || b.benchmarks.passmarkG3D - a.benchmarks.passmarkG3D;
       if (sortBy.value === 'value') {
         const valA = a.benchmarks.passmarkG3D / a.msrpUSD;
@@ -243,6 +246,8 @@ function getFpsBadgeColor(fps: number) {
             <option value="passmark">Orden: PassMark G3D</option>
             <option value="geekbenchOpenCL">Orden: Geekbench 6 OpenCL</option>
             <option value="geekbenchVulkan">Orden: Geekbench 6 Vulkan</option>
+            <option value="vastDlperf">Orden: Vast.ai DLPerf (AI/Compute)</option>
+            <option value="vastCloudPrice">Orden: Vast.ai Cloud ($/hr)</option>
             <option value="vram">Orden: Capacidad VRAM</option>
             <option value="value">Orden: Calidad / Precio</option>
           </select>
@@ -270,8 +275,9 @@ function getFpsBadgeColor(fps: number) {
               <th class="py-3 px-4 w-12 text-center">VS</th>
               <th class="py-3 px-4">Modelo / Arquitectura</th>
               <th class="py-3 px-4">VRAM / Bus</th>
-              <th class="py-3 px-4 min-w-[180px]">PassMark G3D</th>
-              <th class="py-3 px-4 min-w-[180px]">Geekbench 6 (OpenCL)</th>
+              <th class="py-3 px-4 min-w-[165px]">PassMark G3D</th>
+              <th class="py-3 px-4 min-w-[165px]">Geekbench 6 (OpenCL)</th>
+              <th class="py-3 px-4 min-w-[155px]">Vast.ai DLPerf / Cloud</th>
               <th class="py-3 px-4 text-right">Boost / TDP</th>
               <th class="py-3 px-4 text-right">MSRP</th>
               <th class="py-3 px-4 text-right">Ficha</th>
@@ -369,6 +375,25 @@ function getFpsBadgeColor(fps: number) {
                     :style="{ width: `${Math.round((gpu.benchmarks.geekbenchOpenCL / maxGeekbenchCL) * 100)}%` }"
                   ></div>
                 </div>
+              </td>
+
+              <!-- Vast.ai DLPerf & Cloud Price Bar -->
+              <td class="py-3 px-4">
+                <div v-if="gpu.vastai">
+                  <div class="flex items-center justify-between text-xs font-mono mb-1">
+                    <span class="font-bold text-cyan-600 dark:text-cyan-400">{{ gpu.vastai.dlperf }} DLP</span>
+                    <span class="text-emerald-600 dark:text-emerald-400 font-semibold text-[11px]">
+                      ${{ gpu.vastai.hourlyRateUSD.toFixed(2) }}/hr
+                    </span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+                    <div
+                      class="h-full rounded-full bg-cyan-500 transition-all duration-300"
+                      :style="{ width: `${Math.round((gpu.vastai.dlperf / maxVastDlperf) * 100)}%` }"
+                    ></div>
+                  </div>
+                </div>
+                <span v-else class="text-xs font-mono text-slate-400">N/A</span>
               </td>
 
               <!-- Clocks & TDP -->
@@ -574,6 +599,36 @@ function getFpsBadgeColor(fps: number) {
                 >
                   {{ getDiffPercent(gpu.benchmarks.geekbenchVulkan, baselineGpu.benchmarks.geekbenchVulkan) }}
                 </span>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">Vast.ai DLPerf (AI / Compute)</td>
+              <td v-for="(gpu, i) in comparedGpus" :key="gpu.id" class="py-3 px-4">
+                <template v-if="gpu.vastai && baselineGpu.vastai">
+                  <span class="font-bold text-cyan-600 dark:text-cyan-400">{{ gpu.vastai.dlperf }} DLP</span>
+                  <span
+                    v-if="i > 0"
+                    :class="[
+                      'ml-2 px-1.5 py-0.5 rounded text-[10px]',
+                      gpu.vastai.dlperf >= baselineGpu.vastai.dlperf
+                        ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+                        : 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
+                    ]"
+                  >
+                    {{ getDiffPercent(gpu.vastai.dlperf, baselineGpu.vastai.dlperf) }}
+                  </span>
+                </template>
+                <span v-else class="text-slate-400">N/A</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">Vast.ai Tarifa Cloud ($/hr)</td>
+              <td v-for="gpu in comparedGpus" :key="gpu.id" class="py-3 px-4 text-slate-800 dark:text-slate-200">
+                <template v-if="gpu.vastai">
+                  <span class="font-bold text-emerald-600 dark:text-emerald-400">${{ gpu.vastai.hourlyRateUSD.toFixed(2) }}/hr</span>
+                  <span class="text-slate-400 ml-1">({{ gpu.vastai.dlperfPerDollar }} DLP/$ • {{ gpu.vastai.availableOffers }} nodos)</span>
+                </template>
+                <span v-else class="text-slate-400">N/A</span>
               </td>
             </tr>
             <tr>
