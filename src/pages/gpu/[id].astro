@@ -1,0 +1,251 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GpuDetailFps from '../../components/GpuDetailFps.vue';
+import gpusData from '../../data/gpus.json';
+import gamesData from '../../data/games.json';
+import type { GpuSpec, SteamGame } from '../../utils/fpsCalculator';
+import { getCompositeGpuScore } from '../../utils/fpsCalculator';
+
+export function getStaticPaths() {
+  const gpus = gpusData as GpuSpec[];
+  return gpus.map((gpu) => ({
+    params: { id: gpu.id },
+    props: { gpu },
+  }));
+}
+
+interface Props {
+  gpu: GpuSpec;
+}
+
+const { gpu } = Astro.props;
+const allGpus = gpusData as GpuSpec[];
+const games = gamesData as SteamGame[];
+
+const sortedByPassmark = [...allGpus].sort(
+  (a, b) => b.benchmarks.passmarkG3D - a.benchmarks.passmarkG3D
+);
+const rankPosition = sortedByPassmark.findIndex((g) => g.id === gpu.id) + 1;
+const maxPassmark = sortedByPassmark[0].benchmarks.passmarkG3D;
+const maxGeekbenchCL = Math.max(...allGpus.map((g) => g.benchmarks.geekbenchOpenCL));
+const maxGeekbenchVk = Math.max(...allGpus.map((g) => g.benchmarks.geekbenchVulkan));
+const compositeScore = getCompositeGpuScore(gpu);
+
+const brandColorClass =
+  gpu.brand === 'NVIDIA'
+    ? 'bg-lime-500/10 text-lime-700 dark:text-lime-400 border-lime-500/30'
+    : gpu.brand === 'AMD'
+    ? 'bg-red-500/10 text-red-700 dark:text-red-400 border-red-500/30'
+    : 'bg-sky-500/10 text-sky-700 dark:text-sky-400 border-sky-500/30';
+---
+
+<Layout
+  title={`${gpu.name} (${gpu.vramGB}GB) — Benchmarks, Especificaciones y FPS`}
+  description={`Ficha técnica completa de ${gpu.name}: ${gpu.vramGB}GB ${gpu.memoryType}, PassMark G3D ${gpu.benchmarks.passmarkG3D}, Geekbench 6 y FPS por juego en 1080p, 1440p y 4K.`}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+    <!-- Breadcrumb y navegación rápida -->
+    <div class="flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
+      <div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+        <a href="/" class="hover:text-blue-600 dark:hover:text-blue-400">← Volver al Ranking General</a>
+        <span>/</span>
+        <span>{gpu.brand}</span>
+        <span>/</span>
+        <span class="text-slate-900 dark:text-white font-semibold">{gpu.name}</span>
+      </div>
+      <div class="text-slate-500 dark:text-slate-400">
+        Posición en Ranking: <strong class="text-slate-900 dark:text-white">#{rankPosition} de {allGpus.length}</strong>
+      </div>
+    </div>
+
+    <!-- Cabecera Técnica de la GPU -->
+    <section class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-sm">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        <div class="space-y-2">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class={`text-xs font-mono font-bold px-2.5 py-0.5 rounded border ${brandColorClass}`}>
+              {gpu.brand}
+            </span>
+            <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+              {gpu.series}
+            </span>
+            <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+              Arquitectura {gpu.architecture} ({gpu.processNm} nm)
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            {gpu.name}
+          </h1>
+          <p class="text-sm text-slate-600 dark:text-slate-400 font-mono">
+            {gpu.vramGB} GB {gpu.memoryType} • Bus {gpu.busWidthBit}-bit ({gpu.memoryBandwidthGBs} GB/s) • {gpu.cores.toLocaleString()} Shaders • TDP {gpu.tdpWatts}W
+          </p>
+        </div>
+
+        <!-- Resumen de Puntuación e Índice Compuesto -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono shrink-0">
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/70">
+            <span class="text-[10px] uppercase text-slate-400 block">Índice Compuesto</span>
+            <span class="text-xl font-bold text-blue-600 dark:text-blue-400">{compositeScore.toLocaleString()}</span>
+            <span class="text-[10px] text-slate-500 block">Score Relativo</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/70">
+            <span class="text-[10px] uppercase text-slate-400 block">Potencia FP32</span>
+            <span class="text-xl font-bold text-slate-900 dark:text-white">{gpu.tflopsFP32}</span>
+            <span class="text-[10px] text-slate-500 block">TFLOPS</span>
+          </div>
+          <div class="col-span-2 sm:col-span-1 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/70">
+            <span class="text-[10px] uppercase text-slate-400 block">MSRP Referencia</span>
+            <span class="text-xl font-bold text-emerald-600 dark:text-emerald-400">${gpu.msrpUSD}</span>
+            <span class="text-[10px] text-slate-500 block">
+              {(gpu.benchmarks.passmarkG3D / gpu.msrpUSD).toFixed(1)} G3D/$
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid Técnico: Especificaciones Completas + Benchmarks Sintéticos -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <!-- Especificaciones de Hardware (Estilo TechPowerUp) -->
+      <div class="lg:col-span-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-6 space-y-4">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span>Especificaciones Técnicas</span>
+          <span class="text-xs font-mono text-slate-400">gpu-info-api</span>
+        </h2>
+
+        <dl class="divide-y divide-slate-200/70 dark:divide-slate-800 text-xs font-mono">
+          <div class="py-2.5 flex justify-between">
+            <dt class="text-slate-500 dark:text-slate-400 font-sans">Fabricante / Serie</dt>
+            <dd class="font-semibold text-slate-900 dark:text-white">{gpu.brand} • {gpu.series}</dd>
+          </div>
+          <div class="py-2.5 flex justify-between">
+            <dt class="text-slate-500 dark:text-slate-400 font-sans">Arquitectura / Litografía</dt>
+            <dd class="font-semibold text-slate-900 dark:text-white">{gpu.architecture} ({gpu.processNm} nm)</dd>
+          </div>
+          <div class="py-2.5 flex justify-between">
+            <dt class="text-slate-500 dark:text-slate-400 font-sans">Año de Lanzamiento</dt>
+            <dd class="font-semibold text-slate-900 dark:text-white">{gpu.releaseYear}</dd>
+          </div>
+          <div class="py-2.5 flex justify-between">
+            <dt class="text-slate-500 dark:text-slate-400 font-sans">Capacidad de VRAM</dt>
+            <dd class="font-semibold text-slate-900 dark:text-white">{gpu.vramGB} GB {gpu.memoryType}</dd>
+          </div>
+          <div class="py-2.5 flex justify-between">
+            <dt class="text-slate-500 dark:text-slate-400 font-sans">Interfaz de Bus</dt>
+            <dd class="font-semibold text-slate-900 dark:text-white">{gpu.busWidthBit}-bit</dd>
+          </div>
+          <div class="py-2.5 flex justify-between">
+            <dt class="text-slate-500 dark:text-slate-400 font-sans">Ancho de Banda de Memoria</dt>
+            <dd class="font-semibold text-slate-900 dark:text-white">{gpu.memoryBandwidthGBs} GB/s</dd>
+          </div>
+          <div class="py-2.5 flex justify-between">
+            <dt class="text-slate-500 dark:text-slate-400 font-sans">Núcleos de Sombreado</dt>
+            <dd class="font-semibold text-slate-900 dark:text-white">{gpu.cores.toLocaleString()} unidades</dd>
+          </div>
+          <div class="py-2.5 flex justify-between">
+            <dt class="text-slate-500 dark:text-slate-400 font-sans">Reloj Base / Boost</dt>
+            <dd class="font-semibold text-slate-900 dark:text-white">{gpu.baseClockMHz} MHz / {gpu.boostClockMHz} MHz</dd>
+          </div>
+          <div class="py-2.5 flex justify-between">
+            <dt class="text-slate-500 dark:text-slate-400 font-sans">Consumo Energético (TDP)</dt>
+            <dd class="font-semibold text-slate-900 dark:text-white">{gpu.tdpWatts} Watts</dd>
+          </div>
+          <div class="py-2.5 flex justify-between">
+            <dt class="text-slate-500 dark:text-slate-400 font-sans">Eficiencia Energética</dt>
+            <dd class="font-semibold text-emerald-600 dark:text-emerald-400">
+              {(gpu.benchmarks.passmarkG3D / gpu.tdpWatts).toFixed(1)} G3D pts / Watt
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Puntuaciones de Benchmarks Sintéticos -->
+      <div class="lg:col-span-7 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-6 flex flex-col justify-between space-y-6">
+        <div class="space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+            <h2 class="text-lg font-bold text-slate-900 dark:text-white">
+              Resultados en Benchmarks Sintéticos
+            </h2>
+            <span class="text-xs font-mono text-slate-400">Escala sobre el #1 actual</span>
+          </div>
+
+          <!-- PassMark G3D -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-baseline">
+              <div>
+                <span class="text-sm font-bold text-slate-900 dark:text-white">PassMark G3D Mark</span>
+                <span class="text-xs text-slate-500 ml-2">DirectX 9 / 10 / 11 / 12 Rasterization</span>
+              </div>
+              <span class="font-mono text-lg font-bold text-blue-600 dark:text-blue-400">
+                {gpu.benchmarks.passmarkG3D.toLocaleString()} pts
+              </span>
+            </div>
+            <div class="w-full h-3 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+              <div
+                class="h-full rounded-full bg-blue-600"
+                style={`width: ${Math.round((gpu.benchmarks.passmarkG3D / maxPassmark) * 100)}%`}
+              ></div>
+            </div>
+          </div>
+
+          <!-- Geekbench 6 OpenCL -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-baseline">
+              <div>
+                <span class="text-sm font-bold text-slate-900 dark:text-white">Geekbench 6 Compute (OpenCL)</span>
+                <span class="text-xs text-slate-500 ml-2">browser.geekbench.com/v6/compute</span>
+              </div>
+              <span class="font-mono text-lg font-bold text-indigo-600 dark:text-indigo-400">
+                {gpu.benchmarks.geekbenchOpenCL.toLocaleString()} pts
+              </span>
+            </div>
+            <div class="w-full h-3 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+              <div
+                class="h-full rounded-full bg-indigo-500"
+                style={`width: ${Math.round((gpu.benchmarks.geekbenchOpenCL / maxGeekbenchCL) * 100)}%`}
+              ></div>
+            </div>
+          </div>
+
+          <!-- Geekbench 6 Vulkan -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-baseline">
+              <div>
+                <span class="text-sm font-bold text-slate-900 dark:text-white">Geekbench 6 Compute (Vulkan)</span>
+                <span class="text-xs text-slate-500 ml-2">Multi-platform Compute & Shaders</span>
+              </div>
+              <span class="font-mono text-lg font-bold text-emerald-600 dark:text-emerald-400">
+                {gpu.benchmarks.geekbenchVulkan.toLocaleString()} pts
+              </span>
+            </div>
+            <div class="w-full h-3 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+              <div
+                class="h-full rounded-full bg-emerald-500"
+                style={`width: ${Math.round((gpu.benchmarks.geekbenchVulkan / maxGeekbenchVk) * 100)}%`}
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 font-mono">
+          💡 <strong>Nota técnica del Algoritmo de Rendimiento Relativo:</strong> El índice compuesto de <strong>{gpu.name}</strong> ({compositeScore.toLocaleString()} pts) pondera un 55% el score de rasterización DirectX (PassMark G3D), 35% el cómputo moderno en Geekbench 6 (Vulkan/OpenCL) y 10% el ancho de banda de memoria ({gpu.memoryBandwidthGBs} GB/s).
+        </div>
+      </div>
+    </div>
+
+    <!-- Estimador de FPS Interactivo específico para esta GPU -->
+    <section class="space-y-4 pt-4">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400">
+          GAMING BENCHMARKS // STEAM STORE API
+        </span>
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">
+          Rendimiento de {gpu.name} en Juegos Populares (FPS)
+        </h2>
+      </div>
+
+      <GpuDetailFps client:load gpu={gpu} allGpus={allGpus} games={games} />
+    </section>
+  </div>
+</Layout>
