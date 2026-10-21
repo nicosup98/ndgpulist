@@ -5481,5 +5481,623 @@
       "shadersTmusRops": "2304 / 72 / 32",
       "launchDate": "2024-02-02 00:00:00"
     }
+  },
+  {
+    "id": "radeon-vii",
+    "name": "Radeon VII",
+    "brand": "AMD",
+    "series": "Radeon Vega Series",
+    "architecture": "GCN 5.1 (Vega 20)",
+    "releaseYear": 2019,
+    "vramGB": 16,
+    "memoryType": "HBM2",
+    "busWidthBit": 4096,
+    "memoryBandwidthGBs": 1024,
+    "baseClockMHz": 1400,
+    "boostClockMHz": 1750,
+    "cores": 3840,
+    "tdpWatts": 300,
+    "processNm": 7,
+    "tflopsFP32": 13.44,
+    "msrpUSD": 699,
+    "benchmarks": {
+      "geekbenchOpenCL": 84130,
+      "geekbenchVulkan": 100902,
+      "passmarkDX12": 77,
+      "passmarkDX11": 103
+    },
+    "userbenchmark": {
+      "rank": 72,
+      "score": 42.7,
+      "samples": 4254,
+      "url": "https://gpu.userbenchmark.com/AMD-Radeon-VII/Rating/4035"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20VII",
+      "relativePerformancePct": 43.9,
+      "tmus": 120,
+      "rops": 192,
+      "shadersTmusRops": "3840 / 120 / 192",
+      "launchDate": "2019"
+    }
+  },
+  {
+    "id": "rx-vega-64-liquid",
+    "name": "Radeon RX Vega 64 Liquid",
+    "brand": "AMD",
+    "series": "Radeon Vega Series",
+    "architecture": "GCN 5.0 (Vega 10)",
+    "releaseYear": 2017,
+    "vramGB": 8,
+    "memoryType": "HBM2",
+    "busWidthBit": 2048,
+    "memoryBandwidthGBs": 484,
+    "baseClockMHz": 1406,
+    "boostClockMHz": 1677,
+    "cores": 4096,
+    "tdpWatts": 345,
+    "processNm": 14,
+    "tflopsFP32": 13.74,
+    "msrpUSD": 699,
+    "benchmarks": {
+      "geekbenchOpenCL": 66200,
+      "geekbenchVulkan": 71500,
+      "passmarkDX12": 68,
+      "passmarkDX11": 90
+    },
+    "userbenchmark": {
+      "rank": 84,
+      "score": 39.4,
+      "samples": 5148,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/353890/Radeon-RX-Vega"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%20Vega%2064%20Liquid",
+      "relativePerformancePct": 36.2,
+      "tmus": 128,
+      "rops": 192,
+      "shadersTmusRops": "4096 / 128 / 192",
+      "launchDate": "2017"
+    }
+  },
+  {
+    "id": "rx-vega-64",
+    "name": "Radeon RX Vega 64",
+    "brand": "AMD",
+    "series": "Radeon Vega Series",
+    "architecture": "GCN 5.0 (Vega 10)",
+    "releaseYear": 2017,
+    "vramGB": 8,
+    "memoryType": "HBM2",
+    "busWidthBit": 2048,
+    "memoryBandwidthGBs": 484,
+    "baseClockMHz": 1247,
+    "boostClockMHz": 1546,
+    "cores": 4096,
+    "tdpWatts": 295,
+    "processNm": 14,
+    "tflopsFP32": 12.67,
+    "msrpUSD": 499,
+    "benchmarks": {
+      "geekbenchOpenCL": 62552,
+      "geekbenchVulkan": 67032,
+      "passmarkDX12": 65,
+      "passmarkDX11": 86
+    },
+    "userbenchmark": {
+      "rank": 97,
+      "score": 35.8,
+      "samples": 142090,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-Vega-64/Rating/3933"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%20Vega%2064",
+      "relativePerformancePct": 34.5,
+      "tmus": 128,
+      "rops": 192,
+      "shadersTmusRops": "4096 / 128 / 192",
+      "launchDate": "2017"
+    }
+  },
+  {
+    "id": "rx-vega-56",
+    "name": "Radeon RX Vega 56",
+    "brand": "AMD",
+    "series": "Radeon Vega Series",
+    "architecture": "GCN 5.0 (Vega 10)",
+    "releaseYear": 2017,
+    "vramGB": 8,
+    "memoryType": "HBM2",
+    "busWidthBit": 2048,
+    "memoryBandwidthGBs": 410,
+    "baseClockMHz": 1156,
+    "boostClockMHz": 1471,
+    "cores": 3584,
+    "tdpWatts": 210,
+    "processNm": 14,
+    "tflopsFP32": 10.54,
+    "msrpUSD": 399,
+    "benchmarks": {
+      "geekbenchOpenCL": 55927,
+      "geekbenchVulkan": 59800,
+      "passmarkDX12": 56,
+      "passmarkDX11": 82
+    },
+    "userbenchmark": {
+      "rank": 106,
+      "score": 32.1,
+      "samples": 124655,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-Vega-56/Rating/3938"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%20Vega%2056",
+      "relativePerformancePct": 30,
+      "tmus": 112,
+      "rops": 192,
+      "shadersTmusRops": "3584 / 112 / 192",
+      "launchDate": "2017"
+    }
+  },
+  {
+    "id": "radeon-vega-frontier",
+    "name": "Radeon Vega Frontier Edition",
+    "brand": "AMD",
+    "series": "Radeon Vega Series",
+    "architecture": "GCN 5.0 (Vega 10)",
+    "releaseYear": 2017,
+    "vramGB": 16,
+    "memoryType": "HBM2",
+    "busWidthBit": 2048,
+    "memoryBandwidthGBs": 484,
+    "baseClockMHz": 1382,
+    "boostClockMHz": 1600,
+    "cores": 4096,
+    "tdpWatts": 300,
+    "processNm": 14,
+    "tflopsFP32": 13.1,
+    "msrpUSD": 999,
+    "benchmarks": {
+      "geekbenchOpenCL": 76111,
+      "geekbenchVulkan": 72441,
+      "passmarkDX12": 57,
+      "passmarkDX11": 79
+    },
+    "userbenchmark": {
+      "rank": 96,
+      "score": 35.9,
+      "samples": 2291,
+      "url": "https://gpu.userbenchmark.com/AMD-Vega-Frontier-Edition/Rating/3929"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20Vega%20Frontier%20Edition",
+      "relativePerformancePct": 32.6,
+      "tmus": 128,
+      "rops": 192,
+      "shadersTmusRops": "4096 / 128 / 192",
+      "launchDate": "2017"
+    }
+  },
+  {
+    "id": "titan-xp",
+    "name": "GeForce Titan Xp",
+    "brand": "NVIDIA",
+    "series": "GTX 10 Series",
+    "architecture": "Pascal (GP102)",
+    "releaseYear": 2017,
+    "vramGB": 12,
+    "memoryType": "GDDR5X",
+    "busWidthBit": 384,
+    "memoryBandwidthGBs": 547.7,
+    "baseClockMHz": 1405,
+    "boostClockMHz": 1582,
+    "cores": 3840,
+    "tdpWatts": 250,
+    "processNm": 16,
+    "tflopsFP32": 12.15,
+    "msrpUSD": 1199,
+    "benchmarks": {
+      "geekbenchOpenCL": 72400,
+      "geekbenchVulkan": 88900,
+      "passmarkDX12": 69,
+      "passmarkDX11": 152
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20Titan%20Xp",
+      "relativePerformancePct": 38.4,
+      "tmus": 120,
+      "rops": 192,
+      "shadersTmusRops": "3840 / 120 / 192",
+      "launchDate": "2017-04-06 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 45,
+      "score": 53.9,
+      "samples": 9773,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/265423/NVIDIA-TITAN-Xp"
+    }
+  },
+  {
+    "id": "gtx-1080-ti",
+    "name": "GeForce GTX 1080 Ti",
+    "brand": "NVIDIA",
+    "series": "GTX 10 Series",
+    "architecture": "Pascal (GP102)",
+    "releaseYear": 2017,
+    "vramGB": 11,
+    "memoryType": "GDDR5X",
+    "busWidthBit": 352,
+    "memoryBandwidthGBs": 484.4,
+    "baseClockMHz": 1480,
+    "boostClockMHz": 1582,
+    "cores": 3584,
+    "tdpWatts": 250,
+    "processNm": 16,
+    "tflopsFP32": 11.34,
+    "msrpUSD": 699,
+    "benchmarks": {
+      "geekbenchOpenCL": 69122,
+      "geekbenchVulkan": 85261,
+      "passmarkDX12": 66,
+      "passmarkDX11": 152
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20GTX%201080%20Ti",
+      "relativePerformancePct": 36.7,
+      "tmus": 112,
+      "rops": 112,
+      "shadersTmusRops": "3584 / 112 / 112",
+      "launchDate": "2017-03-05 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 48,
+      "score": 51.9,
+      "samples": 1150365,
+      "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1080-Ti/Rating/3918"
+    }
+  },
+  {
+    "id": "gtx-1080",
+    "name": "GeForce GTX 1080",
+    "brand": "NVIDIA",
+    "series": "GTX 10 Series",
+    "architecture": "Pascal (GP104)",
+    "releaseYear": 2016,
+    "vramGB": 8,
+    "memoryType": "GDDR5X",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 320,
+    "baseClockMHz": 1607,
+    "boostClockMHz": 1733,
+    "cores": 2560,
+    "tdpWatts": 180,
+    "processNm": 16,
+    "tflopsFP32": 8.87,
+    "msrpUSD": 599,
+    "benchmarks": {
+      "geekbenchOpenCL": 53022,
+      "geekbenchVulkan": 30737,
+      "passmarkDX12": 56,
+      "passmarkDX11": 125
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20GTX%201080",
+      "relativePerformancePct": 29.6,
+      "tmus": 80,
+      "rops": 112,
+      "shadersTmusRops": "2560 / 80 / 112",
+      "launchDate": "2017-04-20 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 71,
+      "score": 43,
+      "samples": 1495086,
+      "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1080/Rating/3603"
+    }
+  },
+  {
+    "id": "gtx-1070-ti",
+    "name": "GeForce GTX 1070 Ti",
+    "brand": "NVIDIA",
+    "series": "GTX 10 Series",
+    "architecture": "Pascal (GP104)",
+    "releaseYear": 2017,
+    "vramGB": 8,
+    "memoryType": "GDDR5",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 256.3,
+    "baseClockMHz": 1607,
+    "boostClockMHz": 1683,
+    "cores": 2432,
+    "tdpWatts": 180,
+    "processNm": 16,
+    "tflopsFP32": 8.19,
+    "msrpUSD": 449,
+    "benchmarks": {
+      "geekbenchOpenCL": 55356,
+      "geekbenchVulkan": 61006,
+      "passmarkDX12": 53,
+      "passmarkDX11": 107
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20GTX%201070%20Ti",
+      "relativePerformancePct": 28.6,
+      "tmus": 76,
+      "rops": 112,
+      "shadersTmusRops": "2432 / 76 / 112",
+      "launchDate": "2017-11-02 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 85,
+      "score": 39.3,
+      "samples": 577707,
+      "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1070-Ti/Rating/3943"
+    }
+  },
+  {
+    "id": "gtx-1070",
+    "name": "GeForce GTX 1070",
+    "brand": "NVIDIA",
+    "series": "GTX 10 Series",
+    "architecture": "Pascal (GP104)",
+    "releaseYear": 2016,
+    "vramGB": 8,
+    "memoryType": "GDDR5",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 256.3,
+    "baseClockMHz": 1506,
+    "boostClockMHz": 1683,
+    "cores": 1920,
+    "tdpWatts": 150,
+    "processNm": 16,
+    "tflopsFP32": 6.46,
+    "msrpUSD": 379,
+    "benchmarks": {
+      "geekbenchOpenCL": 43851,
+      "geekbenchVulkan": 47633,
+      "passmarkDX12": 49,
+      "passmarkDX11": 99
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20GTX%201070",
+      "relativePerformancePct": 25.4,
+      "tmus": 60,
+      "rops": 112,
+      "shadersTmusRops": "1920 / 60 / 112",
+      "launchDate": "2016-06-10 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 101,
+      "score": 33.5,
+      "samples": 1790166,
+      "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1070/Rating/3609"
+    }
+  },
+  {
+    "id": "gtx-1060-6gb",
+    "name": "GeForce GTX 1060 6GB",
+    "brand": "NVIDIA",
+    "series": "GTX 10 Series",
+    "architecture": "Pascal (GP106)",
+    "releaseYear": 2016,
+    "vramGB": 6,
+    "memoryType": "GDDR5",
+    "busWidthBit": 192,
+    "memoryBandwidthGBs": 192.2,
+    "baseClockMHz": 1506,
+    "boostClockMHz": 1708,
+    "cores": 1280,
+    "tdpWatts": 120,
+    "processNm": 16,
+    "tflopsFP32": 4.37,
+    "msrpUSD": 249,
+    "benchmarks": {
+      "geekbenchOpenCL": 31770,
+      "geekbenchVulkan": 34705,
+      "passmarkDX12": 37,
+      "passmarkDX11": 71
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20GTX%201060%206GB",
+      "relativePerformancePct": 19,
+      "tmus": 40,
+      "rops": 80,
+      "shadersTmusRops": "1280 / 40 / 80",
+      "launchDate": "2018-03-08 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 129,
+      "score": 23.7,
+      "samples": 1809641,
+      "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1060-6GB/Rating/3639"
+    }
+  },
+  {
+    "id": "gtx-1060-3gb",
+    "name": "GeForce GTX 1060 3GB",
+    "brand": "NVIDIA",
+    "series": "GTX 10 Series",
+    "architecture": "Pascal (GP106)",
+    "releaseYear": 2016,
+    "vramGB": 3,
+    "memoryType": "GDDR5",
+    "busWidthBit": 192,
+    "memoryBandwidthGBs": 192.2,
+    "baseClockMHz": 1506,
+    "boostClockMHz": 1708,
+    "cores": 1152,
+    "tdpWatts": 120,
+    "processNm": 16,
+    "tflopsFP32": 3.94,
+    "msrpUSD": 199,
+    "benchmarks": {
+      "geekbenchOpenCL": 29888,
+      "geekbenchVulkan": 16028,
+      "passmarkDX12": 36,
+      "passmarkDX11": 70
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20GTX%201060%203GB",
+      "relativePerformancePct": 18.3,
+      "tmus": 36,
+      "rops": 80,
+      "shadersTmusRops": "1152 / 36 / 80",
+      "launchDate": "2016"
+    },
+    "userbenchmark": {
+      "rank": 134,
+      "score": 21.7,
+      "samples": 852872,
+      "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1060-3GB/Rating/3646"
+    }
+  },
+  {
+    "id": "gtx-1050-ti",
+    "name": "GeForce GTX 1050 Ti",
+    "brand": "NVIDIA",
+    "series": "GTX 10 Series",
+    "architecture": "Pascal (GP107)",
+    "releaseYear": 2016,
+    "vramGB": 4,
+    "memoryType": "GDDR5",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 112.1,
+    "baseClockMHz": 1290,
+    "boostClockMHz": 1392,
+    "cores": 768,
+    "tdpWatts": 75,
+    "processNm": 14,
+    "tflopsFP32": 2.14,
+    "msrpUSD": 139,
+    "benchmarks": {
+      "geekbenchOpenCL": 19622,
+      "geekbenchVulkan": 10437,
+      "passmarkDX12": 26,
+      "passmarkDX11": 51
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20GTX%201050%20Ti",
+      "relativePerformancePct": 12.9,
+      "tmus": 24,
+      "rops": 64,
+      "shadersTmusRops": "768 / 24 / 64",
+      "launchDate": "2016-10-25 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 185,
+      "score": 12.2,
+      "samples": 1361669,
+      "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1050-Ti/Rating/3649"
+    }
+  },
+  {
+    "id": "gtx-1050-3gb",
+    "name": "GeForce GTX 1050 3GB",
+    "brand": "NVIDIA",
+    "series": "GTX 10 Series",
+    "architecture": "Pascal (GP107)",
+    "releaseYear": 2018,
+    "vramGB": 3,
+    "memoryType": "GDDR5",
+    "busWidthBit": 96,
+    "memoryBandwidthGBs": 84.1,
+    "baseClockMHz": 1392,
+    "boostClockMHz": 1518,
+    "cores": 768,
+    "tdpWatts": 75,
+    "processNm": 14,
+    "tflopsFP32": 2.33,
+    "msrpUSD": 129,
+    "benchmarks": {
+      "geekbenchOpenCL": 16184,
+      "geekbenchVulkan": 10438,
+      "passmarkDX12": 23,
+      "passmarkDX11": 46
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20GTX%201050%203GB",
+      "relativePerformancePct": 11.5,
+      "tmus": 24,
+      "rops": 32,
+      "shadersTmusRops": "768 / 24 / 32",
+      "launchDate": "2018"
+    },
+    "userbenchmark": {
+      "rank": 199,
+      "score": 10.7,
+      "samples": 379454,
+      "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1050/Rating/3650"
+    }
+  },
+  {
+    "id": "gtx-1050-2gb",
+    "name": "GeForce GTX 1050 2GB",
+    "brand": "NVIDIA",
+    "series": "GTX 10 Series",
+    "architecture": "Pascal (GP107)",
+    "releaseYear": 2016,
+    "vramGB": 2,
+    "memoryType": "GDDR5",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 112.1,
+    "baseClockMHz": 1354,
+    "boostClockMHz": 1455,
+    "cores": 640,
+    "tdpWatts": 75,
+    "processNm": 14,
+    "tflopsFP32": 1.86,
+    "msrpUSD": 109,
+    "benchmarks": {
+      "geekbenchOpenCL": 16184,
+      "geekbenchVulkan": 18200,
+      "passmarkDX12": 21,
+      "passmarkDX11": 41
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20GTX%201050%202GB",
+      "relativePerformancePct": 10.6,
+      "tmus": 20,
+      "rops": 64,
+      "shadersTmusRops": "640 / 20 / 64",
+      "launchDate": "2016"
+    }
+  },
+  {
+    "id": "gt-1030",
+    "name": "GeForce GT 1030",
+    "brand": "NVIDIA",
+    "series": "GTX 10 Series",
+    "architecture": "Pascal (GP108)",
+    "releaseYear": 2017,
+    "vramGB": 2,
+    "memoryType": "GDDR5",
+    "busWidthBit": 64,
+    "memoryBandwidthGBs": 48.1,
+    "baseClockMHz": 1227,
+    "boostClockMHz": 1468,
+    "cores": 384,
+    "tdpWatts": 30,
+    "processNm": 14,
+    "tflopsFP32": 1.13,
+    "msrpUSD": 69,
+    "benchmarks": {
+      "geekbenchOpenCL": 8989,
+      "geekbenchVulkan": 9229,
+      "passmarkDX12": 11,
+      "passmarkDX11": 20
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20GT%201030",
+      "relativePerformancePct": 5.8,
+      "tmus": 16,
+      "rops": 32,
+      "shadersTmusRops": "384 / 16 / 32",
+      "launchDate": "2018-09-30 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 255,
+      "score": 5.7,
+      "samples": 250236,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/283726/NVIDIA-GeForce-GT-1030"
+    }
   }
 ]
