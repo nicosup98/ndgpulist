@@ -145,6 +145,20 @@ const brandColorClass =
             <dt class="text-slate-500 dark:text-slate-400 font-sans">Núcleos de Sombreado</dt>
             <dd class="font-semibold text-slate-900 dark:text-white">{gpu.cores.toLocaleString()} unidades</dd>
           </div>
+          {gpu.techpowerup && (
+            <div class="py-2.5 flex justify-between">
+              <dt class="text-slate-500 dark:text-slate-400 font-sans">Shaders / TMUs / ROPs (TPU)</dt>
+              <dd class="font-semibold text-slate-900 dark:text-white">{gpu.techpowerup.shadersTmusRops}</dd>
+            </div>
+          )}
+          {gpu.techpowerup && (
+            <div class="py-2.5 flex justify-between">
+              <dt class="text-slate-500 dark:text-slate-400 font-sans">Rendimiento Relativo TPU</dt>
+              <dd class="font-semibold text-blue-600 dark:text-blue-400">
+                {gpu.techpowerup.relativePerformancePct}% (RTX 4090 = 100%)
+              </dd>
+            </div>
+          )}
           <div class="py-2.5 flex justify-between">
             <dt class="text-slate-500 dark:text-slate-400 font-sans">Reloj Base / Boost</dt>
             <dd class="font-semibold text-slate-900 dark:text-white">{gpu.baseClockMHz} MHz / {gpu.boostClockMHz} MHz</dd>
@@ -278,6 +292,77 @@ const brandColorClass =
                 <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-800">
                   <span class="text-[10px] text-slate-400 block">OFERTAS ACTIVAS</span>
                   <span class="font-bold text-slate-900 dark:text-white">{gpu.vastai.availableOffers} nodos</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <!-- TechPowerUp Relative Performance & Tom's Hardware GPU Hierarchy (Puppeteer Scraper) -->
+          {gpu.techpowerup && (
+            <div class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800/80">
+              <div class="flex justify-between items-baseline">
+                <div>
+                  <span class="text-sm font-bold text-slate-900 dark:text-white">TechPowerUp Relative Performance</span>
+                  <span class="text-xs text-slate-500 ml-2">RTX 4090 = 100% • {gpu.techpowerup.shadersTmusRops}</span>
+                </div>
+                <span class="font-mono text-lg font-bold text-amber-600 dark:text-amber-400">
+                  {gpu.techpowerup.relativePerformancePct}%
+                </span>
+              </div>
+              <div class="w-full h-3 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+                <div
+                  class="h-full rounded-full bg-amber-500"
+                  style={`width: ${Math.min(100, Math.round((gpu.techpowerup.relativePerformancePct / 120) * 100))}%`}
+                ></div>
+              </div>
+            </div>
+          )}
+
+          {gpu.tomshardware?.rasterization && (
+            <div class="space-y-2.5 pt-2 border-t border-slate-100 dark:border-slate-800/80">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-sm font-bold text-slate-900 dark:text-white">Tom's Hardware GPU Hierarchy (2026)</span>
+                  <span class="text-xs text-slate-500 ml-2">Puppeteer Scraper • Preset Ultra</span>
+                </div>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/30">
+                  {gpu.tomshardware.rasterization['1440p']?.relativePct}% Rel.
+                </span>
+              </div>
+
+              <div class="grid grid-cols-3 gap-2 text-xs font-mono">
+                <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-800">
+                  <span class="text-[10px] text-slate-400 block">1080P ULTRA</span>
+                  <span class="font-bold text-slate-900 dark:text-white">
+                    {gpu.tomshardware.rasterization['1080p']?.fps ?? 'N/A'} FPS
+                  </span>
+                  {gpu.tomshardware.rayTracing?.['1080p'] && (
+                    <span class="text-[10px] text-slate-500 block">
+                      RT: {gpu.tomshardware.rayTracing['1080p'].fps} FPS
+                    </span>
+                  )}
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-800">
+                  <span class="text-[10px] text-slate-400 block">1440P ULTRA</span>
+                  <span class="font-bold text-blue-600 dark:text-blue-400">
+                    {gpu.tomshardware.rasterization['1440p']?.fps ?? 'N/A'} FPS
+                  </span>
+                  {gpu.tomshardware.rayTracing?.['1440p'] && (
+                    <span class="text-[10px] text-slate-500 block">
+                      RT: {gpu.tomshardware.rayTracing['1440p'].fps} FPS
+                    </span>
+                  )}
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-800">
+                  <span class="text-[10px] text-slate-400 block">4K ULTRA</span>
+                  <span class="font-bold text-emerald-600 dark:text-emerald-400">
+                    {gpu.tomshardware.rasterization['4K']?.fps ?? 'N/A'} FPS
+                  </span>
+                  {gpu.tomshardware.rayTracing?.['4K'] && (
+                    <span class="text-[10px] text-slate-500 block">
+                      RT: {gpu.tomshardware.rayTracing['4K'].fps} FPS
+                    </span>
+                  )}
                 </div>
               </div>
             </div>

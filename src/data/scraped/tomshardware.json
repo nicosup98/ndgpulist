@@ -1,0 +1,1548 @@
+{
+  "source": "tomshardware",
+  "label": "Tom's Hardware GPU Hierarchy",
+  "urls": [
+    "https://www.tomshardware.com/reviews/gpu-hierarchy,4388.html"
+  ],
+  "unit": "FPS promedio (Ultra) y % relativo al #1 del ranking",
+  "scrapedAt": "2026-10-21T14:00:54.521Z",
+  "count": 48,
+  "entries": [
+    {
+      "name": "GeForce RTX 5090",
+      "msrpUSD": 1999.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 100,
+          "fps": 203.8
+        },
+        "1440p": {
+          "relativePct": 100,
+          "fps": 167.3
+        },
+        "4K": {
+          "relativePct": 100,
+          "fps": 110.8
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 100,
+          "fps": 125.7
+        },
+        "1440p": {
+          "relativePct": 100,
+          "fps": 100.8
+        },
+        "4K": {
+          "relativePct": 100,
+          "fps": 64.1
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 4090",
+      "msrpUSD": 1599.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 90.1,
+          "fps": 183.6
+        },
+        "1440p": {
+          "relativePct": 85.7,
+          "fps": 143.4
+        },
+        "4K": {
+          "relativePct": 80.4,
+          "fps": 89.1
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 89.4,
+          "fps": 112.3
+        },
+        "1440p": {
+          "relativePct": 87,
+          "fps": 87.7
+        },
+        "4K": {
+          "relativePct": 81.4,
+          "fps": 52.2
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 5080",
+      "msrpUSD": 999.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 81.9,
+          "fps": 166.9
+        },
+        "1440p": {
+          "relativePct": 76.7,
+          "fps": 128.3
+        },
+        "4K": {
+          "relativePct": 69.8,
+          "fps": 77.4
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 78.2,
+          "fps": 98.3
+        },
+        "1440p": {
+          "relativePct": 73.4,
+          "fps": 74
+        },
+        "4K": {
+          "relativePct": 65.7,
+          "fps": 42.1
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 7900 XTX",
+      "msrpUSD": 999.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 79.3,
+          "fps": 161.5
+        },
+        "1440p": {
+          "relativePct": 73.1,
+          "fps": 122.3
+        },
+        "4K": {
+          "relativePct": 63.7,
+          "fps": 70.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 56,
+          "fps": 70.4
+        },
+        "1440p": {
+          "relativePct": 50.1,
+          "fps": 50.5
+        },
+        "4K": {
+          "relativePct": 42.6,
+          "fps": 27.3
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 4080 Super",
+      "msrpUSD": 999.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 78,
+          "fps": 158.9
+        },
+        "1440p": {
+          "relativePct": 70.9,
+          "fps": 118.6
+        },
+        "4K": {
+          "relativePct": 62.6,
+          "fps": 69.4
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 75,
+          "fps": 94.3
+        },
+        "1440p": {
+          "relativePct": 68.9,
+          "fps": 69.5
+        },
+        "4K": {
+          "relativePct": 60.1,
+          "fps": 38.5
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 4080",
+      "msrpUSD": 1199.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 77.2,
+          "fps": 157.3
+        },
+        "1440p": {
+          "relativePct": 70.3,
+          "fps": 117.5
+        },
+        "4K": {
+          "relativePct": 60.9,
+          "fps": 67.5
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 73.9,
+          "fps": 92.8
+        },
+        "1440p": {
+          "relativePct": 67.8,
+          "fps": 68.4
+        },
+        "4K": {
+          "relativePct": 58.3,
+          "fps": 37.4
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 5070 Ti",
+      "msrpUSD": 749.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 76.2,
+          "fps": 155.4
+        },
+        "1440p": {
+          "relativePct": 69.8,
+          "fps": 116.8
+        },
+        "4K": {
+          "relativePct": 61.9,
+          "fps": 68.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 71.9,
+          "fps": 90.4
+        },
+        "1440p": {
+          "relativePct": 65.7,
+          "fps": 66.2
+        },
+        "4K": {
+          "relativePct": 57.3,
+          "fps": 36.7
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 9070 XT",
+      "msrpUSD": 599.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 76.9,
+          "fps": 156.6
+        },
+        "1440p": {
+          "relativePct": 69.7,
+          "fps": 116.5
+        },
+        "4K": {
+          "relativePct": 59.4,
+          "fps": 65.8
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 61.9,
+          "fps": 77.8
+        },
+        "1440p": {
+          "relativePct": 55.1,
+          "fps": 55.5
+        },
+        "4K": {
+          "relativePct": 47,
+          "fps": 30.1
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 7900 XT",
+      "msrpUSD": 899.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 71.3,
+          "fps": 145.4
+        },
+        "1440p": {
+          "relativePct": 64.6,
+          "fps": 108
+        },
+        "4K": {
+          "relativePct": 54,
+          "fps": 59.8
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 49.1,
+          "fps": 61.7
+        },
+        "1440p": {
+          "relativePct": 43.1,
+          "fps": 43.5
+        },
+        "4K": {
+          "relativePct": 36,
+          "fps": 23.1
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 4070 Ti Super",
+      "msrpUSD": 799.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 69.3,
+          "fps": 141.2
+        },
+        "1440p": {
+          "relativePct": 62.1,
+          "fps": 104
+        },
+        "4K": {
+          "relativePct": 52.8,
+          "fps": 58.5
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 69.9,
+          "fps": 87.9
+        },
+        "1440p": {
+          "relativePct": 59.5,
+          "fps": 60
+        },
+        "4K": {
+          "relativePct": 50.2,
+          "fps": 32.2
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 9070",
+      "msrpUSD": 549.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 69.1,
+          "fps": 140.9
+        },
+        "1440p": {
+          "relativePct": 62.1,
+          "fps": 104
+        },
+        "4K": {
+          "relativePct": 52.1,
+          "fps": 57.7
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 53.8,
+          "fps": 67.6
+        },
+        "1440p": {
+          "relativePct": 47.2,
+          "fps": 47.6
+        },
+        "4K": {
+          "relativePct": 40.2,
+          "fps": 25.8
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 3090 Ti",
+      "msrpUSD": 1999.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 64.7,
+          "fps": 131.7
+        },
+        "1440p": {
+          "relativePct": 59.7,
+          "fps": 99.9
+        },
+        "4K": {
+          "relativePct": 53.5,
+          "fps": 59.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 57.5,
+          "fps": 72.3
+        },
+        "1440p": {
+          "relativePct": 51.8,
+          "fps": 52.2
+        },
+        "4K": {
+          "relativePct": 45.8,
+          "fps": 29.4
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 4070 Ti",
+      "msrpUSD": 799.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 66.3,
+          "fps": 135.1
+        },
+        "1440p": {
+          "relativePct": 58.6,
+          "fps": 97.9
+        },
+        "4K": {
+          "relativePct": 48.6,
+          "fps": 53.9
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 62.4,
+          "fps": 78.5
+        },
+        "1440p": {
+          "relativePct": 54.8,
+          "fps": 55.3
+        },
+        "4K": {
+          "relativePct": 37.2,
+          "fps": 23.9
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 5070",
+      "msrpUSD": 549.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 65.1,
+          "fps": 132.6
+        },
+        "1440p": {
+          "relativePct": 57.6,
+          "fps": 96.4
+        },
+        "4K": {
+          "relativePct": 49,
+          "fps": 54.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 58.9,
+          "fps": 74.1
+        },
+        "1440p": {
+          "relativePct": 51.1,
+          "fps": 51.5
+        },
+        "4K": {
+          "relativePct": 35.4,
+          "fps": 22.7
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 3090",
+      "msrpUSD": 1499.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 60.3,
+          "fps": 122.9
+        },
+        "1440p": {
+          "relativePct": 54.7,
+          "fps": 91.5
+        },
+        "4K": {
+          "relativePct": 47.9,
+          "fps": 53.1
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 52.9,
+          "fps": 66.5
+        },
+        "1440p": {
+          "relativePct": 47,
+          "fps": 47.4
+        },
+        "4K": {
+          "relativePct": 41,
+          "fps": 26.3
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 4070 Super",
+      "msrpUSD": 599.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 62.2,
+          "fps": 126.7
+        },
+        "1440p": {
+          "relativePct": 54.5,
+          "fps": 91.2
+        },
+        "4K": {
+          "relativePct": 44.4,
+          "fps": 49.2
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 57.7,
+          "fps": 72.5
+        },
+        "1440p": {
+          "relativePct": 43.2,
+          "fps": 43.6
+        },
+        "4K": {
+          "relativePct": 34.4,
+          "fps": 22.1
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 6950 XT",
+      "msrpUSD": 1099.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 60.5,
+          "fps": 123.3
+        },
+        "1440p": {
+          "relativePct": 53.5,
+          "fps": 89.5
+        },
+        "4K": {
+          "relativePct": 43.6,
+          "fps": 48.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 37.3,
+          "fps": 46.9
+        },
+        "1440p": {
+          "relativePct": 32.6,
+          "fps": 32.8
+        },
+        "4K": {
+          "relativePct": 24.3,
+          "fps": 15.6
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 3080 Ti",
+      "msrpUSD": 1199.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 58.7,
+          "fps": 119.6
+        },
+        "1440p": {
+          "relativePct": 53.3,
+          "fps": 89.1
+        },
+        "4K": {
+          "relativePct": 46,
+          "fps": 51
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 51.4,
+          "fps": 64.6
+        },
+        "1440p": {
+          "relativePct": 45.8,
+          "fps": 46.2
+        },
+        "4K": {
+          "relativePct": 28.1,
+          "fps": 18
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 9070 GRE",
+      "msrpUSD": 549.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 59.2,
+          "fps": 120.6
+        },
+        "1440p": {
+          "relativePct": 51.8,
+          "fps": 86.6
+        },
+        "4K": {
+          "relativePct": 41.8,
+          "fps": 46.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 46.5,
+          "fps": 58.4
+        },
+        "1440p": {
+          "relativePct": 37,
+          "fps": 37.3
+        },
+        "4K": {
+          "relativePct": 24.2,
+          "fps": 15.5
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 7800 XT",
+      "msrpUSD": 499.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 58.1,
+          "fps": 118.4
+        },
+        "1440p": {
+          "relativePct": 50.7,
+          "fps": 84.7
+        },
+        "4K": {
+          "relativePct": 40.7,
+          "fps": 45.1
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 38.5,
+          "fps": 48.4
+        },
+        "1440p": {
+          "relativePct": 33.3,
+          "fps": 33.5
+        },
+        "4K": {
+          "relativePct": 23.5,
+          "fps": 15.1
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 6900 XT",
+      "msrpUSD": 999.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 57.4,
+          "fps": 117.1
+        },
+        "1440p": {
+          "relativePct": 50.2,
+          "fps": 83.9
+        },
+        "4K": {
+          "relativePct": 40.5,
+          "fps": 44.9
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 36,
+          "fps": 45.2
+        },
+        "1440p": {
+          "relativePct": 31.8,
+          "fps": 32.1
+        },
+        "4K": {
+          "relativePct": 23.6,
+          "fps": 15.1
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 3080",
+      "msrpUSD": 699.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 54.8,
+          "fps": 111.6
+        },
+        "1440p": {
+          "relativePct": 49,
+          "fps": 82
+        },
+        "4K": {
+          "relativePct": 39.6,
+          "fps": 43.9
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 40.8,
+          "fps": 51.3
+        },
+        "1440p": {
+          "relativePct": 34.4,
+          "fps": 34.7
+        },
+        "4K": {
+          "relativePct": 21.5,
+          "fps": 13.8
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 6800 XT",
+      "msrpUSD": 649.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 54.9,
+          "fps": 111.8
+        },
+        "1440p": {
+          "relativePct": 47.6,
+          "fps": 79.6
+        },
+        "4K": {
+          "relativePct": 38.1,
+          "fps": 42.2
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 33.4,
+          "fps": 42
+        },
+        "1440p": {
+          "relativePct": 29.4,
+          "fps": 29.6
+        },
+        "4K": {
+          "relativePct": 21.9,
+          "fps": 14.1
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 4070",
+      "msrpUSD": 549.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 54.7,
+          "fps": 111.5
+        },
+        "1440p": {
+          "relativePct": 46.5,
+          "fps": 77.8
+        },
+        "4K": {
+          "relativePct": 37.2,
+          "fps": 41.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 50.7,
+          "fps": 63.8
+        },
+        "1440p": {
+          "relativePct": 38.3,
+          "fps": 38.6
+        },
+        "4K": {
+          "relativePct": 30.1,
+          "fps": 19.3
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 5060 Ti 16GB",
+      "msrpUSD": 429.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 51.6,
+          "fps": 105.2
+        },
+        "1440p": {
+          "relativePct": 43.9,
+          "fps": 73.4
+        },
+        "4K": {
+          "relativePct": 36.3,
+          "fps": 40.2
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 44.7,
+          "fps": 56.2
+        },
+        "1440p": {
+          "relativePct": 38.6,
+          "fps": 38.9
+        },
+        "4K": {
+          "relativePct": 32.1,
+          "fps": 20.6
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 7700 XT",
+      "msrpUSD": 449.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 50.5,
+          "fps": 102.9
+        },
+        "1440p": {
+          "relativePct": 43.4,
+          "fps": 72.7
+        },
+        "4K": {
+          "relativePct": 34.3,
+          "fps": 38
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 33.1,
+          "fps": 41.6
+        },
+        "1440p": {
+          "relativePct": 25.1,
+          "fps": 25.3
+        },
+        "4K": {
+          "relativePct": 15.2,
+          "fps": 9.8
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 9060 XT 16GB",
+      "msrpUSD": 349.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 48.2,
+          "fps": 98.3
+        },
+        "1440p": {
+          "relativePct": 40.2,
+          "fps": 67.3
+        },
+        "4K": {
+          "relativePct": 31.7,
+          "fps": 35.2
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 36,
+          "fps": 45.3
+        },
+        "1440p": {
+          "relativePct": 30.8,
+          "fps": 31
+        },
+        "4K": {
+          "relativePct": 23.3,
+          "fps": 14.9
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 5060 Ti 8GB",
+      "msrpUSD": 379.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 49.3,
+          "fps": 100.4
+        },
+        "1440p": {
+          "relativePct": 41,
+          "fps": 68.6
+        },
+        "4K": {
+          "relativePct": 25.4,
+          "fps": 28.1
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 36.6,
+          "fps": 46
+        },
+        "1440p": {
+          "relativePct": 26.3,
+          "fps": 26.6
+        },
+        "4K": {
+          "relativePct": 11.3,
+          "fps": 7.2
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 3070 Ti",
+      "msrpUSD": 599.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 46.4,
+          "fps": 94.6
+        },
+        "1440p": {
+          "relativePct": 40,
+          "fps": 66.9
+        },
+        "4K": {
+          "relativePct": 23.5,
+          "fps": 26
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 33.5,
+          "fps": 42.1
+        },
+        "1440p": {
+          "relativePct": 27.5,
+          "fps": 27.7
+        },
+        "4K": {
+          "relativePct": 13.7,
+          "fps": 8.8
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 9060 XT 8GB",
+      "msrpUSD": 299.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 45.7,
+          "fps": 93.2
+        },
+        "1440p": {
+          "relativePct": 37.3,
+          "fps": 62.5
+        },
+        "4K": {
+          "relativePct": 26.8,
+          "fps": 29.7
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 26.3,
+          "fps": 33
+        },
+        "1440p": {
+          "relativePct": 20.1,
+          "fps": 20.2
+        },
+        "4K": {
+          "relativePct": 11.4,
+          "fps": 7.3
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 4060 Ti 16GB",
+      "msrpUSD": 499.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 43.8,
+          "fps": 89.3
+        },
+        "1440p": {
+          "relativePct": 36.2,
+          "fps": 60.5
+        },
+        "4K": {
+          "relativePct": 28.2,
+          "fps": 31.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 38.4,
+          "fps": 48.3
+        },
+        "1440p": {
+          "relativePct": 32.5,
+          "fps": 32.7
+        },
+        "4K": {
+          "relativePct": 26.3,
+          "fps": 16.8
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 7600 XT",
+      "msrpUSD": 329.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 50.1,
+          "fps": 102.1
+        },
+        "1440p": {
+          "relativePct": 30,
+          "fps": 50.2
+        },
+        "4K": {
+          "relativePct": 23.1,
+          "fps": 25.5
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 21.4,
+          "fps": 27
+        },
+        "1440p": {
+          "relativePct": 18,
+          "fps": 18.1
+        },
+        "4K": {
+          "relativePct": 13.2,
+          "fps": 8.5
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 3070",
+      "msrpUSD": 499.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 42.8,
+          "fps": 87.2
+        },
+        "1440p": {
+          "relativePct": 34.8,
+          "fps": 58.2
+        },
+        "4K": {
+          "relativePct": 23.6,
+          "fps": 26.2
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 31.6,
+          "fps": 39.7
+        },
+        "1440p": {
+          "relativePct": 26,
+          "fps": 26.2
+        },
+        "4K": {
+          "relativePct": 12.9,
+          "fps": 8.3
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 4060 Ti 8GB",
+      "msrpUSD": 399.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 43.2,
+          "fps": 88
+        },
+        "1440p": {
+          "relativePct": 35.2,
+          "fps": 58.9
+        },
+        "4K": {
+          "relativePct": 21.5,
+          "fps": 23.9
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 32.5,
+          "fps": 40.8
+        },
+        "1440p": {
+          "relativePct": 25.5,
+          "fps": 25.7
+        },
+        "4K": {
+          "relativePct": 12.6,
+          "fps": 8.1
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 6750 XT",
+      "msrpUSD": 549.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 40.8,
+          "fps": 83.2
+        },
+        "1440p": {
+          "relativePct": 34.4,
+          "fps": 57.6
+        },
+        "4K": {
+          "relativePct": 26.7,
+          "fps": 29.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 22.6,
+          "fps": 28.5
+        },
+        "1440p": {
+          "relativePct": 18.9,
+          "fps": 19.1
+        },
+        "4K": {
+          "relativePct": 12.7,
+          "fps": 8.1
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 5060",
+      "msrpUSD": 299.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 43.4,
+          "fps": 88.5
+        },
+        "1440p": {
+          "relativePct": 35.8,
+          "fps": 59.8
+        },
+        "4K": {
+          "relativePct": 19.6,
+          "fps": 21.8
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 32.6,
+          "fps": 40.9
+        },
+        "1440p": {
+          "relativePct": 24.4,
+          "fps": 24.6
+        },
+        "4K": {
+          "relativePct": 10.7,
+          "fps": 6.8
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 6700 XT",
+      "msrpUSD": 479.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 38.9,
+          "fps": 79.2
+        },
+        "1440p": {
+          "relativePct": 32.5,
+          "fps": 54.3
+        },
+        "4K": {
+          "relativePct": 25.3,
+          "fps": 28
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 21.6,
+          "fps": 27.1
+        },
+        "1440p": {
+          "relativePct": 17.9,
+          "fps": 18
+        },
+        "4K": {
+          "relativePct": 12.3,
+          "fps": 7.9
+        }
+      }
+    },
+    {
+      "name": "Intel Arc B580",
+      "msrpUSD": 249.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 35.1,
+          "fps": 71.5
+        },
+        "1440p": {
+          "relativePct": 30.3,
+          "fps": 50.7
+        },
+        "4K": {
+          "relativePct": 24.9,
+          "fps": 27.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 27.7,
+          "fps": 34.9
+        },
+        "1440p": {
+          "relativePct": 22.9,
+          "fps": 23.1
+        },
+        "4K": {
+          "relativePct": 5.9,
+          "fps": 3.8
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 3060 Ti",
+      "msrpUSD": 399.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 36.4,
+          "fps": 74.2
+        },
+        "1440p": {
+          "relativePct": 30.5,
+          "fps": 51
+        },
+        "4K": {
+          "relativePct": 17.5,
+          "fps": 19.4
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 26.4,
+          "fps": 33.2
+        },
+        "1440p": {
+          "relativePct": 22.2,
+          "fps": 22.3
+        },
+        "4K": {
+          "relativePct": 11.5,
+          "fps": 7.4
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 4060",
+      "msrpUSD": 299.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 35.1,
+          "fps": 71.5
+        },
+        "1440p": {
+          "relativePct": 28.4,
+          "fps": 47.6
+        },
+        "4K": {
+          "relativePct": 15.7,
+          "fps": 17.4
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 26.7,
+          "fps": 33.6
+        },
+        "1440p": {
+          "relativePct": 21.1,
+          "fps": 21.3
+        },
+        "4K": {
+          "relativePct": 10.6,
+          "fps": 6.8
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 7600",
+      "msrpUSD": 269.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 34.3,
+          "fps": 69.9
+        },
+        "1440p": {
+          "relativePct": 27.2,
+          "fps": 45.4
+        },
+        "4K": {
+          "relativePct": 16.6,
+          "fps": 18.4
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 12.7,
+          "fps": 16
+        },
+        "1440p": {
+          "relativePct": 9.3,
+          "fps": 9.3
+        },
+        "4K": {
+          "relativePct": 6.5,
+          "fps": 4.1
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 5050",
+      "msrpUSD": 249.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 34,
+          "fps": 69.3
+        },
+        "1440p": {
+          "relativePct": 27.1,
+          "fps": 45.2
+        },
+        "4K": {
+          "relativePct": 15.4,
+          "fps": 17
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 24.9,
+          "fps": 31.2
+        },
+        "1440p": {
+          "relativePct": 18.5,
+          "fps": 18.7
+        },
+        "4K": {
+          "relativePct": 9.6,
+          "fps": 6.2
+        }
+      }
+    },
+    {
+      "name": "Intel Arc B570",
+      "msrpUSD": 219.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 31.1,
+          "fps": 63.5
+        },
+        "1440p": {
+          "relativePct": 26.5,
+          "fps": 44.3
+        },
+        "4K": {
+          "relativePct": 17.7,
+          "fps": 19.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 15.7,
+          "fps": 19.8
+        },
+        "1440p": {
+          "relativePct": 12.9,
+          "fps": 13.1
+        },
+        "4K": {
+          "relativePct": 5.1,
+          "fps": 3.3
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 3060 12GB",
+      "msrpUSD": 329.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 30.2,
+          "fps": 61.5
+        },
+        "1440p": {
+          "relativePct": 25,
+          "fps": 41.9
+        },
+        "4K": {
+          "relativePct": 20,
+          "fps": 22.2
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 24.2,
+          "fps": 30.4
+        },
+        "1440p": {
+          "relativePct": 20.6,
+          "fps": 20.7
+        },
+        "4K": {
+          "relativePct": 14.8,
+          "fps": 9.5
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 6650 XT",
+      "msrpUSD": 399.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 31.5,
+          "fps": 64.3
+        },
+        "1440p": {
+          "relativePct": 22.7,
+          "fps": 38
+        },
+        "4K": {
+          "relativePct": 17.1,
+          "fps": 19
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 12.4,
+          "fps": 15.5
+        },
+        "1440p": {
+          "relativePct": 9.1,
+          "fps": 9.2
+        },
+        "4K": {
+          "relativePct": 5.3,
+          "fps": 3.4
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 6600 XT",
+      "msrpUSD": 379.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 30.8,
+          "fps": 62.7
+        },
+        "1440p": {
+          "relativePct": 24.3,
+          "fps": 40.7
+        },
+        "4K": {
+          "relativePct": 15.6,
+          "fps": 17.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 13.7,
+          "fps": 17.2
+        },
+        "1440p": {
+          "relativePct": 9,
+          "fps": 9.1
+        },
+        "4K": {
+          "relativePct": 5.4,
+          "fps": 3.4
+        }
+      }
+    },
+    {
+      "name": "Radeon RX 6600",
+      "msrpUSD": 329.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 25.5,
+          "fps": 51.9
+        },
+        "1440p": {
+          "relativePct": 14.9,
+          "fps": 24.8
+        },
+        "4K": {
+          "relativePct": 13.1,
+          "fps": 14.5
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 10.2,
+          "fps": 12.8
+        },
+        "1440p": {
+          "relativePct": 7.6,
+          "fps": 7.7
+        },
+        "4K": {
+          "relativePct": 4.8,
+          "fps": 3.1
+        }
+      }
+    },
+    {
+      "name": "GeForce RTX 3050",
+      "msrpUSD": 249.99,
+      "rasterization": {
+        "1080p": {
+          "relativePct": 21.9,
+          "fps": 44.6
+        },
+        "1440p": {
+          "relativePct": 17.8,
+          "fps": 29.8
+        },
+        "4K": {
+          "relativePct": 11.4,
+          "fps": 12.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 15.6,
+          "fps": 19.6
+        },
+        "1440p": {
+          "relativePct": 12.5,
+          "fps": 12.6
+        },
+        "4K": {
+          "relativePct": 7.1,
+          "fps": 4.5
+        }
+      }
+    }
+  ]
+}

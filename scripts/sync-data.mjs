@@ -2,9 +2,10 @@
 /**
  * Script de sincronización e ingesta de datos de GPUs, Benchmarks, Cloud y Juegos
  * Fuentes integradas:
- * 1. Geekbench 6 Compute Benchmarks (OpenCL / Vulkan): https://browser.geekbench.com/v6/compute
+ * 1. Scraper propio con Puppeteer (scripts/scrape-benchmarks.mjs → src/data/scraped/*.json):
+ *    PassMark DirectX 12 / DirectX 11, Geekbench Browser OpenCL / Vulkan y Tom's Hardware GPU Hierarchy
  * 2. Especificaciones de GPUs: https://raw.githubusercontent.com/voidful/gpu-info-api/gpu-data/gpu.json
- * 3. PassMark G3D Mark Scraper (videocardbenchmark.net)
+ * 3. PassMark DirectX 12 / DirectX 11 vía fetch + cheerio (fallback si no hay datos scrapeados)
  * 4. Vast.ai Cloud GPU Bundles API: https://cloud.vast.ai/api/v0/bundles/
  * 5. Steam Store API: https://store.steampowered.com/api/appdetails?appids={appid}
  * 6. PCGamingWiki Cargo API: https://www.pcgamingwiki.com/w/api.php?action=cargoquery
@@ -15,9 +16,11 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as cheerio from 'cheerio';
+import { normalizeGpuName, normalizeBaseGpuName, buildNameIndex } from './lib/gpu-names.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '../src/data');
+const SCRAPED_DIR = path.join(DATA_DIR, 'scraped');
 const FETCH_TIMEOUT_MS = 8000;
 
 function fetchWithTimeout(url, options = {}) {
@@ -27,59 +30,34 @@ function fetchWithTimeout(url, options = {}) {
   });
 }
 
-function normalizeGpuName(name) {
-  return name
-    .toLowerCase()
-    .replace(/nvidia|amd|intel|geforce|radeon|arc/gi, '')
-    .replace(/\bsuper\b/gi, 'super')
-    .replace(/(\d{4})s\b/gi, '$1super')
-    .replace(/(\d{4})ti\b/gi, '$1ti')
-    .replace(/[^a-z0-9]/g, '')
-    .trim();
-}
-
-function normalizeBaseGpuName(name) {
-  return name
-    .toLowerCase()
-    .replace(/\(.*?\)/g, '')
-    .replace(/\b\d+\s*gb\b/gi, '')
-    .replace(/\bgddr6x?\b/gi, '')
-    .replace(/\b50th\s*anniversary\b/gi, '')
-    .replace(/nvidia|amd|intel|geforce|radeon|arc/gi, '')
-    .replace(/\bsuper\b/gi, 'super')
-    .replace(/(\d{4})s\b/gi, '$1super')
-    .replace(/(\d{4})ti\b/gi, '$1ti')
-    .replace(/[^a-z0-9]/g, '')
-    .trim();
-}
-
-async function fetchGeekbenchCompute() {
-  console.log('⚡ [1/7] Consultando Geekbench 6 Compute Benchmarks (browser.geekbench.com/v6/compute)...');
-  const scores = new Map();
+/**
+ * Carga un archivo generado por scripts/scrape-benchmarks.mjs y devuelve un índice por nombre.
+ * Devuelve null si el archivo no existe o está vacío.
+ */
+async function loadScrapedSource(id) {
   try {
-    const res = await fetchWithTimeout('https://browser.geekbench.com/v6/compute', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; NDGPUList/2.1)' }
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const html = await res.text();
-    const $ = cheerio.load(html);
-
-    $('table.benchmark-chart-table tbody tr, .table tbody tr').each((_, row) => {
-      const name = $(row).find('td.name a, td.name').first().text().trim();
-      const scoreText = $(row).find('td.score').first().text().trim();
-      const score = parseInt(scoreText.replace(/[^0-9]/g, ''), 10);
-      if (name && !isNaN(score) && score > 0) {
-        const key = normalizeGpuName(name);
-        if (!scores.has(key) || scores.get(key) < score) {
-          scores.set(key, score);
-        }
-      }
-    });
-    console.log(`✅ Geekbench 6: ${scores.size} GPUs procesadas.`);
-  } catch (err) {
-    console.warn(`⚠️ Aviso en Geekbench scraper: ${err.message}. Usando datos locales.`);
+    const raw = await fs.readFile(path.join(SCRAPED_DIR, `${id}.json`), 'utf-8');
+    const data = JSON.parse(raw);
+    if (!Array.isArray(data.entries) || !data.entries.length) return null;
+    console.log(`🗂️  Datos scrapeados [${id}]: ${data.entries.length} entradas (${data.scrapedAt}).`);
+    return { meta: data, index: buildNameIndex(data.entries) };
+  } catch {
+    return null;
   }
-  return scores;
+}
+
+async function loadScrapedData() {
+  console.log('🕷️ [1/7] Cargando datos del scraper Puppeteer (src/data/scraped/)...');
+  const [passmark, geekbench, tomshardware, techpowerup] = await Promise.all([
+    loadScrapedSource('passmark'),
+    loadScrapedSource('geekbench'),
+    loadScrapedSource('tomshardware'),
+    loadScrapedSource('techpowerup'),
+  ]);
+  if (!passmark && !geekbench && !tomshardware && !techpowerup) {
+    console.warn('⚠️ No hay datos scrapeados. Ejecuta "npm run scrape" para generarlos.');
+  }
+  return { passmark, geekbench, tomshardware, techpowerup };
 }
 
 async function fetchVoidfulGpuSpecs() {
@@ -349,34 +327,103 @@ async function main() {
   const games = JSON.parse(existingGamesRaw);
   const appIds = games.map((g) => g.steamAppId);
 
-  const [geekbenchMap, voidfulMap, passmarkMap, vastMap, steamGamesMap, pcgwMap, protonMap] = await Promise.all([
-    fetchGeekbenchCompute(),
+  const scraped = await loadScrapedData();
+
+  const [voidfulMap, passmarkMap, vastMap, steamGamesMap, pcgwMap, protonMap] = await Promise.all([
     fetchVoidfulGpuSpecs(),
-    fetchPassmarkScores(),
+    // Fallback con fetch + cheerio sólo si el scraper Puppeteer no generó datos de PassMark
+    scraped.passmark ? Promise.resolve({ dx12Map: new Map(), dx11Map: new Map() }) : fetchPassmarkScores(),
     fetchVastAiBundles(),
     fetchSteamGames(appIds),
     fetchPCGamingWikiCargo(appIds),
     fetchProtonDbData(appIds)
   ]);
 
-  // Actualizar GPUs con Geekbench, PassMark (DirectX 12 y DirectX 11), voidful y Vast.ai Cloud Bundles
+  // Agrupar por nombre base para detectar variantes de VRAM (ej. RTX 3060 8GB vs 12GB)
+  const maxVramByBase = new Map();
+  for (const gpu of gpus) {
+    const base = normalizeBaseGpuName(gpu.name);
+    maxVramByBase.set(base, Math.max(maxVramByBase.get(base) ?? 0, gpu.vramGB));
+  }
+
+  /**
+   * Búsqueda estricta para evitar asignar datos de una variante a otra:
+   * el fallback por nombre base sólo se acepta si la entrada de la fuente no especifica VRAM
+   * y la GPU local es la variante de mayor VRAM de su familia (ej. RTX 3060 12GB, no la de 8GB).
+   */
+  function lookupStrict(index, gpu) {
+    const exact = index.exact.get(normalizeGpuName(gpu.name));
+    if (exact) return exact;
+    const base = normalizeBaseGpuName(gpu.name);
+    const candidate = index.base.get(base);
+    if (!candidate || /\d+\s*GB/i.test(candidate.name)) return undefined;
+    return gpu.vramGB === maxVramByBase.get(base) ? candidate : undefined;
+  }
+
+  const mergeStats = { passmark: 0, geekbench: 0, tomshardware: 0, techpowerup: 0 };
+
+  // Actualizar GPUs con datos scrapeados (PassMark, Geekbench, Tom's Hardware), voidful y Vast.ai Cloud Bundles
   for (const gpu of gpus) {
     const normKey = normalizeGpuName(gpu.name);
     const baseKey = normalizeBaseGpuName(gpu.name);
-    if (geekbenchMap.has(normKey)) {
-      gpu.benchmarks.geekbenchOpenCL = geekbenchMap.get(normKey);
-    } else if (geekbenchMap.has(baseKey)) {
-      gpu.benchmarks.geekbenchOpenCL = geekbenchMap.get(baseKey);
+
+    if (scraped.geekbench) {
+      const gb = lookupStrict(scraped.geekbench.index, gpu);
+      if (gb) {
+        if (gb.opencl) gpu.benchmarks.geekbenchOpenCL = gb.opencl;
+        if (gb.vulkan) gpu.benchmarks.geekbenchVulkan = gb.vulkan;
+        mergeStats.geekbench++;
+      }
     }
-    if (passmarkMap.dx12Map.has(normKey)) {
-      gpu.benchmarks.passmarkDX12 = passmarkMap.dx12Map.get(normKey);
-    } else if (passmarkMap.dx12Map.has(baseKey)) {
-      gpu.benchmarks.passmarkDX12 = passmarkMap.dx12Map.get(baseKey);
+
+    if (scraped.passmark) {
+      const pm = lookupStrict(scraped.passmark.index, gpu);
+      if (pm) {
+        if (pm.dx12) gpu.benchmarks.passmarkDX12 = pm.dx12;
+        if (pm.dx11) gpu.benchmarks.passmarkDX11 = pm.dx11;
+        mergeStats.passmark++;
+      }
+    } else {
+      if (passmarkMap.dx12Map.has(normKey)) {
+        gpu.benchmarks.passmarkDX12 = passmarkMap.dx12Map.get(normKey);
+      } else if (passmarkMap.dx12Map.has(baseKey)) {
+        gpu.benchmarks.passmarkDX12 = passmarkMap.dx12Map.get(baseKey);
+      }
+      if (passmarkMap.dx11Map.has(normKey)) {
+        gpu.benchmarks.passmarkDX11 = passmarkMap.dx11Map.get(normKey);
+      } else if (passmarkMap.dx11Map.has(baseKey)) {
+        gpu.benchmarks.passmarkDX11 = passmarkMap.dx11Map.get(baseKey);
+      }
     }
-    if (passmarkMap.dx11Map.has(normKey)) {
-      gpu.benchmarks.passmarkDX11 = passmarkMap.dx11Map.get(normKey);
-    } else if (passmarkMap.dx11Map.has(baseKey)) {
-      gpu.benchmarks.passmarkDX11 = passmarkMap.dx11Map.get(baseKey);
+
+    if (scraped.tomshardware) {
+      const th = lookupStrict(scraped.tomshardware.index, gpu);
+      if (th) {
+        gpu.tomshardware = {
+          sourceName: th.name,
+          rasterization: th.rasterization ?? null,
+          rayTracing: th.rayTracing ?? null,
+          scrapedAt: scraped.tomshardware.meta.scrapedAt,
+        };
+        mergeStats.tomshardware++;
+      } else {
+        delete gpu.tomshardware;
+      }
+    }
+
+    if (scraped.techpowerup) {
+      const tpu = scraped.techpowerup.index.exact.get(normKey) || lookupStrict(scraped.techpowerup.index, gpu);
+      if (tpu) {
+        gpu.techpowerup = {
+          url: tpu.url,
+          relativePerformancePct: tpu.relativePerformancePct,
+          tmus: tpu.tmus,
+          rops: tpu.rops,
+          shadersTmusRops: tpu.shadersTmusRops,
+          launchDate: tpu.launchDate,
+        };
+        mergeStats.techpowerup++;
+      }
     }
     if (voidfulMap.has(normKey)) {
       const spec = voidfulMap.get(normKey);
@@ -421,6 +468,11 @@ async function main() {
 
   await fs.writeFile(gpusPath, JSON.stringify(gpus, null, 2), 'utf-8');
   await fs.writeFile(gamesPath, JSON.stringify(games, null, 2), 'utf-8');
+  console.log(
+    `🔗 Fusión de datos scrapeados: PassMark ${mergeStats.passmark}/${gpus.length}, ` +
+      `Geekbench ${mergeStats.geekbench}/${gpus.length}, Tom's Hardware ${mergeStats.tomshardware}/${gpus.length}, ` +
+      `TechPowerUp ${mergeStats.techpowerup}/${gpus.length}.`
+  );
   console.log(`🎉 Sincronización completada: ${gpus.length} GPUs (con Vast.ai Bundles) y ${games.length} juegos guardados.`);
 }
 

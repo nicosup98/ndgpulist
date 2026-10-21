@@ -18,8 +18,8 @@
     "tflopsFP32": 104.8,
     "msrpUSD": 1999,
     "benchmarks": {
-      "geekbenchOpenCL": 368500,
-      "geekbenchVulkan": 352000,
+      "geekbenchOpenCL": 369002,
+      "geekbenchVulkan": 373333,
       "passmarkDX12": 179,
       "passmarkDX11": 340
     },
@@ -31,7 +31,47 @@
       "verifiedFlops": 108.1
     },
     "rawSourceSynced": true,
-    "launchDate": "2025-01-30 00:00:00"
+    "launchDate": "2025-01-30 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 5090",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 100,
+          "fps": 203.8
+        },
+        "1440p": {
+          "relativePct": 100,
+          "fps": 167.3
+        },
+        "4K": {
+          "relativePct": 100,
+          "fps": 110.8
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 100,
+          "fps": 125.7
+        },
+        "1440p": {
+          "relativePct": 100,
+          "fps": 100.8
+        },
+        "4K": {
+          "relativePct": 100,
+          "fps": 64.1
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205090",
+      "relativePerformancePct": 121.4,
+      "tmus": 680,
+      "rops": 192,
+      "shadersTmusRops": "21760 / 680 / 192",
+      "launchDate": "2025-01-30 00:00:00"
+    }
   },
   {
     "id": "rtx-5080",
@@ -52,8 +92,8 @@
     "tflopsFP32": 56.3,
     "msrpUSD": 999,
     "benchmarks": {
-      "geekbenchOpenCL": 261000,
-      "geekbenchVulkan": 254000,
+      "geekbenchOpenCL": 261460,
+      "geekbenchVulkan": 261376,
       "passmarkDX12": 145,
       "passmarkDX11": 327
     },
@@ -65,7 +105,47 @@
       "verifiedFlops": 53.2
     },
     "rawSourceSynced": true,
-    "launchDate": "2025-01-30 00:00:00"
+    "launchDate": "2025-01-30 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 5080",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 81.9,
+          "fps": 166.9
+        },
+        "1440p": {
+          "relativePct": 76.7,
+          "fps": 128.3
+        },
+        "4K": {
+          "relativePct": 69.8,
+          "fps": 77.4
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 78.2,
+          "fps": 98.3
+        },
+        "1440p": {
+          "relativePct": 73.4,
+          "fps": 74
+        },
+        "4K": {
+          "relativePct": 65.7,
+          "fps": 42.1
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205080",
+      "relativePerformancePct": 92.2,
+      "tmus": 336,
+      "rops": 112,
+      "shadersTmusRops": "10752 / 336 / 112",
+      "launchDate": "2025-01-30 00:00:00"
+    }
   },
   {
     "id": "rtx-5070-ti",
@@ -86,8 +166,8 @@
     "tflopsFP32": 43.9,
     "msrpUSD": 749,
     "benchmarks": {
-      "geekbenchOpenCL": 236400,
-      "geekbenchVulkan": 228900,
+      "geekbenchOpenCL": 237378,
+      "geekbenchVulkan": 226143,
       "passmarkDX12": 126,
       "passmarkDX11": 303
     },
@@ -99,7 +179,47 @@
       "verifiedFlops": 44.1
     },
     "rawSourceSynced": true,
-    "launchDate": "2025-02-20 00:00:00"
+    "launchDate": "2025-02-20 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 5070 Ti",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 76.2,
+          "fps": 155.4
+        },
+        "1440p": {
+          "relativePct": 69.8,
+          "fps": 116.8
+        },
+        "4K": {
+          "relativePct": 61.9,
+          "fps": 68.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 71.9,
+          "fps": 90.4
+        },
+        "1440p": {
+          "relativePct": 65.7,
+          "fps": 66.2
+        },
+        "4K": {
+          "relativePct": 57.3,
+          "fps": 36.7
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205070%20Ti",
+      "relativePerformancePct": 80.7,
+      "tmus": 280,
+      "rops": 112,
+      "shadersTmusRops": "8960 / 280 / 112",
+      "launchDate": "2025-02-20 00:00:00"
+    }
   },
   {
     "id": "rtx-5070",
@@ -120,8 +240,8 @@
     "tflopsFP32": 30.9,
     "msrpUSD": 549,
     "benchmarks": {
-      "geekbenchOpenCL": 198500,
-      "geekbenchVulkan": 191200,
+      "geekbenchOpenCL": 184346,
+      "geekbenchVulkan": 179038,
       "passmarkDX12": 106,
       "passmarkDX11": 279
     },
@@ -133,7 +253,47 @@
       "verifiedFlops": 30.4
     },
     "rawSourceSynced": true,
-    "launchDate": "2025-03-04 00:00:00"
+    "launchDate": "2025-03-04 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 5070",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 65.1,
+          "fps": 132.6
+        },
+        "1440p": {
+          "relativePct": 57.6,
+          "fps": 96.4
+        },
+        "4K": {
+          "relativePct": 49,
+          "fps": 54.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 58.9,
+          "fps": 74.1
+        },
+        "1440p": {
+          "relativePct": 51.1,
+          "fps": 51.5
+        },
+        "4K": {
+          "relativePct": 35.4,
+          "fps": 22.7
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205070",
+      "relativePerformancePct": 66,
+      "tmus": 192,
+      "rops": 80,
+      "shadersTmusRops": "6144 / 192 / 80",
+      "launchDate": "2025-03-04 00:00:00"
+    }
   },
   {
     "id": "rtx-4090",
@@ -154,8 +314,8 @@
     "tflopsFP32": 82.58,
     "msrpUSD": 1599,
     "benchmarks": {
-      "geekbenchOpenCL": 317122,
-      "geekbenchVulkan": 264500,
+      "geekbenchOpenCL": 288588,
+      "geekbenchVulkan": 311226,
       "passmarkDX12": 151,
       "passmarkDX11": 323
     },
@@ -167,7 +327,47 @@
       "verifiedFlops": 82.2
     },
     "rawSourceSynced": true,
-    "launchDate": "2022-10-12 00:00:00"
+    "launchDate": "2022-10-12 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 4090",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 90.1,
+          "fps": 183.6
+        },
+        "1440p": {
+          "relativePct": 85.7,
+          "fps": 143.4
+        },
+        "4K": {
+          "relativePct": 80.4,
+          "fps": 89.1
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 89.4,
+          "fps": 112.3
+        },
+        "1440p": {
+          "relativePct": 87,
+          "fps": 87.7
+        },
+        "4K": {
+          "relativePct": 81.4,
+          "fps": 52.2
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204090",
+      "relativePerformancePct": 100,
+      "tmus": 512,
+      "rops": 192,
+      "shadersTmusRops": "16384 / 512 / 192",
+      "launchDate": "2022-10-12 00:00:00"
+    }
   },
   {
     "id": "rtx-4080-super",
@@ -188,8 +388,8 @@
     "tflopsFP32": 52.22,
     "msrpUSD": 999,
     "benchmarks": {
-      "geekbenchOpenCL": 247850,
-      "geekbenchVulkan": 221400,
+      "geekbenchOpenCL": 227077,
+      "geekbenchVulkan": 263160,
       "passmarkDX12": 135,
       "passmarkDX11": 299
     },
@@ -201,7 +401,47 @@
       "verifiedFlops": 52.5
     },
     "rawSourceSynced": true,
-    "launchDate": "2024-01-31 00:00:00"
+    "launchDate": "2024-01-31 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 4080 Super",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 78,
+          "fps": 158.9
+        },
+        "1440p": {
+          "relativePct": 70.9,
+          "fps": 118.6
+        },
+        "4K": {
+          "relativePct": 62.6,
+          "fps": 69.4
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 75,
+          "fps": 94.3
+        },
+        "1440p": {
+          "relativePct": 68.9,
+          "fps": 69.5
+        },
+        "4K": {
+          "relativePct": 60.1,
+          "fps": 38.5
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204080%20SUPER",
+      "relativePerformancePct": 86.3,
+      "tmus": 320,
+      "rops": 112,
+      "shadersTmusRops": "10240 / 320 / 112",
+      "launchDate": "2024-01-31 00:00:00"
+    }
   },
   {
     "id": "rtx-4080",
@@ -222,8 +462,8 @@
     "tflopsFP32": 48.74,
     "msrpUSD": 1099,
     "benchmarks": {
-      "geekbenchOpenCL": 241200,
-      "geekbenchVulkan": 215800,
+      "geekbenchOpenCL": 227701,
+      "geekbenchVulkan": 263660,
       "passmarkDX12": 133,
       "passmarkDX11": 313
     },
@@ -235,7 +475,47 @@
       "verifiedFlops": 48.6
     },
     "rawSourceSynced": true,
-    "launchDate": "2022-11-16 00:00:00"
+    "launchDate": "2022-11-16 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 4080",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 77.2,
+          "fps": 157.3
+        },
+        "1440p": {
+          "relativePct": 70.3,
+          "fps": 117.5
+        },
+        "4K": {
+          "relativePct": 60.9,
+          "fps": 67.5
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 73.9,
+          "fps": 92.8
+        },
+        "1440p": {
+          "relativePct": 67.8,
+          "fps": 68.4
+        },
+        "4K": {
+          "relativePct": 58.3,
+          "fps": 37.4
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204080",
+      "relativePerformancePct": 85.5,
+      "tmus": 304,
+      "rops": 112,
+      "shadersTmusRops": "9728 / 304 / 112",
+      "launchDate": "2022-11-16 00:00:00"
+    }
   },
   {
     "id": "rtx-4070-ti-super",
@@ -256,8 +536,8 @@
     "tflopsFP32": 44.1,
     "msrpUSD": 799,
     "benchmarks": {
-      "geekbenchOpenCL": 219600,
-      "geekbenchVulkan": 198200,
+      "geekbenchOpenCL": 207388,
+      "geekbenchVulkan": 233229,
       "passmarkDX12": 120,
       "passmarkDX11": 277
     },
@@ -269,7 +549,47 @@
       "verifiedFlops": 44.4
     },
     "rawSourceSynced": true,
-    "launchDate": "2024-06-10 00:00:00"
+    "launchDate": "2024-06-10 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 4070 Ti Super",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 69.3,
+          "fps": 141.2
+        },
+        "1440p": {
+          "relativePct": 62.1,
+          "fps": 104
+        },
+        "4K": {
+          "relativePct": 52.8,
+          "fps": 58.5
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 69.9,
+          "fps": 87.9
+        },
+        "1440p": {
+          "relativePct": 59.5,
+          "fps": 60
+        },
+        "4K": {
+          "relativePct": 50.2,
+          "fps": 32.2
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204070%20Ti%20SUPER",
+      "relativePerformancePct": 76.9,
+      "tmus": 264,
+      "rops": 112,
+      "shadersTmusRops": "8448 / 264 / 112",
+      "launchDate": "2024-06-10 00:00:00"
+    }
   },
   {
     "id": "rtx-4070-ti",
@@ -290,8 +610,8 @@
     "tflopsFP32": 40.09,
     "msrpUSD": 749,
     "benchmarks": {
-      "geekbenchOpenCL": 208500,
-      "geekbenchVulkan": 186400,
+      "geekbenchOpenCL": 185636,
+      "geekbenchVulkan": 214780,
       "passmarkDX12": 115,
       "passmarkDX11": 287
     },
@@ -303,7 +623,47 @@
       "verifiedFlops": 38.2
     },
     "rawSourceSynced": true,
-    "launchDate": "2023-01-05 00:00:00"
+    "launchDate": "2023-01-05 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 4070 Ti",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 66.3,
+          "fps": 135.1
+        },
+        "1440p": {
+          "relativePct": 58.6,
+          "fps": 97.9
+        },
+        "4K": {
+          "relativePct": 48.6,
+          "fps": 53.9
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 62.4,
+          "fps": 78.5
+        },
+        "1440p": {
+          "relativePct": 54.8,
+          "fps": 55.3
+        },
+        "4K": {
+          "relativePct": 37.2,
+          "fps": 23.9
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204070%20Ti",
+      "relativePerformancePct": 72.1,
+      "tmus": 240,
+      "rops": 80,
+      "shadersTmusRops": "7680 / 240 / 80",
+      "launchDate": "2023-01-05 00:00:00"
+    }
   },
   {
     "id": "rtx-4070-super",
@@ -324,8 +684,8 @@
     "tflopsFP32": 35.48,
     "msrpUSD": 599,
     "benchmarks": {
-      "geekbenchOpenCL": 195340,
-      "geekbenchVulkan": 172800,
+      "geekbenchOpenCL": 181894,
+      "geekbenchVulkan": 201798,
       "passmarkDX12": 110,
       "passmarkDX11": 271
     },
@@ -337,7 +697,47 @@
       "verifiedFlops": 35.6
     },
     "rawSourceSynced": true,
-    "launchDate": "2024-01-17 00:00:00"
+    "launchDate": "2024-01-17 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 4070 Super",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 62.2,
+          "fps": 126.7
+        },
+        "1440p": {
+          "relativePct": 54.5,
+          "fps": 91.2
+        },
+        "4K": {
+          "relativePct": 44.4,
+          "fps": 49.2
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 57.7,
+          "fps": 72.5
+        },
+        "1440p": {
+          "relativePct": 43.2,
+          "fps": 43.6
+        },
+        "4K": {
+          "relativePct": 34.4,
+          "fps": 22.1
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204070%20SUPER",
+      "relativePerformancePct": 68.9,
+      "tmus": 224,
+      "rops": 80,
+      "shadersTmusRops": "7168 / 224 / 80",
+      "launchDate": "2024-01-17 00:00:00"
+    }
   },
   {
     "id": "rtx-4070",
@@ -358,8 +758,8 @@
     "tflopsFP32": 29.15,
     "msrpUSD": 549,
     "benchmarks": {
-      "geekbenchOpenCL": 168900,
-      "geekbenchVulkan": 154300,
+      "geekbenchOpenCL": 158617,
+      "geekbenchVulkan": 175643,
       "passmarkDX12": 103,
       "passmarkDX11": 243
     },
@@ -370,7 +770,47 @@
       "availableOffers": 1,
       "verifiedFlops": 29.3
     },
-    "rawSourceSynced": true
+    "rawSourceSynced": true,
+    "tomshardware": {
+      "sourceName": "GeForce RTX 4070",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 54.7,
+          "fps": 111.5
+        },
+        "1440p": {
+          "relativePct": 46.5,
+          "fps": 77.8
+        },
+        "4K": {
+          "relativePct": 37.2,
+          "fps": 41.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 50.7,
+          "fps": 63.8
+        },
+        "1440p": {
+          "relativePct": 38.3,
+          "fps": 38.6
+        },
+        "4K": {
+          "relativePct": 30.1,
+          "fps": 19.3
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204070",
+      "relativePerformancePct": 62.9,
+      "tmus": 184,
+      "rops": 80,
+      "shadersTmusRops": "5888 / 184 / 80",
+      "launchDate": "2023"
+    }
   },
   {
     "id": "rtx-4060-ti-16gb",
@@ -391,8 +831,8 @@
     "tflopsFP32": 22.06,
     "msrpUSD": 449,
     "benchmarks": {
-      "geekbenchOpenCL": 136400,
-      "geekbenchVulkan": 128100,
+      "geekbenchOpenCL": 114246,
+      "geekbenchVulkan": 123720,
       "passmarkDX12": 89,
       "passmarkDX11": 199
     },
@@ -404,7 +844,47 @@
       "verifiedFlops": 22.1
     },
     "rawSourceSynced": true,
-    "launchDate": "2023-07-18 00:00:00"
+    "launchDate": "2023-07-18 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 4060 Ti 16GB",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 43.8,
+          "fps": 89.3
+        },
+        "1440p": {
+          "relativePct": 36.2,
+          "fps": 60.5
+        },
+        "4K": {
+          "relativePct": 28.2,
+          "fps": 31.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 38.4,
+          "fps": 48.3
+        },
+        "1440p": {
+          "relativePct": 32.5,
+          "fps": 32.7
+        },
+        "4K": {
+          "relativePct": 26.3,
+          "fps": 16.8
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204060%20Ti%2016GB",
+      "relativePerformancePct": 50.6,
+      "tmus": 136,
+      "rops": 64,
+      "shadersTmusRops": "4352 / 136 / 64",
+      "launchDate": "2023-07-18 00:00:00"
+    }
   },
   {
     "id": "rtx-4060-ti-8gb",
@@ -436,6 +916,46 @@
       "dlperfPerDollar": 209.2,
       "availableOffers": 34,
       "verifiedFlops": 22
+    },
+    "tomshardware": {
+      "sourceName": "GeForce RTX 4060 Ti 8GB",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 43.2,
+          "fps": 88
+        },
+        "1440p": {
+          "relativePct": 35.2,
+          "fps": 58.9
+        },
+        "4K": {
+          "relativePct": 21.5,
+          "fps": 23.9
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 32.5,
+          "fps": 40.8
+        },
+        "1440p": {
+          "relativePct": 25.5,
+          "fps": 25.7
+        },
+        "4K": {
+          "relativePct": 12.6,
+          "fps": 8.1
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204060%20Ti%208GB",
+      "relativePerformancePct": 50.5,
+      "tmus": 136,
+      "rops": 64,
+      "shadersTmusRops": "4352 / 136 / 64",
+      "launchDate": "2023"
     }
   },
   {
@@ -457,8 +977,8 @@
     "tflopsFP32": 15.11,
     "msrpUSD": 299,
     "benchmarks": {
-      "geekbenchOpenCL": 105200,
-      "geekbenchVulkan": 101400,
+      "geekbenchOpenCL": 96646,
+      "geekbenchVulkan": 100710,
       "passmarkDX12": 76,
       "passmarkDX11": 174
     },
@@ -469,7 +989,47 @@
       "availableOffers": 41,
       "verifiedFlops": 15.2
     },
-    "rawSourceSynced": true
+    "rawSourceSynced": true,
+    "tomshardware": {
+      "sourceName": "GeForce RTX 4060",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 35.1,
+          "fps": 71.5
+        },
+        "1440p": {
+          "relativePct": 28.4,
+          "fps": 47.6
+        },
+        "4K": {
+          "relativePct": 15.7,
+          "fps": 17.4
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 26.7,
+          "fps": 33.6
+        },
+        "1440p": {
+          "relativePct": 21.1,
+          "fps": 21.3
+        },
+        "4K": {
+          "relativePct": 10.6,
+          "fps": 6.8
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204060",
+      "relativePerformancePct": 42.8,
+      "tmus": 96,
+      "rops": 64,
+      "shadersTmusRops": "3072 / 96 / 64",
+      "launchDate": "2023"
+    }
   },
   {
     "id": "rtx-3090-ti",
@@ -490,8 +1050,8 @@
     "tflopsFP32": 40,
     "msrpUSD": 1099,
     "benchmarks": {
-      "geekbenchOpenCL": 226800,
-      "geekbenchVulkan": 204100,
+      "geekbenchOpenCL": 184138,
+      "geekbenchVulkan": 213077,
       "passmarkDX12": 121,
       "passmarkDX11": 237
     },
@@ -503,7 +1063,47 @@
       "verifiedFlops": 36.6
     },
     "rawSourceSynced": true,
-    "launchDate": "2022-03-29 00:00:00"
+    "launchDate": "2022-03-29 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 3090 Ti",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 64.7,
+          "fps": 131.7
+        },
+        "1440p": {
+          "relativePct": 59.7,
+          "fps": 99.9
+        },
+        "4K": {
+          "relativePct": 53.5,
+          "fps": 59.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 57.5,
+          "fps": 72.3
+        },
+        "1440p": {
+          "relativePct": 51.8,
+          "fps": 52.2
+        },
+        "4K": {
+          "relativePct": 45.8,
+          "fps": 29.4
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203090%20Ti",
+      "relativePerformancePct": 75,
+      "tmus": 336,
+      "rops": 192,
+      "shadersTmusRops": "10752 / 336 / 192",
+      "launchDate": "2022-03-29 00:00:00"
+    }
   },
   {
     "id": "rtx-3090",
@@ -524,8 +1124,8 @@
     "tflopsFP32": 35.58,
     "msrpUSD": 899,
     "benchmarks": {
-      "geekbenchOpenCL": 204900,
-      "geekbenchVulkan": 186200,
+      "geekbenchOpenCL": 191142,
+      "geekbenchVulkan": 184745,
       "passmarkDX12": 109,
       "passmarkDX11": 218
     },
@@ -537,7 +1137,47 @@
       "verifiedFlops": 35.3
     },
     "rawSourceSynced": true,
-    "launchDate": "2020-09-24 00:00:00"
+    "launchDate": "2020-09-24 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 3090",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 60.3,
+          "fps": 122.9
+        },
+        "1440p": {
+          "relativePct": 54.7,
+          "fps": 91.5
+        },
+        "4K": {
+          "relativePct": 47.9,
+          "fps": 53.1
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 52.9,
+          "fps": 66.5
+        },
+        "1440p": {
+          "relativePct": 47,
+          "fps": 47.4
+        },
+        "4K": {
+          "relativePct": 41,
+          "fps": 26.3
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203090",
+      "relativePerformancePct": 68.4,
+      "tmus": 328,
+      "rops": 192,
+      "shadersTmusRops": "10496 / 328 / 192",
+      "launchDate": "2020-09-24 00:00:00"
+    }
   },
   {
     "id": "rtx-3080-ti",
@@ -558,8 +1198,8 @@
     "tflopsFP32": 34.1,
     "msrpUSD": 699,
     "benchmarks": {
-      "geekbenchOpenCL": 198400,
-      "geekbenchVulkan": 179600,
+      "geekbenchOpenCL": 179084,
+      "geekbenchVulkan": 195844,
       "passmarkDX12": 109,
       "passmarkDX11": 221
     },
@@ -571,7 +1211,47 @@
       "verifiedFlops": 35.4
     },
     "rawSourceSynced": true,
-    "launchDate": "2021-06-03 00:00:00"
+    "launchDate": "2021-06-03 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 3080 Ti",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 58.7,
+          "fps": 119.6
+        },
+        "1440p": {
+          "relativePct": 53.3,
+          "fps": 89.1
+        },
+        "4K": {
+          "relativePct": 46,
+          "fps": 51
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 51.4,
+          "fps": 64.6
+        },
+        "1440p": {
+          "relativePct": 45.8,
+          "fps": 46.2
+        },
+        "4K": {
+          "relativePct": 28.1,
+          "fps": 18
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203080%20Ti",
+      "relativePerformancePct": 68.6,
+      "tmus": 320,
+      "rops": 192,
+      "shadersTmusRops": "10240 / 320 / 192",
+      "launchDate": "2021-06-03 00:00:00"
+    }
   },
   {
     "id": "rtx-3080",
@@ -592,8 +1272,8 @@
     "tflopsFP32": 29.77,
     "msrpUSD": 499,
     "benchmarks": {
-      "geekbenchOpenCL": 177600,
-      "geekbenchVulkan": 162400,
+      "geekbenchOpenCL": 167014,
+      "geekbenchVulkan": 173445,
       "passmarkDX12": 99,
       "passmarkDX11": 207
     },
@@ -605,7 +1285,47 @@
       "verifiedFlops": 29.8
     },
     "rawSourceSynced": true,
-    "launchDate": "2020-09-17 00:00:00"
+    "launchDate": "2020-09-17 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 3080",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 54.8,
+          "fps": 111.6
+        },
+        "1440p": {
+          "relativePct": 49,
+          "fps": 82
+        },
+        "4K": {
+          "relativePct": 39.6,
+          "fps": 43.9
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 40.8,
+          "fps": 51.3
+        },
+        "1440p": {
+          "relativePct": 34.4,
+          "fps": 34.7
+        },
+        "4K": {
+          "relativePct": 21.5,
+          "fps": 13.8
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203080",
+      "relativePerformancePct": 62.1,
+      "tmus": 272,
+      "rops": 112,
+      "shadersTmusRops": "8704 / 272 / 112",
+      "launchDate": "2020-09-17 00:00:00"
+    }
   },
   {
     "id": "rtx-3070-ti",
@@ -626,8 +1346,8 @@
     "tflopsFP32": 21.75,
     "msrpUSD": 429,
     "benchmarks": {
-      "geekbenchOpenCL": 149200,
-      "geekbenchVulkan": 138400,
+      "geekbenchOpenCL": 126286,
+      "geekbenchVulkan": 139331,
       "passmarkDX12": 90,
       "passmarkDX11": 192
     },
@@ -639,7 +1359,47 @@
       "verifiedFlops": 21.8
     },
     "rawSourceSynced": true,
-    "launchDate": "2022-10-21 00:00:00"
+    "launchDate": "2022-10-21 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 3070 Ti",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 46.4,
+          "fps": 94.6
+        },
+        "1440p": {
+          "relativePct": 40,
+          "fps": 66.9
+        },
+        "4K": {
+          "relativePct": 23.5,
+          "fps": 26
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 33.5,
+          "fps": 42.1
+        },
+        "1440p": {
+          "relativePct": 27.5,
+          "fps": 27.7
+        },
+        "4K": {
+          "relativePct": 13.7,
+          "fps": 8.8
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203070%20Ti",
+      "relativePerformancePct": 53.5,
+      "tmus": 192,
+      "rops": 112,
+      "shadersTmusRops": "6144 / 192 / 112",
+      "launchDate": "2022-10-21 00:00:00"
+    }
   },
   {
     "id": "rtx-3070",
@@ -660,8 +1420,8 @@
     "tflopsFP32": 20.31,
     "msrpUSD": 369,
     "benchmarks": {
-      "geekbenchOpenCL": 136800,
-      "geekbenchVulkan": 129100,
+      "geekbenchOpenCL": 115029,
+      "geekbenchVulkan": 121177,
       "passmarkDX12": 84,
       "passmarkDX11": 183
     },
@@ -673,7 +1433,47 @@
       "verifiedFlops": 20.4
     },
     "rawSourceSynced": true,
-    "launchDate": "2020-10-29 00:00:00"
+    "launchDate": "2020-10-29 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 3070",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 42.8,
+          "fps": 87.2
+        },
+        "1440p": {
+          "relativePct": 34.8,
+          "fps": 58.2
+        },
+        "4K": {
+          "relativePct": 23.6,
+          "fps": 26.2
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 31.6,
+          "fps": 39.7
+        },
+        "1440p": {
+          "relativePct": 26,
+          "fps": 26.2
+        },
+        "4K": {
+          "relativePct": 12.9,
+          "fps": 8.3
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203070",
+      "relativePerformancePct": 48.8,
+      "tmus": 184,
+      "rops": 112,
+      "shadersTmusRops": "5888 / 184 / 112",
+      "launchDate": "2020-10-29 00:00:00"
+    }
   },
   {
     "id": "rtx-3060-ti",
@@ -694,8 +1494,8 @@
     "tflopsFP32": 16.2,
     "msrpUSD": 329,
     "benchmarks": {
-      "geekbenchOpenCL": 119600,
-      "geekbenchVulkan": 112400,
+      "geekbenchOpenCL": 110966,
+      "geekbenchVulkan": 115945,
       "passmarkDX12": 77,
       "passmarkDX11": 164
     },
@@ -707,7 +1507,47 @@
       "verifiedFlops": 16.3
     },
     "rawSourceSynced": true,
-    "launchDate": "2022-02-23 00:00:00"
+    "launchDate": "2022-02-23 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 3060 Ti",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 36.4,
+          "fps": 74.2
+        },
+        "1440p": {
+          "relativePct": 30.5,
+          "fps": 51
+        },
+        "4K": {
+          "relativePct": 17.5,
+          "fps": 19.4
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 26.4,
+          "fps": 33.2
+        },
+        "1440p": {
+          "relativePct": 22.2,
+          "fps": 22.3
+        },
+        "4K": {
+          "relativePct": 11.5,
+          "fps": 7.4
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203060%20Ti",
+      "relativePerformancePct": 45.5,
+      "tmus": 152,
+      "rops": 112,
+      "shadersTmusRops": "4864 / 152 / 112",
+      "launchDate": "2022-02-23 00:00:00"
+    }
   },
   {
     "id": "rtx-3060-12gb",
@@ -728,8 +1568,8 @@
     "tflopsFP32": 12.74,
     "msrpUSD": 279,
     "benchmarks": {
-      "geekbenchOpenCL": 92500,
-      "geekbenchVulkan": 89200,
+      "geekbenchOpenCL": 88251,
+      "geekbenchVulkan": 87049,
       "passmarkDX12": 68,
       "passmarkDX11": 127
     },
@@ -741,7 +1581,47 @@
       "verifiedFlops": 12.8
     },
     "rawSourceSynced": true,
-    "launchDate": "2021-09-01 00:00:00"
+    "launchDate": "2021-09-01 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 3060 12GB",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 30.2,
+          "fps": 61.5
+        },
+        "1440p": {
+          "relativePct": 25,
+          "fps": 41.9
+        },
+        "4K": {
+          "relativePct": 20,
+          "fps": 22.2
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 24.2,
+          "fps": 30.4
+        },
+        "1440p": {
+          "relativePct": 20.6,
+          "fps": 20.7
+        },
+        "4K": {
+          "relativePct": 14.8,
+          "fps": 9.5
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203060%2012GB",
+      "relativePerformancePct": 38.4,
+      "tmus": 112,
+      "rops": 80,
+      "shadersTmusRops": "3584 / 112 / 80",
+      "launchDate": "2021-09-01 00:00:00"
+    }
   },
   {
     "id": "rtx-2060-super",
@@ -762,8 +1642,8 @@
     "tflopsFP32": 7.18,
     "msrpUSD": 229,
     "benchmarks": {
-      "geekbenchOpenCL": 84100,
-      "geekbenchVulkan": 79800,
+      "geekbenchOpenCL": 74730,
+      "geekbenchVulkan": 85504,
       "passmarkDX12": 61,
       "passmarkDX11": 132
     },
@@ -775,7 +1655,15 @@
       "verifiedFlops": 7.2
     },
     "rawSourceSynced": true,
-    "launchDate": "2019-07-09 00:00:00"
+    "launchDate": "2019-07-09 00:00:00",
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%202060%20SUPER",
+      "relativePerformancePct": 35,
+      "tmus": 68,
+      "rops": 112,
+      "shadersTmusRops": "2176 / 68 / 112",
+      "launchDate": "2019-07-09 00:00:00"
+    }
   },
   {
     "id": "gtx-1660-super",
@@ -796,8 +1684,8 @@
     "tflopsFP32": 5.03,
     "msrpUSD": 179,
     "benchmarks": {
-      "geekbenchOpenCL": 59400,
-      "geekbenchVulkan": 57200,
+      "geekbenchOpenCL": 54276,
+      "geekbenchVulkan": 55678,
       "passmarkDX12": 51,
       "passmarkDX11": 104
     },
@@ -809,7 +1697,15 @@
       "verifiedFlops": 5
     },
     "rawSourceSynced": true,
-    "launchDate": "2019-10-29 00:00:00"
+    "launchDate": "2019-10-29 00:00:00",
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20GTX%201660%20SUPER",
+      "relativePerformancePct": 27.5,
+      "tmus": 44,
+      "rops": 80,
+      "shadersTmusRops": "1408 / 44 / 80",
+      "launchDate": "2019-10-29 00:00:00"
+    }
   },
   {
     "id": "rx-7900-xtx",
@@ -830,8 +1726,8 @@
     "tflopsFP32": 61.4,
     "msrpUSD": 899,
     "benchmarks": {
-      "geekbenchOpenCL": 228900,
-      "geekbenchVulkan": 241500,
+      "geekbenchOpenCL": 215743,
+      "geekbenchVulkan": 212459,
       "passmarkDX12": 134,
       "passmarkDX11": 355
     },
@@ -841,6 +1737,46 @@
       "dlperfPerDollar": 201.4,
       "availableOffers": 31,
       "verifiedFlops": 61.4
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 7900 XTX",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 79.3,
+          "fps": 161.5
+        },
+        "1440p": {
+          "relativePct": 73.1,
+          "fps": 122.3
+        },
+        "4K": {
+          "relativePct": 63.7,
+          "fps": 70.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 56,
+          "fps": 70.4
+        },
+        "1440p": {
+          "relativePct": 50.1,
+          "fps": 50.5
+        },
+        "4K": {
+          "relativePct": 42.6,
+          "fps": 27.3
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207900%20XTX",
+      "relativePerformancePct": 81.6,
+      "tmus": 192,
+      "rops": 192,
+      "shadersTmusRops": "6144 / 192 / 192",
+      "launchDate": "2022"
     }
   },
   {
@@ -862,8 +1798,8 @@
     "tflopsFP32": 51.6,
     "msrpUSD": 699,
     "benchmarks": {
-      "geekbenchOpenCL": 196400,
-      "geekbenchVulkan": 208100,
+      "geekbenchOpenCL": 188298,
+      "geekbenchVulkan": 204248,
       "passmarkDX12": 112,
       "passmarkDX11": 341
     },
@@ -873,6 +1809,46 @@
       "dlperfPerDollar": 200.8,
       "availableOffers": 18,
       "verifiedFlops": 51.6
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 7900 XT",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 71.3,
+          "fps": 145.4
+        },
+        "1440p": {
+          "relativePct": 64.6,
+          "fps": 108
+        },
+        "4K": {
+          "relativePct": 54,
+          "fps": 59.8
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 49.1,
+          "fps": 61.7
+        },
+        "1440p": {
+          "relativePct": 43.1,
+          "fps": 43.5
+        },
+        "4K": {
+          "relativePct": 36,
+          "fps": 23.1
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207900%20XT",
+      "relativePerformancePct": 70.8,
+      "tmus": 168,
+      "rops": 112,
+      "shadersTmusRops": "5376 / 168 / 112",
+      "launchDate": "2022"
     }
   },
   {
@@ -894,8 +1870,8 @@
     "tflopsFP32": 46,
     "msrpUSD": 549,
     "benchmarks": {
-      "geekbenchOpenCL": 172100,
-      "geekbenchVulkan": 184200,
+      "geekbenchOpenCL": 184272,
+      "geekbenchVulkan": 87077,
       "passmarkDX12": 111,
       "passmarkDX11": 300
     },
@@ -905,6 +1881,14 @@
       "dlperfPerDollar": 197.6,
       "availableOffers": 14,
       "verifiedFlops": 46
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207900%20GRE",
+      "relativePerformancePct": 60.4,
+      "tmus": 160,
+      "rops": 112,
+      "shadersTmusRops": "5120 / 160 / 112",
+      "launchDate": "2024"
     }
   },
   {
@@ -926,8 +1910,8 @@
     "tflopsFP32": 37.3,
     "msrpUSD": 489,
     "benchmarks": {
-      "geekbenchOpenCL": 154800,
-      "geekbenchVulkan": 169400,
+      "geekbenchOpenCL": 162065,
+      "geekbenchVulkan": 143060,
       "passmarkDX12": 96,
       "passmarkDX11": 250
     },
@@ -937,6 +1921,46 @@
       "dlperfPerDollar": 197.8,
       "availableOffers": 22,
       "verifiedFlops": 37.3
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 7800 XT",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 58.1,
+          "fps": 118.4
+        },
+        "1440p": {
+          "relativePct": 50.7,
+          "fps": 84.7
+        },
+        "4K": {
+          "relativePct": 40.7,
+          "fps": 45.1
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 38.5,
+          "fps": 48.4
+        },
+        "1440p": {
+          "relativePct": 33.3,
+          "fps": 33.5
+        },
+        "4K": {
+          "relativePct": 23.5,
+          "fps": 15.1
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207800%20XT",
+      "relativePerformancePct": 58,
+      "tmus": 120,
+      "rops": 112,
+      "shadersTmusRops": "3840 / 120 / 112",
+      "launchDate": "2023"
     }
   },
   {
@@ -958,8 +1982,8 @@
     "tflopsFP32": 35.2,
     "msrpUSD": 399,
     "benchmarks": {
-      "geekbenchOpenCL": 135200,
-      "geekbenchVulkan": 144600,
+      "geekbenchOpenCL": 142921,
+      "geekbenchVulkan": 72141,
       "passmarkDX12": 83,
       "passmarkDX11": 232
     },
@@ -969,6 +1993,46 @@
       "dlperfPerDollar": 195,
       "availableOffers": 12,
       "verifiedFlops": 35.2
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 7700 XT",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 50.5,
+          "fps": 102.9
+        },
+        "1440p": {
+          "relativePct": 43.4,
+          "fps": 72.7
+        },
+        "4K": {
+          "relativePct": 34.3,
+          "fps": 38
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 33.1,
+          "fps": 41.6
+        },
+        "1440p": {
+          "relativePct": 25.1,
+          "fps": 25.3
+        },
+        "4K": {
+          "relativePct": 15.2,
+          "fps": 9.8
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207700%20XT",
+      "relativePerformancePct": 46,
+      "tmus": 108,
+      "rops": 80,
+      "shadersTmusRops": "3456 / 108 / 80",
+      "launchDate": "2023"
     }
   },
   {
@@ -990,8 +2054,8 @@
     "tflopsFP32": 22.6,
     "msrpUSD": 319,
     "benchmarks": {
-      "geekbenchOpenCL": 98400,
-      "geekbenchVulkan": 106800,
+      "geekbenchOpenCL": 90617,
+      "geekbenchVulkan": 79363,
       "passmarkDX12": 67,
       "passmarkDX11": 167
     },
@@ -1001,6 +2065,46 @@
       "dlperfPerDollar": 181.7,
       "availableOffers": 15,
       "verifiedFlops": 22.6
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 7600 XT",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 50.1,
+          "fps": 102.1
+        },
+        "1440p": {
+          "relativePct": 30,
+          "fps": 50.2
+        },
+        "4K": {
+          "relativePct": 23.1,
+          "fps": 25.5
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 21.4,
+          "fps": 27
+        },
+        "1440p": {
+          "relativePct": 18,
+          "fps": 18.1
+        },
+        "4K": {
+          "relativePct": 13.2,
+          "fps": 8.5
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207600%20XT",
+      "relativePerformancePct": 37.4,
+      "tmus": 64,
+      "rops": 64,
+      "shadersTmusRops": "2048 / 64 / 64",
+      "launchDate": "2024"
     }
   },
   {
@@ -1022,8 +2126,8 @@
     "tflopsFP32": 21.75,
     "msrpUSD": 259,
     "benchmarks": {
-      "geekbenchOpenCL": 93200,
-      "geekbenchVulkan": 101400,
+      "geekbenchOpenCL": 87726,
+      "geekbenchVulkan": 93634,
       "passmarkDX12": 56,
       "passmarkDX11": 172
     },
@@ -1033,6 +2137,46 @@
       "dlperfPerDollar": 194,
       "availableOffers": 11,
       "verifiedFlops": 21.7
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 7600",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 34.3,
+          "fps": 69.9
+        },
+        "1440p": {
+          "relativePct": 27.2,
+          "fps": 45.4
+        },
+        "4K": {
+          "relativePct": 16.6,
+          "fps": 18.4
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 12.7,
+          "fps": 16
+        },
+        "1440p": {
+          "relativePct": 9.3,
+          "fps": 9.3
+        },
+        "4K": {
+          "relativePct": 6.5,
+          "fps": 4.1
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207600",
+      "relativePerformancePct": 34.2,
+      "tmus": 64,
+      "rops": 64,
+      "shadersTmusRops": "2048 / 64 / 64",
+      "launchDate": "2023"
     }
   },
   {
@@ -1054,8 +2198,8 @@
     "tflopsFP32": 23.65,
     "msrpUSD": 599,
     "benchmarks": {
-      "geekbenchOpenCL": 176400,
-      "geekbenchVulkan": 188900,
+      "geekbenchOpenCL": 200466,
+      "geekbenchVulkan": 170703,
       "passmarkDX12": 115,
       "passmarkDX11": 298
     },
@@ -1065,6 +2209,46 @@
       "dlperfPerDollar": 191.2,
       "availableOffers": 9,
       "verifiedFlops": 23.7
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 6950 XT",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 60.5,
+          "fps": 123.3
+        },
+        "1440p": {
+          "relativePct": 53.5,
+          "fps": 89.5
+        },
+        "4K": {
+          "relativePct": 43.6,
+          "fps": 48.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 37.3,
+          "fps": 46.9
+        },
+        "1440p": {
+          "relativePct": 32.6,
+          "fps": 32.8
+        },
+        "4K": {
+          "relativePct": 24.3,
+          "fps": 15.6
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206950%20XT",
+      "relativePerformancePct": 69.5,
+      "tmus": 160,
+      "rops": 112,
+      "shadersTmusRops": "5120 / 160 / 112",
+      "launchDate": "2022"
     }
   },
   {
@@ -1086,8 +2270,8 @@
     "tflopsFP32": 20.74,
     "msrpUSD": 469,
     "benchmarks": {
-      "geekbenchOpenCL": 148200,
-      "geekbenchVulkan": 159800,
+      "geekbenchOpenCL": 169600,
+      "geekbenchVulkan": 159219,
       "passmarkDX12": 100,
       "passmarkDX11": 265
     },
@@ -1097,6 +2281,46 @@
       "dlperfPerDollar": 189.3,
       "availableOffers": 17,
       "verifiedFlops": 20.8
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 6800 XT",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 54.9,
+          "fps": 111.8
+        },
+        "1440p": {
+          "relativePct": 47.6,
+          "fps": 79.6
+        },
+        "4K": {
+          "relativePct": 38.1,
+          "fps": 42.2
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 33.4,
+          "fps": 42
+        },
+        "1440p": {
+          "relativePct": 29.4,
+          "fps": 29.6
+        },
+        "4K": {
+          "relativePct": 21.9,
+          "fps": 14.1
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206800%20XT",
+      "relativePerformancePct": 61.1,
+      "tmus": 144,
+      "rops": 112,
+      "shadersTmusRops": "4608 / 144 / 112",
+      "launchDate": "2020"
     }
   },
   {
@@ -1118,8 +2342,8 @@
     "tflopsFP32": 16.17,
     "msrpUSD": 389,
     "benchmarks": {
-      "geekbenchOpenCL": 131400,
-      "geekbenchVulkan": 141200,
+      "geekbenchOpenCL": 145264,
+      "geekbenchVulkan": 154592,
       "passmarkDX12": 90,
       "passmarkDX11": 212
     },
@@ -1129,6 +2353,14 @@
       "dlperfPerDollar": 189.2,
       "availableOffers": 14,
       "verifiedFlops": 16.2
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206800",
+      "relativePerformancePct": 55.5,
+      "tmus": 120,
+      "rops": 112,
+      "shadersTmusRops": "3840 / 120 / 112",
+      "launchDate": "2020"
     }
   },
   {
@@ -1150,8 +2382,8 @@
     "tflopsFP32": 13.31,
     "msrpUSD": 349,
     "benchmarks": {
-      "geekbenchOpenCL": 111800,
-      "geekbenchVulkan": 119400,
+      "geekbenchOpenCL": 118781,
+      "geekbenchVulkan": 108311,
       "passmarkDX12": 81,
       "passmarkDX11": 180
     },
@@ -1161,6 +2393,46 @@
       "dlperfPerDollar": 189.1,
       "availableOffers": 10,
       "verifiedFlops": 13.3
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 6750 XT",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 40.8,
+          "fps": 83.2
+        },
+        "1440p": {
+          "relativePct": 34.4,
+          "fps": 57.6
+        },
+        "4K": {
+          "relativePct": 26.7,
+          "fps": 29.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 22.6,
+          "fps": 28.5
+        },
+        "1440p": {
+          "relativePct": 18.9,
+          "fps": 19.1
+        },
+        "4K": {
+          "relativePct": 12.7,
+          "fps": 8.1
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206750%20XT",
+      "relativePerformancePct": 46.8,
+      "tmus": 80,
+      "rops": 80,
+      "shadersTmusRops": "2560 / 80 / 80",
+      "launchDate": "2022"
     }
   },
   {
@@ -1182,8 +2454,8 @@
     "tflopsFP32": 13.21,
     "msrpUSD": 319,
     "benchmarks": {
-      "geekbenchOpenCL": 103900,
-      "geekbenchVulkan": 112500,
+      "geekbenchOpenCL": 109117,
+      "geekbenchVulkan": 102003,
       "passmarkDX12": 77,
       "passmarkDX11": 172
     },
@@ -1193,6 +2465,46 @@
       "dlperfPerDollar": 195,
       "availableOffers": 16,
       "verifiedFlops": 13.2
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 6700 XT",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 38.9,
+          "fps": 79.2
+        },
+        "1440p": {
+          "relativePct": 32.5,
+          "fps": 54.3
+        },
+        "4K": {
+          "relativePct": 25.3,
+          "fps": 28
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 21.6,
+          "fps": 27.1
+        },
+        "1440p": {
+          "relativePct": 17.9,
+          "fps": 18
+        },
+        "4K": {
+          "relativePct": 12.3,
+          "fps": 7.9
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206700%20XT",
+      "relativePerformancePct": 44.2,
+      "tmus": 80,
+      "rops": 80,
+      "shadersTmusRops": "2560 / 80 / 80",
+      "launchDate": "2021"
     }
   },
   {
@@ -1214,8 +2526,8 @@
     "tflopsFP32": 10.6,
     "msrpUSD": 239,
     "benchmarks": {
-      "geekbenchOpenCL": 85400,
-      "geekbenchVulkan": 91800,
+      "geekbenchOpenCL": 79491,
+      "geekbenchVulkan": 78265,
       "passmarkDX12": 60,
       "passmarkDX11": 164
     },
@@ -1225,6 +2537,46 @@
       "dlperfPerDollar": 190,
       "availableOffers": 12,
       "verifiedFlops": 10.6
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 6600 XT",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 30.8,
+          "fps": 62.7
+        },
+        "1440p": {
+          "relativePct": 24.3,
+          "fps": 40.7
+        },
+        "4K": {
+          "relativePct": 15.6,
+          "fps": 17.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 13.7,
+          "fps": 17.2
+        },
+        "1440p": {
+          "relativePct": 9,
+          "fps": 9.1
+        },
+        "4K": {
+          "relativePct": 5.4,
+          "fps": 3.4
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206600%20XT",
+      "relativePerformancePct": 34,
+      "tmus": 64,
+      "rops": 64,
+      "shadersTmusRops": "2048 / 64 / 64",
+      "launchDate": "2021"
     }
   },
   {
@@ -1246,8 +2598,8 @@
     "tflopsFP32": 8.93,
     "msrpUSD": 199,
     "benchmarks": {
-      "geekbenchOpenCL": 76800,
-      "geekbenchVulkan": 81500,
+      "geekbenchOpenCL": 72182,
+      "geekbenchVulkan": 69638,
       "passmarkDX12": 51,
       "passmarkDX11": 153
     },
@@ -1257,6 +2609,46 @@
       "dlperfPerDollar": 191.4,
       "availableOffers": 15,
       "verifiedFlops": 8.9
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 6600",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 25.5,
+          "fps": 51.9
+        },
+        "1440p": {
+          "relativePct": 14.9,
+          "fps": 24.8
+        },
+        "4K": {
+          "relativePct": 13.1,
+          "fps": 14.5
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 10.2,
+          "fps": 12.8
+        },
+        "1440p": {
+          "relativePct": 7.6,
+          "fps": 7.7
+        },
+        "4K": {
+          "relativePct": 4.8,
+          "fps": 3.1
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206600",
+      "relativePerformancePct": 29.4,
+      "tmus": 56,
+      "rops": 64,
+      "shadersTmusRops": "1792 / 56 / 64",
+      "launchDate": "2021"
     }
   },
   {
@@ -1278,8 +2670,8 @@
     "tflopsFP32": 9.75,
     "msrpUSD": 189,
     "benchmarks": {
-      "geekbenchOpenCL": 78200,
-      "geekbenchVulkan": 83900,
+      "geekbenchOpenCL": 85114,
+      "geekbenchVulkan": 81255,
       "passmarkDX12": 63,
       "passmarkDX11": 115
     },
@@ -1289,6 +2681,14 @@
       "dlperfPerDollar": 180,
       "availableOffers": 8,
       "verifiedFlops": 9.8
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%205700%20XT",
+      "relativePerformancePct": 36,
+      "tmus": 80,
+      "rops": 112,
+      "shadersTmusRops": "2560 / 80 / 112",
+      "launchDate": "2019"
     }
   },
   {
@@ -1321,6 +2721,46 @@
       "dlperfPerDollar": 225.5,
       "availableOffers": 14,
       "verifiedFlops": 14.7
+    },
+    "tomshardware": {
+      "sourceName": "Intel Arc B580",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 35.1,
+          "fps": 71.5
+        },
+        "1440p": {
+          "relativePct": 30.3,
+          "fps": 50.7
+        },
+        "4K": {
+          "relativePct": 24.9,
+          "fps": 27.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 27.7,
+          "fps": 34.9
+        },
+        "1440p": {
+          "relativePct": 22.9,
+          "fps": 23.1
+        },
+        "4K": {
+          "relativePct": 5.9,
+          "fps": 3.8
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Intel%20Arc%20B580",
+      "relativePerformancePct": 45.9,
+      "tmus": 80,
+      "rops": 80,
+      "shadersTmusRops": "2560 / 80 / 80",
+      "launchDate": "2024"
     }
   },
   {
@@ -1353,6 +2793,46 @@
       "dlperfPerDollar": 235.6,
       "availableOffers": 9,
       "verifiedFlops": 12.7
+    },
+    "tomshardware": {
+      "sourceName": "Intel Arc B570",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 31.1,
+          "fps": 63.5
+        },
+        "1440p": {
+          "relativePct": 26.5,
+          "fps": 44.3
+        },
+        "4K": {
+          "relativePct": 17.7,
+          "fps": 19.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 15.7,
+          "fps": 19.8
+        },
+        "1440p": {
+          "relativePct": 12.9,
+          "fps": 13.1
+        },
+        "4K": {
+          "relativePct": 5.1,
+          "fps": 3.3
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Intel%20Arc%20B570",
+      "relativePerformancePct": 41,
+      "tmus": 72,
+      "rops": 64,
+      "shadersTmusRops": "2304 / 72 / 64",
+      "launchDate": "2025"
     }
   },
   {
@@ -1385,6 +2865,14 @@
       "dlperfPerDollar": 224,
       "availableOffers": 19,
       "verifiedFlops": 19.7
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Intel%20Arc%20A770%2016GB",
+      "relativePerformancePct": 42.8,
+      "tmus": 128,
+      "rops": 112,
+      "shadersTmusRops": "4096 / 128 / 112",
+      "launchDate": "2022"
     }
   },
   {
@@ -1417,6 +2905,14 @@
       "dlperfPerDollar": 232.5,
       "availableOffers": 11,
       "verifiedFlops": 17.2
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Intel%20Arc%20A750",
+      "relativePerformancePct": 39.8,
+      "tmus": 112,
+      "rops": 112,
+      "shadersTmusRops": "3584 / 112 / 112",
+      "launchDate": "2022"
     }
   },
   {
@@ -1438,8 +2934,8 @@
     "tflopsFP32": 23.7,
     "msrpUSD": 429,
     "benchmarks": {
-      "geekbenchOpenCL": 158400,
-      "geekbenchVulkan": 152100,
+      "geekbenchOpenCL": 136742,
+      "geekbenchVulkan": 130799,
       "passmarkDX12": 89,
       "passmarkDX11": 218
     },
@@ -1451,7 +2947,47 @@
       "verifiedFlops": 23.7
     },
     "rawSourceSynced": true,
-    "launchDate": "2025-04-16 00:00:00"
+    "launchDate": "2025-04-16 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 5060 Ti 16GB",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 51.6,
+          "fps": 105.2
+        },
+        "1440p": {
+          "relativePct": 43.9,
+          "fps": 73.4
+        },
+        "4K": {
+          "relativePct": 36.3,
+          "fps": 40.2
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 44.7,
+          "fps": 56.2
+        },
+        "1440p": {
+          "relativePct": 38.6,
+          "fps": 38.9
+        },
+        "4K": {
+          "relativePct": 32.1,
+          "fps": 20.6
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205060%20Ti%2016GB",
+      "relativePerformancePct": 52.7,
+      "tmus": 144,
+      "rops": 64,
+      "shadersTmusRops": "4608 / 144 / 64",
+      "launchDate": "2025-04-16 00:00:00"
+    }
   },
   {
     "id": "rtx-5060",
@@ -1472,8 +3008,8 @@
     "tflopsFP32": 19.2,
     "msrpUSD": 299,
     "benchmarks": {
-      "geekbenchOpenCL": 128900,
-      "geekbenchVulkan": 124200,
+      "geekbenchOpenCL": 119974,
+      "geekbenchVulkan": 114681,
       "passmarkDX12": 77,
       "passmarkDX11": 200
     },
@@ -1485,7 +3021,47 @@
       "verifiedFlops": 19
     },
     "rawSourceSynced": true,
-    "launchDate": "2025-05-19 00:00:00"
+    "launchDate": "2025-05-19 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 5060",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 43.4,
+          "fps": 88.5
+        },
+        "1440p": {
+          "relativePct": 35.8,
+          "fps": 59.8
+        },
+        "4K": {
+          "relativePct": 19.6,
+          "fps": 21.8
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 32.6,
+          "fps": 40.9
+        },
+        "1440p": {
+          "relativePct": 24.4,
+          "fps": 24.6
+        },
+        "4K": {
+          "relativePct": 10.7,
+          "fps": 6.8
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205060",
+      "relativePerformancePct": 45.9,
+      "tmus": 120,
+      "rops": 64,
+      "shadersTmusRops": "3840 / 120 / 64",
+      "launchDate": "2025-05-19 00:00:00"
+    }
   },
   {
     "id": "rtx-5050",
@@ -1506,8 +3082,8 @@
     "tflopsFP32": 13.16,
     "msrpUSD": 249,
     "benchmarks": {
-      "geekbenchOpenCL": 96800,
-      "geekbenchVulkan": 93400,
+      "geekbenchOpenCL": 93466,
+      "geekbenchVulkan": 88062,
       "passmarkDX12": 65,
       "passmarkDX11": 152
     },
@@ -1519,7 +3095,47 @@
       "verifiedFlops": 13.2
     },
     "rawSourceSynced": true,
-    "launchDate": "2025-07-01 00:00:00"
+    "launchDate": "2025-07-01 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 5050",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 34,
+          "fps": 69.3
+        },
+        "1440p": {
+          "relativePct": 27.1,
+          "fps": 45.2
+        },
+        "4K": {
+          "relativePct": 15.4,
+          "fps": 17
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 24.9,
+          "fps": 31.2
+        },
+        "1440p": {
+          "relativePct": 18.5,
+          "fps": 18.7
+        },
+        "4K": {
+          "relativePct": 9.6,
+          "fps": 6.2
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205050",
+      "relativePerformancePct": 37.5,
+      "tmus": 80,
+      "rops": 64,
+      "shadersTmusRops": "2560 / 80 / 64",
+      "launchDate": "2025-07-01 00:00:00"
+    }
   },
   {
     "id": "rx-590",
@@ -1551,6 +3167,14 @@
       "dlperfPerDollar": 136,
       "availableOffers": 6,
       "verifiedFlops": 7.1
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%20590",
+      "relativePerformancePct": 23.8,
+      "tmus": 72,
+      "rops": 112,
+      "shadersTmusRops": "2304 / 72 / 112",
+      "launchDate": "2018"
     }
   },
   {
@@ -1583,6 +3207,14 @@
       "dlperfPerDollar": 152.5,
       "availableOffers": 14,
       "verifiedFlops": 6.2
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%20580%208GB",
+      "relativePerformancePct": 22.5,
+      "tmus": 72,
+      "rops": 112,
+      "shadersTmusRops": "2304 / 72 / 112",
+      "launchDate": "2017"
     }
   },
   {
@@ -1615,6 +3247,14 @@
       "dlperfPerDollar": 130,
       "availableOffers": 9,
       "verifiedFlops": 5.1
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%20570%208GB",
+      "relativePerformancePct": 19.8,
+      "tmus": 64,
+      "rops": 112,
+      "shadersTmusRops": "2048 / 64 / 112",
+      "launchDate": "2017"
     }
   },
   {
@@ -1636,10 +3276,18 @@
     "tflopsFP32": 2.61,
     "msrpUSD": 69,
     "benchmarks": {
-      "geekbenchOpenCL": 21200,
-      "geekbenchVulkan": 20100,
+      "geekbenchOpenCL": 17963,
+      "geekbenchVulkan": 19607,
       "passmarkDX12": 21,
       "passmarkDX11": 31
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%20560%204GB",
+      "relativePerformancePct": 10.8,
+      "tmus": 32,
+      "rops": 64,
+      "shadersTmusRops": "1024 / 32 / 64",
+      "launchDate": "2017"
     }
   },
   {
@@ -1661,10 +3309,18 @@
     "tflopsFP32": 1.21,
     "msrpUSD": 59,
     "benchmarks": {
-      "geekbenchOpenCL": 13400,
-      "geekbenchVulkan": 12800,
+      "geekbenchOpenCL": 11063,
+      "geekbenchVulkan": 12505,
       "passmarkDX12": 14,
       "passmarkDX11": 20
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%20550%204GB",
+      "relativePerformancePct": 7.2,
+      "tmus": 16,
+      "rops": 64,
+      "shadersTmusRops": "512 / 16 / 64",
+      "launchDate": "2017"
     }
   },
   {
@@ -1697,6 +3353,14 @@
       "dlperfPerDollar": 140,
       "availableOffers": 5,
       "verifiedFlops": 5.8
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%20480%208GB",
+      "relativePerformancePct": 21.3,
+      "tmus": 72,
+      "rops": 112,
+      "shadersTmusRops": "2304 / 72 / 112",
+      "launchDate": "2016"
     }
   },
   {
@@ -1722,6 +3386,14 @@
       "geekbenchVulkan": 33400,
       "passmarkDX12": 36,
       "passmarkDX11": 51
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%20470%204GB",
+      "relativePerformancePct": 18.7,
+      "tmus": 64,
+      "rops": 112,
+      "shadersTmusRops": "2048 / 64 / 112",
+      "launchDate": "2016"
     }
   },
   {
@@ -1743,10 +3415,18 @@
     "tflopsFP32": 2.15,
     "msrpUSD": 65,
     "benchmarks": {
-      "geekbenchOpenCL": 18900,
-      "geekbenchVulkan": 17600,
+      "geekbenchOpenCL": 17990,
+      "geekbenchVulkan": 20633,
       "passmarkDX12": 20,
       "passmarkDX11": 29
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%20460%204GB",
+      "relativePerformancePct": 10.5,
+      "tmus": 28,
+      "rops": 64,
+      "shadersTmusRops": "896 / 28 / 64",
+      "launchDate": "2016"
     }
   },
   {
@@ -1772,6 +3452,14 @@
       "geekbenchVulkan": 39200,
       "passmarkDX12": 44,
       "passmarkDX11": 57
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R9%20Fury%20X",
+      "relativePerformancePct": 23.2,
+      "tmus": 128,
+      "rops": 192,
+      "shadersTmusRops": "4096 / 128 / 192",
+      "launchDate": "2015"
     }
   },
   {
@@ -1797,6 +3485,14 @@
       "geekbenchVulkan": 31800,
       "passmarkDX12": 40,
       "passmarkDX11": 57
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R9%20390X%208GB",
+      "relativePerformancePct": 20.4,
+      "tmus": 88,
+      "rops": 192,
+      "shadersTmusRops": "2816 / 88 / 192",
+      "launchDate": "2015"
     }
   },
   {
@@ -1822,6 +3518,14 @@
       "geekbenchVulkan": 29500,
       "passmarkDX12": 39,
       "passmarkDX11": 55
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R9%20390%208GB",
+      "relativePerformancePct": 19.7,
+      "tmus": 80,
+      "rops": 192,
+      "shadersTmusRops": "2560 / 80 / 192",
+      "launchDate": "2015"
     }
   },
   {
@@ -1847,6 +3551,14 @@
       "geekbenchVulkan": 23900,
       "passmarkDX12": 33,
       "passmarkDX11": 42
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R9%20380X%204GB",
+      "relativePerformancePct": 16.3,
+      "tmus": 64,
+      "rops": 112,
+      "shadersTmusRops": "2048 / 64 / 112",
+      "launchDate": "2015"
     }
   },
   {
@@ -1872,6 +3584,14 @@
       "geekbenchVulkan": 21500,
       "passmarkDX12": 32,
       "passmarkDX11": 40
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R9%20380%204GB",
+      "relativePerformancePct": 15.6,
+      "tmus": 56,
+      "rops": 112,
+      "shadersTmusRops": "1792 / 56 / 112",
+      "launchDate": "2015"
     }
   },
   {
@@ -1894,9 +3614,17 @@
     "msrpUSD": 79,
     "benchmarks": {
       "geekbenchOpenCL": 30800,
-      "geekbenchVulkan": 28100,
+      "geekbenchVulkan": 44042,
       "passmarkDX12": 38,
       "passmarkDX11": 53
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R9%20290X%204GB",
+      "relativePerformancePct": 20.3,
+      "tmus": 88,
+      "rops": 192,
+      "shadersTmusRops": "2816 / 88 / 192",
+      "launchDate": "2013"
     }
   },
   {
@@ -1922,6 +3650,14 @@
       "geekbenchVulkan": 18400,
       "passmarkDX12": 30,
       "passmarkDX11": 38
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R9%20280X%203GB",
+      "relativePerformancePct": 14.6,
+      "tmus": 64,
+      "rops": 192,
+      "shadersTmusRops": "2048 / 64 / 192",
+      "launchDate": "2013"
     }
   },
   {
@@ -1947,6 +3683,14 @@
       "geekbenchVulkan": 14200,
       "passmarkDX12": 21,
       "passmarkDX11": 31
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R9%20270X%202GB",
+      "relativePerformancePct": 10.4,
+      "tmus": 40,
+      "rops": 112,
+      "shadersTmusRops": "1280 / 40 / 112",
+      "launchDate": "2013"
     }
   },
   {
@@ -1972,6 +3716,14 @@
       "geekbenchVulkan": 13100,
       "passmarkDX12": 18,
       "passmarkDX11": 27
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R7%20370%204GB",
+      "relativePerformancePct": 9.1,
+      "tmus": 32,
+      "rops": 112,
+      "shadersTmusRops": "1024 / 32 / 112",
+      "launchDate": "2015"
     }
   },
   {
@@ -1997,6 +3749,14 @@
       "geekbenchVulkan": 10800,
       "passmarkDX12": 17,
       "passmarkDX11": 24
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R7%20360%202GB",
+      "relativePerformancePct": 8.2,
+      "tmus": 24,
+      "rops": 64,
+      "shadersTmusRops": "768 / 24 / 64",
+      "launchDate": "2015"
     }
   },
   {
@@ -2022,6 +3782,14 @@
       "geekbenchVulkan": 11200,
       "passmarkDX12": 18,
       "passmarkDX11": 25
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R7%20260X%202GB",
+      "relativePerformancePct": 8.6,
+      "tmus": 28,
+      "rops": 64,
+      "shadersTmusRops": "896 / 28 / 64",
+      "launchDate": "2013"
     }
   },
   {
@@ -2043,10 +3811,18 @@
     "tflopsFP32": 0.81,
     "msrpUSD": 32,
     "benchmarks": {
-      "geekbenchOpenCL": 6400,
+      "geekbenchOpenCL": 7651,
       "geekbenchVulkan": 5800,
       "passmarkDX12": 8,
       "passmarkDX11": 13
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R7%20250%202GB",
+      "relativePerformancePct": 4.1,
+      "tmus": 16,
+      "rops": 64,
+      "shadersTmusRops": "384 / 16 / 64",
+      "launchDate": "2013"
     }
   },
   {
@@ -2072,6 +3848,14 @@
       "geekbenchVulkan": 3800,
       "passmarkDX12": 6,
       "passmarkDX11": 10
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20R7%20240%202GB",
+      "relativePerformancePct": 2.9,
+      "tmus": 16,
+      "rops": 64,
+      "shadersTmusRops": "320 / 16 / 64",
+      "launchDate": "2013"
     }
   },
   {
@@ -2093,8 +3877,8 @@
     "tflopsFP32": 23.04,
     "msrpUSD": 529,
     "benchmarks": {
-      "geekbenchOpenCL": 168900,
-      "geekbenchVulkan": 181400,
+      "geekbenchOpenCL": 184268,
+      "geekbenchVulkan": 151926,
       "passmarkDX12": 111,
       "passmarkDX11": 279
     },
@@ -2104,6 +3888,46 @@
       "dlperfPerDollar": 192.5,
       "availableOffers": 18,
       "verifiedFlops": 23
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 6900 XT",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 57.4,
+          "fps": 117.1
+        },
+        "1440p": {
+          "relativePct": 50.2,
+          "fps": 83.9
+        },
+        "4K": {
+          "relativePct": 40.5,
+          "fps": 44.9
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 36,
+          "fps": 45.2
+        },
+        "1440p": {
+          "relativePct": 31.8,
+          "fps": 32.1
+        },
+        "4K": {
+          "relativePct": 23.6,
+          "fps": 15.1
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206900%20XT",
+      "relativePerformancePct": 65.5,
+      "tmus": 160,
+      "rops": 112,
+      "shadersTmusRops": "5120 / 160 / 112",
+      "launchDate": "2020"
     }
   },
   {
@@ -2136,6 +3960,14 @@
       "dlperfPerDollar": 198,
       "availableOffers": 7,
       "verifiedFlops": 13.2
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206750%20GRE%2012GB",
+      "relativePerformancePct": 46.4,
+      "tmus": 80,
+      "rops": 80,
+      "shadersTmusRops": "2560 / 80 / 80",
+      "launchDate": "2023"
     }
   },
   {
@@ -2157,10 +3989,18 @@
     "tflopsFP32": 11.29,
     "msrpUSD": 269,
     "benchmarks": {
-      "geekbenchOpenCL": 92400,
+      "geekbenchOpenCL": 102164,
       "geekbenchVulkan": 99600,
       "passmarkDX12": 73,
       "passmarkDX11": 163
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206750%20GRE%2010GB",
+      "relativePerformancePct": 42,
+      "tmus": 72,
+      "rops": 64,
+      "shadersTmusRops": "2304 / 72 / 64",
+      "launchDate": "2023"
     }
   },
   {
@@ -2182,8 +4022,8 @@
     "tflopsFP32": 11.29,
     "msrpUSD": 269,
     "benchmarks": {
-      "geekbenchOpenCL": 91800,
-      "geekbenchVulkan": 98900,
+      "geekbenchOpenCL": 89897,
+      "geekbenchVulkan": 76061,
       "passmarkDX12": 71,
       "passmarkDX11": 166
     },
@@ -2193,6 +4033,14 @@
       "dlperfPerDollar": 195.6,
       "availableOffers": 9,
       "verifiedFlops": 11.3
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206700%2010GB",
+      "relativePerformancePct": 38.7,
+      "tmus": 72,
+      "rops": 64,
+      "shadersTmusRops": "2304 / 72 / 64",
+      "launchDate": "2022"
     }
   },
   {
@@ -2214,8 +4062,8 @@
     "tflopsFP32": 10.79,
     "msrpUSD": 249,
     "benchmarks": {
-      "geekbenchOpenCL": 90400,
-      "geekbenchVulkan": 96800,
+      "geekbenchOpenCL": 89071,
+      "geekbenchVulkan": 80175,
       "passmarkDX12": 62,
       "passmarkDX11": 168
     },
@@ -2225,6 +4073,46 @@
       "dlperfPerDollar": 205,
       "availableOffers": 11,
       "verifiedFlops": 10.8
+    },
+    "tomshardware": {
+      "sourceName": "Radeon RX 6650 XT",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 31.5,
+          "fps": 64.3
+        },
+        "1440p": {
+          "relativePct": 22.7,
+          "fps": 38
+        },
+        "4K": {
+          "relativePct": 17.1,
+          "fps": 19
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 12.4,
+          "fps": 15.5
+        },
+        "1440p": {
+          "relativePct": 9.1,
+          "fps": 9.2
+        },
+        "4K": {
+          "relativePct": 5.3,
+          "fps": 3.4
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206650%20XT",
+      "relativePerformancePct": 35.4,
+      "tmus": 64,
+      "rops": 64,
+      "shadersTmusRops": "2048 / 64 / 64",
+      "launchDate": "2022"
     }
   },
   {
@@ -2246,10 +4134,18 @@
     "tflopsFP32": 5.79,
     "msrpUSD": 169,
     "benchmarks": {
-      "geekbenchOpenCL": 49800,
-      "geekbenchVulkan": 53200,
-      "passmarkDX12": 39,
-      "passmarkDX11": 92
+      "geekbenchOpenCL": 48376,
+      "geekbenchVulkan": 54724,
+      "passmarkDX12": 38,
+      "passmarkDX11": 90
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206500%20XT%208GB",
+      "relativePerformancePct": 21.8,
+      "tmus": 32,
+      "rops": 32,
+      "shadersTmusRops": "1024 / 32 / 32",
+      "launchDate": "2022"
     }
   },
   {
@@ -2275,6 +4171,14 @@
       "geekbenchVulkan": 52400,
       "passmarkDX12": 38,
       "passmarkDX11": 90
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206500%20XT%204GB",
+      "relativePerformancePct": 21.6,
+      "tmus": 32,
+      "rops": 32,
+      "shadersTmusRops": "1024 / 32 / 32",
+      "launchDate": "2022"
     }
   },
   {
@@ -2296,10 +4200,18 @@
     "tflopsFP32": 3.57,
     "msrpUSD": 119,
     "benchmarks": {
-      "geekbenchOpenCL": 36200,
-      "geekbenchVulkan": 38900,
+      "geekbenchOpenCL": 32208,
+      "geekbenchVulkan": 34418,
       "passmarkDX12": 31,
       "passmarkDX11": 70
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206400",
+      "relativePerformancePct": 16.6,
+      "tmus": 24,
+      "rops": 32,
+      "shadersTmusRops": "768 / 24 / 32",
+      "launchDate": "2022"
     }
   },
   {
@@ -2321,10 +4233,18 @@
     "tflopsFP32": 10.14,
     "msrpUSD": 199,
     "benchmarks": {
-      "geekbenchOpenCL": 80900,
-      "geekbenchVulkan": 86400,
+      "geekbenchOpenCL": 77161,
+      "geekbenchVulkan": 84210,
       "passmarkDX12": 67,
       "passmarkDX11": 115
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%205700%20XT%2050th%20Anniversary",
+      "relativePerformancePct": 37.3,
+      "tmus": 80,
+      "rops": 112,
+      "shadersTmusRops": "2560 / 80 / 112",
+      "launchDate": "2019"
     }
   },
   {
@@ -2346,8 +4266,8 @@
     "tflopsFP32": 7.95,
     "msrpUSD": 165,
     "benchmarks": {
-      "geekbenchOpenCL": 69800,
-      "geekbenchVulkan": 74500,
+      "geekbenchOpenCL": 73554,
+      "geekbenchVulkan": 65201,
       "passmarkDX12": 54,
       "passmarkDX11": 100
     },
@@ -2357,6 +4277,14 @@
       "dlperfPerDollar": 186.7,
       "availableOffers": 7,
       "verifiedFlops": 8
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%205700",
+      "relativePerformancePct": 30.6,
+      "tmus": 72,
+      "rops": 112,
+      "shadersTmusRops": "2304 / 72 / 112",
+      "launchDate": "2019"
     }
   },
   {
@@ -2378,8 +4306,8 @@
     "tflopsFP32": 7.19,
     "msrpUSD": 139,
     "benchmarks": {
-      "geekbenchOpenCL": 62400,
-      "geekbenchVulkan": 66800,
+      "geekbenchOpenCL": 68270,
+      "geekbenchVulkan": 63221,
       "passmarkDX12": 52,
       "passmarkDX11": 95
     },
@@ -2389,6 +4317,14 @@
       "dlperfPerDollar": 168.3,
       "availableOffers": 6,
       "verifiedFlops": 7.2
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%205600%20XT",
+      "relativePerformancePct": 29.2,
+      "tmus": 72,
+      "rops": 80,
+      "shadersTmusRops": "2304 / 72 / 80",
+      "launchDate": "2020"
     }
   },
   {
@@ -2414,6 +4350,14 @@
       "geekbenchVulkan": 61200,
       "passmarkDX12": 45,
       "passmarkDX11": 85
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%205600",
+      "relativePerformancePct": 25.7,
+      "tmus": 64,
+      "rops": 80,
+      "shadersTmusRops": "2048 / 64 / 80",
+      "launchDate": "2020"
     }
   },
   {
@@ -2435,10 +4379,18 @@
     "tflopsFP32": 5.2,
     "msrpUSD": 109,
     "benchmarks": {
-      "geekbenchOpenCL": 44200,
-      "geekbenchVulkan": 47500,
-      "passmarkDX12": 41,
-      "passmarkDX11": 56
+      "geekbenchOpenCL": 46121,
+      "geekbenchVulkan": 51464,
+      "passmarkDX12": 40,
+      "passmarkDX11": 54
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%205500%20XT%208GB",
+      "relativePerformancePct": 22.3,
+      "tmus": 44,
+      "rops": 64,
+      "shadersTmusRops": "1408 / 44 / 64",
+      "launchDate": "2019"
     }
   },
   {
@@ -2464,6 +4416,14 @@
       "geekbenchVulkan": 46800,
       "passmarkDX12": 40,
       "passmarkDX11": 54
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%205500%20XT%204GB",
+      "relativePerformancePct": 21.8,
+      "tmus": 44,
+      "rops": 64,
+      "shadersTmusRops": "1408 / 44 / 64",
+      "launchDate": "2019"
     }
   },
   {
@@ -2485,10 +4445,18 @@
     "tflopsFP32": 5.2,
     "msrpUSD": 89,
     "benchmarks": {
-      "geekbenchOpenCL": 42100,
-      "geekbenchVulkan": 45200,
+      "geekbenchOpenCL": 44293,
+      "geekbenchVulkan": 53724,
       "passmarkDX12": 37,
       "passmarkDX11": 52
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%205500",
+      "relativePerformancePct": 21.2,
+      "tmus": 44,
+      "rops": 64,
+      "shadersTmusRops": "1408 / 44 / 64",
+      "launchDate": "2019"
     }
   },
   {
@@ -2510,10 +4478,18 @@
     "tflopsFP32": 4.63,
     "msrpUSD": 75,
     "benchmarks": {
-      "geekbenchOpenCL": 36900,
+      "geekbenchOpenCL": 39007,
       "geekbenchVulkan": 39400,
       "passmarkDX12": 34,
       "passmarkDX11": 49
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%205300",
+      "relativePerformancePct": 18.6,
+      "tmus": 44,
+      "rops": 32,
+      "shadersTmusRops": "1408 / 44 / 32",
+      "launchDate": "2020"
     }
   },
   {
@@ -2535,7 +4511,7 @@
     "tflopsFP32": 73.54,
     "msrpUSD": 1599,
     "benchmarks": {
-      "geekbenchOpenCL": 294800,
+      "geekbenchOpenCL": 278621,
       "geekbenchVulkan": 248900,
       "passmarkDX12": 114,
       "passmarkDX11": 286
@@ -2548,7 +4524,15 @@
       "verifiedFlops": 73.5
     },
     "rawSourceSynced": true,
-    "launchDate": "2023-12-28 00:00:00"
+    "launchDate": "2023-12-28 00:00:00",
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204090%20D",
+      "relativePerformancePct": 80.3,
+      "tmus": 456,
+      "rops": 192,
+      "shadersTmusRops": "14592 / 456 / 192",
+      "launchDate": "2023-12-28 00:00:00"
+    }
   },
   {
     "id": "rtx-4070-gddr6",
@@ -2569,10 +4553,10 @@
     "tflopsFP32": 29.15,
     "msrpUSD": 539,
     "benchmarks": {
-      "geekbenchOpenCL": 166200,
-      "geekbenchVulkan": 151800,
-      "passmarkDX12": 101,
-      "passmarkDX11": 239
+      "geekbenchOpenCL": 158617,
+      "geekbenchVulkan": 175643,
+      "passmarkDX12": 103,
+      "passmarkDX11": 243
     },
     "vastai": {
       "dlperf": 33.1,
@@ -2582,7 +4566,47 @@
       "verifiedFlops": 29.1
     },
     "rawSourceSynced": true,
-    "launchDate": "2024-08-20 00:00:00"
+    "launchDate": "2024-08-20 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 4070",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 54.7,
+          "fps": 111.5
+        },
+        "1440p": {
+          "relativePct": 46.5,
+          "fps": 77.8
+        },
+        "4K": {
+          "relativePct": 37.2,
+          "fps": 41.3
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 50.7,
+          "fps": 63.8
+        },
+        "1440p": {
+          "relativePct": 38.3,
+          "fps": 38.6
+        },
+        "4K": {
+          "relativePct": 30.1,
+          "fps": 19.3
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204070%20GDDR6",
+      "relativePerformancePct": 62.9,
+      "tmus": 184,
+      "rops": 80,
+      "shadersTmusRops": "5888 / 184 / 80",
+      "launchDate": "2024-08-20 00:00:00"
+    }
   },
   {
     "id": "rtx-4050",
@@ -2614,6 +4638,14 @@
       "dlperfPerDollar": 185,
       "availableOffers": 12,
       "verifiedFlops": 12.1
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204050",
+      "relativePerformancePct": 33.6,
+      "tmus": 80,
+      "rops": 32,
+      "shadersTmusRops": "2560 / 80 / 32",
+      "launchDate": "2023"
     }
   },
   {
@@ -2635,8 +4667,8 @@
     "tflopsFP32": 30.64,
     "msrpUSD": 549,
     "benchmarks": {
-      "geekbenchOpenCL": 186400,
-      "geekbenchVulkan": 171200,
+      "geekbenchOpenCL": 167014,
+      "geekbenchVulkan": 173445,
       "passmarkDX12": 109,
       "passmarkDX11": 218
     },
@@ -2648,7 +4680,47 @@
       "verifiedFlops": 30.6
     },
     "rawSourceSynced": true,
-    "launchDate": "2022-01-11 00:00:00"
+    "launchDate": "2022-01-11 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 3080",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 54.8,
+          "fps": 111.6
+        },
+        "1440p": {
+          "relativePct": 49,
+          "fps": 82
+        },
+        "4K": {
+          "relativePct": 39.6,
+          "fps": 43.9
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 40.8,
+          "fps": 51.3
+        },
+        "1440p": {
+          "relativePct": 34.4,
+          "fps": 34.7
+        },
+        "4K": {
+          "relativePct": 21.5,
+          "fps": 13.8
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203080%2012GB",
+      "relativePerformancePct": 66.2,
+      "tmus": 280,
+      "rops": 192,
+      "shadersTmusRops": "8960 / 280 / 192",
+      "launchDate": "2022-01-11 00:00:00"
+    }
   },
   {
     "id": "rtx-3060-ti-gddr6x",
@@ -2669,10 +4741,10 @@
     "tflopsFP32": 16.2,
     "msrpUSD": 339,
     "benchmarks": {
-      "geekbenchOpenCL": 124800,
-      "geekbenchVulkan": 117900,
-      "passmarkDX12": 79,
-      "passmarkDX11": 168
+      "geekbenchOpenCL": 110966,
+      "geekbenchVulkan": 115945,
+      "passmarkDX12": 77,
+      "passmarkDX11": 164
     },
     "vastai": {
       "dlperf": 21.4,
@@ -2682,7 +4754,47 @@
       "verifiedFlops": 16.2
     },
     "rawSourceSynced": true,
-    "launchDate": "2022-10-19 00:00:00"
+    "launchDate": "2022-10-19 00:00:00",
+    "tomshardware": {
+      "sourceName": "GeForce RTX 3060 Ti",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 36.4,
+          "fps": 74.2
+        },
+        "1440p": {
+          "relativePct": 30.5,
+          "fps": 51
+        },
+        "4K": {
+          "relativePct": 17.5,
+          "fps": 19.4
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 26.4,
+          "fps": 33.2
+        },
+        "1440p": {
+          "relativePct": 22.2,
+          "fps": 22.3
+        },
+        "4K": {
+          "relativePct": 11.5,
+          "fps": 7.4
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203060%20Ti%20GDDR6X",
+      "relativePerformancePct": 45.8,
+      "tmus": 152,
+      "rops": 112,
+      "shadersTmusRops": "4864 / 152 / 112",
+      "launchDate": "2022-10-19 00:00:00"
+    }
   },
   {
     "id": "rtx-3060-8gb",
@@ -2714,6 +4826,14 @@
       "dlperfPerDollar": 212.9,
       "availableOffers": 33,
       "verifiedFlops": 12.7
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203060%208GB",
+      "relativePerformancePct": 36.9,
+      "tmus": 112,
+      "rops": 64,
+      "shadersTmusRops": "3584 / 112 / 64",
+      "launchDate": "2022"
     }
   },
   {
@@ -2735,8 +4855,8 @@
     "tflopsFP32": 9.1,
     "msrpUSD": 199,
     "benchmarks": {
-      "geekbenchOpenCL": 68400,
-      "geekbenchVulkan": 65200,
+      "geekbenchOpenCL": 53213,
+      "geekbenchVulkan": 55439,
       "passmarkDX12": 59,
       "passmarkDX11": 90
     },
@@ -2746,6 +4866,46 @@
       "dlperfPerDollar": 196.7,
       "availableOffers": 27,
       "verifiedFlops": 9.1
+    },
+    "tomshardware": {
+      "sourceName": "GeForce RTX 3050",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 21.9,
+          "fps": 44.6
+        },
+        "1440p": {
+          "relativePct": 17.8,
+          "fps": 29.8
+        },
+        "4K": {
+          "relativePct": 11.4,
+          "fps": 12.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 15.6,
+          "fps": 19.6
+        },
+        "1440p": {
+          "relativePct": 12.5,
+          "fps": 12.6
+        },
+        "4K": {
+          "relativePct": 7.1,
+          "fps": 4.5
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203050%208GB",
+      "relativePerformancePct": 30.3,
+      "tmus": 80,
+      "rops": 64,
+      "shadersTmusRops": "2560 / 80 / 64",
+      "launchDate": "2022"
     }
   },
   {
@@ -2767,10 +4927,50 @@
     "tflopsFP32": 8.09,
     "msrpUSD": 179,
     "benchmarks": {
-      "geekbenchOpenCL": 62100,
-      "geekbenchVulkan": 59800,
+      "geekbenchOpenCL": 53213,
+      "geekbenchVulkan": 55439,
       "passmarkDX12": 55,
       "passmarkDX11": 84
+    },
+    "tomshardware": {
+      "sourceName": "GeForce RTX 3050",
+      "rasterization": {
+        "1080p": {
+          "relativePct": 21.9,
+          "fps": 44.6
+        },
+        "1440p": {
+          "relativePct": 17.8,
+          "fps": 29.8
+        },
+        "4K": {
+          "relativePct": 11.4,
+          "fps": 12.6
+        }
+      },
+      "rayTracing": {
+        "1080p": {
+          "relativePct": 15.6,
+          "fps": 19.6
+        },
+        "1440p": {
+          "relativePct": 12.5,
+          "fps": 12.6
+        },
+        "4K": {
+          "relativePct": 7.1,
+          "fps": 4.5
+        }
+      },
+      "scrapedAt": "2026-10-21T14:00:54.521Z"
+    },
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203050%208GB%20(GA106%20OEM)",
+      "relativePerformancePct": 28.8,
+      "tmus": 72,
+      "rops": 64,
+      "shadersTmusRops": "2304 / 72 / 64",
+      "launchDate": "2022"
     }
   },
   {
@@ -2798,6 +4998,14 @@
       "passmarkDX11": 72
     },
     "rawSourceSynced": true,
-    "launchDate": "2024-02-02 00:00:00"
+    "launchDate": "2024-02-02 00:00:00",
+    "techpowerup": {
+      "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203050%206GB",
+      "relativePerformancePct": 27.4,
+      "tmus": 72,
+      "rops": 32,
+      "shadersTmusRops": "2304 / 72 / 32",
+      "launchDate": "2024-02-02 00:00:00"
+    }
   }
 ]

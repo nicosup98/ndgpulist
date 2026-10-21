@@ -25,17 +25,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run data synchronization script (Geekbench, PassMark, Vast.ai, Steam, PCGamingWiki, ProtonDB)
+      - name: Install chrome-headless-shell via @puppeteer/browsers
+        run: npm run browsers:install
+
+      - name: Run Puppeteer benchmark scraper (PassMark, Geekbench, Tom's Hardware, TechPowerUp)
+        run: npm run scrape
+
+      - name: Run data synchronization script (merge scraped data + Vast.ai, Steam, PCGamingWiki, ProtonDB)
         run: npm run sync-data
 
       - name: Commit and push if data changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/gpus.json src/data/games.json
+          git add src/data/scraped/*.json src/data/gpus.json src/data/games.json
           if git diff --staged --quiet; then
             echo "No hay cambios nuevos en los datasets."
           else
-            git commit -m "chore(data): actualización automática de benchmarks y tarifas cloud"
+            git commit -m "chore(data): actualización automática de benchmarks (Puppeteer) y tarifas cloud"
             git push
           fi

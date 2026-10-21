@@ -787,6 +787,67 @@ function getFpsBadgeColor(fps: number) {
               </td>
             </tr>
             <tr>
+              <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">TechPowerUp Relative Perf.</td>
+              <td v-for="(gpu, i) in comparedGpus" :key="gpu.id" class="py-3 px-4">
+                <template v-if="gpu.techpowerup">
+                  <span class="font-bold text-amber-600 dark:text-amber-400">{{ gpu.techpowerup.relativePerformancePct }}%</span>
+                  <span class="text-slate-400 ml-1 text-[11px]">({{ gpu.techpowerup.shadersTmusRops }})</span>
+                  <span
+                    v-if="i > 0 && baselineGpu.techpowerup"
+                    :class="[
+                      'ml-1.5 px-1.5 py-0.5 rounded text-[10px]',
+                      gpu.techpowerup.relativePerformancePct >= baselineGpu.techpowerup.relativePerformancePct
+                        ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+                        : 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
+                    ]"
+                  >
+                    {{ getDiffPercent(gpu.techpowerup.relativePerformancePct, baselineGpu.techpowerup.relativePerformancePct) }}
+                  </span>
+                </template>
+                <span v-else class="text-slate-400">N/A</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">Tom's Hardware (1080p / 1440p / 4K Ultra)</td>
+              <td v-for="(gpu, i) in comparedGpus" :key="gpu.id" class="py-3 px-4">
+                <template v-if="gpu.tomshardware?.rasterization">
+                  <span class="font-bold text-slate-900 dark:text-white">
+                    {{ gpu.tomshardware.rasterization['1080p']?.fps ?? '-' }} /
+                    {{ gpu.tomshardware.rasterization['1440p']?.fps ?? '-' }} /
+                    {{ gpu.tomshardware.rasterization['4K']?.fps ?? '-' }} FPS
+                  </span>
+                  <span
+                    v-if="i > 0 && baselineGpu.tomshardware?.rasterization?.['1440p'] && gpu.tomshardware.rasterization['1440p']"
+                    :class="[
+                      'ml-1.5 px-1.5 py-0.5 rounded text-[10px]',
+                      gpu.tomshardware.rasterization['1440p'].fps >= baselineGpu.tomshardware.rasterization['1440p'].fps
+                        ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+                        : 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
+                    ]"
+                  >
+                    {{ getDiffPercent(gpu.tomshardware.rasterization['1440p'].fps, baselineGpu.tomshardware.rasterization['1440p'].fps) }}
+                  </span>
+                </template>
+                <span v-else class="text-slate-400">N/A</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">Tom's Hardware Ray Tracing (1080p / 1440p / 4K)</td>
+              <td v-for="gpu in comparedGpus" :key="gpu.id" class="py-3 px-4 text-slate-800 dark:text-slate-200">
+                <template v-if="gpu.tomshardware?.rayTracing">
+                  <span class="font-semibold text-rose-600 dark:text-rose-400">
+                    {{ gpu.tomshardware.rayTracing['1080p']?.fps ?? '-' }} /
+                    {{ gpu.tomshardware.rayTracing['1440p']?.fps ?? '-' }} /
+                    {{ gpu.tomshardware.rayTracing['4K']?.fps ?? '-' }} FPS
+                  </span>
+                  <span class="text-slate-400 ml-1 text-[11px]">
+                    ({{ gpu.tomshardware.rayTracing['1440p']?.relativePct ?? '-' }}% Rel.)
+                  </span>
+                </template>
+                <span v-else class="text-slate-400">N/A</span>
+              </td>
+            </tr>
+            <tr>
               <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">Vast.ai DLPerf (AI / Compute)</td>
               <td v-for="(gpu, i) in comparedGpus" :key="gpu.id" class="py-3 px-4">
                 <template v-if="gpu.vastai && baselineGpu.vastai">
@@ -849,7 +910,7 @@ function getFpsBadgeColor(fps: number) {
             <tr>
               <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">Consumo Energético (TDP)</td>
               <td v-for="gpu in comparedGpus" :key="gpu.id" class="py-3 px-4 text-slate-800 dark:text-slate-200">
-                {{ gpu.tdpWatts }} W ({{ (gpu.benchmarks.passmarkDX12 / gpu.tdpWatts).toFixed(1) }} DX12/W)
+                {{ gpu.tdpWatts }} W ({{ (gpu.benchmarks.passmarkDX12 / gpu.tdpWatts).toFixed(2) }} DX12/W)
               </td>
             </tr>
             <tr>

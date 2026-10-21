@@ -13,6 +13,35 @@ export interface VastAiMetrics {
   verifiedFlops: number;
 }
 
+export interface TomsHardwareResult {
+  relativePct: number;
+  fps: number;
+}
+
+export interface TomsHardwareResolutionSet {
+  '1080p': TomsHardwareResult | null;
+  '1440p': TomsHardwareResult | null;
+  '4K': TomsHardwareResult | null;
+}
+
+/** Datos scrapeados de Tom's Hardware GPU Benchmarks Hierarchy (preset Ultra). */
+export interface TomsHardwareData {
+  sourceName: string;
+  rasterization: TomsHardwareResolutionSet | null;
+  rayTracing: TomsHardwareResolutionSet | null;
+  scrapedAt: string;
+}
+
+/** Datos scrapeados/sincronizados de TechPowerUp GPU Database. */
+export interface TechPowerUpData {
+  url: string;
+  relativePerformancePct: number;
+  tmus: number;
+  rops: number;
+  shadersTmusRops: string;
+  launchDate?: string;
+}
+
 export interface GpuSpec {
   id: string;
   name: string;
@@ -33,6 +62,8 @@ export interface GpuSpec {
   msrpUSD: number;
   benchmarks: GpuBenchmarks;
   vastai?: VastAiMetrics;
+  tomshardware?: TomsHardwareData;
+  techpowerup?: TechPowerUpData;
 }
 
 export interface PCGamingWikiData {
