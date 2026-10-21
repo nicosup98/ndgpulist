@@ -42,6 +42,14 @@ export interface TechPowerUpData {
   launchDate?: string;
 }
 
+/** Datos oficiales descargados de UserBenchmark GPU Database (Daily CSV). */
+export interface UserBenchmarkData {
+  rank: number;
+  score: number;
+  samples: number;
+  url: string;
+}
+
 export interface GpuSpec {
   id: string;
   name: string;
@@ -64,6 +72,7 @@ export interface GpuSpec {
   vastai?: VastAiMetrics;
   tomshardware?: TomsHardwareData;
   techpowerup?: TechPowerUpData;
+  userbenchmark?: UserBenchmarkData;
 }
 
 export interface PCGamingWikiData {

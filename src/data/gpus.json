@@ -71,6 +71,12 @@
       "rops": 192,
       "shadersTmusRops": "21760 / 680 / 192",
       "launchDate": "2025-01-30 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 1,
+      "score": 183,
+      "samples": 1412,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-5090/Rating/4180"
     }
   },
   {
@@ -145,6 +151,12 @@
       "rops": 112,
       "shadersTmusRops": "10752 / 336 / 112",
       "launchDate": "2025-01-30 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 3,
+      "score": 139,
+      "samples": 2771,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-5080/Rating/4179"
     }
   },
   {
@@ -219,6 +231,12 @@
       "rops": 112,
       "shadersTmusRops": "8960 / 280 / 112",
       "launchDate": "2025-02-20 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 6,
+      "score": 119,
+      "samples": 5759,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-5070-Ti/Rating/4181"
     }
   },
   {
@@ -293,6 +311,12 @@
       "rops": 80,
       "shadersTmusRops": "6144 / 192 / 80",
       "launchDate": "2025-03-04 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 10,
+      "score": 98.5,
+      "samples": 8731,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-5070/Rating/4182"
     }
   },
   {
@@ -367,6 +391,12 @@
       "rops": 192,
       "shadersTmusRops": "16384 / 512 / 192",
       "launchDate": "2022-10-12 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 2,
+      "score": 155,
+      "samples": 121235,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-4090/Rating/4136"
     }
   },
   {
@@ -515,6 +545,12 @@
       "rops": 112,
       "shadersTmusRops": "9728 / 304 / 112",
       "launchDate": "2022-11-16 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 5,
+      "score": 122,
+      "samples": 80552,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-4080/Rating/4138"
     }
   },
   {
@@ -663,6 +699,12 @@
       "rops": 80,
       "shadersTmusRops": "7680 / 240 / 80",
       "launchDate": "2023-01-05 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 9,
+      "score": 101,
+      "samples": 120180,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-4070-Ti/Rating/4146"
     }
   },
   {
@@ -810,6 +852,12 @@
       "rops": 80,
       "shadersTmusRops": "5888 / 184 / 80",
       "launchDate": "2023"
+    },
+    "userbenchmark": {
+      "rank": 22,
+      "score": 80,
+      "samples": 122223,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-4070/Rating/4148"
     }
   },
   {
@@ -884,6 +932,12 @@
       "rops": 64,
       "shadersTmusRops": "4352 / 136 / 64",
       "launchDate": "2023-07-18 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 38,
+      "score": 60.9,
+      "samples": 49740,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-4060-Ti/Rating/4149"
     }
   },
   {
@@ -1029,6 +1083,12 @@
       "rops": 64,
       "shadersTmusRops": "3072 / 96 / 64",
       "launchDate": "2023"
+    },
+    "userbenchmark": {
+      "rank": 54,
+      "score": 50.9,
+      "samples": 98583,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-4060/Rating/4150"
     }
   },
   {
@@ -1103,6 +1163,12 @@
       "rops": 192,
       "shadersTmusRops": "10752 / 336 / 192",
       "launchDate": "2022-03-29 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 12,
+      "score": 97.3,
+      "samples": 28639,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/1818101/NVIDIA-GeForce-RTX-3090-Ti"
     }
   },
   {
@@ -1177,6 +1243,12 @@
       "rops": 192,
       "shadersTmusRops": "10496 / 328 / 192",
       "launchDate": "2020-09-24 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 16,
+      "score": 87.4,
+      "samples": 252728,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-3090/Rating/4081"
     }
   },
   {
@@ -1251,6 +1323,12 @@
       "rops": 192,
       "shadersTmusRops": "10240 / 320 / 192",
       "launchDate": "2021-06-03 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 18,
+      "score": 86.3,
+      "samples": 275308,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-3080-Ti/Rating/4115"
     }
   },
   {
@@ -1325,6 +1403,12 @@
       "rops": 112,
       "shadersTmusRops": "8704 / 272 / 112",
       "launchDate": "2020-09-17 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 23,
+      "score": 78.9,
+      "samples": 577680,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-3080/Rating/4080"
     }
   },
   {
@@ -1399,6 +1483,12 @@
       "rops": 112,
       "shadersTmusRops": "6144 / 192 / 112",
       "launchDate": "2022-10-21 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 32,
+      "score": 66.2,
+      "samples": 332087,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-3070-Ti/Rating/4116"
     }
   },
   {
@@ -1473,6 +1563,12 @@
       "rops": 112,
       "shadersTmusRops": "5888 / 184 / 112",
       "launchDate": "2020-10-29 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 36,
+      "score": 61.7,
+      "samples": 963187,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-3070/Rating/4083"
     }
   },
   {
@@ -1547,6 +1643,12 @@
       "rops": 112,
       "shadersTmusRops": "4864 / 152 / 112",
       "launchDate": "2022-02-23 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 47,
+      "score": 53.6,
+      "samples": 669798,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-3060-Ti/Rating/4090"
     }
   },
   {
@@ -1621,6 +1723,12 @@
       "rops": 80,
       "shadersTmusRops": "3584 / 112 / 80",
       "launchDate": "2021-09-01 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 74,
+      "score": 42,
+      "samples": 779364,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-3060/Rating/4105"
     }
   },
   {
@@ -1663,6 +1771,12 @@
       "rops": 112,
       "shadersTmusRops": "2176 / 68 / 112",
       "launchDate": "2019-07-09 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 78,
+      "score": 41.4,
+      "samples": 502304,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-2060S-Super/Rating/4049"
     }
   },
   {
@@ -1705,6 +1819,12 @@
       "rops": 80,
       "shadersTmusRops": "1408 / 44 / 80",
       "launchDate": "2019-10-29 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 115,
+      "score": 29.9,
+      "samples": 717475,
+      "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1660S-Super/Rating/4056"
     }
   },
   {
@@ -1777,6 +1897,12 @@
       "rops": 192,
       "shadersTmusRops": "6144 / 192 / 192",
       "launchDate": "2022"
+    },
+    "userbenchmark": {
+      "rank": 7,
+      "score": 108,
+      "samples": 5084,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-7900-XTX/Rating/4142"
     }
   },
   {
@@ -1849,6 +1975,12 @@
       "rops": 112,
       "shadersTmusRops": "5376 / 168 / 112",
       "launchDate": "2022"
+    },
+    "userbenchmark": {
+      "rank": 13,
+      "score": 92.8,
+      "samples": 1931,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-7900-XT/Rating/4141"
     }
   },
   {
@@ -1889,6 +2021,12 @@
       "rops": 112,
       "shadersTmusRops": "5120 / 160 / 112",
       "launchDate": "2024"
+    },
+    "userbenchmark": {
+      "rank": 20,
+      "score": 81.7,
+      "samples": 307,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/2164460/AMD-Radeon-RX-7900-GRE"
     }
   },
   {
@@ -1961,6 +2099,12 @@
       "rops": 112,
       "shadersTmusRops": "3840 / 120 / 112",
       "launchDate": "2023"
+    },
+    "userbenchmark": {
+      "rank": 25,
+      "score": 75.6,
+      "samples": 2821,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/2184033/AMD-Radeon-RX-7800-XT"
     }
   },
   {
@@ -2033,6 +2177,12 @@
       "rops": 80,
       "shadersTmusRops": "3456 / 108 / 80",
       "launchDate": "2023"
+    },
+    "userbenchmark": {
+      "rank": 33,
+      "score": 65.1,
+      "samples": 488,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/2184147/AMD-Radeon-RX-7700-XT"
     }
   },
   {
@@ -2105,6 +2255,12 @@
       "rops": 64,
       "shadersTmusRops": "2048 / 64 / 64",
       "launchDate": "2024"
+    },
+    "userbenchmark": {
+      "rank": 56,
+      "score": 49.6,
+      "samples": 207,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/2280266/AMD-Radeon-RX-7600-XT"
     }
   },
   {
@@ -2177,6 +2333,12 @@
       "rops": 64,
       "shadersTmusRops": "2048 / 64 / 64",
       "launchDate": "2023"
+    },
+    "userbenchmark": {
+      "rank": 63,
+      "score": 46.2,
+      "samples": 460,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/2114669/AMD-Radeon-RX-7600"
     }
   },
   {
@@ -2249,6 +2411,12 @@
       "rops": 112,
       "shadersTmusRops": "5120 / 160 / 112",
       "launchDate": "2022"
+    },
+    "userbenchmark": {
+      "rank": 19,
+      "score": 84.2,
+      "samples": 5892,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/1843533/AMD-Radeon-RX-6950-XT"
     }
   },
   {
@@ -2321,6 +2489,12 @@
       "rops": 112,
       "shadersTmusRops": "4608 / 144 / 112",
       "launchDate": "2020"
+    },
+    "userbenchmark": {
+      "rank": 27,
+      "score": 71.5,
+      "samples": 26696,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-6800-XT/Rating/4089"
     }
   },
   {
@@ -2361,6 +2535,12 @@
       "rops": 112,
       "shadersTmusRops": "3840 / 120 / 112",
       "launchDate": "2020"
+    },
+    "userbenchmark": {
+      "rank": 39,
+      "score": 60.5,
+      "samples": 9444,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-6800/Rating/4088"
     }
   },
   {
@@ -2433,6 +2613,12 @@
       "rops": 80,
       "shadersTmusRops": "2560 / 80 / 80",
       "launchDate": "2022"
+    },
+    "userbenchmark": {
+      "rank": 44,
+      "score": 54.2,
+      "samples": 12330,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/1845738/AMD-Radeon-RX-6750-XT"
     }
   },
   {
@@ -2505,6 +2691,12 @@
       "rops": 80,
       "shadersTmusRops": "2560 / 80 / 80",
       "launchDate": "2021"
+    },
+    "userbenchmark": {
+      "rank": 50,
+      "score": 51.6,
+      "samples": 52501,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-6700-XT/Rating/4109"
     }
   },
   {
@@ -2577,6 +2769,12 @@
       "rops": 64,
       "shadersTmusRops": "2048 / 64 / 64",
       "launchDate": "2021"
+    },
+    "userbenchmark": {
+      "rank": 69,
+      "score": 45.3,
+      "samples": 31780,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-6600-XT/Rating/4117"
     }
   },
   {
@@ -2649,6 +2847,12 @@
       "rops": 64,
       "shadersTmusRops": "1792 / 56 / 64",
       "launchDate": "2021"
+    },
+    "userbenchmark": {
+      "rank": 93,
+      "score": 36.4,
+      "samples": 31716,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-6600/Rating/4128"
     }
   },
   {
@@ -2689,6 +2893,12 @@
       "rops": 112,
       "shadersTmusRops": "2560 / 80 / 112",
       "launchDate": "2019"
+    },
+    "userbenchmark": {
+      "rank": 75,
+      "score": 41.6,
+      "samples": 103539,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-5700-XT/Rating/4045"
     }
   },
   {
@@ -2761,6 +2971,12 @@
       "rops": 80,
       "shadersTmusRops": "2560 / 80 / 80",
       "launchDate": "2024"
+    },
+    "userbenchmark": {
+      "rank": 66,
+      "score": 46.1,
+      "samples": 529,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/2371910/IntelR-ArcTM-B580-Graphics"
     }
   },
   {
@@ -2833,6 +3049,12 @@
       "rops": 64,
       "shadersTmusRops": "2304 / 72 / 64",
       "launchDate": "2025"
+    },
+    "userbenchmark": {
+      "rank": 76,
+      "score": 41.6,
+      "samples": 28,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/2383887/IntelR-ArcTM-B570-Graphics"
     }
   },
   {
@@ -2873,6 +3095,12 @@
       "rops": 112,
       "shadersTmusRops": "4096 / 128 / 112",
       "launchDate": "2022"
+    },
+    "userbenchmark": {
+      "rank": 67,
+      "score": 46.1,
+      "samples": 11272,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/1850973/IntelR-ArcTM-A770-Graphics"
     }
   },
   {
@@ -2913,6 +3141,12 @@
       "rops": 112,
       "shadersTmusRops": "3584 / 112 / 112",
       "launchDate": "2022"
+    },
+    "userbenchmark": {
+      "rank": 77,
+      "score": 41.6,
+      "samples": 8729,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/1947734/IntelR-ArcTM-A750-Graphics"
     }
   },
   {
@@ -2987,6 +3221,12 @@
       "rops": 64,
       "shadersTmusRops": "4608 / 144 / 64",
       "launchDate": "2025-04-16 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 28,
+      "score": 71.4,
+      "samples": 5725,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-5060-Ti/Rating/4183"
     }
   },
   {
@@ -3061,6 +3301,12 @@
       "rops": 64,
       "shadersTmusRops": "3840 / 120 / 64",
       "launchDate": "2025-05-19 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 37,
+      "score": 61.2,
+      "samples": 6041,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-5060/Rating/4184"
     }
   },
   {
@@ -3135,6 +3381,12 @@
       "rops": 64,
       "shadersTmusRops": "2560 / 80 / 64",
       "launchDate": "2025-07-01 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 55,
+      "score": 49.6,
+      "samples": 704,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-5050/Rating/4185"
     }
   },
   {
@@ -3175,6 +3427,12 @@
       "rops": 112,
       "shadersTmusRops": "2304 / 72 / 112",
       "launchDate": "2018"
+    },
+    "userbenchmark": {
+      "rank": 128,
+      "score": 23.7,
+      "samples": 167696,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-590/Rating/4033"
     }
   },
   {
@@ -3215,6 +3473,12 @@
       "rops": 112,
       "shadersTmusRops": "2304 / 72 / 112",
       "launchDate": "2017"
+    },
+    "userbenchmark": {
+      "rank": 135,
+      "score": 21.5,
+      "samples": 1236994,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-580/Rating/3923"
     }
   },
   {
@@ -3255,6 +3519,12 @@
       "rops": 112,
       "shadersTmusRops": "2048 / 64 / 112",
       "launchDate": "2017"
+    },
+    "userbenchmark": {
+      "rank": 149,
+      "score": 18.6,
+      "samples": 657949,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-570/Rating/3924"
     }
   },
   {
@@ -3288,6 +3558,12 @@
       "rops": 64,
       "shadersTmusRops": "1024 / 32 / 64",
       "launchDate": "2017"
+    },
+    "userbenchmark": {
+      "rank": 210,
+      "score": 9.2,
+      "samples": 84432,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-560/Rating/3926"
     }
   },
   {
@@ -3321,6 +3597,12 @@
       "rops": 64,
       "shadersTmusRops": "512 / 16 / 64",
       "launchDate": "2017"
+    },
+    "userbenchmark": {
+      "rank": 248,
+      "score": 6,
+      "samples": 113570,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-550/Rating/3925"
     }
   },
   {
@@ -3361,6 +3643,12 @@
       "rops": 112,
       "shadersTmusRops": "2304 / 72 / 112",
       "launchDate": "2016"
+    },
+    "userbenchmark": {
+      "rank": 147,
+      "score": 19.1,
+      "samples": 350806,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-480/Rating/3634"
     }
   },
   {
@@ -3394,6 +3682,12 @@
       "rops": 112,
       "shadersTmusRops": "2048 / 64 / 112",
       "launchDate": "2016"
+    },
+    "userbenchmark": {
+      "rank": 161,
+      "score": 16.6,
+      "samples": 133438,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-470/Rating/3640"
     }
   },
   {
@@ -3427,6 +3721,12 @@
       "rops": 64,
       "shadersTmusRops": "896 / 28 / 64",
       "launchDate": "2016"
+    },
+    "userbenchmark": {
+      "rank": 222,
+      "score": 8.3,
+      "samples": 91754,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-460/Rating/3641"
     }
   },
   {
@@ -3460,6 +3760,12 @@
       "rops": 192,
       "shadersTmusRops": "4096 / 128 / 192",
       "launchDate": "2015"
+    },
+    "userbenchmark": {
+      "rank": 124,
+      "score": 24.6,
+      "samples": 2537,
+      "url": "https://gpu.userbenchmark.com/AMD-R9-Fury-X/Rating/3498"
     }
   },
   {
@@ -3493,6 +3799,12 @@
       "rops": 192,
       "shadersTmusRops": "2816 / 88 / 192",
       "launchDate": "2015"
+    },
+    "userbenchmark": {
+      "rank": 133,
+      "score": 22.3,
+      "samples": 7719,
+      "url": "https://gpu.userbenchmark.com/AMD-R9-390X/Rating/3497"
     }
   },
   {
@@ -3526,6 +3838,12 @@
       "rops": 192,
       "shadersTmusRops": "2560 / 80 / 192",
       "launchDate": "2015"
+    },
+    "userbenchmark": {
+      "rank": 141,
+      "score": 20.6,
+      "samples": 29908,
+      "url": "https://gpu.userbenchmark.com/AMD-R9-390/Rating/3481"
     }
   },
   {
@@ -3559,6 +3877,12 @@
       "rops": 112,
       "shadersTmusRops": "2048 / 64 / 112",
       "launchDate": "2015"
+    },
+    "userbenchmark": {
+      "rank": 164,
+      "score": 15.8,
+      "samples": 5623,
+      "url": "https://gpu.userbenchmark.com/AMD-R9-380X/Rating/3532"
     }
   },
   {
@@ -3592,6 +3916,12 @@
       "rops": 112,
       "shadersTmusRops": "1792 / 56 / 112",
       "launchDate": "2015"
+    },
+    "userbenchmark": {
+      "rank": 177,
+      "score": 14,
+      "samples": 28875,
+      "url": "https://gpu.userbenchmark.com/AMD-R9-380/Rating/3482"
     }
   },
   {
@@ -3625,6 +3955,12 @@
       "rops": 192,
       "shadersTmusRops": "2816 / 88 / 192",
       "launchDate": "2013"
+    },
+    "userbenchmark": {
+      "rank": 138,
+      "score": 21.1,
+      "samples": 11615,
+      "url": "https://gpu.userbenchmark.com/AMD-R9-290X/Rating/2166"
     }
   },
   {
@@ -3658,6 +3994,12 @@
       "rops": 192,
       "shadersTmusRops": "2048 / 64 / 192",
       "launchDate": "2013"
+    },
+    "userbenchmark": {
+      "rank": 171,
+      "score": 14.9,
+      "samples": 35430,
+      "url": "https://gpu.userbenchmark.com/AMD-R9-280X/Rating/2192"
     }
   },
   {
@@ -3691,6 +4033,12 @@
       "rops": 112,
       "shadersTmusRops": "1280 / 40 / 112",
       "launchDate": "2013"
+    },
+    "userbenchmark": {
+      "rank": 190,
+      "score": 11.5,
+      "samples": 31688,
+      "url": "https://gpu.userbenchmark.com/AMD-R9-270X/Rating/2188"
     }
   },
   {
@@ -3724,6 +4072,12 @@
       "rops": 112,
       "shadersTmusRops": "1024 / 32 / 112",
       "launchDate": "2015"
+    },
+    "userbenchmark": {
+      "rank": 211,
+      "score": 9.1,
+      "samples": 11631,
+      "url": "https://gpu.userbenchmark.com/AMD-R7-370/Rating/3571"
     }
   },
   {
@@ -3757,6 +4111,12 @@
       "rops": 64,
       "shadersTmusRops": "768 / 24 / 64",
       "launchDate": "2015"
+    },
+    "userbenchmark": {
+      "rank": 231,
+      "score": 7.4,
+      "samples": 8393,
+      "url": "https://gpu.userbenchmark.com/AMD-R7-360/Rating/3572"
     }
   },
   {
@@ -3790,6 +4150,12 @@
       "rops": 64,
       "shadersTmusRops": "896 / 28 / 64",
       "launchDate": "2013"
+    },
+    "userbenchmark": {
+      "rank": 223,
+      "score": 8.3,
+      "samples": 12551,
+      "url": "https://gpu.userbenchmark.com/AMD-R7-260X/Rating/3151"
     }
   },
   {
@@ -3823,6 +4189,12 @@
       "rops": 64,
       "shadersTmusRops": "384 / 16 / 64",
       "launchDate": "2013"
+    },
+    "userbenchmark": {
+      "rank": 306,
+      "score": 3.3,
+      "samples": 7983,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/8217/AMD-Radeon-R7-200"
     }
   },
   {
@@ -3856,6 +4228,12 @@
       "rops": 64,
       "shadersTmusRops": "320 / 16 / 64",
       "launchDate": "2013"
+    },
+    "userbenchmark": {
+      "rank": 345,
+      "score": 2.3,
+      "samples": 20040,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/8608/AMD-Radeon-R7-200"
     }
   },
   {
@@ -3928,6 +4306,12 @@
       "rops": 112,
       "shadersTmusRops": "5120 / 160 / 112",
       "launchDate": "2020"
+    },
+    "userbenchmark": {
+      "rank": 21,
+      "score": 81.7,
+      "samples": 29826,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-6900-XT/Rating/4091"
     }
   },
   {
@@ -4041,6 +4425,12 @@
       "rops": 64,
       "shadersTmusRops": "2304 / 72 / 64",
       "launchDate": "2022"
+    },
+    "userbenchmark": {
+      "rank": 70,
+      "score": 45.3,
+      "samples": 4258,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/1880631/AMD-Radeon-RX-6700"
     }
   },
   {
@@ -4113,6 +4503,12 @@
       "rops": 64,
       "shadersTmusRops": "2048 / 64 / 64",
       "launchDate": "2022"
+    },
+    "userbenchmark": {
+      "rank": 68,
+      "score": 46,
+      "samples": 13997,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/1845690/AMD-Radeon-RX-6650-XT"
     }
   },
   {
@@ -4146,6 +4542,12 @@
       "rops": 32,
       "shadersTmusRops": "1024 / 32 / 32",
       "launchDate": "2022"
+    },
+    "userbenchmark": {
+      "rank": 140,
+      "score": 21.1,
+      "samples": 2415,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/1762761/AMD-Radeon-RX-6500-XT"
     }
   },
   {
@@ -4212,6 +4614,12 @@
       "rops": 32,
       "shadersTmusRops": "768 / 24 / 32",
       "launchDate": "2022"
+    },
+    "userbenchmark": {
+      "rank": 167,
+      "score": 15.1,
+      "samples": 2196,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/1834749/AMD-Radeon-RX-6400"
     }
   },
   {
@@ -4245,6 +4653,12 @@
       "rops": 112,
       "shadersTmusRops": "2560 / 80 / 112",
       "launchDate": "2019"
+    },
+    "userbenchmark": {
+      "rank": 79,
+      "score": 40.8,
+      "samples": 1627,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/845537/AMD-Radeon-RX-5700-XT-50th-Anniversary"
     }
   },
   {
@@ -4285,6 +4699,12 @@
       "rops": 112,
       "shadersTmusRops": "2304 / 72 / 112",
       "launchDate": "2019"
+    },
+    "userbenchmark": {
+      "rank": 98,
+      "score": 35.8,
+      "samples": 14699,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-5700/Rating/4046"
     }
   },
   {
@@ -4325,6 +4745,12 @@
       "rops": 80,
       "shadersTmusRops": "2304 / 72 / 80",
       "launchDate": "2020"
+    },
+    "userbenchmark": {
+      "rank": 100,
+      "score": 34.6,
+      "samples": 39780,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-5600-XT/Rating/4062"
     }
   },
   {
@@ -4391,6 +4817,12 @@
       "rops": 64,
       "shadersTmusRops": "1408 / 44 / 64",
       "launchDate": "2019"
+    },
+    "userbenchmark": {
+      "rank": 137,
+      "score": 21.2,
+      "samples": 111383,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-5500-XT/Rating/4060"
     }
   },
   {
@@ -4457,6 +4889,12 @@
       "rops": 64,
       "shadersTmusRops": "1408 / 44 / 64",
       "launchDate": "2019"
+    },
+    "userbenchmark": {
+      "rank": 139,
+      "score": 21.1,
+      "samples": 2110,
+      "url": "https://gpu.userbenchmark.com/AMD-RX-5500/Rating/4059"
     }
   },
   {
@@ -4606,6 +5044,12 @@
       "rops": 80,
       "shadersTmusRops": "5888 / 184 / 80",
       "launchDate": "2024-08-20 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 22,
+      "score": 80,
+      "samples": 122223,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-4070/Rating/4148"
     }
   },
   {
@@ -4646,6 +5090,12 @@
       "rops": 32,
       "shadersTmusRops": "2560 / 80 / 32",
       "launchDate": "2023"
+    },
+    "userbenchmark": {
+      "rank": 81,
+      "score": 40.2,
+      "samples": 15514,
+      "url": "https://gpu.userbenchmark.com/SpeedTest/2015629/NVIDIA-GeForce-RTX-4050-Laptop-GPU"
     }
   },
   {
@@ -4720,6 +5170,12 @@
       "rops": 192,
       "shadersTmusRops": "8960 / 280 / 192",
       "launchDate": "2022-01-11 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 23,
+      "score": 78.9,
+      "samples": 577680,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-3080/Rating/4080"
     }
   },
   {
@@ -4794,6 +5250,12 @@
       "rops": 112,
       "shadersTmusRops": "4864 / 152 / 112",
       "launchDate": "2022-10-19 00:00:00"
+    },
+    "userbenchmark": {
+      "rank": 47,
+      "score": 53.6,
+      "samples": 669798,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-3060-Ti/Rating/4090"
     }
   },
   {
@@ -4906,6 +5368,12 @@
       "rops": 64,
       "shadersTmusRops": "2560 / 80 / 64",
       "launchDate": "2022"
+    },
+    "userbenchmark": {
+      "rank": 111,
+      "score": 31,
+      "samples": 107355,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-3050/Rating/4127"
     }
   },
   {
@@ -4971,6 +5439,12 @@
       "rops": 64,
       "shadersTmusRops": "2304 / 72 / 64",
       "launchDate": "2022"
+    },
+    "userbenchmark": {
+      "rank": 111,
+      "score": 31,
+      "samples": 107355,
+      "url": "https://gpu.userbenchmark.com/Nvidia-RTX-3050/Rating/4127"
     }
   },
   {

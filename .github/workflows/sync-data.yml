@@ -28,7 +28,7 @@ jobs:
       - name: Install chrome-headless-shell via @puppeteer/browsers
         run: npm run browsers:install
 
-      - name: Run Puppeteer benchmark scraper (PassMark, Geekbench, Tom's Hardware, TechPowerUp)
+      - name: Run Puppeteer benchmark scraper (PassMark, Geekbench, Tom's Hardware, TechPowerUp, UserBenchmark)
         run: npm run scrape
 
       - name: Run data synchronization script (merge scraped data + Vast.ai, Steam, PCGamingWiki, ProtonDB)

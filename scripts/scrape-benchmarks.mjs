@@ -365,11 +365,85 @@ async function scrapeTechPowerUp(browser) {
   };
 }
 
+/**
+ * UserBenchmark GPU Database (vía volcado oficial CSV diario).
+ * Extrae Rank, Effective Speed (Benchmark %), Samples y URL para cada GPU.
+ */
+async function scrapeUserBenchmark(browser) {
+  const url = 'https://www.userbenchmark.com/resources/download/csv/GPU_UserBenchmarks.csv';
+  let csvText = '';
+  try {
+    const res = await fetch(url, {
+      headers: { 'User-Agent': USER_AGENT },
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    csvText = await res.text();
+  } catch {
+    // Si falla el fetch directo, usar Puppeteer con chrome-headless-shell
+    const page = await createPage(browser);
+    try {
+      await gotoWithRetry(page, url);
+      csvText = await page.evaluate(() => document.body?.innerText || '');
+    } finally {
+      await page.close();
+    }
+  }
+
+  const lines = csvText.split('\n').filter((l) => l.trim().length > 0);
+  const entriesMap = new Map();
+
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i];
+    const parts = line.split(',');
+    if (parts.length < 8) continue;
+    const type = parts[0]?.trim();
+    if (type !== 'GPU') continue;
+
+    const partNumber = parts[1]?.trim() || '';
+    const brand = parts[2]?.trim() || '';
+    const model = parts[3]?.trim() || '';
+    const rank = parseInt(parts[4]?.replace(/[^0-9]/g, ''), 10);
+    const benchmark = parseFloat(parts[5]?.replace(/[^0-9.]/g, ''));
+    const samples = parseInt(parts[6]?.replace(/[^0-9]/g, ''), 10);
+    const itemUrl = parts.slice(7).join(',').trim();
+
+    if (!model || isNaN(benchmark) || isNaN(rank)) continue;
+
+    const fullName = `${brand} ${model}`.trim();
+    const key = normalizeGpuName(fullName);
+
+    const existing = entriesMap.get(key);
+    const isReference = !partNumber;
+    if (!existing || (isReference && existing.partNumber) || (samples > (existing.samples || 0))) {
+      entriesMap.set(key, {
+        name: fullName,
+        brand,
+        model,
+        partNumber,
+        rank,
+        benchmark: Number(benchmark.toFixed(1)),
+        samples: samples || 0,
+        url: itemUrl,
+      });
+    }
+  }
+
+  const entries = [...entriesMap.values()];
+  console.log(`   • UserBenchmark: ${entries.length} modelos de GPU procesados.`);
+  return {
+    urls: [url],
+    unit: 'Effective Speed (%) y Ranking Global con número de muestras de usuarios',
+    entries,
+  };
+}
+
 const SOURCES = {
   passmark: { label: 'PassMark DirectX 12 / DirectX 11', run: scrapePassmark },
   geekbench: { label: 'Geekbench Browser OpenCL / Vulkan', run: scrapeGeekbench },
   tomshardware: { label: "Tom's Hardware GPU Hierarchy", run: scrapeTomsHardware },
   techpowerup: { label: 'TechPowerUp GPU Database', run: scrapeTechPowerUp },
+  userbenchmark: { label: 'UserBenchmark GPU Database (Daily CSV)', run: scrapeUserBenchmark },
 };
 
 function parseOnlyArg() {

@@ -48,16 +48,17 @@ async function loadScrapedSource(id) {
 
 async function loadScrapedData() {
   console.log('🕷️ [1/7] Cargando datos del scraper Puppeteer (src/data/scraped/)...');
-  const [passmark, geekbench, tomshardware, techpowerup] = await Promise.all([
+  const [passmark, geekbench, tomshardware, techpowerup, userbenchmark] = await Promise.all([
     loadScrapedSource('passmark'),
     loadScrapedSource('geekbench'),
     loadScrapedSource('tomshardware'),
     loadScrapedSource('techpowerup'),
+    loadScrapedSource('userbenchmark'),
   ]);
-  if (!passmark && !geekbench && !tomshardware && !techpowerup) {
+  if (!passmark && !geekbench && !tomshardware && !techpowerup && !userbenchmark) {
     console.warn('⚠️ No hay datos scrapeados. Ejecuta "npm run scrape" para generarlos.');
   }
-  return { passmark, geekbench, tomshardware, techpowerup };
+  return { passmark, geekbench, tomshardware, techpowerup, userbenchmark };
 }
 
 async function fetchVoidfulGpuSpecs() {
@@ -360,7 +361,7 @@ async function main() {
     return gpu.vramGB === maxVramByBase.get(base) ? candidate : undefined;
   }
 
-  const mergeStats = { passmark: 0, geekbench: 0, tomshardware: 0, techpowerup: 0 };
+  const mergeStats = { passmark: 0, geekbench: 0, tomshardware: 0, techpowerup: 0, userbenchmark: 0 };
 
   // Actualizar GPUs con datos scrapeados (PassMark, Geekbench, Tom's Hardware), voidful y Vast.ai Cloud Bundles
   for (const gpu of gpus) {
@@ -425,6 +426,21 @@ async function main() {
         mergeStats.techpowerup++;
       }
     }
+
+    if (scraped.userbenchmark) {
+      const ub = lookupStrict(scraped.userbenchmark.index, gpu);
+      if (ub) {
+        gpu.userbenchmark = {
+          rank: ub.rank,
+          score: ub.benchmark,
+          samples: ub.samples,
+          url: ub.url,
+        };
+        mergeStats.userbenchmark++;
+      } else {
+        delete gpu.userbenchmark;
+      }
+    }
     if (voidfulMap.has(normKey)) {
       const spec = voidfulMap.get(normKey);
       gpu.rawSourceSynced = true;
@@ -471,7 +487,7 @@ async function main() {
   console.log(
     `🔗 Fusión de datos scrapeados: PassMark ${mergeStats.passmark}/${gpus.length}, ` +
       `Geekbench ${mergeStats.geekbench}/${gpus.length}, Tom's Hardware ${mergeStats.tomshardware}/${gpus.length}, ` +
-      `TechPowerUp ${mergeStats.techpowerup}/${gpus.length}.`
+      `TechPowerUp ${mergeStats.techpowerup}/${gpus.length}, UserBenchmark ${mergeStats.userbenchmark}/${gpus.length}.`
   );
   console.log(`🎉 Sincronización completada: ${gpus.length} GPUs (con Vast.ai Bundles) y ${games.length} juegos guardados.`);
 }

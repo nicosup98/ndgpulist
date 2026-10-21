@@ -114,6 +114,7 @@ const filteredGpus = computed(() => {
     if (sortBy.value === 'passmarkDX11') return b.benchmarks.passmarkDX11 - a.benchmarks.passmarkDX11;
     if (sortBy.value === 'geekbenchOpenCL') return b.benchmarks.geekbenchOpenCL - a.benchmarks.geekbenchOpenCL;
     if (sortBy.value === 'geekbenchVulkan') return b.benchmarks.geekbenchVulkan - a.benchmarks.geekbenchVulkan;
+    if (sortBy.value === 'userbenchmark') return (b.userbenchmark?.score || 0) - (a.userbenchmark?.score || 0);
     if (sortBy.value === 'vastDlperf') return (b.vastai?.dlperf || 0) - (a.vastai?.dlperf || 0);
     if (sortBy.value === 'vastCloudPrice') return (a.vastai?.hourlyRateUSD || 999) - (b.vastai?.hourlyRateUSD || 999);
     if (sortBy.value === 'vram') return b.vramGB - a.vramGB || b.benchmarks.passmarkDX12 - a.benchmarks.passmarkDX12;
@@ -349,6 +350,7 @@ function getFpsBadgeColor(fps: number) {
             <option value="passmarkDX11">Orden: PassMark DirectX 11</option>
             <option value="geekbenchOpenCL">Orden: Geekbench 6 OpenCL</option>
             <option value="geekbenchVulkan">Orden: Geekbench 6 Vulkan</option>
+            <option value="userbenchmark">Orden: UserBenchmark Speed</option>
             <option value="vastDlperf">Orden: Vast.ai DLPerf (AI/Compute)</option>
             <option value="vastCloudPrice">Orden: Vast.ai Cloud ($/hr)</option>
             <option value="vram">Orden: Capacidad VRAM</option>
@@ -842,6 +844,34 @@ function getFpsBadgeColor(fps: number) {
                   </span>
                   <span class="text-slate-400 ml-1 text-[11px]">
                     ({{ gpu.tomshardware.rayTracing['1440p']?.relativePct ?? '-' }}% Rel.)
+                  </span>
+                </template>
+                <span v-else class="text-slate-400">N/A</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">UserBenchmark (Effective Speed)</td>
+              <td v-for="(gpu, i) in comparedGpus" :key="gpu.id" class="py-3 px-4">
+                <template v-if="gpu.userbenchmark">
+                  <a
+                    :href="gpu.userbenchmark.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-bold text-amber-600 dark:text-amber-400 hover:underline"
+                  >
+                    {{ gpu.userbenchmark.score }}%
+                  </a>
+                  <span class="text-slate-400 ml-1 text-[11px]">(#{{ gpu.userbenchmark.rank }})</span>
+                  <span
+                    v-if="i > 0 && baselineGpu.userbenchmark"
+                    :class="[
+                      'ml-1.5 px-1.5 py-0.5 rounded text-[10px]',
+                      gpu.userbenchmark.score >= baselineGpu.userbenchmark.score
+                        ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+                        : 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
+                    ]"
+                  >
+                    {{ getDiffPercent(gpu.userbenchmark.score, baselineGpu.userbenchmark.score) }}
                   </span>
                 </template>
                 <span v-else class="text-slate-400">N/A</span>
