@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import Fuse from 'fuse.js';
 import type {
   GpuSpec,
   SteamGame,
@@ -29,6 +30,46 @@ const rivalGpuId = ref<string>(
 const rivalGpu = computed(
   () => props.allGpus.find((g) => g.id === rivalGpuId.value) || props.allGpus[0]
 );
+
+const otherGpus = computed(() => props.allGpus.filter((g) => g.id !== props.gpu.id));
+
+const rivalFuse = computed(
+  () =>
+    new Fuse(otherGpus.value, {
+      keys: [
+        { name: 'name', weight: 0.55 },
+        { name: 'id', weight: 0.2 },
+        { name: 'series', weight: 0.15 },
+        { name: 'architecture', weight: 0.1 },
+      ],
+      threshold: 0.35,
+      ignoreLocation: true,
+    })
+);
+
+const rivalSearchQuery = ref('');
+const isRivalSearchOpen = ref(false);
+
+const rivalSearchResults = computed(() => {
+  const q = rivalSearchQuery.value.trim();
+  if (!q) return otherGpus.value.slice(0, 7);
+  return rivalFuse.value
+    .search(q)
+    .map((r) => r.item)
+    .slice(0, 7);
+});
+
+function selectRivalGpu(id: string) {
+  rivalGpuId.value = id;
+  rivalSearchQuery.value = '';
+  isRivalSearchOpen.value = false;
+}
+
+function handleRivalBlur() {
+  setTimeout(() => {
+    isRivalSearchOpen.value = false;
+  }, 180);
+}
 
 function calcFps(targetGpu: GpuSpec, game: SteamGame) {
   return calculateRelativeFps(targetGpu, game, resolution.value, quality.value, {
@@ -162,23 +203,38 @@ function getProtonTierColor(tier: ProtonTier) {
         </div>
       </div>
 
-      <!-- Comparar contra otra GPU en esta misma página -->
-      <div>
+      <!-- Comparar contra otra GPU en esta misma página (Fuse.js) -->
+      <div class="relative">
         <label class="block text-[10px] font-mono uppercase text-slate-400 mb-1">
-          Comparar frente a:
+          Comparar frente a (Fuse.js):
         </label>
-        <select
-          v-model="rivalGpuId"
-          class="w-full px-3 py-2 rounded-lg text-xs font-mono bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white"
+        <input
+          v-model="rivalSearchQuery"
+          type="text"
+          :placeholder="`${rivalGpu.name} (${rivalGpu.vramGB}GB)`"
+          @focus="isRivalSearchOpen = true"
+          @input="isRivalSearchOpen = true"
+          @blur="handleRivalBlur"
+          class="w-full px-3 py-2 rounded-lg text-xs font-mono bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-700 dark:placeholder-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <div
+          v-if="isRivalSearchOpen && rivalSearchResults.length > 0"
+          class="absolute z-30 right-0 mt-1 w-72 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-xl overflow-hidden divide-y divide-slate-100 dark:divide-slate-800"
         >
-          <option
-            v-for="item in allGpus.filter((g) => g.id !== gpu.id)"
+          <button
+            v-for="item in rivalSearchResults"
             :key="item.id"
-            :value="item.id"
+            type="button"
+            @mousedown.prevent="selectRivalGpu(item.id)"
+            class="w-full px-3 py-2 text-left text-xs font-mono hover:bg-blue-50 dark:hover:bg-blue-950/50 flex items-center justify-between gap-2"
           >
-            {{ item.name }} ({{ item.vramGB }}GB)
-          </option>
-        </select>
+            <div class="truncate">
+              <span class="font-bold text-slate-900 dark:text-white block truncate">{{ item.name }}</span>
+              <span class="text-[10px] text-slate-500">{{ item.vramGB }}GB • {{ item.series }}</span>
+            </div>
+            <span class="text-[10px] text-blue-600 dark:text-blue-400 font-bold shrink-0">VS →</span>
+          </button>
+        </div>
       </div>
     </div>
 

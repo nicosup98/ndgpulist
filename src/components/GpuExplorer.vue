@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import Fuse from 'fuse.js';
 import type {
   GpuSpec,
   SteamGame,
@@ -19,10 +20,21 @@ const props = defineProps<{
 
 // Filtros del Ranking de GPUs
 const selectedBrandFilter = ref<'ALL' | 'NVIDIA' | 'AMD' | 'Intel'>('ALL');
+const selectedSeriesFilter = ref<string>('ALL');
 const selectedVramFilter = ref<number>(0);
 const searchQuery = ref('');
 const sortBy = ref<'passmark' | 'geekbenchOpenCL' | 'geekbenchVulkan' | 'vastDlperf' | 'vastCloudPrice' | 'vram' | 'value'>('passmark');
 const showAllGpus = ref(false);
+
+const availableSeries = computed(() => {
+  const set = new Set<string>();
+  for (const g of props.gpus) {
+    if (selectedBrandFilter.value === 'ALL' || g.brand === selectedBrandFilter.value) {
+      set.add(g.series);
+    }
+  }
+  return Array.from(set);
+});
 
 // Comparador (soporta de 2 hasta 4 GPUs simultáneamente)
 const comparedIds = ref<string[]>(
@@ -31,7 +43,39 @@ const comparedIds = ref<string[]>(
     : ['rtx-4070-super', 'rx-7800-xt', 'arc-b580']
 );
 
-const gpuToAdd = ref<string>('rtx-4080-super');
+// Buscador difuso con Fuse.js para el Ranking y para agregar GPUs al Comparador
+const gpuFuse = computed(
+  () =>
+    new Fuse(props.gpus, {
+      keys: [
+        { name: 'name', weight: 0.5 },
+        { name: 'id', weight: 0.2 },
+        { name: 'series', weight: 0.15 },
+        { name: 'architecture', weight: 0.1 },
+        { name: 'brand', weight: 0.05 },
+      ],
+      threshold: 0.35,
+      ignoreLocation: true,
+      includeScore: true,
+    })
+);
+
+const compareSearchQuery = ref('');
+const isCompareSearchOpen = ref(false);
+const highlightedIndex = ref(0);
+
+const compareSearchResults = computed(() => {
+  const q = compareSearchQuery.value.trim();
+  if (!q) {
+    return props.gpus
+      .filter((g) => !comparedIds.value.includes(g.id))
+      .slice(0, 8);
+  }
+  return gpuFuse.value
+    .search(q)
+    .map((res) => res.item)
+    .slice(0, 8);
+});
 
 // Controles del Estimador de FPS (enriquecido con PCGamingWiki Cargo + ProtonDB)
 const selectedResolution = ref<ResolutionKey>('1440p');
@@ -47,36 +91,47 @@ const maxGeekbenchCL = computed(() => Math.max(...props.gpus.map((g) => g.benchm
 const maxVastDlperf = computed(() => Math.max(...props.gpus.map((g) => g.vastai?.dlperf || 1)));
 
 const filteredGpus = computed(() => {
-  return props.gpus
-    .filter((gpu) => {
-      const matchesBrand = selectedBrandFilter.value === 'ALL' || gpu.brand === selectedBrandFilter.value;
-      const matchesVram = selectedVramFilter.value === 0 || gpu.vramGB >= selectedVramFilter.value;
-      const q = searchQuery.value.trim().toLowerCase();
-      const matchesSearch =
-        !q ||
-        gpu.name.toLowerCase().includes(q) ||
-        gpu.architecture.toLowerCase().includes(q) ||
-        gpu.series.toLowerCase().includes(q);
-      return matchesBrand && matchesVram && matchesSearch;
-    })
-    .sort((a, b) => {
-      if (sortBy.value === 'passmark') return b.benchmarks.passmarkG3D - a.benchmarks.passmarkG3D;
-      if (sortBy.value === 'geekbenchOpenCL') return b.benchmarks.geekbenchOpenCL - a.benchmarks.geekbenchOpenCL;
-      if (sortBy.value === 'geekbenchVulkan') return b.benchmarks.geekbenchVulkan - a.benchmarks.geekbenchVulkan;
-      if (sortBy.value === 'vastDlperf') return (b.vastai?.dlperf || 0) - (a.vastai?.dlperf || 0);
-      if (sortBy.value === 'vastCloudPrice') return (a.vastai?.hourlyRateUSD || 999) - (b.vastai?.hourlyRateUSD || 999);
-      if (sortBy.value === 'vram') return b.vramGB - a.vramGB || b.benchmarks.passmarkG3D - a.benchmarks.passmarkG3D;
-      if (sortBy.value === 'value') {
-        const valA = a.benchmarks.passmarkG3D / a.msrpUSD;
-        const valB = b.benchmarks.passmarkG3D / b.msrpUSD;
-        return valB - valA;
-      }
-      return 0;
-    });
+  const q = searchQuery.value.trim();
+  const baseList = q
+    ? gpuFuse.value.search(q).map((r) => r.item)
+    : props.gpus;
+
+  const filtered = baseList.filter((gpu) => {
+    const matchesBrand = selectedBrandFilter.value === 'ALL' || gpu.brand === selectedBrandFilter.value;
+    const matchesSeries = selectedSeriesFilter.value === 'ALL' || gpu.series === selectedSeriesFilter.value;
+    const matchesVram = selectedVramFilter.value === 0 || gpu.vramGB >= selectedVramFilter.value;
+    return matchesBrand && matchesSeries && matchesVram;
+  });
+
+  if (q) {
+    // Mantiene la relevancia difusa de Fuse.js cuando el usuario está buscando por texto
+    return filtered;
+  }
+
+  return [...filtered].sort((a, b) => {
+    if (sortBy.value === 'passmark') return b.benchmarks.passmarkG3D - a.benchmarks.passmarkG3D;
+    if (sortBy.value === 'geekbenchOpenCL') return b.benchmarks.geekbenchOpenCL - a.benchmarks.geekbenchOpenCL;
+    if (sortBy.value === 'geekbenchVulkan') return b.benchmarks.geekbenchVulkan - a.benchmarks.geekbenchVulkan;
+    if (sortBy.value === 'vastDlperf') return (b.vastai?.dlperf || 0) - (a.vastai?.dlperf || 0);
+    if (sortBy.value === 'vastCloudPrice') return (a.vastai?.hourlyRateUSD || 999) - (b.vastai?.hourlyRateUSD || 999);
+    if (sortBy.value === 'vram') return b.vramGB - a.vramGB || b.benchmarks.passmarkG3D - a.benchmarks.passmarkG3D;
+    if (sortBy.value === 'value') {
+      const valA = a.benchmarks.passmarkG3D / a.msrpUSD;
+      const valB = b.benchmarks.passmarkG3D / b.msrpUSD;
+      return valB - valA;
+    }
+    return 0;
+  });
 });
 
 const displayedGpus = computed(() => {
-  if (showAllGpus.value || searchQuery.value.trim() || selectedBrandFilter.value !== 'ALL' || selectedVramFilter.value > 0) {
+  if (
+    showAllGpus.value ||
+    searchQuery.value.trim() ||
+    selectedBrandFilter.value !== 'ALL' ||
+    selectedSeriesFilter.value !== 'ALL' ||
+    selectedVramFilter.value > 0
+  ) {
     return filteredGpus.value;
   }
   return filteredGpus.value.slice(0, 16);
@@ -131,13 +186,45 @@ function toggleCompareGpu(id: string) {
   }
 }
 
-function addGpuFromSelector() {
-  if (gpuToAdd.value && !comparedIds.value.includes(gpuToAdd.value)) {
+function selectGpuForComparator(gpuId: string) {
+  if (!comparedIds.value.includes(gpuId)) {
     if (comparedIds.value.length >= 4) {
       comparedIds.value.shift();
     }
-    comparedIds.value.push(gpuToAdd.value);
+    comparedIds.value.push(gpuId);
   }
+  compareSearchQuery.value = '';
+  isCompareSearchOpen.value = false;
+  highlightedIndex.value = 0;
+}
+
+function handleCompareSearchKeydown(e: KeyboardEvent) {
+  const results = compareSearchResults.value;
+  if (!results.length) return;
+
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    isCompareSearchOpen.value = true;
+    highlightedIndex.value = (highlightedIndex.value + 1) % results.length;
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    isCompareSearchOpen.value = true;
+    highlightedIndex.value = (highlightedIndex.value - 1 + results.length) % results.length;
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    const chosen = results[highlightedIndex.value] || results[0];
+    if (chosen) {
+      selectGpuForComparator(chosen.id);
+    }
+  } else if (e.key === 'Escape') {
+    isCompareSearchOpen.value = false;
+  }
+}
+
+function handleCompareBlur() {
+  setTimeout(() => {
+    isCompareSearchOpen.value = false;
+  }, 180);
 }
 
 function removeComparedGpu(id: string) {
@@ -212,7 +299,7 @@ function getFpsBadgeColor(fps: number) {
               v-for="brand in (['ALL', 'NVIDIA', 'AMD', 'Intel'] as const)"
               :key="brand"
               type="button"
-              @click="selectedBrandFilter = brand"
+              @click="selectedBrandFilter = brand; selectedSeriesFilter = 'ALL'"
               :class="[
                 'px-3 py-1.5 rounded-md font-semibold transition-all',
                 selectedBrandFilter === brand
@@ -224,6 +311,18 @@ function getFpsBadgeColor(fps: number) {
             </button>
           </div>
 
+          <!-- Filtro por Serie (RTX 50, RX 500, RX 400, R9, R7, etc.) -->
+          <select
+            v-model="selectedSeriesFilter"
+            aria-label="Filtrar por Serie de GPU"
+            class="px-2.5 py-2 rounded-lg text-xs font-mono bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="ALL">Serie: Todas</option>
+            <option v-for="serie in availableSeries" :key="serie" :value="serie">
+              {{ serie }}
+            </option>
+          </select>
+
           <!-- Filtro por VRAM mínima -->
           <select
             v-model.number="selectedVramFilter"
@@ -231,6 +330,7 @@ function getFpsBadgeColor(fps: number) {
             class="px-2.5 py-2 rounded-lg text-xs font-mono bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option :value="0">VRAM: Todas</option>
+            <option :value="4">4+ GB VRAM</option>
             <option :value="8">8+ GB VRAM</option>
             <option :value="12">12+ GB VRAM</option>
             <option :value="16">16+ GB VRAM</option>
@@ -455,24 +555,85 @@ function getFpsBadgeColor(fps: number) {
           </p>
         </div>
 
-        <!-- Selector rápido para añadir GPU al comparador -->
-        <div class="flex items-center gap-2">
-          <select
-            v-model="gpuToAdd"
-            aria-label="Seleccionar GPU para añadir a la comparación"
-            class="px-3 py-2 rounded-lg text-xs font-mono bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-200"
+        <!-- Buscador difuso con Fuse.js para añadir GPU al comparador -->
+        <div class="relative w-full md:w-96">
+          <label class="block text-[10px] font-mono uppercase tracking-wider text-slate-400 mb-1">
+            Buscar y añadir GPU al comparador (Fuse.js)
+          </label>
+          <div class="relative">
+            <input
+              v-model="compareSearchQuery"
+              type="text"
+              placeholder="Ej: 4070 super, rx 580, r9 390, b580..."
+              @focus="isCompareSearchOpen = true; highlightedIndex = 0"
+              @input="isCompareSearchOpen = true; highlightedIndex = 0"
+              @keydown="handleCompareSearchKeydown"
+              @blur="handleCompareBlur"
+              class="w-full pl-9 pr-16 py-2.5 rounded-xl text-xs font-mono bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <svg
+              class="w-4 h-4 text-blue-500 absolute left-3 top-1/2 -translate-y-1/2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-400 border border-slate-200 dark:border-slate-700">
+              {{ comparedIds.length }}/4 VS
+            </span>
+          </div>
+
+          <!-- Dropdown de resultados difusos de Fuse.js -->
+          <div
+            v-if="isCompareSearchOpen && compareSearchResults.length > 0"
+            class="absolute z-40 mt-1.5 w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-xl overflow-hidden divide-y divide-slate-100 dark:divide-slate-800"
           >
-            <option v-for="g in gpus" :key="g.id" :value="g.id">
-              {{ g.name }} ({{ g.vramGB }}GB)
-            </option>
-          </select>
-          <button
-            type="button"
-            @click="addGpuFromSelector"
-            class="px-3.5 py-2 rounded-lg text-xs font-mono font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-colors"
-          >
-            + Añadir GPU
-          </button>
+            <button
+              v-for="(item, idx) in compareSearchResults"
+              :key="item.id"
+              type="button"
+              @mousedown.prevent="selectGpuForComparator(item.id)"
+              @mouseenter="highlightedIndex = idx"
+              :class="[
+                'w-full px-3.5 py-2.5 text-left flex items-center justify-between gap-2 transition-colors',
+                idx === highlightedIndex
+                  ? 'bg-blue-50 dark:bg-blue-950/50'
+                  : 'hover:bg-slate-50 dark:hover:bg-slate-800/60',
+              ]"
+            >
+              <div class="min-w-0">
+                <div class="flex items-center gap-2">
+                  <span
+                    :class="[
+                      'text-[9px] font-mono font-bold px-1.5 py-0.2 rounded border shrink-0',
+                      getBrandBadgeClass(item.brand),
+                    ]"
+                  >
+                    {{ item.brand }}
+                  </span>
+                  <span class="text-xs font-bold text-slate-900 dark:text-white truncate">
+                    {{ item.name }}
+                  </span>
+                </div>
+                <div class="text-[11px] font-mono text-slate-500 dark:text-slate-400 mt-0.5">
+                  {{ item.vramGB }}GB {{ item.memoryType }} • {{ item.series }} • {{ item.benchmarks.passmarkG3D.toLocaleString() }} G3D
+                </div>
+              </div>
+
+              <span
+                :class="[
+                  'text-[10px] font-mono font-bold px-2 py-1 rounded shrink-0',
+                  comparedIds.includes(item.id)
+                    ? 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30'
+                    : 'bg-blue-600 text-white',
+                ]"
+              >
+                {{ comparedIds.includes(item.id) ? '✓ Activa' : '+ Añadir' }}
+              </span>
+            </button>
+          </div>
         </div>
       </div>
 

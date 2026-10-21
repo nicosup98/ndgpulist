@@ -25,7 +25,7 @@
     "vastai": {
       "dlperf": 118.4,
       "hourlyRateUSD": 0.89,
-      "dlperfPerDollar": 133.0,
+      "dlperfPerDollar": 133,
       "availableOffers": 42,
       "verifiedFlops": 105.2
     }
@@ -399,7 +399,7 @@
       "hourlyRateUSD": 0.12,
       "dlperfPerDollar": 209.2,
       "availableOffers": 34,
-      "verifiedFlops": 22.0
+      "verifiedFlops": 22
     }
   },
   {
@@ -428,7 +428,7 @@
     "vastai": {
       "dlperf": 19.6,
       "hourlyRateUSD": 0.1,
-      "dlperfPerDollar": 196.0,
+      "dlperfPerDollar": 196,
       "availableOffers": 41,
       "verifiedFlops": 15.2
     }
@@ -449,7 +449,7 @@
     "cores": 10752,
     "tdpWatts": 450,
     "processNm": 8,
-    "tflopsFP32": 40.0,
+    "tflopsFP32": 40,
     "msrpUSD": 1099,
     "benchmarks": {
       "geekbenchOpenCL": 226800,
@@ -459,7 +459,7 @@
     "vastai": {
       "dlperf": 46.2,
       "hourlyRateUSD": 0.22,
-      "dlperfPerDollar": 210.0,
+      "dlperfPerDollar": 210,
       "availableOffers": 37,
       "verifiedFlops": 40.1
     }
@@ -583,7 +583,7 @@
     "vastai": {
       "dlperf": 25.8,
       "hourlyRateUSD": 0.12,
-      "dlperfPerDollar": 215.0,
+      "dlperfPerDollar": 215,
       "availableOffers": 45,
       "verifiedFlops": 21.8
     }
@@ -676,7 +676,7 @@
     "vastai": {
       "dlperf": 16.4,
       "hourlyRateUSD": 0.08,
-      "dlperfPerDollar": 205.0,
+      "dlperfPerDollar": 205,
       "availableOffers": 142,
       "verifiedFlops": 12.8
     }
@@ -738,9 +738,9 @@
     "vastai": {
       "dlperf": 8.4,
       "hourlyRateUSD": 0.05,
-      "dlperfPerDollar": 168.0,
+      "dlperfPerDollar": 168,
       "availableOffers": 19,
-      "verifiedFlops": 5.0
+      "verifiedFlops": 5
     }
   },
   {
@@ -821,7 +821,7 @@
     "cores": 5120,
     "tdpWatts": 260,
     "processNm": 5,
-    "tflopsFP32": 46.0,
+    "tflopsFP32": 46,
     "msrpUSD": 549,
     "benchmarks": {
       "geekbenchOpenCL": 172100,
@@ -833,7 +833,7 @@
       "hourlyRateUSD": 0.21,
       "dlperfPerDollar": 197.6,
       "availableOffers": 14,
-      "verifiedFlops": 46.0
+      "verifiedFlops": 46
     }
   },
   {
@@ -893,7 +893,7 @@
     "vastai": {
       "dlperf": 31.2,
       "hourlyRateUSD": 0.16,
-      "dlperfPerDollar": 195.0,
+      "dlperfPerDollar": 195,
       "availableOffers": 12,
       "verifiedFlops": 35.2
     }
@@ -955,7 +955,7 @@
     "vastai": {
       "dlperf": 19.4,
       "hourlyRateUSD": 0.1,
-      "dlperfPerDollar": 194.0,
+      "dlperfPerDollar": 194,
       "availableOffers": 11,
       "verifiedFlops": 21.7
     }
@@ -1110,7 +1110,7 @@
     "vastai": {
       "dlperf": 19.5,
       "hourlyRateUSD": 0.1,
-      "dlperfPerDollar": 195.0,
+      "dlperfPerDollar": 195,
       "availableOffers": 16,
       "verifiedFlops": 13.2
     }
@@ -1141,7 +1141,7 @@
     "vastai": {
       "dlperf": 15.2,
       "hourlyRateUSD": 0.08,
-      "dlperfPerDollar": 190.0,
+      "dlperfPerDollar": 190,
       "availableOffers": 12,
       "verifiedFlops": 10.6
     }
@@ -1203,7 +1203,7 @@
     "vastai": {
       "dlperf": 12.6,
       "hourlyRateUSD": 0.07,
-      "dlperfPerDollar": 180.0,
+      "dlperfPerDollar": 180,
       "availableOffers": 8,
       "verifiedFlops": 9.8
     }
@@ -1296,7 +1296,7 @@
     "vastai": {
       "dlperf": 22.4,
       "hourlyRateUSD": 0.1,
-      "dlperfPerDollar": 224.0,
+      "dlperfPerDollar": 224,
       "availableOffers": 19,
       "verifiedFlops": 19.7
     }
@@ -1330,6 +1330,1322 @@
       "dlperfPerDollar": 232.5,
       "availableOffers": 11,
       "verifiedFlops": 17.2
+    }
+  },
+  {
+    "id": "rtx-5060-ti-16gb",
+    "name": "GeForce RTX 5060 Ti 16GB",
+    "brand": "NVIDIA",
+    "series": "RTX 50 Series",
+    "architecture": "Blackwell",
+    "releaseYear": 2025,
+    "vramGB": 16,
+    "memoryType": "GDDR7",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 448,
+    "baseClockMHz": 2407,
+    "boostClockMHz": 2572,
+    "cores": 4608,
+    "tdpWatts": 180,
+    "processNm": 4,
+    "tflopsFP32": 23.7,
+    "msrpUSD": 429,
+    "benchmarks": {
+      "geekbenchOpenCL": 158400,
+      "geekbenchVulkan": 152100,
+      "passmarkG3D": 26100
+    },
+    "vastai": {
+      "dlperf": 32.8,
+      "hourlyRateUSD": 0.16,
+      "dlperfPerDollar": 205.0,
+      "availableOffers": 36,
+      "verifiedFlops": 23.7
+    }
+  },
+  {
+    "id": "rtx-5060",
+    "name": "GeForce RTX 5060",
+    "brand": "NVIDIA",
+    "series": "RTX 50 Series",
+    "architecture": "Blackwell",
+    "releaseYear": 2025,
+    "vramGB": 8,
+    "memoryType": "GDDR7",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 448,
+    "baseClockMHz": 2280,
+    "boostClockMHz": 2497,
+    "cores": 3840,
+    "tdpWatts": 145,
+    "processNm": 4,
+    "tflopsFP32": 19.2,
+    "msrpUSD": 299,
+    "benchmarks": {
+      "geekbenchOpenCL": 128900,
+      "geekbenchVulkan": 124200,
+      "passmarkG3D": 22400
+    },
+    "vastai": {
+      "dlperf": 25.4,
+      "hourlyRateUSD": 0.12,
+      "dlperfPerDollar": 211.7,
+      "availableOffers": 29,
+      "verifiedFlops": 19.2
+    }
+  },
+  {
+    "id": "rtx-5050",
+    "name": "GeForce RTX 5050",
+    "brand": "NVIDIA",
+    "series": "RTX 50 Series",
+    "architecture": "Blackwell",
+    "releaseYear": 2025,
+    "vramGB": 8,
+    "memoryType": "GDDR6",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 320,
+    "baseClockMHz": 2310,
+    "boostClockMHz": 2570,
+    "cores": 2560,
+    "tdpWatts": 130,
+    "processNm": 4,
+    "tflopsFP32": 13.16,
+    "msrpUSD": 249,
+    "benchmarks": {
+      "geekbenchOpenCL": 96800,
+      "geekbenchVulkan": 93400,
+      "passmarkG3D": 18250
+    },
+    "vastai": {
+      "dlperf": 17.8,
+      "hourlyRateUSD": 0.08,
+      "dlperfPerDollar": 222.5,
+      "availableOffers": 18,
+      "verifiedFlops": 13.2
+    }
+  },
+  {
+    "id": "rx-590",
+    "name": "Radeon RX 590",
+    "brand": "AMD",
+    "series": "RX 500 Series",
+    "architecture": "GCN 4.0 (Polaris 30)",
+    "releaseYear": 2018,
+    "vramGB": 8,
+    "memoryType": "GDDR5",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 256,
+    "baseClockMHz": 1469,
+    "boostClockMHz": 1545,
+    "cores": 2304,
+    "tdpWatts": 175,
+    "processNm": 12,
+    "tflopsFP32": 7.12,
+    "msrpUSD": 129,
+    "benchmarks": {
+      "geekbenchOpenCL": 47200,
+      "geekbenchVulkan": 44800,
+      "passmarkG3D": 10280
+    },
+    "vastai": {
+      "dlperf": 6.8,
+      "hourlyRateUSD": 0.05,
+      "dlperfPerDollar": 136.0,
+      "availableOffers": 6,
+      "verifiedFlops": 7.1
+    }
+  },
+  {
+    "id": "rx-580-8gb",
+    "name": "Radeon RX 580 8GB",
+    "brand": "AMD",
+    "series": "RX 500 Series",
+    "architecture": "GCN 4.0 (Polaris 20)",
+    "releaseYear": 2017,
+    "vramGB": 8,
+    "memoryType": "GDDR5",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 256,
+    "baseClockMHz": 1257,
+    "boostClockMHz": 1340,
+    "cores": 2304,
+    "tdpWatts": 185,
+    "processNm": 14,
+    "tflopsFP32": 6.17,
+    "msrpUSD": 109,
+    "benchmarks": {
+      "geekbenchOpenCL": 42800,
+      "geekbenchVulkan": 40900,
+      "passmarkG3D": 8910
+    },
+    "vastai": {
+      "dlperf": 6.1,
+      "hourlyRateUSD": 0.04,
+      "dlperfPerDollar": 152.5,
+      "availableOffers": 14,
+      "verifiedFlops": 6.2
+    }
+  },
+  {
+    "id": "rx-570-8gb",
+    "name": "Radeon RX 570 8GB",
+    "brand": "AMD",
+    "series": "RX 500 Series",
+    "architecture": "GCN 4.0 (Polaris 20)",
+    "releaseYear": 2017,
+    "vramGB": 8,
+    "memoryType": "GDDR5",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 224,
+    "baseClockMHz": 1168,
+    "boostClockMHz": 1244,
+    "cores": 2048,
+    "tdpWatts": 150,
+    "processNm": 14,
+    "tflopsFP32": 5.1,
+    "msrpUSD": 89,
+    "benchmarks": {
+      "geekbenchOpenCL": 37400,
+      "geekbenchVulkan": 35800,
+      "passmarkG3D": 7980
+    },
+    "vastai": {
+      "dlperf": 5.2,
+      "hourlyRateUSD": 0.04,
+      "dlperfPerDollar": 130.0,
+      "availableOffers": 9,
+      "verifiedFlops": 5.1
+    }
+  },
+  {
+    "id": "rx-560-4gb",
+    "name": "Radeon RX 560 4GB",
+    "brand": "AMD",
+    "series": "RX 500 Series",
+    "architecture": "GCN 4.0 (Polaris 21)",
+    "releaseYear": 2017,
+    "vramGB": 4,
+    "memoryType": "GDDR5",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 112,
+    "baseClockMHz": 1175,
+    "boostClockMHz": 1275,
+    "cores": 1024,
+    "tdpWatts": 75,
+    "processNm": 14,
+    "tflopsFP32": 2.61,
+    "msrpUSD": 69,
+    "benchmarks": {
+      "geekbenchOpenCL": 21200,
+      "geekbenchVulkan": 20100,
+      "passmarkG3D": 4450
+    }
+  },
+  {
+    "id": "rx-550-4gb",
+    "name": "Radeon RX 550 4GB",
+    "brand": "AMD",
+    "series": "RX 500 Series",
+    "architecture": "GCN 4.0 (Polaris 12)",
+    "releaseYear": 2017,
+    "vramGB": 4,
+    "memoryType": "GDDR5",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 112,
+    "baseClockMHz": 1100,
+    "boostClockMHz": 1183,
+    "cores": 512,
+    "tdpWatts": 50,
+    "processNm": 14,
+    "tflopsFP32": 1.21,
+    "msrpUSD": 59,
+    "benchmarks": {
+      "geekbenchOpenCL": 13400,
+      "geekbenchVulkan": 12800,
+      "passmarkG3D": 2840
+    }
+  },
+  {
+    "id": "rx-480-8gb",
+    "name": "Radeon RX 480 8GB",
+    "brand": "AMD",
+    "series": "RX 400 Series",
+    "architecture": "GCN 4.0 (Polaris 10)",
+    "releaseYear": 2016,
+    "vramGB": 8,
+    "memoryType": "GDDR5",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 256,
+    "baseClockMHz": 1120,
+    "boostClockMHz": 1266,
+    "cores": 2304,
+    "tdpWatts": 150,
+    "processNm": 14,
+    "tflopsFP32": 5.83,
+    "msrpUSD": 99,
+    "benchmarks": {
+      "geekbenchOpenCL": 39800,
+      "geekbenchVulkan": 38100,
+      "passmarkG3D": 8450
+    },
+    "vastai": {
+      "dlperf": 5.6,
+      "hourlyRateUSD": 0.04,
+      "dlperfPerDollar": 140.0,
+      "availableOffers": 5,
+      "verifiedFlops": 5.8
+    }
+  },
+  {
+    "id": "rx-470-4gb",
+    "name": "Radeon RX 470 4GB",
+    "brand": "AMD",
+    "series": "RX 400 Series",
+    "architecture": "GCN 4.0 (Polaris 10)",
+    "releaseYear": 2016,
+    "vramGB": 4,
+    "memoryType": "GDDR5",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 211,
+    "baseClockMHz": 926,
+    "boostClockMHz": 1206,
+    "cores": 2048,
+    "tdpWatts": 120,
+    "processNm": 14,
+    "tflopsFP32": 4.94,
+    "msrpUSD": 79,
+    "benchmarks": {
+      "geekbenchOpenCL": 35100,
+      "geekbenchVulkan": 33400,
+      "passmarkG3D": 7590
+    }
+  },
+  {
+    "id": "rx-460-4gb",
+    "name": "Radeon RX 460 4GB",
+    "brand": "AMD",
+    "series": "RX 400 Series",
+    "architecture": "GCN 4.0 (Polaris 11)",
+    "releaseYear": 2016,
+    "vramGB": 4,
+    "memoryType": "GDDR5",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 112,
+    "baseClockMHz": 1090,
+    "boostClockMHz": 1200,
+    "cores": 896,
+    "tdpWatts": 75,
+    "processNm": 14,
+    "tflopsFP32": 2.15,
+    "msrpUSD": 65,
+    "benchmarks": {
+      "geekbenchOpenCL": 18900,
+      "geekbenchVulkan": 17600,
+      "passmarkG3D": 4120
+    }
+  },
+  {
+    "id": "r9-fury-x",
+    "name": "Radeon R9 Fury X",
+    "brand": "AMD",
+    "series": "Radeon R9 Series",
+    "architecture": "GCN 3.0 (Fiji)",
+    "releaseYear": 2015,
+    "vramGB": 4,
+    "memoryType": "HBM",
+    "busWidthBit": 4096,
+    "memoryBandwidthGBs": 512,
+    "baseClockMHz": 1050,
+    "boostClockMHz": 1050,
+    "cores": 4096,
+    "tdpWatts": 275,
+    "processNm": 28,
+    "tflopsFP32": 8.6,
+    "msrpUSD": 119,
+    "benchmarks": {
+      "geekbenchOpenCL": 43500,
+      "geekbenchVulkan": 39200,
+      "passmarkG3D": 8590
+    }
+  },
+  {
+    "id": "r9-390x",
+    "name": "Radeon R9 390X 8GB",
+    "brand": "AMD",
+    "series": "Radeon R9 Series",
+    "architecture": "GCN 2.0 (Grenada)",
+    "releaseYear": 2015,
+    "vramGB": 8,
+    "memoryType": "GDDR5",
+    "busWidthBit": 512,
+    "memoryBandwidthGBs": 384,
+    "baseClockMHz": 1050,
+    "boostClockMHz": 1050,
+    "cores": 2816,
+    "tdpWatts": 275,
+    "processNm": 28,
+    "tflopsFP32": 5.91,
+    "msrpUSD": 99,
+    "benchmarks": {
+      "geekbenchOpenCL": 34200,
+      "geekbenchVulkan": 31800,
+      "passmarkG3D": 7680
+    }
+  },
+  {
+    "id": "r9-390",
+    "name": "Radeon R9 390 8GB",
+    "brand": "AMD",
+    "series": "Radeon R9 Series",
+    "architecture": "GCN 2.0 (Grenada)",
+    "releaseYear": 2015,
+    "vramGB": 8,
+    "memoryType": "GDDR5",
+    "busWidthBit": 512,
+    "memoryBandwidthGBs": 384,
+    "baseClockMHz": 1000,
+    "boostClockMHz": 1000,
+    "cores": 2560,
+    "tdpWatts": 275,
+    "processNm": 28,
+    "tflopsFP32": 5.12,
+    "msrpUSD": 89,
+    "benchmarks": {
+      "geekbenchOpenCL": 31900,
+      "geekbenchVulkan": 29500,
+      "passmarkG3D": 7250
+    }
+  },
+  {
+    "id": "r9-380x",
+    "name": "Radeon R9 380X 4GB",
+    "brand": "AMD",
+    "series": "Radeon R9 Series",
+    "architecture": "GCN 3.0 (Antigua)",
+    "releaseYear": 2015,
+    "vramGB": 4,
+    "memoryType": "GDDR5",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 182.4,
+    "baseClockMHz": 970,
+    "boostClockMHz": 970,
+    "cores": 2048,
+    "tdpWatts": 190,
+    "processNm": 28,
+    "tflopsFP32": 3.97,
+    "msrpUSD": 75,
+    "benchmarks": {
+      "geekbenchOpenCL": 25800,
+      "geekbenchVulkan": 23900,
+      "passmarkG3D": 5680
+    }
+  },
+  {
+    "id": "r9-380",
+    "name": "Radeon R9 380 4GB",
+    "brand": "AMD",
+    "series": "Radeon R9 Series",
+    "architecture": "GCN 3.0 (Tonga)",
+    "releaseYear": 2015,
+    "vramGB": 4,
+    "memoryType": "GDDR5",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 182.4,
+    "baseClockMHz": 970,
+    "boostClockMHz": 970,
+    "cores": 1792,
+    "tdpWatts": 190,
+    "processNm": 28,
+    "tflopsFP32": 3.48,
+    "msrpUSD": 69,
+    "benchmarks": {
+      "geekbenchOpenCL": 23400,
+      "geekbenchVulkan": 21500,
+      "passmarkG3D": 5240
+    }
+  },
+  {
+    "id": "r9-290x",
+    "name": "Radeon R9 290X 4GB",
+    "brand": "AMD",
+    "series": "Radeon R9 Series",
+    "architecture": "GCN 2.0 (Hawaii)",
+    "releaseYear": 2013,
+    "vramGB": 4,
+    "memoryType": "GDDR5",
+    "busWidthBit": 512,
+    "memoryBandwidthGBs": 320,
+    "baseClockMHz": 1000,
+    "boostClockMHz": 1000,
+    "cores": 2816,
+    "tdpWatts": 290,
+    "processNm": 28,
+    "tflopsFP32": 5.63,
+    "msrpUSD": 79,
+    "benchmarks": {
+      "geekbenchOpenCL": 30800,
+      "geekbenchVulkan": 28100,
+      "passmarkG3D": 6950
+    }
+  },
+  {
+    "id": "r9-280x",
+    "name": "Radeon R9 280X 3GB",
+    "brand": "AMD",
+    "series": "Radeon R9 Series",
+    "architecture": "GCN 1.0 (Tahiti)",
+    "releaseYear": 2013,
+    "vramGB": 3,
+    "memoryType": "GDDR5",
+    "busWidthBit": 384,
+    "memoryBandwidthGBs": 288,
+    "baseClockMHz": 850,
+    "boostClockMHz": 1000,
+    "cores": 2048,
+    "tdpWatts": 250,
+    "processNm": 28,
+    "tflopsFP32": 4.1,
+    "msrpUSD": 65,
+    "benchmarks": {
+      "geekbenchOpenCL": 21900,
+      "geekbenchVulkan": 18400,
+      "passmarkG3D": 5020
+    }
+  },
+  {
+    "id": "r9-270x",
+    "name": "Radeon R9 270X 2GB",
+    "brand": "AMD",
+    "series": "Radeon R9 Series",
+    "architecture": "GCN 1.0 (Curacao)",
+    "releaseYear": 2013,
+    "vramGB": 2,
+    "memoryType": "GDDR5",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 179.2,
+    "baseClockMHz": 1000,
+    "boostClockMHz": 1050,
+    "cores": 1280,
+    "tdpWatts": 180,
+    "processNm": 28,
+    "tflopsFP32": 2.69,
+    "msrpUSD": 55,
+    "benchmarks": {
+      "geekbenchOpenCL": 16400,
+      "geekbenchVulkan": 14200,
+      "passmarkG3D": 4050
+    }
+  },
+  {
+    "id": "r7-370",
+    "name": "Radeon R7 370 4GB",
+    "brand": "AMD",
+    "series": "Radeon R7 Series",
+    "architecture": "GCN 1.0 (Trinidad)",
+    "releaseYear": 2015,
+    "vramGB": 4,
+    "memoryType": "GDDR5",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 179.2,
+    "baseClockMHz": 925,
+    "boostClockMHz": 975,
+    "cores": 1024,
+    "tdpWatts": 110,
+    "processNm": 28,
+    "tflopsFP32": 2.0,
+    "msrpUSD": 49,
+    "benchmarks": {
+      "geekbenchOpenCL": 14800,
+      "geekbenchVulkan": 13100,
+      "passmarkG3D": 3480
+    }
+  },
+  {
+    "id": "r7-360",
+    "name": "Radeon R7 360 2GB",
+    "brand": "AMD",
+    "series": "Radeon R7 Series",
+    "architecture": "GCN 2.0 (Tobago)",
+    "releaseYear": 2015,
+    "vramGB": 2,
+    "memoryType": "GDDR5",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 96,
+    "baseClockMHz": 1000,
+    "boostClockMHz": 1050,
+    "cores": 768,
+    "tdpWatts": 100,
+    "processNm": 28,
+    "tflopsFP32": 1.61,
+    "msrpUSD": 42,
+    "benchmarks": {
+      "geekbenchOpenCL": 11900,
+      "geekbenchVulkan": 10800,
+      "passmarkG3D": 2860
+    }
+  },
+  {
+    "id": "r7-260x",
+    "name": "Radeon R7 260X 2GB",
+    "brand": "AMD",
+    "series": "Radeon R7 Series",
+    "architecture": "GCN 2.0 (Bonaire)",
+    "releaseYear": 2013,
+    "vramGB": 2,
+    "memoryType": "GDDR5",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 104,
+    "baseClockMHz": 1000,
+    "boostClockMHz": 1100,
+    "cores": 896,
+    "tdpWatts": 115,
+    "processNm": 28,
+    "tflopsFP32": 1.97,
+    "msrpUSD": 39,
+    "benchmarks": {
+      "geekbenchOpenCL": 12500,
+      "geekbenchVulkan": 11200,
+      "passmarkG3D": 3010
+    }
+  },
+  {
+    "id": "r7-250",
+    "name": "Radeon R7 250 2GB",
+    "brand": "AMD",
+    "series": "Radeon R7 Series",
+    "architecture": "GCN 1.0 (Oland)",
+    "releaseYear": 2013,
+    "vramGB": 2,
+    "memoryType": "GDDR5",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 73.6,
+    "baseClockMHz": 1000,
+    "boostClockMHz": 1050,
+    "cores": 384,
+    "tdpWatts": 65,
+    "processNm": 28,
+    "tflopsFP32": 0.81,
+    "msrpUSD": 32,
+    "benchmarks": {
+      "geekbenchOpenCL": 6400,
+      "geekbenchVulkan": 5800,
+      "passmarkG3D": 1420
+    }
+  },
+  {
+    "id": "r7-240",
+    "name": "Radeon R7 240 2GB",
+    "brand": "AMD",
+    "series": "Radeon R7 Series",
+    "architecture": "GCN 1.0 (Oland)",
+    "releaseYear": 2013,
+    "vramGB": 2,
+    "memoryType": "DDR3",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 28.8,
+    "baseClockMHz": 730,
+    "boostClockMHz": 780,
+    "cores": 320,
+    "tdpWatts": 30,
+    "processNm": 28,
+    "tflopsFP32": 0.5,
+    "msrpUSD": 25,
+    "benchmarks": {
+      "geekbenchOpenCL": 4200,
+      "geekbenchVulkan": 3800,
+      "passmarkG3D": 980
+    }
+  },
+  {
+    "id": "rx-6900-xt",
+    "name": "Radeon RX 6900 XT",
+    "brand": "AMD",
+    "series": "RX 6000 Series",
+    "architecture": "RDNA 2",
+    "releaseYear": 2020,
+    "vramGB": 16,
+    "memoryType": "GDDR6",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 512,
+    "baseClockMHz": 1825,
+    "boostClockMHz": 2250,
+    "cores": 5120,
+    "tdpWatts": 300,
+    "processNm": 7,
+    "tflopsFP32": 23.04,
+    "msrpUSD": 529,
+    "benchmarks": {
+      "geekbenchOpenCL": 168900,
+      "geekbenchVulkan": 181400,
+      "passmarkG3D": 26650
+    },
+    "vastai": {
+      "dlperf": 30.8,
+      "hourlyRateUSD": 0.16,
+      "dlperfPerDollar": 192.5,
+      "availableOffers": 18,
+      "verifiedFlops": 23.0
+    }
+  },
+  {
+    "id": "rx-6750-gre-12gb",
+    "name": "Radeon RX 6750 GRE 12GB",
+    "brand": "AMD",
+    "series": "RX 6000 Series",
+    "architecture": "RDNA 2",
+    "releaseYear": 2023,
+    "vramGB": 12,
+    "memoryType": "GDDR6",
+    "busWidthBit": 192,
+    "memoryBandwidthGBs": 384,
+    "baseClockMHz": 2321,
+    "boostClockMHz": 2581,
+    "cores": 2560,
+    "tdpWatts": 230,
+    "processNm": 7,
+    "tflopsFP32": 13.21,
+    "msrpUSD": 289,
+    "benchmarks": {
+      "geekbenchOpenCL": 104800,
+      "geekbenchVulkan": 113200,
+      "passmarkG3D": 20120
+    },
+    "vastai": {
+      "dlperf": 19.8,
+      "hourlyRateUSD": 0.1,
+      "dlperfPerDollar": 198.0,
+      "availableOffers": 7,
+      "verifiedFlops": 13.2
+    }
+  },
+  {
+    "id": "rx-6750-gre-10gb",
+    "name": "Radeon RX 6750 GRE 10GB",
+    "brand": "AMD",
+    "series": "RX 6000 Series",
+    "architecture": "RDNA 2",
+    "releaseYear": 2023,
+    "vramGB": 10,
+    "memoryType": "GDDR6",
+    "busWidthBit": 160,
+    "memoryBandwidthGBs": 320,
+    "baseClockMHz": 1941,
+    "boostClockMHz": 2450,
+    "cores": 2304,
+    "tdpWatts": 170,
+    "processNm": 7,
+    "tflopsFP32": 11.29,
+    "msrpUSD": 269,
+    "benchmarks": {
+      "geekbenchOpenCL": 92400,
+      "geekbenchVulkan": 99600,
+      "passmarkG3D": 18240
+    }
+  },
+  {
+    "id": "rx-6700-10gb",
+    "name": "Radeon RX 6700 10GB",
+    "brand": "AMD",
+    "series": "RX 6000 Series",
+    "architecture": "RDNA 2",
+    "releaseYear": 2022,
+    "vramGB": 10,
+    "memoryType": "GDDR6",
+    "busWidthBit": 160,
+    "memoryBandwidthGBs": 320,
+    "baseClockMHz": 1941,
+    "boostClockMHz": 2450,
+    "cores": 2304,
+    "tdpWatts": 175,
+    "processNm": 7,
+    "tflopsFP32": 11.29,
+    "msrpUSD": 269,
+    "benchmarks": {
+      "geekbenchOpenCL": 91800,
+      "geekbenchVulkan": 98900,
+      "passmarkG3D": 18090
+    },
+    "vastai": {
+      "dlperf": 17.6,
+      "hourlyRateUSD": 0.09,
+      "dlperfPerDollar": 195.6,
+      "availableOffers": 9,
+      "verifiedFlops": 11.3
+    }
+  },
+  {
+    "id": "rx-6650-xt",
+    "name": "Radeon RX 6650 XT",
+    "brand": "AMD",
+    "series": "RX 6000 Series",
+    "architecture": "RDNA 2",
+    "releaseYear": 2022,
+    "vramGB": 8,
+    "memoryType": "GDDR6",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 280,
+    "baseClockMHz": 2055,
+    "boostClockMHz": 2635,
+    "cores": 2048,
+    "tdpWatts": 180,
+    "processNm": 7,
+    "tflopsFP32": 10.79,
+    "msrpUSD": 249,
+    "benchmarks": {
+      "geekbenchOpenCL": 90400,
+      "geekbenchVulkan": 96800,
+      "passmarkG3D": 17320
+    },
+    "vastai": {
+      "dlperf": 16.4,
+      "hourlyRateUSD": 0.08,
+      "dlperfPerDollar": 205.0,
+      "availableOffers": 11,
+      "verifiedFlops": 10.8
+    }
+  },
+  {
+    "id": "rx-6500-xt-8gb",
+    "name": "Radeon RX 6500 XT 8GB",
+    "brand": "AMD",
+    "series": "RX 6000 Series",
+    "architecture": "RDNA 2",
+    "releaseYear": 2022,
+    "vramGB": 8,
+    "memoryType": "GDDR6",
+    "busWidthBit": 64,
+    "memoryBandwidthGBs": 144,
+    "baseClockMHz": 2310,
+    "boostClockMHz": 2825,
+    "cores": 1024,
+    "tdpWatts": 113,
+    "processNm": 6,
+    "tflopsFP32": 5.79,
+    "msrpUSD": 169,
+    "benchmarks": {
+      "geekbenchOpenCL": 49800,
+      "geekbenchVulkan": 53200,
+      "passmarkG3D": 9850
+    }
+  },
+  {
+    "id": "rx-6500-xt-4gb",
+    "name": "Radeon RX 6500 XT 4GB",
+    "brand": "AMD",
+    "series": "RX 6000 Series",
+    "architecture": "RDNA 2",
+    "releaseYear": 2022,
+    "vramGB": 4,
+    "memoryType": "GDDR6",
+    "busWidthBit": 64,
+    "memoryBandwidthGBs": 144,
+    "baseClockMHz": 2310,
+    "boostClockMHz": 2815,
+    "cores": 1024,
+    "tdpWatts": 107,
+    "processNm": 6,
+    "tflopsFP32": 5.77,
+    "msrpUSD": 149,
+    "benchmarks": {
+      "geekbenchOpenCL": 48900,
+      "geekbenchVulkan": 52400,
+      "passmarkG3D": 9680
+    }
+  },
+  {
+    "id": "rx-6400",
+    "name": "Radeon RX 6400",
+    "brand": "AMD",
+    "series": "RX 6000 Series",
+    "architecture": "RDNA 2",
+    "releaseYear": 2022,
+    "vramGB": 4,
+    "memoryType": "GDDR6",
+    "busWidthBit": 64,
+    "memoryBandwidthGBs": 128,
+    "baseClockMHz": 1923,
+    "boostClockMHz": 2321,
+    "cores": 768,
+    "tdpWatts": 53,
+    "processNm": 6,
+    "tflopsFP32": 3.57,
+    "msrpUSD": 119,
+    "benchmarks": {
+      "geekbenchOpenCL": 36200,
+      "geekbenchVulkan": 38900,
+      "passmarkG3D": 7280
+    }
+  },
+  {
+    "id": "rx-5700-xt-50th",
+    "name": "Radeon RX 5700 XT 50th Anniversary",
+    "brand": "AMD",
+    "series": "RX 5000 Series",
+    "architecture": "RDNA 1",
+    "releaseYear": 2019,
+    "vramGB": 8,
+    "memoryType": "GDDR6",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 448,
+    "baseClockMHz": 1680,
+    "boostClockMHz": 1980,
+    "cores": 2560,
+    "tdpWatts": 235,
+    "processNm": 7,
+    "tflopsFP32": 10.14,
+    "msrpUSD": 199,
+    "benchmarks": {
+      "geekbenchOpenCL": 80900,
+      "geekbenchVulkan": 86400,
+      "passmarkG3D": 17380
+    }
+  },
+  {
+    "id": "rx-5700",
+    "name": "Radeon RX 5700",
+    "brand": "AMD",
+    "series": "RX 5000 Series",
+    "architecture": "RDNA 1",
+    "releaseYear": 2019,
+    "vramGB": 8,
+    "memoryType": "GDDR6",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 448,
+    "baseClockMHz": 1465,
+    "boostClockMHz": 1725,
+    "cores": 2304,
+    "tdpWatts": 180,
+    "processNm": 7,
+    "tflopsFP32": 7.95,
+    "msrpUSD": 165,
+    "benchmarks": {
+      "geekbenchOpenCL": 69800,
+      "geekbenchVulkan": 74500,
+      "passmarkG3D": 15210
+    },
+    "vastai": {
+      "dlperf": 11.2,
+      "hourlyRateUSD": 0.06,
+      "dlperfPerDollar": 186.7,
+      "availableOffers": 7,
+      "verifiedFlops": 8.0
+    }
+  },
+  {
+    "id": "rx-5600-xt",
+    "name": "Radeon RX 5600 XT",
+    "brand": "AMD",
+    "series": "RX 5000 Series",
+    "architecture": "RDNA 1",
+    "releaseYear": 2020,
+    "vramGB": 6,
+    "memoryType": "GDDR6",
+    "busWidthBit": 192,
+    "memoryBandwidthGBs": 336,
+    "baseClockMHz": 1375,
+    "boostClockMHz": 1560,
+    "cores": 2304,
+    "tdpWatts": 150,
+    "processNm": 7,
+    "tflopsFP32": 7.19,
+    "msrpUSD": 139,
+    "benchmarks": {
+      "geekbenchOpenCL": 62400,
+      "geekbenchVulkan": 66800,
+      "passmarkG3D": 13780
+    },
+    "vastai": {
+      "dlperf": 10.1,
+      "hourlyRateUSD": 0.06,
+      "dlperfPerDollar": 168.3,
+      "availableOffers": 6,
+      "verifiedFlops": 7.2
+    }
+  },
+  {
+    "id": "rx-5600",
+    "name": "Radeon RX 5600",
+    "brand": "AMD",
+    "series": "RX 5000 Series",
+    "architecture": "RDNA 1",
+    "releaseYear": 2020,
+    "vramGB": 6,
+    "memoryType": "GDDR6",
+    "busWidthBit": 192,
+    "memoryBandwidthGBs": 288,
+    "baseClockMHz": 1375,
+    "boostClockMHz": 1560,
+    "cores": 2048,
+    "tdpWatts": 150,
+    "processNm": 7,
+    "tflopsFP32": 6.39,
+    "msrpUSD": 125,
+    "benchmarks": {
+      "geekbenchOpenCL": 57800,
+      "geekbenchVulkan": 61200,
+      "passmarkG3D": 12650
+    }
+  },
+  {
+    "id": "rx-5500-xt-8gb",
+    "name": "Radeon RX 5500 XT 8GB",
+    "brand": "AMD",
+    "series": "RX 5000 Series",
+    "architecture": "RDNA 1",
+    "releaseYear": 2019,
+    "vramGB": 8,
+    "memoryType": "GDDR6",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 224,
+    "baseClockMHz": 1607,
+    "boostClockMHz": 1845,
+    "cores": 1408,
+    "tdpWatts": 130,
+    "processNm": 7,
+    "tflopsFP32": 5.2,
+    "msrpUSD": 109,
+    "benchmarks": {
+      "geekbenchOpenCL": 44200,
+      "geekbenchVulkan": 47500,
+      "passmarkG3D": 9620
+    }
+  },
+  {
+    "id": "rx-5500-xt-4gb",
+    "name": "Radeon RX 5500 XT 4GB",
+    "brand": "AMD",
+    "series": "RX 5000 Series",
+    "architecture": "RDNA 1",
+    "releaseYear": 2019,
+    "vramGB": 4,
+    "memoryType": "GDDR6",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 224,
+    "baseClockMHz": 1607,
+    "boostClockMHz": 1845,
+    "cores": 1408,
+    "tdpWatts": 130,
+    "processNm": 7,
+    "tflopsFP32": 5.2,
+    "msrpUSD": 95,
+    "benchmarks": {
+      "geekbenchOpenCL": 43600,
+      "geekbenchVulkan": 46800,
+      "passmarkG3D": 9410
+    }
+  },
+  {
+    "id": "rx-5500",
+    "name": "Radeon RX 5500",
+    "brand": "AMD",
+    "series": "RX 5000 Series",
+    "architecture": "RDNA 1",
+    "releaseYear": 2019,
+    "vramGB": 4,
+    "memoryType": "GDDR6",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 224,
+    "baseClockMHz": 1670,
+    "boostClockMHz": 1845,
+    "cores": 1408,
+    "tdpWatts": 110,
+    "processNm": 7,
+    "tflopsFP32": 5.2,
+    "msrpUSD": 89,
+    "benchmarks": {
+      "geekbenchOpenCL": 42100,
+      "geekbenchVulkan": 45200,
+      "passmarkG3D": 9180
+    }
+  },
+  {
+    "id": "rx-5300",
+    "name": "Radeon RX 5300",
+    "brand": "AMD",
+    "series": "RX 5000 Series",
+    "architecture": "RDNA 1",
+    "releaseYear": 2020,
+    "vramGB": 3,
+    "memoryType": "GDDR6",
+    "busWidthBit": 96,
+    "memoryBandwidthGBs": 168,
+    "baseClockMHz": 1327,
+    "boostClockMHz": 1645,
+    "cores": 1408,
+    "tdpWatts": 100,
+    "processNm": 7,
+    "tflopsFP32": 4.63,
+    "msrpUSD": 75,
+    "benchmarks": {
+      "geekbenchOpenCL": 36900,
+      "geekbenchVulkan": 39400,
+      "passmarkG3D": 7840
+    }
+  },
+  {
+    "id": "rtx-4090-d",
+    "name": "GeForce RTX 4090 D",
+    "brand": "NVIDIA",
+    "series": "RTX 40 Series",
+    "architecture": "Ada Lovelace",
+    "releaseYear": 2023,
+    "vramGB": 24,
+    "memoryType": "GDDR6X",
+    "busWidthBit": 384,
+    "memoryBandwidthGBs": 1008,
+    "baseClockMHz": 2280,
+    "boostClockMHz": 2520,
+    "cores": 14592,
+    "tdpWatts": 425,
+    "processNm": 5,
+    "tflopsFP32": 73.54,
+    "msrpUSD": 1599,
+    "benchmarks": {
+      "geekbenchOpenCL": 294800,
+      "geekbenchVulkan": 248900,
+      "passmarkG3D": 36850
+    },
+    "vastai": {
+      "dlperf": 78.2,
+      "hourlyRateUSD": 0.35,
+      "dlperfPerDollar": 223.4,
+      "availableOffers": 48,
+      "verifiedFlops": 73.5
+    }
+  },
+  {
+    "id": "rtx-4070-gddr6",
+    "name": "GeForce RTX 4070 GDDR6",
+    "brand": "NVIDIA",
+    "series": "RTX 40 Series",
+    "architecture": "Ada Lovelace",
+    "releaseYear": 2024,
+    "vramGB": 12,
+    "memoryType": "GDDR6",
+    "busWidthBit": 192,
+    "memoryBandwidthGBs": 480,
+    "baseClockMHz": 1920,
+    "boostClockMHz": 2475,
+    "cores": 5888,
+    "tdpWatts": 200,
+    "processNm": 5,
+    "tflopsFP32": 29.15,
+    "msrpUSD": 539,
+    "benchmarks": {
+      "geekbenchOpenCL": 166200,
+      "geekbenchVulkan": 151800,
+      "passmarkG3D": 26610
+    },
+    "vastai": {
+      "dlperf": 33.1,
+      "hourlyRateUSD": 0.16,
+      "dlperfPerDollar": 206.9,
+      "availableOffers": 19,
+      "verifiedFlops": 29.1
+    }
+  },
+  {
+    "id": "rtx-4050",
+    "name": "GeForce RTX 4050",
+    "brand": "NVIDIA",
+    "series": "RTX 40 Series",
+    "architecture": "Ada Lovelace",
+    "releaseYear": 2023,
+    "vramGB": 6,
+    "memoryType": "GDDR6",
+    "busWidthBit": 96,
+    "memoryBandwidthGBs": 192,
+    "baseClockMHz": 1605,
+    "boostClockMHz": 2370,
+    "cores": 2560,
+    "tdpWatts": 115,
+    "processNm": 5,
+    "tflopsFP32": 12.13,
+    "msrpUSD": 239,
+    "benchmarks": {
+      "geekbenchOpenCL": 84500,
+      "geekbenchVulkan": 81200,
+      "passmarkG3D": 15280
+    },
+    "vastai": {
+      "dlperf": 14.8,
+      "hourlyRateUSD": 0.08,
+      "dlperfPerDollar": 185.0,
+      "availableOffers": 12,
+      "verifiedFlops": 12.1
+    }
+  },
+  {
+    "id": "rtx-3080-12gb",
+    "name": "GeForce RTX 3080 12GB",
+    "brand": "NVIDIA",
+    "series": "RTX 30 Series",
+    "architecture": "Ampere",
+    "releaseYear": 2022,
+    "vramGB": 12,
+    "memoryType": "GDDR6X",
+    "busWidthBit": 384,
+    "memoryBandwidthGBs": 912,
+    "baseClockMHz": 1260,
+    "boostClockMHz": 1710,
+    "cores": 8960,
+    "tdpWatts": 350,
+    "processNm": 8,
+    "tflopsFP32": 30.64,
+    "msrpUSD": 549,
+    "benchmarks": {
+      "geekbenchOpenCL": 186400,
+      "geekbenchVulkan": 171200,
+      "passmarkG3D": 26120
+    },
+    "vastai": {
+      "dlperf": 35.8,
+      "hourlyRateUSD": 0.15,
+      "dlperfPerDollar": 238.7,
+      "availableOffers": 41,
+      "verifiedFlops": 30.6
+    }
+  },
+  {
+    "id": "rtx-3060-ti-gddr6x",
+    "name": "GeForce RTX 3060 Ti GDDR6X",
+    "brand": "NVIDIA",
+    "series": "RTX 30 Series",
+    "architecture": "Ampere",
+    "releaseYear": 2022,
+    "vramGB": 8,
+    "memoryType": "GDDR6X",
+    "busWidthBit": 256,
+    "memoryBandwidthGBs": 608,
+    "baseClockMHz": 1410,
+    "boostClockMHz": 1665,
+    "cores": 4864,
+    "tdpWatts": 225,
+    "processNm": 8,
+    "tflopsFP32": 16.2,
+    "msrpUSD": 339,
+    "benchmarks": {
+      "geekbenchOpenCL": 124800,
+      "geekbenchVulkan": 117900,
+      "passmarkG3D": 21140
+    },
+    "vastai": {
+      "dlperf": 21.4,
+      "hourlyRateUSD": 0.1,
+      "dlperfPerDollar": 214.0,
+      "availableOffers": 28,
+      "verifiedFlops": 16.2
+    }
+  },
+  {
+    "id": "rtx-3060-8gb",
+    "name": "GeForce RTX 3060 8GB",
+    "brand": "NVIDIA",
+    "series": "RTX 30 Series",
+    "architecture": "Ampere",
+    "releaseYear": 2022,
+    "vramGB": 8,
+    "memoryType": "GDDR6",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 240,
+    "baseClockMHz": 1320,
+    "boostClockMHz": 1777,
+    "cores": 3584,
+    "tdpWatts": 170,
+    "processNm": 8,
+    "tflopsFP32": 12.74,
+    "msrpUSD": 249,
+    "benchmarks": {
+      "geekbenchOpenCL": 85400,
+      "geekbenchVulkan": 81900,
+      "passmarkG3D": 15680
+    },
+    "vastai": {
+      "dlperf": 14.9,
+      "hourlyRateUSD": 0.07,
+      "dlperfPerDollar": 212.9,
+      "availableOffers": 33,
+      "verifiedFlops": 12.7
+    }
+  },
+  {
+    "id": "rtx-3050-8gb",
+    "name": "GeForce RTX 3050 8GB",
+    "brand": "NVIDIA",
+    "series": "RTX 30 Series",
+    "architecture": "Ampere",
+    "releaseYear": 2022,
+    "vramGB": 8,
+    "memoryType": "GDDR6",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 224,
+    "baseClockMHz": 1552,
+    "boostClockMHz": 1777,
+    "cores": 2560,
+    "tdpWatts": 130,
+    "processNm": 8,
+    "tflopsFP32": 9.1,
+    "msrpUSD": 199,
+    "benchmarks": {
+      "geekbenchOpenCL": 68400,
+      "geekbenchVulkan": 65200,
+      "passmarkG3D": 12890
+    },
+    "vastai": {
+      "dlperf": 11.8,
+      "hourlyRateUSD": 0.06,
+      "dlperfPerDollar": 196.7,
+      "availableOffers": 27,
+      "verifiedFlops": 9.1
+    }
+  },
+  {
+    "id": "rtx-3050-oem",
+    "name": "GeForce RTX 3050 8GB (GA106 OEM)",
+    "brand": "NVIDIA",
+    "series": "RTX 30 Series",
+    "architecture": "Ampere",
+    "releaseYear": 2022,
+    "vramGB": 8,
+    "memoryType": "GDDR6",
+    "busWidthBit": 128,
+    "memoryBandwidthGBs": 224,
+    "baseClockMHz": 1515,
+    "boostClockMHz": 1755,
+    "cores": 2304,
+    "tdpWatts": 130,
+    "processNm": 8,
+    "tflopsFP32": 8.09,
+    "msrpUSD": 179,
+    "benchmarks": {
+      "geekbenchOpenCL": 62100,
+      "geekbenchVulkan": 59800,
+      "passmarkG3D": 11920
+    }
+  },
+  {
+    "id": "rtx-3050-6gb",
+    "name": "GeForce RTX 3050 6GB",
+    "brand": "NVIDIA",
+    "series": "RTX 30 Series",
+    "architecture": "Ampere",
+    "releaseYear": 2024,
+    "vramGB": 6,
+    "memoryType": "GDDR6",
+    "busWidthBit": 96,
+    "memoryBandwidthGBs": 168,
+    "baseClockMHz": 1042,
+    "boostClockMHz": 1470,
+    "cores": 2304,
+    "tdpWatts": 70,
+    "processNm": 8,
+    "tflopsFP32": 6.77,
+    "msrpUSD": 169,
+    "benchmarks": {
+      "geekbenchOpenCL": 51800,
+      "geekbenchVulkan": 49600,
+      "passmarkG3D": 10340
     }
   }
 ]
