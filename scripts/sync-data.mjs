@@ -88,11 +88,10 @@ async function fetchVoidfulGpuSpecs() {
   return specs;
 }
 
-async function fetchPassmarkScores() {
-  console.log('📊 [3/7] Consultando PassMark G3D Mark (passmark-scraper)...');
+async function fetchPassmarkDirectXChart(url, label) {
   const scores = new Map();
   try {
-    const res = await fetchWithTimeout('https://www.videocardbenchmark.net/high_end_gpus.html', {
+    const res = await fetchWithTimeout(url, {
       headers: { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36' }
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -101,16 +100,25 @@ async function fetchPassmarkScores() {
     $('ul.chartlist li').each((_, li) => {
       const name = $(li).find('span.prdname').text().trim();
       const countText = $(li).find('span.count').text().trim();
-      const score = parseInt(countText.replace(/[^0-9]/g, ''), 10);
+      const score = parseFloat(countText.replace(/[^0-9.]/g, ''));
       if (name && !isNaN(score) && score > 0) {
-        scores.set(normalizeGpuName(name), score);
+        scores.set(normalizeGpuName(name), Math.round(score));
       }
     });
-    console.log(`✅ PassMark: ${scores.size} GPUs procesadas.`);
+    console.log(`✅ PassMark ${label}: ${scores.size} GPUs procesadas.`);
   } catch (err) {
-    console.warn(`⚠️ Aviso en PassMark scraper: ${err.message}.`);
+    console.warn(`⚠️ Aviso en PassMark ${label} scraper: ${err.message}.`);
   }
   return scores;
+}
+
+async function fetchPassmarkScores() {
+  console.log('📊 [3/7] Consultando PassMark DirectX 12 & DirectX 11 Benchmarks...');
+  const [dx12Map, dx11Map] = await Promise.all([
+    fetchPassmarkDirectXChart('https://www.videocardbenchmark.net/directx-12.html', 'DirectX 12'),
+    fetchPassmarkDirectXChart('https://www.videocardbenchmark.net/directx-11.html', 'DirectX 11')
+  ]);
+  return { dx12Map, dx11Map };
 }
 
 /**
@@ -331,14 +339,17 @@ async function main() {
     fetchProtonDbData(appIds)
   ]);
 
-  // Actualizar GPUs con Geekbench, PassMark, voidful y Vast.ai Cloud Bundles
+  // Actualizar GPUs con Geekbench, PassMark (DirectX 12 y DirectX 11), voidful y Vast.ai Cloud Bundles
   for (const gpu of gpus) {
     const normKey = normalizeGpuName(gpu.name);
     if (geekbenchMap.has(normKey)) {
       gpu.benchmarks.geekbenchOpenCL = geekbenchMap.get(normKey);
     }
-    if (passmarkMap.has(normKey)) {
-      gpu.benchmarks.passmarkG3D = passmarkMap.get(normKey);
+    if (passmarkMap.dx12Map.has(normKey)) {
+      gpu.benchmarks.passmarkDX12 = passmarkMap.dx12Map.get(normKey);
+    }
+    if (passmarkMap.dx11Map.has(normKey)) {
+      gpu.benchmarks.passmarkDX11 = passmarkMap.dx11Map.get(normKey);
     }
     if (voidfulMap.has(normKey)) {
       const spec = voidfulMap.get(normKey);

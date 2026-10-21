@@ -10,7 +10,7 @@ const games = gamesData as SteamGame[];
 
 const totalGpus = gpus.length;
 const totalGames = games.length;
-const topGpu = [...gpus].sort((a, b) => b.benchmarks.passmarkG3D - a.benchmarks.passmarkG3D)[0];
+const topGpu = [...gpus].sort((a, b) => b.benchmarks.passmarkDX12 - a.benchmarks.passmarkDX12)[0];
 ---
 
 <Layout title="Base de Datos de GPUs, Benchmarks y Estimador de FPS">
@@ -66,7 +66,7 @@ const topGpu = [...gpus].sort((a, b) => b.benchmarks.passmarkG3D - a.benchmarks.
             </div>
             <div class="text-right">
               <span class="text-xs font-bold text-blue-600 dark:text-blue-400 block">
-                {topGpu.benchmarks.passmarkG3D.toLocaleString()} G3D
+                {topGpu.benchmarks.passmarkDX12.toLocaleString()} DX12
               </span>
               <span class="text-[10px] text-slate-400">
                 {topGpu.benchmarks.geekbenchOpenCL.toLocaleString()} OpenCL

@@ -23,7 +23,7 @@ const selectedBrandFilter = ref<'ALL' | 'NVIDIA' | 'AMD' | 'Intel'>('ALL');
 const selectedSeriesFilter = ref<string>('ALL');
 const selectedVramFilter = ref<number>(0);
 const searchQuery = ref('');
-const sortBy = ref<'passmark' | 'geekbenchOpenCL' | 'geekbenchVulkan' | 'vastDlperf' | 'vastCloudPrice' | 'vram' | 'value'>('passmark');
+const sortBy = ref<'passmarkDX12' | 'passmarkDX11' | 'geekbenchOpenCL' | 'geekbenchVulkan' | 'vastDlperf' | 'vastCloudPrice' | 'vram' | 'value'>('passmarkDX12');
 const showAllGpus = ref(false);
 
 const availableSeries = computed(() => {
@@ -86,7 +86,8 @@ const selectedPlatform = ref<TargetPlatform>('windows');
 const unlockEngineCap = ref<boolean>(false);
 const gameFeatureFilter = ref<'ALL' | 'PROTON_TOP' | 'UPSCALING' | 'FRAME_GEN' | 'RAY_TRACING'>('ALL');
 
-const maxPassmark = computed(() => Math.max(...props.gpus.map((g) => g.benchmarks.passmarkG3D)));
+const maxPassmarkDX12 = computed(() => Math.max(...props.gpus.map((g) => g.benchmarks.passmarkDX12)));
+const maxPassmarkDX11 = computed(() => Math.max(...props.gpus.map((g) => g.benchmarks.passmarkDX11)));
 const maxGeekbenchCL = computed(() => Math.max(...props.gpus.map((g) => g.benchmarks.geekbenchOpenCL)));
 const maxVastDlperf = computed(() => Math.max(...props.gpus.map((g) => g.vastai?.dlperf || 1)));
 
@@ -109,15 +110,16 @@ const filteredGpus = computed(() => {
   }
 
   return [...filtered].sort((a, b) => {
-    if (sortBy.value === 'passmark') return b.benchmarks.passmarkG3D - a.benchmarks.passmarkG3D;
+    if (sortBy.value === 'passmarkDX12') return b.benchmarks.passmarkDX12 - a.benchmarks.passmarkDX12;
+    if (sortBy.value === 'passmarkDX11') return b.benchmarks.passmarkDX11 - a.benchmarks.passmarkDX11;
     if (sortBy.value === 'geekbenchOpenCL') return b.benchmarks.geekbenchOpenCL - a.benchmarks.geekbenchOpenCL;
     if (sortBy.value === 'geekbenchVulkan') return b.benchmarks.geekbenchVulkan - a.benchmarks.geekbenchVulkan;
     if (sortBy.value === 'vastDlperf') return (b.vastai?.dlperf || 0) - (a.vastai?.dlperf || 0);
     if (sortBy.value === 'vastCloudPrice') return (a.vastai?.hourlyRateUSD || 999) - (b.vastai?.hourlyRateUSD || 999);
-    if (sortBy.value === 'vram') return b.vramGB - a.vramGB || b.benchmarks.passmarkG3D - a.benchmarks.passmarkG3D;
+    if (sortBy.value === 'vram') return b.vramGB - a.vramGB || b.benchmarks.passmarkDX12 - a.benchmarks.passmarkDX12;
     if (sortBy.value === 'value') {
-      const valA = a.benchmarks.passmarkG3D / a.msrpUSD;
-      const valB = b.benchmarks.passmarkG3D / b.msrpUSD;
+      const valA = a.benchmarks.passmarkDX12 / a.msrpUSD;
+      const valB = b.benchmarks.passmarkDX12 / b.msrpUSD;
       return valB - valA;
     }
     return 0;
@@ -287,7 +289,7 @@ function getFpsBadgeColor(fps: number) {
             Índice Técnico de GPUs & Benchmarks
           </h2>
           <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
-            Especificaciones de <span class="font-mono">gpu-info-api</span> combinadas con puntuaciones de Geekbench 6 Compute y PassMark G3D. Selecciona hasta 4 GPUs para comparar.
+            Especificaciones de <span class="font-mono">gpu-info-api</span> combinadas con puntuaciones de Geekbench 6 Compute y PassMark DirectX 12 / DirectX 11. Selecciona hasta 4 GPUs para comparar.
           </p>
         </div>
 
@@ -343,7 +345,8 @@ function getFpsBadgeColor(fps: number) {
             aria-label="Ordenar GPUs por criterio"
             class="px-2.5 py-2 rounded-lg text-xs font-mono bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <option value="passmark">Orden: PassMark G3D</option>
+            <option value="passmarkDX12">Orden: PassMark DirectX 12</option>
+            <option value="passmarkDX11">Orden: PassMark DirectX 11</option>
             <option value="geekbenchOpenCL">Orden: Geekbench 6 OpenCL</option>
             <option value="geekbenchVulkan">Orden: Geekbench 6 Vulkan</option>
             <option value="vastDlperf">Orden: Vast.ai DLPerf (AI/Compute)</option>
@@ -375,7 +378,7 @@ function getFpsBadgeColor(fps: number) {
               <th class="py-3 px-4 w-12 text-center">VS</th>
               <th class="py-3 px-4">Modelo / Arquitectura</th>
               <th class="py-3 px-4">VRAM / Bus</th>
-              <th class="py-3 px-4 min-w-[165px]">PassMark G3D</th>
+              <th class="py-3 px-4 min-w-[175px]">PassMark (DX12 / DX11)</th>
               <th class="py-3 px-4 min-w-[165px]">Geekbench 6 (OpenCL)</th>
               <th class="py-3 px-4 min-w-[155px]">Vast.ai DLPerf / Cloud</th>
               <th class="py-3 px-4 text-right">Boost / TDP</th>
@@ -449,16 +452,20 @@ function getFpsBadgeColor(fps: number) {
                 </div>
               </td>
 
-              <!-- PassMark G3D Bar -->
+              <!-- PassMark DirectX 12 & DirectX 11 Bar -->
               <td class="py-3 px-4">
                 <div class="flex items-center justify-between text-xs font-mono mb-1">
-                  <span class="font-bold text-slate-900 dark:text-white">{{ gpu.benchmarks.passmarkG3D.toLocaleString() }}</span>
-                  <span class="text-slate-400 text-[11px]">{{ Math.round((gpu.benchmarks.passmarkG3D / maxPassmark) * 100) }}%</span>
+                  <span class="font-bold text-slate-900 dark:text-white">
+                    DX12: {{ gpu.benchmarks.passmarkDX12.toLocaleString() }}
+                  </span>
+                  <span class="text-slate-400 text-[11px]">
+                    DX11: {{ (gpu.benchmarks.passmarkDX11 / 1000).toFixed(1) }}k
+                  </span>
                 </div>
                 <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
                   <div
                     :class="['h-full rounded-full transition-all duration-300', getBrandBarClass(gpu.brand)]"
-                    :style="{ width: `${Math.round((gpu.benchmarks.passmarkG3D / maxPassmark) * 100)}%` }"
+                    :style="{ width: `${Math.round((gpu.benchmarks.passmarkDX12 / maxPassmarkDX12) * 100)}%` }"
                   ></div>
                 </div>
               </td>
@@ -506,7 +513,7 @@ function getFpsBadgeColor(fps: number) {
               <td class="py-3 px-4 text-right font-mono">
                 <span class="text-sm font-bold text-slate-900 dark:text-white">${{ gpu.msrpUSD }}</span>
                 <div class="text-[10px] text-slate-500">
-                  {{ (gpu.benchmarks.passmarkG3D / gpu.msrpUSD).toFixed(1) }} pts/$
+                  {{ (gpu.benchmarks.passmarkDX12 / gpu.msrpUSD).toFixed(1) }} DX12/$
                 </div>
               </td>
 
@@ -618,7 +625,7 @@ function getFpsBadgeColor(fps: number) {
                   </span>
                 </div>
                 <div class="text-[11px] font-mono text-slate-500 dark:text-slate-400 mt-0.5">
-                  {{ item.vramGB }}GB {{ item.memoryType }} • {{ item.series }} • {{ item.benchmarks.passmarkG3D.toLocaleString() }} G3D
+                  {{ item.vramGB }}GB {{ item.memoryType }} • {{ item.series }} • DX12: {{ item.benchmarks.passmarkDX12.toLocaleString() }}
                 </div>
               </div>
 
@@ -712,19 +719,36 @@ function getFpsBadgeColor(fps: number) {
           </thead>
           <tbody class="divide-y divide-slate-200/70 dark:divide-slate-800/80 font-mono text-xs">
             <tr>
-              <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">PassMark G3D Mark</td>
+              <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">PassMark DirectX 12 Benchmark</td>
               <td v-for="(gpu, i) in comparedGpus" :key="gpu.id" class="py-3 px-4">
-                <span class="font-bold text-slate-900 dark:text-white">{{ gpu.benchmarks.passmarkG3D.toLocaleString() }}</span>
+                <span class="font-bold text-slate-900 dark:text-white">{{ gpu.benchmarks.passmarkDX12.toLocaleString() }}</span>
                 <span
                   v-if="i > 0"
                   :class="[
                     'ml-2 px-1.5 py-0.5 rounded text-[10px]',
-                    gpu.benchmarks.passmarkG3D >= baselineGpu.benchmarks.passmarkG3D
+                    gpu.benchmarks.passmarkDX12 >= baselineGpu.benchmarks.passmarkDX12
                       ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
                       : 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
                   ]"
                 >
-                  {{ getDiffPercent(gpu.benchmarks.passmarkG3D, baselineGpu.benchmarks.passmarkG3D) }}
+                  {{ getDiffPercent(gpu.benchmarks.passmarkDX12, baselineGpu.benchmarks.passmarkDX12) }}
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">PassMark DirectX 11 Benchmark</td>
+              <td v-for="(gpu, i) in comparedGpus" :key="gpu.id" class="py-3 px-4">
+                <span class="font-bold text-slate-900 dark:text-white">{{ gpu.benchmarks.passmarkDX11.toLocaleString() }}</span>
+                <span
+                  v-if="i > 0"
+                  :class="[
+                    'ml-2 px-1.5 py-0.5 rounded text-[10px]',
+                    gpu.benchmarks.passmarkDX11 >= baselineGpu.benchmarks.passmarkDX11
+                      ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+                      : 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
+                  ]"
+                >
+                  {{ getDiffPercent(gpu.benchmarks.passmarkDX11, baselineGpu.benchmarks.passmarkDX11) }}
                 </span>
               </td>
             </tr>
@@ -825,7 +849,7 @@ function getFpsBadgeColor(fps: number) {
             <tr>
               <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">Consumo Energético (TDP)</td>
               <td v-for="gpu in comparedGpus" :key="gpu.id" class="py-3 px-4 text-slate-800 dark:text-slate-200">
-                {{ gpu.tdpWatts }} W ({{ (gpu.benchmarks.passmarkG3D / gpu.tdpWatts).toFixed(1) }} pts/W)
+                {{ gpu.tdpWatts }} W ({{ (gpu.benchmarks.passmarkDX12 / gpu.tdpWatts).toFixed(1) }} DX12/W)
               </td>
             </tr>
             <tr>

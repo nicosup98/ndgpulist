@@ -1,7 +1,8 @@
 export interface GpuBenchmarks {
   geekbenchOpenCL: number;
   geekbenchVulkan: number;
-  passmarkG3D: number;
+  passmarkDX12: number;
+  passmarkDX11: number;
 }
 
 export interface VastAiMetrics {
@@ -157,17 +158,25 @@ export function resolveSupportedUpscaler(gpu: GpuSpec, game: SteamGame): string 
 
 /**
  * Calcula un Índice Compuesto de Rendimiento Relativo de una GPU combinando:
- * - PassMark G3D Mark (peso 55% - orientando a rasterización en juegos DirectX)
+ * - PassMark DirectX 12 Benchmark & DirectX 11 Benchmark (peso 55%)
  * - Geekbench 6 Vulkan / OpenCL normalizado (peso 35% - cómputo moderno y shaders)
  * - Ancho de banda de memoria (peso 10%)
  */
-export function getCompositeGpuScore(gpu: GpuSpec): number {
-  const passmarkNorm = gpu.benchmarks.passmarkG3D;
+export function getCompositeGpuScore(gpu: GpuSpec, apiHint?: 'DX12' | 'DX11'): number {
+  let passmarkDirectX =
+    gpu.benchmarks.passmarkDX12 * 0.65 + gpu.benchmarks.passmarkDX11 * 0.35;
+
+  if (apiHint === 'DX12') {
+    passmarkDirectX = gpu.benchmarks.passmarkDX12 * 0.85 + gpu.benchmarks.passmarkDX11 * 0.15;
+  } else if (apiHint === 'DX11') {
+    passmarkDirectX = gpu.benchmarks.passmarkDX11 * 0.85 + gpu.benchmarks.passmarkDX12 * 0.15;
+  }
+
   const geekbenchAvg =
     (gpu.benchmarks.geekbenchVulkan * 0.6 + gpu.benchmarks.geekbenchOpenCL * 0.4) * 0.145;
   const bandwidthBonus = gpu.memoryBandwidthGBs * 6.5;
 
-  return Math.round(passmarkNorm * 0.55 + geekbenchAvg * 0.35 + bandwidthBonus * 0.1);
+  return Math.round(passmarkDirectX * 0.55 + geekbenchAvg * 0.35 + bandwidthBonus * 0.1);
 }
 
 /**
@@ -187,7 +196,15 @@ export function calculateRelativeFps(
     unlockEngineCap = false,
   } = options;
 
-  const compositeScore = getCompositeGpuScore(gpu);
+  const apis = game.pcgw?.graphicsApis || [];
+  const apiHint: 'DX12' | 'DX11' | undefined =
+    apis.includes('DirectX 12') && !apis.includes('DirectX 11')
+      ? 'DX12'
+      : apis.includes('DirectX 11') && !apis.includes('DirectX 12')
+      ? 'DX11'
+      : undefined;
+
+  const compositeScore = getCompositeGpuScore(gpu, apiHint);
   const rawRatio = compositeScore / game.recommendedPassmarkScore;
 
   const scalingExponent = resolution === '4K' ? 0.91 : resolution === '1440p' ? 0.86 : 0.8;

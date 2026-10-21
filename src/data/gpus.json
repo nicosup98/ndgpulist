@@ -20,7 +20,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 368500,
       "geekbenchVulkan": 352000,
-      "passmarkG3D": 48900
+      "passmarkDX12": 50856,
+      "passmarkDX11": 46944
     },
     "vastai": {
       "dlperf": 118.4,
@@ -51,7 +52,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 261000,
       "geekbenchVulkan": 254000,
-      "passmarkG3D": 41200
+      "passmarkDX12": 42848,
+      "passmarkDX11": 39552
     },
     "vastai": {
       "dlperf": 68.5,
@@ -82,7 +84,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 236400,
       "geekbenchVulkan": 228900,
-      "passmarkG3D": 36400
+      "passmarkDX12": 37856,
+      "passmarkDX11": 34944
     },
     "vastai": {
       "dlperf": 55.2,
@@ -113,7 +116,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 198500,
       "geekbenchVulkan": 191200,
-      "passmarkG3D": 31750
+      "passmarkDX12": 33020,
+      "passmarkDX11": 30480
     },
     "vastai": {
       "dlperf": 41.8,
@@ -144,7 +148,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 317122,
       "geekbenchVulkan": 264500,
-      "passmarkG3D": 38430
+      "passmarkDX12": 39967,
+      "passmarkDX11": 36893
     },
     "vastai": {
       "dlperf": 85.6,
@@ -175,7 +180,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 247850,
       "geekbenchVulkan": 221400,
-      "passmarkG3D": 34650
+      "passmarkDX12": 36036,
+      "passmarkDX11": 33264
     },
     "vastai": {
       "dlperf": 56.4,
@@ -206,7 +212,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 241200,
       "geekbenchVulkan": 215800,
-      "passmarkG3D": 34180
+      "passmarkDX12": 35547,
+      "passmarkDX11": 32813
     },
     "vastai": {
       "dlperf": 53.8,
@@ -237,7 +244,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 219600,
       "geekbenchVulkan": 198200,
-      "passmarkG3D": 31890
+      "passmarkDX12": 33166,
+      "passmarkDX11": 30614
     },
     "vastai": {
       "dlperf": 47.9,
@@ -268,7 +276,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 208500,
       "geekbenchVulkan": 186400,
-      "passmarkG3D": 31420
+      "passmarkDX12": 32677,
+      "passmarkDX11": 30163
     },
     "vastai": {
       "dlperf": 43.2,
@@ -299,7 +308,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 195340,
       "geekbenchVulkan": 172800,
-      "passmarkG3D": 30120
+      "passmarkDX12": 31325,
+      "passmarkDX11": 28915
     },
     "vastai": {
       "dlperf": 39.4,
@@ -330,7 +340,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 168900,
       "geekbenchVulkan": 154300,
-      "passmarkG3D": 26940
+      "passmarkDX12": 28018,
+      "passmarkDX11": 25862
     },
     "vastai": {
       "dlperf": 33.8,
@@ -361,7 +372,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 136400,
       "geekbenchVulkan": 128100,
-      "passmarkG3D": 22850
+      "passmarkDX12": 23764,
+      "passmarkDX11": 21936
     },
     "vastai": {
       "dlperf": 26.4,
@@ -392,7 +404,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 135100,
       "geekbenchVulkan": 126800,
-      "passmarkG3D": 22740
+      "passmarkDX12": 23650,
+      "passmarkDX11": 21830
     },
     "vastai": {
       "dlperf": 25.1,
@@ -423,7 +436,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 105200,
       "geekbenchVulkan": 101400,
-      "passmarkG3D": 19620
+      "passmarkDX12": 20405,
+      "passmarkDX11": 18835
     },
     "vastai": {
       "dlperf": 19.6,
@@ -454,7 +468,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 226800,
       "geekbenchVulkan": 204100,
-      "passmarkG3D": 29680
+      "passmarkDX12": 30867,
+      "passmarkDX11": 28493
     },
     "vastai": {
       "dlperf": 46.2,
@@ -485,7 +500,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 204900,
       "geekbenchVulkan": 186200,
-      "passmarkG3D": 26980
+      "passmarkDX12": 26980,
+      "passmarkDX11": 26980
     },
     "vastai": {
       "dlperf": 41.8,
@@ -516,7 +532,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 198400,
       "geekbenchVulkan": 179600,
-      "passmarkG3D": 26890
+      "passmarkDX12": 26890,
+      "passmarkDX11": 26890
     },
     "vastai": {
       "dlperf": 38.9,
@@ -547,7 +564,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 177600,
       "geekbenchVulkan": 162400,
-      "passmarkG3D": 25480
+      "passmarkDX12": 25480,
+      "passmarkDX11": 25480
     },
     "vastai": {
       "dlperf": 33.4,
@@ -578,7 +596,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 149200,
       "geekbenchVulkan": 138400,
-      "passmarkG3D": 23680
+      "passmarkDX12": 23680,
+      "passmarkDX11": 23680
     },
     "vastai": {
       "dlperf": 25.8,
@@ -609,7 +628,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 136800,
       "geekbenchVulkan": 129100,
-      "passmarkG3D": 22480
+      "passmarkDX12": 22480,
+      "passmarkDX11": 22480
     },
     "vastai": {
       "dlperf": 23.9,
@@ -640,7 +660,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 119600,
       "geekbenchVulkan": 112400,
-      "passmarkG3D": 20590
+      "passmarkDX12": 20590,
+      "passmarkDX11": 20590
     },
     "vastai": {
       "dlperf": 20.2,
@@ -671,7 +692,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 92500,
       "geekbenchVulkan": 89200,
-      "passmarkG3D": 17160
+      "passmarkDX12": 17160,
+      "passmarkDX11": 17160
     },
     "vastai": {
       "dlperf": 16.4,
@@ -702,7 +724,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 84100,
       "geekbenchVulkan": 79800,
-      "passmarkG3D": 16640
+      "passmarkDX12": 16640,
+      "passmarkDX11": 16640
     },
     "vastai": {
       "dlperf": 13.2,
@@ -733,7 +756,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 59400,
       "geekbenchVulkan": 57200,
-      "passmarkG3D": 12810
+      "passmarkDX12": 12810,
+      "passmarkDX11": 12810
     },
     "vastai": {
       "dlperf": 8.4,
@@ -764,7 +788,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 228900,
       "geekbenchVulkan": 241500,
-      "passmarkG3D": 31450
+      "passmarkDX12": 32708,
+      "passmarkDX11": 30192
     },
     "vastai": {
       "dlperf": 58.4,
@@ -795,7 +820,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 196400,
       "geekbenchVulkan": 208100,
-      "passmarkG3D": 29180
+      "passmarkDX12": 30347,
+      "passmarkDX11": 28013
     },
     "vastai": {
       "dlperf": 48.2,
@@ -826,7 +852,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 172100,
       "geekbenchVulkan": 184200,
-      "passmarkG3D": 26800
+      "passmarkDX12": 27872,
+      "passmarkDX11": 25728
     },
     "vastai": {
       "dlperf": 41.5,
@@ -857,7 +884,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 154800,
       "geekbenchVulkan": 169400,
-      "passmarkG3D": 24450
+      "passmarkDX12": 25428,
+      "passmarkDX11": 23472
     },
     "vastai": {
       "dlperf": 35.6,
@@ -888,7 +916,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 135200,
       "geekbenchVulkan": 144600,
-      "passmarkG3D": 22190
+      "passmarkDX12": 23078,
+      "passmarkDX11": 21302
     },
     "vastai": {
       "dlperf": 31.2,
@@ -919,7 +948,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 98400,
       "geekbenchVulkan": 106800,
-      "passmarkG3D": 17560
+      "passmarkDX12": 18262,
+      "passmarkDX11": 16858
     },
     "vastai": {
       "dlperf": 21.8,
@@ -950,7 +980,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 93200,
       "geekbenchVulkan": 101400,
-      "passmarkG3D": 16940
+      "passmarkDX12": 17618,
+      "passmarkDX11": 16262
     },
     "vastai": {
       "dlperf": 19.4,
@@ -981,7 +1012,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 176400,
       "geekbenchVulkan": 188900,
-      "passmarkG3D": 28140
+      "passmarkDX12": 29266,
+      "passmarkDX11": 27014
     },
     "vastai": {
       "dlperf": 32.5,
@@ -1012,7 +1044,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 148200,
       "geekbenchVulkan": 159800,
-      "passmarkG3D": 24120
+      "passmarkDX12": 24120,
+      "passmarkDX11": 24120
     },
     "vastai": {
       "dlperf": 28.4,
@@ -1043,7 +1076,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 131400,
       "geekbenchVulkan": 141200,
-      "passmarkG3D": 21980
+      "passmarkDX12": 21980,
+      "passmarkDX11": 21980
     },
     "vastai": {
       "dlperf": 24.6,
@@ -1074,7 +1108,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 111800,
       "geekbenchVulkan": 119400,
-      "passmarkG3D": 20890
+      "passmarkDX12": 21726,
+      "passmarkDX11": 20054
     },
     "vastai": {
       "dlperf": 20.8,
@@ -1105,7 +1140,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 103900,
       "geekbenchVulkan": 112500,
-      "passmarkG3D": 19840
+      "passmarkDX12": 19840,
+      "passmarkDX11": 19840
     },
     "vastai": {
       "dlperf": 19.5,
@@ -1136,7 +1172,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 85400,
       "geekbenchVulkan": 91800,
-      "passmarkG3D": 16580
+      "passmarkDX12": 16580,
+      "passmarkDX11": 16580
     },
     "vastai": {
       "dlperf": 15.2,
@@ -1167,7 +1204,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 76800,
       "geekbenchVulkan": 81500,
-      "passmarkG3D": 15040
+      "passmarkDX12": 15040,
+      "passmarkDX11": 15040
     },
     "vastai": {
       "dlperf": 13.4,
@@ -1198,7 +1236,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 78200,
       "geekbenchVulkan": 83900,
-      "passmarkG3D": 16910
+      "passmarkDX12": 16910,
+      "passmarkDX11": 16910
     },
     "vastai": {
       "dlperf": 12.6,
@@ -1229,7 +1268,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 109400,
       "geekbenchVulkan": 116200,
-      "passmarkG3D": 19950
+      "passmarkDX12": 21546,
+      "passmarkDX11": 17756
     },
     "vastai": {
       "dlperf": 24.8,
@@ -1260,7 +1300,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 97600,
       "geekbenchVulkan": 103400,
-      "passmarkG3D": 17850
+      "passmarkDX12": 19278,
+      "passmarkDX11": 15887
     },
     "vastai": {
       "dlperf": 21.2,
@@ -1291,7 +1332,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 98900,
       "geekbenchVulkan": 101500,
-      "passmarkG3D": 17210
+      "passmarkDX12": 18587,
+      "passmarkDX11": 15317
     },
     "vastai": {
       "dlperf": 22.4,
@@ -1322,7 +1364,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 89100,
       "geekbenchVulkan": 91800,
-      "passmarkG3D": 15980
+      "passmarkDX12": 17258,
+      "passmarkDX11": 14222
     },
     "vastai": {
       "dlperf": 18.6,
@@ -1353,12 +1396,13 @@
     "benchmarks": {
       "geekbenchOpenCL": 158400,
       "geekbenchVulkan": 152100,
-      "passmarkG3D": 26100
+      "passmarkDX12": 27144,
+      "passmarkDX11": 25056
     },
     "vastai": {
       "dlperf": 32.8,
       "hourlyRateUSD": 0.16,
-      "dlperfPerDollar": 205.0,
+      "dlperfPerDollar": 205,
       "availableOffers": 36,
       "verifiedFlops": 23.7
     }
@@ -1384,7 +1428,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 128900,
       "geekbenchVulkan": 124200,
-      "passmarkG3D": 22400
+      "passmarkDX12": 23296,
+      "passmarkDX11": 21504
     },
     "vastai": {
       "dlperf": 25.4,
@@ -1415,7 +1460,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 96800,
       "geekbenchVulkan": 93400,
-      "passmarkG3D": 18250
+      "passmarkDX12": 18980,
+      "passmarkDX11": 17520
     },
     "vastai": {
       "dlperf": 17.8,
@@ -1446,12 +1492,13 @@
     "benchmarks": {
       "geekbenchOpenCL": 47200,
       "geekbenchVulkan": 44800,
-      "passmarkG3D": 10280
+      "passmarkDX12": 9046,
+      "passmarkDX11": 10794
     },
     "vastai": {
       "dlperf": 6.8,
       "hourlyRateUSD": 0.05,
-      "dlperfPerDollar": 136.0,
+      "dlperfPerDollar": 136,
       "availableOffers": 6,
       "verifiedFlops": 7.1
     }
@@ -1477,7 +1524,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 42800,
       "geekbenchVulkan": 40900,
-      "passmarkG3D": 8910
+      "passmarkDX12": 7841,
+      "passmarkDX11": 9356
     },
     "vastai": {
       "dlperf": 6.1,
@@ -1508,12 +1556,13 @@
     "benchmarks": {
       "geekbenchOpenCL": 37400,
       "geekbenchVulkan": 35800,
-      "passmarkG3D": 7980
+      "passmarkDX12": 7022,
+      "passmarkDX11": 8379
     },
     "vastai": {
       "dlperf": 5.2,
       "hourlyRateUSD": 0.04,
-      "dlperfPerDollar": 130.0,
+      "dlperfPerDollar": 130,
       "availableOffers": 9,
       "verifiedFlops": 5.1
     }
@@ -1539,7 +1588,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 21200,
       "geekbenchVulkan": 20100,
-      "passmarkG3D": 4450
+      "passmarkDX12": 3916,
+      "passmarkDX11": 4673
     }
   },
   {
@@ -1563,7 +1613,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 13400,
       "geekbenchVulkan": 12800,
-      "passmarkG3D": 2840
+      "passmarkDX12": 2499,
+      "passmarkDX11": 2982
     }
   },
   {
@@ -1587,12 +1638,13 @@
     "benchmarks": {
       "geekbenchOpenCL": 39800,
       "geekbenchVulkan": 38100,
-      "passmarkG3D": 8450
+      "passmarkDX12": 7436,
+      "passmarkDX11": 8873
     },
     "vastai": {
       "dlperf": 5.6,
       "hourlyRateUSD": 0.04,
-      "dlperfPerDollar": 140.0,
+      "dlperfPerDollar": 140,
       "availableOffers": 5,
       "verifiedFlops": 5.8
     }
@@ -1618,7 +1670,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 35100,
       "geekbenchVulkan": 33400,
-      "passmarkG3D": 7590
+      "passmarkDX12": 6679,
+      "passmarkDX11": 7970
     }
   },
   {
@@ -1642,7 +1695,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 18900,
       "geekbenchVulkan": 17600,
-      "passmarkG3D": 4120
+      "passmarkDX12": 3626,
+      "passmarkDX11": 4326
     }
   },
   {
@@ -1666,7 +1720,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 43500,
       "geekbenchVulkan": 39200,
-      "passmarkG3D": 8590
+      "passmarkDX12": 7559,
+      "passmarkDX11": 9020
     }
   },
   {
@@ -1690,7 +1745,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 34200,
       "geekbenchVulkan": 31800,
-      "passmarkG3D": 7680
+      "passmarkDX12": 6758,
+      "passmarkDX11": 8064
     }
   },
   {
@@ -1714,7 +1770,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 31900,
       "geekbenchVulkan": 29500,
-      "passmarkG3D": 7250
+      "passmarkDX12": 6380,
+      "passmarkDX11": 7613
     }
   },
   {
@@ -1738,7 +1795,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 25800,
       "geekbenchVulkan": 23900,
-      "passmarkG3D": 5680
+      "passmarkDX12": 4998,
+      "passmarkDX11": 5964
     }
   },
   {
@@ -1762,7 +1820,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 23400,
       "geekbenchVulkan": 21500,
-      "passmarkG3D": 5240
+      "passmarkDX12": 4611,
+      "passmarkDX11": 5502
     }
   },
   {
@@ -1786,7 +1845,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 30800,
       "geekbenchVulkan": 28100,
-      "passmarkG3D": 6950
+      "passmarkDX12": 6116,
+      "passmarkDX11": 7298
     }
   },
   {
@@ -1810,7 +1870,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 21900,
       "geekbenchVulkan": 18400,
-      "passmarkG3D": 5020
+      "passmarkDX12": 3614,
+      "passmarkDX11": 5321
     }
   },
   {
@@ -1834,7 +1895,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 16400,
       "geekbenchVulkan": 14200,
-      "passmarkG3D": 4050
+      "passmarkDX12": 2916,
+      "passmarkDX11": 4293
     }
   },
   {
@@ -1853,12 +1915,13 @@
     "cores": 1024,
     "tdpWatts": 110,
     "processNm": 28,
-    "tflopsFP32": 2.0,
+    "tflopsFP32": 2,
     "msrpUSD": 49,
     "benchmarks": {
       "geekbenchOpenCL": 14800,
       "geekbenchVulkan": 13100,
-      "passmarkG3D": 3480
+      "passmarkDX12": 2506,
+      "passmarkDX11": 3689
     }
   },
   {
@@ -1882,7 +1945,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 11900,
       "geekbenchVulkan": 10800,
-      "passmarkG3D": 2860
+      "passmarkDX12": 2517,
+      "passmarkDX11": 3003
     }
   },
   {
@@ -1906,7 +1970,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 12500,
       "geekbenchVulkan": 11200,
-      "passmarkG3D": 3010
+      "passmarkDX12": 2649,
+      "passmarkDX11": 3161
     }
   },
   {
@@ -1930,7 +1995,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 6400,
       "geekbenchVulkan": 5800,
-      "passmarkG3D": 1420
+      "passmarkDX12": 1022,
+      "passmarkDX11": 1505
     }
   },
   {
@@ -1954,7 +2020,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 4200,
       "geekbenchVulkan": 3800,
-      "passmarkG3D": 980
+      "passmarkDX12": 706,
+      "passmarkDX11": 1039
     }
   },
   {
@@ -1978,14 +2045,15 @@
     "benchmarks": {
       "geekbenchOpenCL": 168900,
       "geekbenchVulkan": 181400,
-      "passmarkG3D": 26650
+      "passmarkDX12": 26650,
+      "passmarkDX11": 26650
     },
     "vastai": {
       "dlperf": 30.8,
       "hourlyRateUSD": 0.16,
       "dlperfPerDollar": 192.5,
       "availableOffers": 18,
-      "verifiedFlops": 23.0
+      "verifiedFlops": 23
     }
   },
   {
@@ -2009,12 +2077,13 @@
     "benchmarks": {
       "geekbenchOpenCL": 104800,
       "geekbenchVulkan": 113200,
-      "passmarkG3D": 20120
+      "passmarkDX12": 20925,
+      "passmarkDX11": 19315
     },
     "vastai": {
       "dlperf": 19.8,
       "hourlyRateUSD": 0.1,
-      "dlperfPerDollar": 198.0,
+      "dlperfPerDollar": 198,
       "availableOffers": 7,
       "verifiedFlops": 13.2
     }
@@ -2040,7 +2109,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 92400,
       "geekbenchVulkan": 99600,
-      "passmarkG3D": 18240
+      "passmarkDX12": 18970,
+      "passmarkDX11": 17510
     }
   },
   {
@@ -2064,7 +2134,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 91800,
       "geekbenchVulkan": 98900,
-      "passmarkG3D": 18090
+      "passmarkDX12": 18814,
+      "passmarkDX11": 17366
     },
     "vastai": {
       "dlperf": 17.6,
@@ -2095,12 +2166,13 @@
     "benchmarks": {
       "geekbenchOpenCL": 90400,
       "geekbenchVulkan": 96800,
-      "passmarkG3D": 17320
+      "passmarkDX12": 18013,
+      "passmarkDX11": 16627
     },
     "vastai": {
       "dlperf": 16.4,
       "hourlyRateUSD": 0.08,
-      "dlperfPerDollar": 205.0,
+      "dlperfPerDollar": 205,
       "availableOffers": 11,
       "verifiedFlops": 10.8
     }
@@ -2126,7 +2198,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 49800,
       "geekbenchVulkan": 53200,
-      "passmarkG3D": 9850
+      "passmarkDX12": 10244,
+      "passmarkDX11": 9456
     }
   },
   {
@@ -2150,7 +2223,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 48900,
       "geekbenchVulkan": 52400,
-      "passmarkG3D": 9680
+      "passmarkDX12": 10067,
+      "passmarkDX11": 9293
     }
   },
   {
@@ -2174,7 +2248,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 36200,
       "geekbenchVulkan": 38900,
-      "passmarkG3D": 7280
+      "passmarkDX12": 7571,
+      "passmarkDX11": 6989
     }
   },
   {
@@ -2198,7 +2273,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 80900,
       "geekbenchVulkan": 86400,
-      "passmarkG3D": 17380
+      "passmarkDX12": 17380,
+      "passmarkDX11": 17380
     }
   },
   {
@@ -2222,14 +2298,15 @@
     "benchmarks": {
       "geekbenchOpenCL": 69800,
       "geekbenchVulkan": 74500,
-      "passmarkG3D": 15210
+      "passmarkDX12": 15210,
+      "passmarkDX11": 15210
     },
     "vastai": {
       "dlperf": 11.2,
       "hourlyRateUSD": 0.06,
       "dlperfPerDollar": 186.7,
       "availableOffers": 7,
-      "verifiedFlops": 8.0
+      "verifiedFlops": 8
     }
   },
   {
@@ -2253,7 +2330,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 62400,
       "geekbenchVulkan": 66800,
-      "passmarkG3D": 13780
+      "passmarkDX12": 13780,
+      "passmarkDX11": 13780
     },
     "vastai": {
       "dlperf": 10.1,
@@ -2284,7 +2362,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 57800,
       "geekbenchVulkan": 61200,
-      "passmarkG3D": 12650
+      "passmarkDX12": 12650,
+      "passmarkDX11": 12650
     }
   },
   {
@@ -2308,7 +2387,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 44200,
       "geekbenchVulkan": 47500,
-      "passmarkG3D": 9620
+      "passmarkDX12": 9620,
+      "passmarkDX11": 9620
     }
   },
   {
@@ -2332,7 +2412,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 43600,
       "geekbenchVulkan": 46800,
-      "passmarkG3D": 9410
+      "passmarkDX12": 9410,
+      "passmarkDX11": 9410
     }
   },
   {
@@ -2356,7 +2437,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 42100,
       "geekbenchVulkan": 45200,
-      "passmarkG3D": 9180
+      "passmarkDX12": 9180,
+      "passmarkDX11": 9180
     }
   },
   {
@@ -2380,7 +2462,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 36900,
       "geekbenchVulkan": 39400,
-      "passmarkG3D": 7840
+      "passmarkDX12": 7840,
+      "passmarkDX11": 7840
     }
   },
   {
@@ -2404,7 +2487,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 294800,
       "geekbenchVulkan": 248900,
-      "passmarkG3D": 36850
+      "passmarkDX12": 38324,
+      "passmarkDX11": 35376
     },
     "vastai": {
       "dlperf": 78.2,
@@ -2435,7 +2519,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 166200,
       "geekbenchVulkan": 151800,
-      "passmarkG3D": 26610
+      "passmarkDX12": 27674,
+      "passmarkDX11": 25546
     },
     "vastai": {
       "dlperf": 33.1,
@@ -2466,12 +2551,13 @@
     "benchmarks": {
       "geekbenchOpenCL": 84500,
       "geekbenchVulkan": 81200,
-      "passmarkG3D": 15280
+      "passmarkDX12": 15891,
+      "passmarkDX11": 14669
     },
     "vastai": {
       "dlperf": 14.8,
       "hourlyRateUSD": 0.08,
-      "dlperfPerDollar": 185.0,
+      "dlperfPerDollar": 185,
       "availableOffers": 12,
       "verifiedFlops": 12.1
     }
@@ -2497,7 +2583,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 186400,
       "geekbenchVulkan": 171200,
-      "passmarkG3D": 26120
+      "passmarkDX12": 27165,
+      "passmarkDX11": 25075
     },
     "vastai": {
       "dlperf": 35.8,
@@ -2528,12 +2615,13 @@
     "benchmarks": {
       "geekbenchOpenCL": 124800,
       "geekbenchVulkan": 117900,
-      "passmarkG3D": 21140
+      "passmarkDX12": 21986,
+      "passmarkDX11": 20294
     },
     "vastai": {
       "dlperf": 21.4,
       "hourlyRateUSD": 0.1,
-      "dlperfPerDollar": 214.0,
+      "dlperfPerDollar": 214,
       "availableOffers": 28,
       "verifiedFlops": 16.2
     }
@@ -2559,7 +2647,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 85400,
       "geekbenchVulkan": 81900,
-      "passmarkG3D": 15680
+      "passmarkDX12": 16307,
+      "passmarkDX11": 15053
     },
     "vastai": {
       "dlperf": 14.9,
@@ -2590,7 +2679,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 68400,
       "geekbenchVulkan": 65200,
-      "passmarkG3D": 12890
+      "passmarkDX12": 13406,
+      "passmarkDX11": 12374
     },
     "vastai": {
       "dlperf": 11.8,
@@ -2621,7 +2711,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 62100,
       "geekbenchVulkan": 59800,
-      "passmarkG3D": 11920
+      "passmarkDX12": 12397,
+      "passmarkDX11": 11443
     }
   },
   {
@@ -2645,7 +2736,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 51800,
       "geekbenchVulkan": 49600,
-      "passmarkG3D": 10340
+      "passmarkDX12": 10754,
+      "passmarkDX11": 9926
     }
   }
 ]
