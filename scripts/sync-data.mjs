@@ -18,6 +18,14 @@ import * as cheerio from 'cheerio';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '../src/data');
+const FETCH_TIMEOUT_MS = 8000;
+
+function fetchWithTimeout(url, options = {}) {
+  return fetch(url, {
+    ...options,
+    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+  });
+}
 
 function normalizeGpuName(name) {
   return name
@@ -34,7 +42,7 @@ async function fetchGeekbenchCompute() {
   console.log('⚡ [1/7] Consultando Geekbench 6 Compute Benchmarks (browser.geekbench.com/v6/compute)...');
   const scores = new Map();
   try {
-    const res = await fetch('https://browser.geekbench.com/v6/compute', {
+    const res = await fetchWithTimeout('https://browser.geekbench.com/v6/compute', {
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; NDGPUList/2.1)' }
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -63,7 +71,7 @@ async function fetchVoidfulGpuSpecs() {
   console.log('📦 [2/7] Consultando especificaciones desde voidful/gpu-info-api...');
   const specs = new Map();
   try {
-    const res = await fetch('https://raw.githubusercontent.com/voidful/gpu-info-api/gpu-data/gpu.json');
+    const res = await fetchWithTimeout('https://raw.githubusercontent.com/voidful/gpu-info-api/gpu-data/gpu.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     const entries = Array.isArray(data) ? data : Object.values(data);
@@ -84,7 +92,7 @@ async function fetchPassmarkScores() {
   console.log('📊 [3/7] Consultando PassMark G3D Mark (passmark-scraper)...');
   const scores = new Map();
   try {
-    const res = await fetch('https://www.videocardbenchmark.net/high_end_gpus.html', {
+    const res = await fetchWithTimeout('https://www.videocardbenchmark.net/high_end_gpus.html', {
       headers: { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36' }
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -114,7 +122,7 @@ async function fetchVastAiBundles() {
   console.log('☁️ [4/7] Consultando Vast.ai Cloud Bundles API (https://cloud.vast.ai/api/v0/bundles/)...');
   const vastMap = new Map();
   try {
-    const res = await fetch('https://cloud.vast.ai/api/v0/bundles/', {
+    const res = await fetchWithTimeout('https://cloud.vast.ai/api/v0/bundles/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -178,7 +186,7 @@ async function fetchSteamGames(appIds) {
   for (const appid of appIds) {
     try {
       const url = `https://store.steampowered.com/api/appdetails?appids=${appid}&l=spanish`;
-      const res = await fetch(url);
+      const res = await fetchWithTimeout(url);
       if (!res.ok) continue;
       const json = await res.json();
       const appData = json[String(appid)];
@@ -232,7 +240,7 @@ async function fetchPCGamingWikiCargo(appIds) {
       });
 
       const url = `https://www.pcgamingwiki.com/w/api.php?${params.toString()}`;
-      const res = await fetch(url, {
+      const res = await fetchWithTimeout(url, {
         headers: { 'User-Agent': 'NDGPUList/2.1 (https://github.com/nicosup98/ndgpulist)' }
       });
       if (!res.ok) continue;
@@ -278,7 +286,7 @@ async function fetchProtonDbData(appIds) {
   for (const appid of appIds) {
     try {
       const url = `https://www.protondb.com/api/v1/reports/summaries/${appid}.json`;
-      const res = await fetch(url, {
+      const res = await fetchWithTimeout(url, {
         headers: { 'User-Agent': 'NDGPUList/2.1' }
       });
       if (!res.ok) continue;
