@@ -29,3 +29,171 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-slate-400 dark:bg-slate-600;
 }
+
+/* ==========================================================================
+   Animaciones con CSS al scrollear (Scroll-Driven + IntersectionObserver)
+   ========================================================================== */
+
+/* Barra de progreso de lectura / scroll en la cabecera */
+.scroll-progress-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #6366f1, #06b6d4);
+  z-index: 100;
+  width: 0%;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  pointer-events: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  .scroll-progress-indicator {
+    width: 100%;
+    transform-origin: 0 50%;
+    animation: scroll-progress-keyframes auto linear;
+    animation-timeline: scroll();
+  }
+
+  @keyframes scroll-progress-keyframes {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* Clases de revelación progresiva al entrar y salir del viewport */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95) translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animación escalonada FADE suave y sedoso para cards de juegos (una por una) */
+.game-card-stagger {
+  opacity: 0;
+  transition: opacity 0.85s cubic-bezier(0.25, 0.1, 0.25, 1),
+              transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
+              box-shadow 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: opacity;
+}
+
+.game-card-stagger.is-visible {
+  opacity: 1;
+}
+
+.game-card-stagger:hover {
+  transform: translateY(-2px);
+}
+
+/* Retardos escalonados para listas y grids */
+.delay-75 { transition-delay: 75ms; }
+.delay-150 { transition-delay: 150ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* Soporte nativo para CSS View-Timeline (Scroll-Driven Animations Level 1: Entrada y Salida continua) */
+@supports (animation-timeline: view()) {
+  .css-scroll-view {
+    animation-timeline: view();
+    animation-name: css-view-in-out;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes css-view-in-out {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    18% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    82% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+  }
+}
+
+/* Efecto suave en tarjetas hover (no sobrescribe transitions de opacity) */
+.card-hover-fx {
+  transition-property: transform, box-shadow, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.card-hover-fx:hover {
+  transform: translateY(-2px);
+}
+
+/* Accesibilidad: desactivar animaciones si el usuario prefiere movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-scale,
+  .reveal-left,
+  .reveal-right,
+  .css-scroll-view,
+  .game-card-stagger,
+  .card-hover-fx {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+  .scroll-progress-indicator {
+    display: none !important;
+  }
+}

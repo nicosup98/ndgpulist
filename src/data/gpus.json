@@ -25,10 +25,10 @@
     },
     "vastai": {
       "dlperf": 199.2,
-      "hourlyRateUSD": 0.72,
-      "dlperfPerDollar": 275.8,
+      "hourlyRateUSD": 0.98,
+      "dlperfPerDollar": 204.1,
       "availableOffers": 2,
-      "verifiedFlops": 108.1
+      "verifiedFlops": 109.1
     },
     "rawSourceSynced": true,
     "launchDate": "2025-01-30 00:00:00",
@@ -104,9 +104,9 @@
       "passmarkDX11": 327
     },
     "vastai": {
-      "dlperf": 83.8,
-      "hourlyRateUSD": 0.32,
-      "dlperfPerDollar": 259.5,
+      "dlperf": 41.2,
+      "hourlyRateUSD": 1.34,
+      "dlperfPerDollar": 30.8,
       "availableOffers": 1,
       "verifiedFlops": 53.2
     },
@@ -184,11 +184,11 @@
       "passmarkDX11": 303
     },
     "vastai": {
-      "dlperf": 55.2,
-      "hourlyRateUSD": 0.36,
-      "dlperfPerDollar": 153.3,
-      "availableOffers": 29,
-      "verifiedFlops": 44.1
+      "dlperf": 75.9,
+      "hourlyRateUSD": 0.8,
+      "dlperfPerDollar": 94.4,
+      "availableOffers": 1,
+      "verifiedFlops": 44.3
     },
     "rawSourceSynced": true,
     "launchDate": "2025-02-20 00:00:00",
@@ -265,8 +265,8 @@
     },
     "vastai": {
       "dlperf": 49.9,
-      "hourlyRateUSD": 0.18,
-      "dlperfPerDollar": 284.4,
+      "hourlyRateUSD": 0.44,
+      "dlperfPerDollar": 113.6,
       "availableOffers": 1,
       "verifiedFlops": 30.4
     },
@@ -344,11 +344,11 @@
       "passmarkDX11": 323
     },
     "vastai": {
-      "dlperf": 97.4,
-      "hourlyRateUSD": 1.07,
-      "dlperfPerDollar": 91,
-      "availableOffers": 1,
-      "verifiedFlops": 82.2
+      "dlperf": 106.7,
+      "hourlyRateUSD": 1,
+      "dlperfPerDollar": 106.3,
+      "availableOffers": 3,
+      "verifiedFlops": 82.6
     },
     "rawSourceSynced": true,
     "launchDate": "2022-10-12 00:00:00",
@@ -424,11 +424,11 @@
       "passmarkDX11": 299
     },
     "vastai": {
-      "dlperf": 56.4,
-      "hourlyRateUSD": 0.28,
-      "dlperfPerDollar": 201.4,
-      "availableOffers": 64,
-      "verifiedFlops": 52.5
+      "dlperf": 57.1,
+      "hourlyRateUSD": 0.54,
+      "dlperfPerDollar": 106.6,
+      "availableOffers": 1,
+      "verifiedFlops": 54.6
     },
     "rawSourceSynced": true,
     "launchDate": "2024-01-31 00:00:00",
@@ -498,11 +498,11 @@
       "passmarkDX11": 313
     },
     "vastai": {
-      "dlperf": 53.3,
-      "hourlyRateUSD": 0.42,
-      "dlperfPerDollar": 127.3,
+      "dlperf": 53.1,
+      "hourlyRateUSD": 0.41,
+      "dlperfPerDollar": 128.6,
       "availableOffers": 1,
-      "verifiedFlops": 48.6
+      "verifiedFlops": 48.3
     },
     "rawSourceSynced": true,
     "launchDate": "2022-11-16 00:00:00",
@@ -732,11 +732,11 @@
       "passmarkDX11": 271
     },
     "vastai": {
-      "dlperf": 39.4,
-      "hourlyRateUSD": 0.19,
-      "dlperfPerDollar": 207.4,
-      "availableOffers": 61,
-      "verifiedFlops": 35.6
+      "dlperf": 34.8,
+      "hourlyRateUSD": 0.18,
+      "dlperfPerDollar": 190.1,
+      "availableOffers": 1,
+      "verifiedFlops": 35.8
     },
     "rawSourceSynced": true,
     "launchDate": "2024-01-17 00:00:00",
@@ -1037,11 +1037,11 @@
       "passmarkDX11": 174
     },
     "vastai": {
-      "dlperf": 19.6,
-      "hourlyRateUSD": 0.1,
-      "dlperfPerDollar": 196,
-      "availableOffers": 41,
-      "verifiedFlops": 15.2
+      "dlperf": 15.7,
+      "hourlyRateUSD": 0.13,
+      "dlperfPerDollar": 117.1,
+      "availableOffers": 1,
+      "verifiedFlops": 15.3
     },
     "rawSourceSynced": true,
     "tomshardware": {
@@ -1116,9 +1116,9 @@
       "passmarkDX11": 237
     },
     "vastai": {
-      "dlperf": 37.5,
-      "hourlyRateUSD": 0.31,
-      "dlperfPerDollar": 121.3,
+      "dlperf": 46.4,
+      "hourlyRateUSD": 0.34,
+      "dlperfPerDollar": 137.5,
       "availableOffers": 1,
       "verifiedFlops": 36.6
     },
@@ -1197,8 +1197,8 @@
     },
     "vastai": {
       "dlperf": 44.4,
-      "hourlyRateUSD": 0.39,
-      "dlperfPerDollar": 113.2,
+      "hourlyRateUSD": 0.27,
+      "dlperfPerDollar": 166.7,
       "availableOffers": 2,
       "verifiedFlops": 35.3
     },
@@ -1276,11 +1276,11 @@
       "passmarkDX11": 221
     },
     "vastai": {
-      "dlperf": 34.7,
-      "hourlyRateUSD": 0.43,
-      "dlperfPerDollar": 80,
+      "dlperf": 33.4,
+      "hourlyRateUSD": 0.24,
+      "dlperfPerDollar": 136.8,
       "availableOffers": 1,
-      "verifiedFlops": 35.4
+      "verifiedFlops": 34.4
     },
     "rawSourceSynced": true,
     "launchDate": "2021-06-03 00:00:00",
@@ -1356,11 +1356,11 @@
       "passmarkDX11": 207
     },
     "vastai": {
-      "dlperf": 33.4,
-      "hourlyRateUSD": 0.14,
-      "dlperfPerDollar": 238.6,
-      "availableOffers": 94,
-      "verifiedFlops": 29.8
+      "dlperf": 31.3,
+      "hourlyRateUSD": 0.2,
+      "dlperfPerDollar": 155.2,
+      "availableOffers": 2,
+      "verifiedFlops": 31.8
     },
     "rawSourceSynced": true,
     "launchDate": "2020-09-17 00:00:00",
@@ -1516,11 +1516,11 @@
       "passmarkDX11": 183
     },
     "vastai": {
-      "dlperf": 23.9,
-      "hourlyRateUSD": 0.11,
-      "dlperfPerDollar": 217.3,
-      "availableOffers": 82,
-      "verifiedFlops": 20.4
+      "dlperf": 16.3,
+      "hourlyRateUSD": 0.12,
+      "dlperfPerDollar": 133.1,
+      "availableOffers": 1,
+      "verifiedFlops": 19.8
     },
     "rawSourceSynced": true,
     "launchDate": "2020-10-29 00:00:00",
@@ -1756,11 +1756,11 @@
       "passmarkDX11": 132
     },
     "vastai": {
-      "dlperf": 13.2,
+      "dlperf": 4,
       "hourlyRateUSD": 0.07,
-      "dlperfPerDollar": 188.6,
-      "availableOffers": 28,
-      "verifiedFlops": 7.2
+      "dlperfPerDollar": 56,
+      "availableOffers": 1,
+      "verifiedFlops": 7.5
     },
     "rawSourceSynced": true,
     "launchDate": "2019-07-09 00:00:00",
@@ -5714,6 +5714,15 @@
       "score": 53.9,
       "samples": 9773,
       "url": "https://gpu.userbenchmark.com/SpeedTest/265423/NVIDIA-TITAN-Xp"
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2017-04-06 00:00:00",
+    "vastai": {
+      "dlperf": 5.8,
+      "hourlyRateUSD": 0.07,
+      "dlperfPerDollar": 83.6,
+      "availableOffers": 1,
+      "verifiedFlops": 11.7
     }
   },
   {
@@ -5753,6 +5762,15 @@
       "score": 51.9,
       "samples": 1150365,
       "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1080-Ti/Rating/3918"
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2017-03-05 00:00:00",
+    "vastai": {
+      "dlperf": 5.3,
+      "hourlyRateUSD": 0.07,
+      "dlperfPerDollar": 76.6,
+      "availableOffers": 1,
+      "verifiedFlops": 11.5
     }
   },
   {
@@ -5792,6 +5810,15 @@
       "score": 43,
       "samples": 1495086,
       "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1080/Rating/3603"
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2017-04-20 00:00:00",
+    "vastai": {
+      "dlperf": 3.4,
+      "hourlyRateUSD": 0.06,
+      "dlperfPerDollar": 60.3,
+      "availableOffers": 1,
+      "verifiedFlops": 7.9
     }
   },
   {
@@ -5831,6 +5858,15 @@
       "score": 39.3,
       "samples": 577707,
       "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1070-Ti/Rating/3943"
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2017-11-02 00:00:00",
+    "vastai": {
+      "dlperf": 3.2,
+      "hourlyRateUSD": 0.06,
+      "dlperfPerDollar": 53.1,
+      "availableOffers": 1,
+      "verifiedFlops": 7.4
     }
   },
   {
@@ -5870,7 +5906,9 @@
       "score": 33.5,
       "samples": 1790166,
       "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1070/Rating/3609"
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2016-06-10 00:00:00"
   },
   {
     "id": "gtx-1060-6gb",
@@ -5909,7 +5947,9 @@
       "score": 23.7,
       "samples": 1809641,
       "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1060-6GB/Rating/3639"
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2018-03-08 00:00:00"
   },
   {
     "id": "gtx-1060-3gb",
@@ -5987,7 +6027,9 @@
       "score": 12.2,
       "samples": 1361669,
       "url": "https://gpu.userbenchmark.com/Nvidia-GTX-1050-Ti/Rating/3649"
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2016-10-25 00:00:00"
   },
   {
     "id": "gtx-1050-3gb",
@@ -6098,6 +6140,8 @@
       "score": 5.7,
       "samples": 250236,
       "url": "https://gpu.userbenchmark.com/SpeedTest/283726/NVIDIA-GeForce-GT-1030"
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2018-09-30 00:00:00"
   }
 ]

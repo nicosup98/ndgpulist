@@ -37,6 +37,9 @@ const currentPath = Astro.url.pathname;
     </script>
   </head>
   <body class="min-h-screen flex flex-col font-sans">
+    <!-- Barra de progreso de lectura / scroll reactiva -->
+    <div class="scroll-progress-indicator" id="scroll-progress" aria-hidden="true"></div>
+
     <!-- Top Technical Header -->
     <header class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
@@ -126,12 +129,86 @@ const currentPath = Astro.url.pathname;
     </footer>
 
     <script>
+      // Tema claro / oscuro
       const btn = document.getElementById('theme-toggle');
       btn?.addEventListener('click', () => {
         const html = document.documentElement;
         const isDark = html.classList.toggle('dark');
         localStorage.setItem('ndgpu-theme', isDark ? 'dark' : 'light');
       });
+
+      // Animaciones de Scroll con IntersectionObserver + Fallback para progress bar
+      (function setupScrollAnimations() {
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const targetsSelector = '.reveal-on-scroll, .reveal-scale, .reveal-left, .reveal-right, .css-scroll-view, .game-card-stagger';
+        
+        let observer = null;
+        const observedElements = new WeakSet();
+
+        function observeElements() {
+          const elements = document.querySelectorAll(targetsSelector);
+          if (prefersReduced) {
+            elements.forEach((el) => el.classList.add('is-visible'));
+            return;
+          }
+
+          if (!observer) {
+            observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    // Entra en pantalla
+                    entry.target.classList.add('is-visible');
+                  } else {
+                    // Sale de pantalla (hacia arriba o hacia abajo)
+                    entry.target.classList.remove('is-visible');
+                  }
+                });
+              },
+              {
+                root: null,
+                rootMargin: '0px 0px -20px 0px',
+                threshold: 0.04,
+              }
+            );
+          }
+
+          elements.forEach((el) => {
+            if (!observedElements.has(el)) {
+              observer.observe(el);
+              observedElements.add(el);
+            }
+          });
+        }
+
+        // Observar mutaciones para elementos que Vue renderiza o filtra en el cliente
+        const mutationObserver = new MutationObserver(() => {
+          observeElements();
+        });
+        mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+        // Progreso de lectura (fallback para navegadores sin animation-timeline)
+        const progressBar = document.getElementById('scroll-progress');
+        const supportsScrollTimeline = CSS.supports && CSS.supports('animation-timeline', 'scroll()');
+        
+        if (!supportsScrollTimeline && progressBar) {
+          const updateScrollProgress = () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = `${progress}%`;
+          };
+
+          window.addEventListener('scroll', updateScrollProgress, { passive: true });
+          updateScrollProgress();
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', observeElements);
+        } else {
+          observeElements();
+        }
+      })();
     </script>
   </body>
 </html>

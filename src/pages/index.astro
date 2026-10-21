@@ -15,10 +15,10 @@ const topGpu = [...gpus].sort((a, b) => b.benchmarks.passmarkDX12 - a.benchmarks
 
 <Layout title="Base de Datos de GPUs, Benchmarks y Estimador de FPS">
   <!-- Hero Técnico Minimalista -->
-  <section class="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40">
+  <section class="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <div class="lg:col-span-8 space-y-4">
+        <div class="lg:col-span-8 space-y-4 reveal-on-scroll">
           <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-mono">
             <span>SSG • GEEKBENCH 6 • PASSMARK • VAST.AI CLOUD • STEAM • PCGAMINGWIKI • PROTONDB</span>
           </div>
@@ -32,13 +32,13 @@ const topGpu = [...gpus].sort((a, b) => b.benchmarks.passmarkDX12 - a.benchmarks
           <div class="flex flex-wrap items-center gap-3 pt-2">
             <a
               href="#comparador"
-              class="px-4 py-2.5 rounded-lg text-sm font-semibold bg-slate-900 dark:bg-white text-white dark:text-slate-950 hover:opacity-90 transition-opacity"
+              class="px-4 py-2.5 rounded-lg text-sm font-semibold bg-slate-900 dark:bg-white text-white dark:text-slate-950 hover:opacity-90 active:scale-95 transition-all shadow-sm"
             >
               Ir al Comparador VS
             </a>
             <a
               href="#fps-estimator"
-              class="px-4 py-2.5 rounded-lg text-sm font-semibold border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              class="px-4 py-2.5 rounded-lg text-sm font-semibold border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 active:scale-95 transition-all"
             >
               Calcular FPS por Juego
             </a>
@@ -46,21 +46,21 @@ const topGpu = [...gpus].sort((a, b) => b.benchmarks.passmarkDX12 - a.benchmarks
         </div>
 
         <!-- Panel de Telemetría Rápida -->
-        <div class="lg:col-span-4 grid grid-cols-2 gap-3 font-mono">
-          <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900">
+        <div class="lg:col-span-4 grid grid-cols-2 gap-3 font-mono reveal-right delay-200">
+          <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 card-hover-fx">
             <span class="text-[10px] uppercase text-slate-400 block">GPUs Indexadas</span>
             <span class="text-2xl font-bold text-slate-900 dark:text-white mt-1 block">{totalGpus}</span>
             <span class="text-[11px] text-slate-500">NVIDIA • AMD • Intel</span>
           </div>
-          <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900">
+          <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 card-hover-fx">
             <span class="text-[10px] uppercase text-slate-400 block">Juegos Steam API</span>
             <span class="text-2xl font-bold text-slate-900 dark:text-white mt-1 block">{totalGames}</span>
             <span class="text-[11px] text-slate-500">1080p / 1440p / 4K</span>
           </div>
-          <div class="col-span-2 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 flex items-center justify-between">
+          <div class="col-span-2 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 flex items-center justify-between card-hover-fx">
             <div>
               <span class="text-[10px] uppercase text-emerald-500 font-semibold block">Líder Actual en Ranking</span>
-              <a href={`/gpu/${topGpu.id}`} class="text-sm font-bold text-slate-900 dark:text-white hover:text-blue-500">
+              <a href={`/gpu/${topGpu.id}`} class="text-sm font-bold text-slate-900 dark:text-white hover:text-blue-500 transition-colors">
                 {topGpu.name} ({topGpu.vramGB}GB {topGpu.memoryType})
               </a>
             </div>

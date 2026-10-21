@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import Fuse from 'fuse.js';
 import type {
   GpuSpec,
@@ -17,6 +17,17 @@ const props = defineProps<{
   games: SteamGame[];
   initialGpuIds?: string[];
 }>();
+
+// GPU Top 1 del ranking (por PassMark DirectX 12)
+const top1Gpu = computed(() => {
+  return [...props.gpus].sort((a, b) => b.benchmarks.passmarkDX12 - a.benchmarks.passmarkDX12)[0] || props.gpus[0];
+});
+
+// Estado de detección de GPU local del usuario (WebGPU / WebGL)
+const detectedUserGpu = ref<GpuSpec | null>(null);
+const detectedGpuRaw = ref<string>('');
+const detectionMethod = ref<'WebGPU' | 'WebGL' | 'None'>('None');
+const isDetectingGpu = ref<boolean>(false);
 
 // Filtros del Ranking de GPUs
 const selectedBrandFilter = ref<'ALL' | 'NVIDIA' | 'AMD' | 'Intel'>('ALL');
@@ -37,10 +48,15 @@ const availableSeries = computed(() => {
 });
 
 // Comparador (soporta de 2 hasta 4 GPUs simultáneamente)
+// Por defecto inicia con el Top 1 (si no se detecta la GPU del equipo aún)
 const comparedIds = ref<string[]>(
   props.initialGpuIds && props.initialGpuIds.length >= 2
     ? [...props.initialGpuIds]
-    : ['rtx-4070-super', 'rx-7800-xt', 'arc-b580']
+    : [
+        ([...props.gpus].sort((a, b) => b.benchmarks.passmarkDX12 - a.benchmarks.passmarkDX12)[0]?.id || 'rtx-5090'),
+        'rtx-4070-super',
+        'rx-7800-xt',
+      ]
 );
 
 // Buscador difuso con Fuse.js para el Ranking y para agregar GPUs al Comparador
@@ -236,6 +252,66 @@ function removeComparedGpu(id: string) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Drag and Drop y Reordenamiento de GPUs en el Comparador
+// ---------------------------------------------------------------------------
+const draggedIndex = ref<number | null>(null);
+const dragOverIndex = ref<number | null>(null);
+
+function handleCardDragStart(index: number, event: DragEvent) {
+  draggedIndex.value = index;
+  if (event.dataTransfer) {
+    event.dataTransfer.effectAllowed = 'move';
+    event.dataTransfer.setData('text/plain', String(index));
+  }
+}
+
+function handleCardDragOver(index: number, event: DragEvent) {
+  event.preventDefault();
+  if (draggedIndex.value === null || draggedIndex.value === index) return;
+  dragOverIndex.value = index;
+  if (event.dataTransfer) {
+    event.dataTransfer.dropEffect = 'move';
+  }
+}
+
+function handleCardDragLeave(index: number) {
+  if (dragOverIndex.value === index) {
+    dragOverIndex.value = null;
+  }
+}
+
+function handleCardDrop(targetIndex: number, event: DragEvent) {
+  event.preventDefault();
+  if (draggedIndex.value === null || draggedIndex.value === targetIndex) {
+    draggedIndex.value = null;
+    dragOverIndex.value = null;
+    return;
+  }
+
+  const list = [...comparedIds.value];
+  const [movedId] = list.splice(draggedIndex.value, 1);
+  list.splice(targetIndex, 0, movedId);
+  comparedIds.value = list;
+
+  draggedIndex.value = null;
+  dragOverIndex.value = null;
+}
+
+function handleCardDragEnd() {
+  draggedIndex.value = null;
+  dragOverIndex.value = null;
+}
+
+function moveComparedGpu(currentIndex: number, direction: 'left' | 'right') {
+  const targetIndex = direction === 'left' ? currentIndex - 1 : currentIndex + 1;
+  if (targetIndex < 0 || targetIndex >= comparedIds.value.length) return;
+  const list = [...comparedIds.value];
+  const [movedId] = list.splice(currentIndex, 1);
+  list.splice(targetIndex, 0, movedId);
+  comparedIds.value = list;
+}
+
 function getBrandBadgeClass(brand: GpuSpec['brand']) {
   if (brand === 'NVIDIA')
     return 'bg-lime-500/10 text-lime-700 dark:text-lime-400 border-lime-500/30';
@@ -275,11 +351,138 @@ function getFpsBadgeColor(fps: number) {
   if (fps >= 35) return 'text-amber-600 dark:text-amber-400 bg-amber-500/10 border-amber-500/30';
   return 'text-rose-600 dark:text-rose-400 bg-rose-500/10 border-rose-500/30';
 }
+
+// ---------------------------------------------------------------------------
+// Detección automática de la GPU del usuario local (WebGPU + WebGL)
+// ---------------------------------------------------------------------------
+function findBestGpuMatch(raw: string, gpus: GpuSpec[]): GpuSpec | null {
+  if (!raw) return null;
+  const clean = raw
+    .replace(/ANGLE\s*\(/gi, '')
+    .replace(/Direct3D\d+/gi, '')
+    .replace(/vs_\d+_\d+/gi, '')
+    .replace(/ps_\d+_\d+/gi, '')
+    .replace(/D3D\d+/gi, '')
+    .replace(/OpenGL/gi, '')
+    .replace(/Mesa/gi, '')
+    .replace(/RADV/gi, '')
+    .replace(/\(.*?\)/g, '')
+    .replace(/,\s*/g, ' ')
+    .trim()
+    .toLowerCase();
+
+  // 1. Coincidencia directa por nombre (de más largo a más corto para evitar falsos positivos)
+  const sortedByLen = [...gpus].sort((a, b) => b.name.length - a.name.length);
+  for (const gpu of sortedByLen) {
+    const gpuCleanName = gpu.name.toLowerCase();
+    const gpuIdClean = gpu.id.replace(/-/g, ' ').toLowerCase();
+    if (clean.includes(gpuCleanName) || clean.includes(gpuIdClean)) {
+      return gpu;
+    }
+  }
+
+  // 2. Búsqueda difusa de respaldo con Fuse.js
+  if (gpuFuse.value) {
+    const searchRes = gpuFuse.value.search(clean);
+    if (searchRes.length > 0 && (searchRes[0].score ?? 1) <= 0.35) {
+      return searchRes[0].item;
+    }
+  }
+
+  return null;
+}
+
+async function detectLocalGpu(): Promise<{ rawName: string; matchedGpu: GpuSpec | null; method: 'WebGPU' | 'WebGL' | 'None' }> {
+  let rawName = '';
+  let method: 'WebGPU' | 'WebGL' | 'None' = 'None';
+
+  // 1. Intentar con WebGPU
+  if (typeof navigator !== 'undefined' && 'gpu' in navigator && (navigator as any).gpu) {
+    try {
+      const adapter = await (navigator as any).gpu.requestAdapter();
+      if (adapter) {
+        const info = (adapter as any).info || (await (adapter as any).requestAdapterInfo?.());
+        if (info) {
+          const parts = [info.vendor, info.architecture, info.description, info.device].filter(Boolean);
+          if (parts.length > 0) {
+            rawName = parts.join(' ');
+            method = 'WebGPU';
+          }
+        }
+      }
+    } catch {
+      // Continuar al fallback de WebGL
+    }
+  }
+
+  // 2. Fallback universal con WebGL (UNMASKED_RENDERER_WEBGL suele tener el modelo comercial exacto)
+  if (!rawName && typeof document !== 'undefined') {
+    try {
+      const canvas = document.createElement('canvas');
+      const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+      if (gl) {
+        const debugInfo = (gl as any).getExtension('WEBGL_debug_renderer_info');
+        if (debugInfo) {
+          const renderer = (gl as any).getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+          if (renderer) {
+            rawName = renderer;
+            method = 'WebGL';
+          }
+        }
+        if (!rawName) {
+          const renderer = (gl as any).getParameter((gl as any).RENDERER);
+          if (renderer) {
+            rawName = renderer;
+            method = 'WebGL';
+          }
+        }
+      }
+    } catch {
+      // Ignorar error
+    }
+  }
+
+  const matchedGpu = findBestGpuMatch(rawName, props.gpus);
+  return { rawName, matchedGpu, method };
+}
+
+async function triggerGpuDetection() {
+  isDetectingGpu.value = true;
+  try {
+    const result = await detectLocalGpu();
+    detectionMethod.value = result.method;
+    detectedGpuRaw.value = result.rawName;
+    if (result.matchedGpu) {
+      detectedUserGpu.value = result.matchedGpu;
+      // Establecer la GPU del equipo como referencia (posición 0)
+      const others = comparedIds.value.filter((id) => id !== result.matchedGpu!.id);
+      comparedIds.value = [result.matchedGpu.id, ...others].slice(0, 3);
+    } else {
+      // Si no está en la lista de GPUs indexadas, tomar el Top 1 por defecto
+      const top1 = top1Gpu.value;
+      const others = comparedIds.value.filter((id) => id !== top1.id);
+      comparedIds.value = [top1.id, ...others].slice(0, 3);
+    }
+  } catch {
+    const top1 = top1Gpu.value;
+    const others = comparedIds.value.filter((id) => id !== top1.id);
+    comparedIds.value = [top1.id, ...others].slice(0, 3);
+  } finally {
+    isDetectingGpu.value = false;
+  }
+}
+
+onMounted(() => {
+  // Si no se pasaron IDs preseleccionados por URL, autodetectar la GPU local
+  if (!props.initialGpuIds || props.initialGpuIds.length === 0) {
+    triggerGpuDetection();
+  }
+});
 </script>
 
 <template>
   <div class="space-y-14">
-    <!-- SECCIÓN 1: TABLA TÉCNICA Y RANKING DE BENCHMARKS -->
+    <!-- SECCIÓN 1: TABLA TÉCNICA Y RANKING DE BENCHMARKS (Carga visible al inicio) -->
     <section id="ranking" class="space-y-5">
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-5">
         <div>
@@ -436,6 +639,13 @@ function getFpsBadgeColor(fps: number) {
                       >
                         {{ gpu.brand }}
                       </span>
+                      <span
+                        v-if="detectedUserGpu && detectedUserGpu.id === gpu.id"
+                        class="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30"
+                        title="Tu GPU física detectada por WebGPU/WebGL"
+                      >
+                        TU GPU 💻
+                      </span>
                     </div>
                     <div class="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">
                       {{ gpu.architecture }} ({{ gpu.processNm }}nm) • {{ gpu.releaseYear }}
@@ -550,7 +760,7 @@ function getFpsBadgeColor(fps: number) {
     </section>
 
     <!-- SECCIÓN 2: COMPARADOR LADO A LADO (1 VS 1 HASTA 4 GPUS) -->
-    <section id="comparador" class="space-y-6 scroll-mt-20">
+    <section id="comparador" class="space-y-6 scroll-mt-20 reveal-on-scroll">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-5">
         <div>
           <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">
@@ -562,6 +772,39 @@ function getFpsBadgeColor(fps: number) {
           <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
             Compara especificaciones de arquitectura, memoria, consumo y diferencias porcentuales tomando la primera GPU como referencia (<span class="font-mono font-semibold">{{ baselineGpu.name }} = 100%</span>).
           </p>
+
+          <!-- Banner de autodetección de GPU local del usuario (WebGPU / WebGL) -->
+          <div class="mt-3 flex flex-wrap items-center gap-2 text-xs font-mono">
+            <div
+              v-if="detectedUserGpu"
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400"
+            >
+              <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>GPU local detectada ({{ detectionMethod }}): <strong>{{ detectedUserGpu.name }}</strong> (Referencia activa)</span>
+            </div>
+            <div
+              v-else-if="detectedGpuRaw"
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-400"
+            >
+              <span class="inline-block w-2 h-2 rounded-full bg-amber-500"></span>
+              <span>Hardware detectado ("{{ detectedGpuRaw }}") fuera de catálogo. Por defecto: <strong>{{ top1Gpu.name }} (#1)</strong></span>
+            </div>
+            <div
+              v-else-if="!isDetectingGpu"
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700"
+            >
+              <span>Referencia por defecto: <strong>{{ top1Gpu.name }} (Líder #1)</strong></span>
+            </div>
+            <button
+              type="button"
+              @click="triggerGpuDetection"
+              :disabled="isDetectingGpu"
+              class="px-2.5 py-1 rounded-md text-[11px] font-mono border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors"
+              title="Volver a escanear hardware con WebGPU y WebGL"
+            >
+              {{ isDetectingGpu ? 'Escaneando GPU...' : '🔄 Re-escanear mi GPU' }}
+            </button>
+          </div>
         </div>
 
         <!-- Buscador difuso con Fuse.js para añadir GPU al comparador -->
@@ -646,32 +889,90 @@ function getFpsBadgeColor(fps: number) {
         </div>
       </div>
 
-      <!-- Tarjetas de cabecera de las GPUs comparadas -->
+      <!-- Ayuda visual de reordenamiento con Drag & Drop -->
+      <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-slate-500 dark:text-slate-400">
+        <span class="inline-flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+          </svg>
+          <span><strong>Drag & Drop activo:</strong> Arrastra las tarjetas para reordenarlas a gusto. La 1ª posición es la <strong>Referencia Base (100%)</strong>.</span>
+        </span>
+        <span class="text-[11px] text-slate-400">
+          {{ comparedGpus.length }} de 4 GPUs en comparación
+        </span>
+      </div>
+
+      <!-- Tarjetas de cabecera de las GPUs comparadas (Reordenables mediante Drag & Drop) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div
           v-for="(gpu, idx) in comparedGpus"
           :key="gpu.id"
-          class="relative rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-sm flex flex-col justify-between"
+          draggable="true"
+          @dragstart="handleCardDragStart(idx, $event)"
+          @dragover="handleCardDragOver(idx, $event)"
+          @dragleave="handleCardDragLeave(idx)"
+          @drop="handleCardDrop(idx, $event)"
+          @dragend="handleCardDragEnd"
+          :class="[
+            'relative rounded-xl border bg-white dark:bg-slate-900 p-4 shadow-sm flex flex-col justify-between transition-all duration-200 cursor-grab active:cursor-grabbing select-none',
+            idx === 0
+              ? 'border-blue-500/60 dark:border-blue-500/50 bg-blue-50/20 dark:bg-blue-950/20 ring-1 ring-blue-500/30'
+              : 'border-slate-200 dark:border-slate-800',
+            draggedIndex === idx ? 'opacity-40 scale-95 border-dashed border-blue-500' : '',
+            dragOverIndex === idx ? 'ring-2 ring-blue-500 border-blue-500 bg-blue-50/60 dark:bg-blue-950/50 -translate-y-1' : '',
+          ]"
         >
           <div>
             <div class="flex items-center justify-between gap-2 mb-2">
-              <span
-                :class="[
-                  'text-[10px] font-mono font-bold px-2 py-0.5 rounded border',
-                  getBrandBadgeClass(gpu.brand),
-                ]"
-              >
-                {{ gpu.brand }} • {{ idx === 0 ? 'BASE (100%)' : `VS #${idx + 1}` }}
-              </span>
-              <button
-                v-if="comparedGpus.length > 1"
-                type="button"
-                @click="removeComparedGpu(gpu.id)"
-                class="text-xs font-mono text-slate-400 hover:text-rose-500 transition-colors"
-                title="Quitar GPU"
-              >
-                ✕ Quitar
-              </button>
+              <div class="flex items-center gap-1.5">
+                <!-- Manilla de arrastre visual ⋮⋮ -->
+                <span
+                  class="text-slate-400 hover:text-blue-500 font-mono text-base font-bold cursor-grab active:cursor-grabbing leading-none"
+                  title="Arrastra para mover de posición"
+                >
+                  ⋮⋮
+                </span>
+                <span
+                  :class="[
+                    'text-[10px] font-mono font-bold px-2 py-0.5 rounded border',
+                    getBrandBadgeClass(gpu.brand),
+                  ]"
+                >
+                  {{ gpu.brand }} • {{ idx === 0 ? 'BASE (100%)' : `VS #${idx + 1}` }}
+                </span>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <!-- Controles accesibles para reordenar a izquierda/derecha -->
+                <button
+                  v-if="idx > 0"
+                  type="button"
+                  @click.stop="moveComparedGpu(idx, 'left')"
+                  class="w-5 h-5 rounded flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-[10px]"
+                  title="Mover hacia la izquierda"
+                >
+                  ◀
+                </button>
+                <button
+                  v-if="idx < comparedGpus.length - 1"
+                  type="button"
+                  @click.stop="moveComparedGpu(idx, 'right')"
+                  class="w-5 h-5 rounded flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-[10px]"
+                  title="Mover hacia la derecha"
+                >
+                  ▶
+                </button>
+
+                <button
+                  v-if="comparedGpus.length > 1"
+                  type="button"
+                  @click.stop="removeComparedGpu(gpu.id)"
+                  class="text-xs font-mono text-slate-400 hover:text-rose-500 transition-colors ml-1 p-0.5"
+                  title="Quitar GPU del comparador"
+                >
+                  ✕
+                </button>
+              </div>
             </div>
 
             <a :href="`/gpu/${gpu.id}`" class="text-lg font-bold text-slate-900 dark:text-white hover:text-blue-500 transition-colors block">
@@ -955,7 +1256,7 @@ function getFpsBadgeColor(fps: number) {
     </section>
 
     <!-- SECCIÓN 3: ESTIMADOR DE FPS POR JUEGO (STEAM API + PCGAMINGWIKI CARGO + PROTONDB) -->
-    <section id="fps-estimator" class="space-y-6 scroll-mt-20">
+    <section id="fps-estimator" class="space-y-6 scroll-mt-20 reveal-on-scroll">
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-5">
         <div>
           <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">
@@ -1113,9 +1414,10 @@ function getFpsBadgeColor(fps: number) {
       <!-- Grid de Juegos de Steam con telemetría de PCGamingWiki Cargo + ProtonDB -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <article
-          v-for="game in filteredGames"
+          v-for="(game, index) in filteredGames"
           :key="game.id"
-          class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 overflow-hidden shadow-sm flex flex-col justify-between"
+          class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 overflow-hidden shadow-sm flex flex-col justify-between game-card-stagger"
+          :style="{ transitionDelay: `${(index % 6) * 90}ms` }"
         >
           <div>
             <!-- Cabecera con imagen oficial de Steam API + Badges de ProtonDB -->

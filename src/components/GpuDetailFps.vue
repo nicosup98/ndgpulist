@@ -241,9 +241,10 @@ function getProtonTierColor(tier: ProtonTier) {
     <!-- Tarjetas de FPS por juego con metadatos de PCGamingWiki y ProtonDB -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div
-        v-for="game in games"
+        v-for="(game, index) in games"
         :key="game.id"
-        class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-4 flex flex-col justify-between gap-3"
+        class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 p-4 flex flex-col justify-between gap-3 game-card-stagger"
+        :style="{ transitionDelay: `${(index % 6) * 90}ms` }"
       >
         <div class="flex items-start gap-3.5">
           <img
