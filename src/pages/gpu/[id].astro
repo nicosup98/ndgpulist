@@ -100,7 +100,7 @@ const brandColorClass =
             <span class="text-[10px] uppercase text-slate-400 block">MSRP Referencia</span>
             <span class="text-xl font-bold text-emerald-600 dark:text-emerald-400">${gpu.msrpUSD}</span>
             <span class="text-[10px] text-slate-500 block">
-              {(gpu.benchmarks.passmarkDX12 / gpu.msrpUSD).toFixed(1)} DX12/$
+              {(gpu.benchmarks.passmarkDX12 / gpu.msrpUSD).toFixed(2)} DX12/$
             </span>
           </div>
         </div>
@@ -156,7 +156,7 @@ const brandColorClass =
           <div class="py-2.5 flex justify-between">
             <dt class="text-slate-500 dark:text-slate-400 font-sans">Eficiencia Energética</dt>
             <dd class="font-semibold text-emerald-600 dark:text-emerald-400">
-              {(gpu.benchmarks.passmarkDX12 / gpu.tdpWatts).toFixed(1)} DX12 pts / Watt
+              {(gpu.benchmarks.passmarkDX12 / gpu.tdpWatts).toFixed(2)} DX12 / Watt
             </dd>
           </div>
         </dl>

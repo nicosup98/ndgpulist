@@ -163,13 +163,15 @@ export function resolveSupportedUpscaler(gpu: GpuSpec, game: SteamGame): string 
  * - Ancho de banda de memoria (peso 10%)
  */
 export function getCompositeGpuScore(gpu: GpuSpec, apiHint?: 'DX12' | 'DX11'): number {
-  let passmarkDirectX =
-    gpu.benchmarks.passmarkDX12 * 0.65 + gpu.benchmarks.passmarkDX11 * 0.35;
+  const dx12Norm = gpu.benchmarks.passmarkDX12 * 265;
+  const dx11Norm = gpu.benchmarks.passmarkDX11 * 108;
+
+  let passmarkDirectX = dx12Norm * 0.65 + dx11Norm * 0.35;
 
   if (apiHint === 'DX12') {
-    passmarkDirectX = gpu.benchmarks.passmarkDX12 * 0.85 + gpu.benchmarks.passmarkDX11 * 0.15;
+    passmarkDirectX = dx12Norm * 0.85 + dx11Norm * 0.15;
   } else if (apiHint === 'DX11') {
-    passmarkDirectX = gpu.benchmarks.passmarkDX11 * 0.85 + gpu.benchmarks.passmarkDX12 * 0.15;
+    passmarkDirectX = dx11Norm * 0.85 + dx12Norm * 0.15;
   }
 
   const geekbenchAvg =

@@ -20,16 +20,18 @@
     "benchmarks": {
       "geekbenchOpenCL": 368500,
       "geekbenchVulkan": 352000,
-      "passmarkDX12": 50856,
-      "passmarkDX11": 46944
+      "passmarkDX12": 179,
+      "passmarkDX11": 340
     },
     "vastai": {
-      "dlperf": 118.4,
-      "hourlyRateUSD": 0.89,
-      "dlperfPerDollar": 133,
-      "availableOffers": 42,
-      "verifiedFlops": 105.2
-    }
+      "dlperf": 199.2,
+      "hourlyRateUSD": 0.72,
+      "dlperfPerDollar": 275.8,
+      "availableOffers": 2,
+      "verifiedFlops": 108.1
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2025-01-30 00:00:00"
   },
   {
     "id": "rtx-5080",
@@ -52,16 +54,18 @@
     "benchmarks": {
       "geekbenchOpenCL": 261000,
       "geekbenchVulkan": 254000,
-      "passmarkDX12": 42848,
-      "passmarkDX11": 39552
+      "passmarkDX12": 145,
+      "passmarkDX11": 327
     },
     "vastai": {
-      "dlperf": 68.5,
-      "hourlyRateUSD": 0.48,
-      "dlperfPerDollar": 142.7,
-      "availableOffers": 38,
-      "verifiedFlops": 56.8
-    }
+      "dlperf": 83.8,
+      "hourlyRateUSD": 0.32,
+      "dlperfPerDollar": 259.5,
+      "availableOffers": 1,
+      "verifiedFlops": 53.2
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2025-01-30 00:00:00"
   },
   {
     "id": "rtx-5070-ti",
@@ -84,8 +88,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 236400,
       "geekbenchVulkan": 228900,
-      "passmarkDX12": 37856,
-      "passmarkDX11": 34944
+      "passmarkDX12": 126,
+      "passmarkDX11": 303
     },
     "vastai": {
       "dlperf": 55.2,
@@ -93,7 +97,9 @@
       "dlperfPerDollar": 153.3,
       "availableOffers": 29,
       "verifiedFlops": 44.1
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2025-02-20 00:00:00"
   },
   {
     "id": "rtx-5070",
@@ -116,16 +122,18 @@
     "benchmarks": {
       "geekbenchOpenCL": 198500,
       "geekbenchVulkan": 191200,
-      "passmarkDX12": 33020,
-      "passmarkDX11": 30480
+      "passmarkDX12": 106,
+      "passmarkDX11": 279
     },
     "vastai": {
-      "dlperf": 41.8,
-      "hourlyRateUSD": 0.27,
-      "dlperfPerDollar": 154.8,
-      "availableOffers": 24,
-      "verifiedFlops": 31.2
-    }
+      "dlperf": 49.9,
+      "hourlyRateUSD": 0.18,
+      "dlperfPerDollar": 284.4,
+      "availableOffers": 1,
+      "verifiedFlops": 30.4
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2025-03-04 00:00:00"
   },
   {
     "id": "rtx-4090",
@@ -148,16 +156,18 @@
     "benchmarks": {
       "geekbenchOpenCL": 317122,
       "geekbenchVulkan": 264500,
-      "passmarkDX12": 39967,
-      "passmarkDX11": 36893
+      "passmarkDX12": 151,
+      "passmarkDX11": 323
     },
     "vastai": {
-      "dlperf": 85.6,
-      "hourlyRateUSD": 0.39,
-      "dlperfPerDollar": 219.5,
-      "availableOffers": 215,
-      "verifiedFlops": 83.1
-    }
+      "dlperf": 97.4,
+      "hourlyRateUSD": 1.07,
+      "dlperfPerDollar": 91,
+      "availableOffers": 1,
+      "verifiedFlops": 82.2
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2022-10-12 00:00:00"
   },
   {
     "id": "rtx-4080-super",
@@ -180,8 +190,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 247850,
       "geekbenchVulkan": 221400,
-      "passmarkDX12": 36036,
-      "passmarkDX11": 33264
+      "passmarkDX12": 135,
+      "passmarkDX11": 299
     },
     "vastai": {
       "dlperf": 56.4,
@@ -189,7 +199,9 @@
       "dlperfPerDollar": 201.4,
       "availableOffers": 64,
       "verifiedFlops": 52.5
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2024-01-31 00:00:00"
   },
   {
     "id": "rtx-4080",
@@ -212,16 +224,18 @@
     "benchmarks": {
       "geekbenchOpenCL": 241200,
       "geekbenchVulkan": 215800,
-      "passmarkDX12": 35547,
-      "passmarkDX11": 32813
+      "passmarkDX12": 133,
+      "passmarkDX11": 313
     },
     "vastai": {
-      "dlperf": 53.8,
-      "hourlyRateUSD": 0.27,
-      "dlperfPerDollar": 199.3,
-      "availableOffers": 52,
-      "verifiedFlops": 49.1
-    }
+      "dlperf": 53.3,
+      "hourlyRateUSD": 0.42,
+      "dlperfPerDollar": 127.3,
+      "availableOffers": 1,
+      "verifiedFlops": 48.6
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2022-11-16 00:00:00"
   },
   {
     "id": "rtx-4070-ti-super",
@@ -244,8 +258,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 219600,
       "geekbenchVulkan": 198200,
-      "passmarkDX12": 33166,
-      "passmarkDX11": 30614
+      "passmarkDX12": 120,
+      "passmarkDX11": 277
     },
     "vastai": {
       "dlperf": 47.9,
@@ -253,7 +267,9 @@
       "dlperfPerDollar": 208.3,
       "availableOffers": 78,
       "verifiedFlops": 44.4
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2024-06-10 00:00:00"
   },
   {
     "id": "rtx-4070-ti",
@@ -276,16 +292,18 @@
     "benchmarks": {
       "geekbenchOpenCL": 208500,
       "geekbenchVulkan": 186400,
-      "passmarkDX12": 32677,
-      "passmarkDX11": 30163
+      "passmarkDX12": 115,
+      "passmarkDX11": 287
     },
     "vastai": {
-      "dlperf": 43.2,
-      "hourlyRateUSD": 0.21,
-      "dlperfPerDollar": 205.7,
-      "availableOffers": 49,
-      "verifiedFlops": 40.3
-    }
+      "dlperf": 35.6,
+      "hourlyRateUSD": 1.07,
+      "dlperfPerDollar": 33.3,
+      "availableOffers": 1,
+      "verifiedFlops": 38.2
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2023-01-05 00:00:00"
   },
   {
     "id": "rtx-4070-super",
@@ -308,8 +326,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 195340,
       "geekbenchVulkan": 172800,
-      "passmarkDX12": 31325,
-      "passmarkDX11": 28915
+      "passmarkDX12": 110,
+      "passmarkDX11": 271
     },
     "vastai": {
       "dlperf": 39.4,
@@ -317,7 +335,9 @@
       "dlperfPerDollar": 207.4,
       "availableOffers": 61,
       "verifiedFlops": 35.6
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2024-01-17 00:00:00"
   },
   {
     "id": "rtx-4070",
@@ -340,16 +360,17 @@
     "benchmarks": {
       "geekbenchOpenCL": 168900,
       "geekbenchVulkan": 154300,
-      "passmarkDX12": 28018,
-      "passmarkDX11": 25862
+      "passmarkDX12": 103,
+      "passmarkDX11": 243
     },
     "vastai": {
-      "dlperf": 33.8,
-      "hourlyRateUSD": 0.17,
-      "dlperfPerDollar": 198.8,
-      "availableOffers": 55,
+      "dlperf": 33.6,
+      "hourlyRateUSD": 0.4,
+      "dlperfPerDollar": 83.6,
+      "availableOffers": 1,
       "verifiedFlops": 29.3
-    }
+    },
+    "rawSourceSynced": true
   },
   {
     "id": "rtx-4060-ti-16gb",
@@ -372,8 +393,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 136400,
       "geekbenchVulkan": 128100,
-      "passmarkDX12": 23764,
-      "passmarkDX11": 21936
+      "passmarkDX12": 89,
+      "passmarkDX11": 199
     },
     "vastai": {
       "dlperf": 26.4,
@@ -381,7 +402,9 @@
       "dlperfPerDollar": 188.6,
       "availableOffers": 89,
       "verifiedFlops": 22.1
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2023-07-18 00:00:00"
   },
   {
     "id": "rtx-4060-ti-8gb",
@@ -404,8 +427,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 135100,
       "geekbenchVulkan": 126800,
-      "passmarkDX12": 23650,
-      "passmarkDX11": 21830
+      "passmarkDX12": 85,
+      "passmarkDX11": 202
     },
     "vastai": {
       "dlperf": 25.1,
@@ -436,8 +459,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 105200,
       "geekbenchVulkan": 101400,
-      "passmarkDX12": 20405,
-      "passmarkDX11": 18835
+      "passmarkDX12": 76,
+      "passmarkDX11": 174
     },
     "vastai": {
       "dlperf": 19.6,
@@ -445,7 +468,8 @@
       "dlperfPerDollar": 196,
       "availableOffers": 41,
       "verifiedFlops": 15.2
-    }
+    },
+    "rawSourceSynced": true
   },
   {
     "id": "rtx-3090-ti",
@@ -468,16 +492,18 @@
     "benchmarks": {
       "geekbenchOpenCL": 226800,
       "geekbenchVulkan": 204100,
-      "passmarkDX12": 30867,
-      "passmarkDX11": 28493
+      "passmarkDX12": 121,
+      "passmarkDX11": 237
     },
     "vastai": {
-      "dlperf": 46.2,
-      "hourlyRateUSD": 0.22,
-      "dlperfPerDollar": 210,
-      "availableOffers": 37,
-      "verifiedFlops": 40.1
-    }
+      "dlperf": 37.5,
+      "hourlyRateUSD": 0.31,
+      "dlperfPerDollar": 121.3,
+      "availableOffers": 1,
+      "verifiedFlops": 36.6
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2022-03-29 00:00:00"
   },
   {
     "id": "rtx-3090",
@@ -500,16 +526,18 @@
     "benchmarks": {
       "geekbenchOpenCL": 204900,
       "geekbenchVulkan": 186200,
-      "passmarkDX12": 26980,
-      "passmarkDX11": 26980
+      "passmarkDX12": 109,
+      "passmarkDX11": 218
     },
     "vastai": {
-      "dlperf": 41.8,
-      "hourlyRateUSD": 0.18,
-      "dlperfPerDollar": 232.2,
-      "availableOffers": 310,
-      "verifiedFlops": 35.7
-    }
+      "dlperf": 44.4,
+      "hourlyRateUSD": 0.39,
+      "dlperfPerDollar": 113.2,
+      "availableOffers": 2,
+      "verifiedFlops": 35.3
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2020-09-24 00:00:00"
   },
   {
     "id": "rtx-3080-ti",
@@ -532,16 +560,18 @@
     "benchmarks": {
       "geekbenchOpenCL": 198400,
       "geekbenchVulkan": 179600,
-      "passmarkDX12": 26890,
-      "passmarkDX11": 26890
+      "passmarkDX12": 109,
+      "passmarkDX11": 221
     },
     "vastai": {
-      "dlperf": 38.9,
-      "hourlyRateUSD": 0.16,
-      "dlperfPerDollar": 243.1,
-      "availableOffers": 68,
-      "verifiedFlops": 34.2
-    }
+      "dlperf": 34.7,
+      "hourlyRateUSD": 0.43,
+      "dlperfPerDollar": 80,
+      "availableOffers": 1,
+      "verifiedFlops": 35.4
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2021-06-03 00:00:00"
   },
   {
     "id": "rtx-3080",
@@ -564,8 +594,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 177600,
       "geekbenchVulkan": 162400,
-      "passmarkDX12": 25480,
-      "passmarkDX11": 25480
+      "passmarkDX12": 99,
+      "passmarkDX11": 207
     },
     "vastai": {
       "dlperf": 33.4,
@@ -573,7 +603,9 @@
       "dlperfPerDollar": 238.6,
       "availableOffers": 94,
       "verifiedFlops": 29.8
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2020-09-17 00:00:00"
   },
   {
     "id": "rtx-3070-ti",
@@ -596,8 +628,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 149200,
       "geekbenchVulkan": 138400,
-      "passmarkDX12": 23680,
-      "passmarkDX11": 23680
+      "passmarkDX12": 90,
+      "passmarkDX11": 192
     },
     "vastai": {
       "dlperf": 25.8,
@@ -605,7 +637,9 @@
       "dlperfPerDollar": 215,
       "availableOffers": 45,
       "verifiedFlops": 21.8
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2022-10-21 00:00:00"
   },
   {
     "id": "rtx-3070",
@@ -628,8 +662,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 136800,
       "geekbenchVulkan": 129100,
-      "passmarkDX12": 22480,
-      "passmarkDX11": 22480
+      "passmarkDX12": 84,
+      "passmarkDX11": 183
     },
     "vastai": {
       "dlperf": 23.9,
@@ -637,7 +671,9 @@
       "dlperfPerDollar": 217.3,
       "availableOffers": 82,
       "verifiedFlops": 20.4
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2020-10-29 00:00:00"
   },
   {
     "id": "rtx-3060-ti",
@@ -660,8 +696,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 119600,
       "geekbenchVulkan": 112400,
-      "passmarkDX12": 20590,
-      "passmarkDX11": 20590
+      "passmarkDX12": 77,
+      "passmarkDX11": 164
     },
     "vastai": {
       "dlperf": 20.2,
@@ -669,7 +705,9 @@
       "dlperfPerDollar": 224.4,
       "availableOffers": 76,
       "verifiedFlops": 16.3
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2022-02-23 00:00:00"
   },
   {
     "id": "rtx-3060-12gb",
@@ -692,8 +730,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 92500,
       "geekbenchVulkan": 89200,
-      "passmarkDX12": 17160,
-      "passmarkDX11": 17160
+      "passmarkDX12": 68,
+      "passmarkDX11": 127
     },
     "vastai": {
       "dlperf": 16.4,
@@ -701,7 +739,9 @@
       "dlperfPerDollar": 205,
       "availableOffers": 142,
       "verifiedFlops": 12.8
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2021-09-01 00:00:00"
   },
   {
     "id": "rtx-2060-super",
@@ -724,8 +764,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 84100,
       "geekbenchVulkan": 79800,
-      "passmarkDX12": 16640,
-      "passmarkDX11": 16640
+      "passmarkDX12": 61,
+      "passmarkDX11": 132
     },
     "vastai": {
       "dlperf": 13.2,
@@ -733,7 +773,9 @@
       "dlperfPerDollar": 188.6,
       "availableOffers": 28,
       "verifiedFlops": 7.2
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2019-07-09 00:00:00"
   },
   {
     "id": "gtx-1660-super",
@@ -756,8 +798,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 59400,
       "geekbenchVulkan": 57200,
-      "passmarkDX12": 12810,
-      "passmarkDX11": 12810
+      "passmarkDX12": 51,
+      "passmarkDX11": 104
     },
     "vastai": {
       "dlperf": 8.4,
@@ -765,7 +807,9 @@
       "dlperfPerDollar": 168,
       "availableOffers": 19,
       "verifiedFlops": 5
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2019-10-29 00:00:00"
   },
   {
     "id": "rx-7900-xtx",
@@ -788,8 +832,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 228900,
       "geekbenchVulkan": 241500,
-      "passmarkDX12": 32708,
-      "passmarkDX11": 30192
+      "passmarkDX12": 134,
+      "passmarkDX11": 355
     },
     "vastai": {
       "dlperf": 58.4,
@@ -820,8 +864,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 196400,
       "geekbenchVulkan": 208100,
-      "passmarkDX12": 30347,
-      "passmarkDX11": 28013
+      "passmarkDX12": 112,
+      "passmarkDX11": 341
     },
     "vastai": {
       "dlperf": 48.2,
@@ -852,8 +896,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 172100,
       "geekbenchVulkan": 184200,
-      "passmarkDX12": 27872,
-      "passmarkDX11": 25728
+      "passmarkDX12": 111,
+      "passmarkDX11": 300
     },
     "vastai": {
       "dlperf": 41.5,
@@ -884,8 +928,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 154800,
       "geekbenchVulkan": 169400,
-      "passmarkDX12": 25428,
-      "passmarkDX11": 23472
+      "passmarkDX12": 96,
+      "passmarkDX11": 250
     },
     "vastai": {
       "dlperf": 35.6,
@@ -916,8 +960,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 135200,
       "geekbenchVulkan": 144600,
-      "passmarkDX12": 23078,
-      "passmarkDX11": 21302
+      "passmarkDX12": 83,
+      "passmarkDX11": 232
     },
     "vastai": {
       "dlperf": 31.2,
@@ -948,8 +992,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 98400,
       "geekbenchVulkan": 106800,
-      "passmarkDX12": 18262,
-      "passmarkDX11": 16858
+      "passmarkDX12": 67,
+      "passmarkDX11": 167
     },
     "vastai": {
       "dlperf": 21.8,
@@ -980,8 +1024,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 93200,
       "geekbenchVulkan": 101400,
-      "passmarkDX12": 17618,
-      "passmarkDX11": 16262
+      "passmarkDX12": 56,
+      "passmarkDX11": 172
     },
     "vastai": {
       "dlperf": 19.4,
@@ -1012,8 +1056,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 176400,
       "geekbenchVulkan": 188900,
-      "passmarkDX12": 29266,
-      "passmarkDX11": 27014
+      "passmarkDX12": 115,
+      "passmarkDX11": 298
     },
     "vastai": {
       "dlperf": 32.5,
@@ -1044,8 +1088,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 148200,
       "geekbenchVulkan": 159800,
-      "passmarkDX12": 24120,
-      "passmarkDX11": 24120
+      "passmarkDX12": 100,
+      "passmarkDX11": 265
     },
     "vastai": {
       "dlperf": 28.4,
@@ -1076,8 +1120,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 131400,
       "geekbenchVulkan": 141200,
-      "passmarkDX12": 21980,
-      "passmarkDX11": 21980
+      "passmarkDX12": 90,
+      "passmarkDX11": 212
     },
     "vastai": {
       "dlperf": 24.6,
@@ -1108,8 +1152,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 111800,
       "geekbenchVulkan": 119400,
-      "passmarkDX12": 21726,
-      "passmarkDX11": 20054
+      "passmarkDX12": 81,
+      "passmarkDX11": 180
     },
     "vastai": {
       "dlperf": 20.8,
@@ -1140,8 +1184,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 103900,
       "geekbenchVulkan": 112500,
-      "passmarkDX12": 19840,
-      "passmarkDX11": 19840
+      "passmarkDX12": 77,
+      "passmarkDX11": 172
     },
     "vastai": {
       "dlperf": 19.5,
@@ -1172,8 +1216,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 85400,
       "geekbenchVulkan": 91800,
-      "passmarkDX12": 16580,
-      "passmarkDX11": 16580
+      "passmarkDX12": 60,
+      "passmarkDX11": 164
     },
     "vastai": {
       "dlperf": 15.2,
@@ -1204,8 +1248,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 76800,
       "geekbenchVulkan": 81500,
-      "passmarkDX12": 15040,
-      "passmarkDX11": 15040
+      "passmarkDX12": 51,
+      "passmarkDX11": 153
     },
     "vastai": {
       "dlperf": 13.4,
@@ -1236,8 +1280,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 78200,
       "geekbenchVulkan": 83900,
-      "passmarkDX12": 16910,
-      "passmarkDX11": 16910
+      "passmarkDX12": 63,
+      "passmarkDX11": 115
     },
     "vastai": {
       "dlperf": 12.6,
@@ -1268,8 +1312,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 109400,
       "geekbenchVulkan": 116200,
-      "passmarkDX12": 21546,
-      "passmarkDX11": 17756
+      "passmarkDX12": 78,
+      "passmarkDX11": 125
     },
     "vastai": {
       "dlperf": 24.8,
@@ -1300,8 +1344,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 97600,
       "geekbenchVulkan": 103400,
-      "passmarkDX12": 19278,
-      "passmarkDX11": 15887
+      "passmarkDX12": 70,
+      "passmarkDX11": 109
     },
     "vastai": {
       "dlperf": 21.2,
@@ -1332,8 +1376,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 98900,
       "geekbenchVulkan": 101500,
-      "passmarkDX12": 18587,
-      "passmarkDX11": 15317
+      "passmarkDX12": 74,
+      "passmarkDX11": 78
     },
     "vastai": {
       "dlperf": 22.4,
@@ -1364,8 +1408,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 89100,
       "geekbenchVulkan": 91800,
-      "passmarkDX12": 17258,
-      "passmarkDX11": 14222
+      "passmarkDX12": 70,
+      "passmarkDX11": 73
     },
     "vastai": {
       "dlperf": 18.6,
@@ -1396,8 +1440,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 158400,
       "geekbenchVulkan": 152100,
-      "passmarkDX12": 27144,
-      "passmarkDX11": 25056
+      "passmarkDX12": 89,
+      "passmarkDX11": 218
     },
     "vastai": {
       "dlperf": 32.8,
@@ -1405,7 +1449,9 @@
       "dlperfPerDollar": 205,
       "availableOffers": 36,
       "verifiedFlops": 23.7
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2025-04-16 00:00:00"
   },
   {
     "id": "rtx-5060",
@@ -1428,16 +1474,18 @@
     "benchmarks": {
       "geekbenchOpenCL": 128900,
       "geekbenchVulkan": 124200,
-      "passmarkDX12": 23296,
-      "passmarkDX11": 21504
+      "passmarkDX12": 77,
+      "passmarkDX11": 200
     },
     "vastai": {
-      "dlperf": 25.4,
-      "hourlyRateUSD": 0.12,
-      "dlperfPerDollar": 211.7,
-      "availableOffers": 29,
-      "verifiedFlops": 19.2
-    }
+      "dlperf": 28.2,
+      "hourlyRateUSD": 0.34,
+      "dlperfPerDollar": 83.8,
+      "availableOffers": 1,
+      "verifiedFlops": 19
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2025-05-19 00:00:00"
   },
   {
     "id": "rtx-5050",
@@ -1460,8 +1508,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 96800,
       "geekbenchVulkan": 93400,
-      "passmarkDX12": 18980,
-      "passmarkDX11": 17520
+      "passmarkDX12": 65,
+      "passmarkDX11": 152
     },
     "vastai": {
       "dlperf": 17.8,
@@ -1469,7 +1517,9 @@
       "dlperfPerDollar": 222.5,
       "availableOffers": 18,
       "verifiedFlops": 13.2
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2025-07-01 00:00:00"
   },
   {
     "id": "rx-590",
@@ -1492,8 +1542,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 47200,
       "geekbenchVulkan": 44800,
-      "passmarkDX12": 9046,
-      "passmarkDX11": 10794
+      "passmarkDX12": 45,
+      "passmarkDX11": 65
     },
     "vastai": {
       "dlperf": 6.8,
@@ -1524,8 +1574,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 42800,
       "geekbenchVulkan": 40900,
-      "passmarkDX12": 7841,
-      "passmarkDX11": 9356
+      "passmarkDX12": 43,
+      "passmarkDX11": 60
     },
     "vastai": {
       "dlperf": 6.1,
@@ -1556,8 +1606,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 37400,
       "geekbenchVulkan": 35800,
-      "passmarkDX12": 7022,
-      "passmarkDX11": 8379
+      "passmarkDX12": 38,
+      "passmarkDX11": 53
     },
     "vastai": {
       "dlperf": 5.2,
@@ -1588,8 +1638,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 21200,
       "geekbenchVulkan": 20100,
-      "passmarkDX12": 3916,
-      "passmarkDX11": 4673
+      "passmarkDX12": 21,
+      "passmarkDX11": 31
     }
   },
   {
@@ -1613,8 +1663,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 13400,
       "geekbenchVulkan": 12800,
-      "passmarkDX12": 2499,
-      "passmarkDX11": 2982
+      "passmarkDX12": 14,
+      "passmarkDX11": 20
     }
   },
   {
@@ -1638,8 +1688,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 39800,
       "geekbenchVulkan": 38100,
-      "passmarkDX12": 7436,
-      "passmarkDX11": 8873
+      "passmarkDX12": 41,
+      "passmarkDX11": 58
     },
     "vastai": {
       "dlperf": 5.6,
@@ -1670,8 +1720,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 35100,
       "geekbenchVulkan": 33400,
-      "passmarkDX12": 6679,
-      "passmarkDX11": 7970
+      "passmarkDX12": 36,
+      "passmarkDX11": 51
     }
   },
   {
@@ -1695,8 +1745,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 18900,
       "geekbenchVulkan": 17600,
-      "passmarkDX12": 3626,
-      "passmarkDX11": 4326
+      "passmarkDX12": 20,
+      "passmarkDX11": 29
     }
   },
   {
@@ -1720,8 +1770,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 43500,
       "geekbenchVulkan": 39200,
-      "passmarkDX12": 7559,
-      "passmarkDX11": 9020
+      "passmarkDX12": 44,
+      "passmarkDX11": 57
     }
   },
   {
@@ -1745,8 +1795,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 34200,
       "geekbenchVulkan": 31800,
-      "passmarkDX12": 6758,
-      "passmarkDX11": 8064
+      "passmarkDX12": 40,
+      "passmarkDX11": 57
     }
   },
   {
@@ -1770,8 +1820,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 31900,
       "geekbenchVulkan": 29500,
-      "passmarkDX12": 6380,
-      "passmarkDX11": 7613
+      "passmarkDX12": 39,
+      "passmarkDX11": 55
     }
   },
   {
@@ -1795,8 +1845,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 25800,
       "geekbenchVulkan": 23900,
-      "passmarkDX12": 4998,
-      "passmarkDX11": 5964
+      "passmarkDX12": 33,
+      "passmarkDX11": 42
     }
   },
   {
@@ -1820,8 +1870,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 23400,
       "geekbenchVulkan": 21500,
-      "passmarkDX12": 4611,
-      "passmarkDX11": 5502
+      "passmarkDX12": 32,
+      "passmarkDX11": 40
     }
   },
   {
@@ -1845,8 +1895,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 30800,
       "geekbenchVulkan": 28100,
-      "passmarkDX12": 6116,
-      "passmarkDX11": 7298
+      "passmarkDX12": 38,
+      "passmarkDX11": 53
     }
   },
   {
@@ -1870,8 +1920,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 21900,
       "geekbenchVulkan": 18400,
-      "passmarkDX12": 3614,
-      "passmarkDX11": 5321
+      "passmarkDX12": 30,
+      "passmarkDX11": 38
     }
   },
   {
@@ -1895,8 +1945,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 16400,
       "geekbenchVulkan": 14200,
-      "passmarkDX12": 2916,
-      "passmarkDX11": 4293
+      "passmarkDX12": 21,
+      "passmarkDX11": 31
     }
   },
   {
@@ -1920,8 +1970,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 14800,
       "geekbenchVulkan": 13100,
-      "passmarkDX12": 2506,
-      "passmarkDX11": 3689
+      "passmarkDX12": 18,
+      "passmarkDX11": 27
     }
   },
   {
@@ -1945,8 +1995,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 11900,
       "geekbenchVulkan": 10800,
-      "passmarkDX12": 2517,
-      "passmarkDX11": 3003
+      "passmarkDX12": 17,
+      "passmarkDX11": 24
     }
   },
   {
@@ -1970,8 +2020,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 12500,
       "geekbenchVulkan": 11200,
-      "passmarkDX12": 2649,
-      "passmarkDX11": 3161
+      "passmarkDX12": 18,
+      "passmarkDX11": 25
     }
   },
   {
@@ -1995,8 +2045,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 6400,
       "geekbenchVulkan": 5800,
-      "passmarkDX12": 1022,
-      "passmarkDX11": 1505
+      "passmarkDX12": 8,
+      "passmarkDX11": 13
     }
   },
   {
@@ -2020,8 +2070,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 4200,
       "geekbenchVulkan": 3800,
-      "passmarkDX12": 706,
-      "passmarkDX11": 1039
+      "passmarkDX12": 6,
+      "passmarkDX11": 10
     }
   },
   {
@@ -2045,8 +2095,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 168900,
       "geekbenchVulkan": 181400,
-      "passmarkDX12": 26650,
-      "passmarkDX11": 26650
+      "passmarkDX12": 111,
+      "passmarkDX11": 279
     },
     "vastai": {
       "dlperf": 30.8,
@@ -2077,8 +2127,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 104800,
       "geekbenchVulkan": 113200,
-      "passmarkDX12": 20925,
-      "passmarkDX11": 19315
+      "passmarkDX12": 81,
+      "passmarkDX11": 171
     },
     "vastai": {
       "dlperf": 19.8,
@@ -2109,8 +2159,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 92400,
       "geekbenchVulkan": 99600,
-      "passmarkDX12": 18970,
-      "passmarkDX11": 17510
+      "passmarkDX12": 73,
+      "passmarkDX11": 163
     }
   },
   {
@@ -2134,8 +2184,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 91800,
       "geekbenchVulkan": 98900,
-      "passmarkDX12": 18814,
-      "passmarkDX11": 17366
+      "passmarkDX12": 71,
+      "passmarkDX11": 166
     },
     "vastai": {
       "dlperf": 17.6,
@@ -2166,8 +2216,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 90400,
       "geekbenchVulkan": 96800,
-      "passmarkDX12": 18013,
-      "passmarkDX11": 16627
+      "passmarkDX12": 62,
+      "passmarkDX11": 168
     },
     "vastai": {
       "dlperf": 16.4,
@@ -2198,8 +2248,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 49800,
       "geekbenchVulkan": 53200,
-      "passmarkDX12": 10244,
-      "passmarkDX11": 9456
+      "passmarkDX12": 39,
+      "passmarkDX11": 92
     }
   },
   {
@@ -2223,8 +2273,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 48900,
       "geekbenchVulkan": 52400,
-      "passmarkDX12": 10067,
-      "passmarkDX11": 9293
+      "passmarkDX12": 38,
+      "passmarkDX11": 90
     }
   },
   {
@@ -2248,8 +2298,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 36200,
       "geekbenchVulkan": 38900,
-      "passmarkDX12": 7571,
-      "passmarkDX11": 6989
+      "passmarkDX12": 31,
+      "passmarkDX11": 70
     }
   },
   {
@@ -2273,8 +2323,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 80900,
       "geekbenchVulkan": 86400,
-      "passmarkDX12": 17380,
-      "passmarkDX11": 17380
+      "passmarkDX12": 67,
+      "passmarkDX11": 115
     }
   },
   {
@@ -2298,8 +2348,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 69800,
       "geekbenchVulkan": 74500,
-      "passmarkDX12": 15210,
-      "passmarkDX11": 15210
+      "passmarkDX12": 54,
+      "passmarkDX11": 100
     },
     "vastai": {
       "dlperf": 11.2,
@@ -2330,8 +2380,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 62400,
       "geekbenchVulkan": 66800,
-      "passmarkDX12": 13780,
-      "passmarkDX11": 13780
+      "passmarkDX12": 52,
+      "passmarkDX11": 95
     },
     "vastai": {
       "dlperf": 10.1,
@@ -2362,8 +2412,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 57800,
       "geekbenchVulkan": 61200,
-      "passmarkDX12": 12650,
-      "passmarkDX11": 12650
+      "passmarkDX12": 45,
+      "passmarkDX11": 85
     }
   },
   {
@@ -2387,8 +2437,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 44200,
       "geekbenchVulkan": 47500,
-      "passmarkDX12": 9620,
-      "passmarkDX11": 9620
+      "passmarkDX12": 41,
+      "passmarkDX11": 56
     }
   },
   {
@@ -2412,8 +2462,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 43600,
       "geekbenchVulkan": 46800,
-      "passmarkDX12": 9410,
-      "passmarkDX11": 9410
+      "passmarkDX12": 40,
+      "passmarkDX11": 54
     }
   },
   {
@@ -2437,8 +2487,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 42100,
       "geekbenchVulkan": 45200,
-      "passmarkDX12": 9180,
-      "passmarkDX11": 9180
+      "passmarkDX12": 37,
+      "passmarkDX11": 52
     }
   },
   {
@@ -2462,8 +2512,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 36900,
       "geekbenchVulkan": 39400,
-      "passmarkDX12": 7840,
-      "passmarkDX11": 7840
+      "passmarkDX12": 34,
+      "passmarkDX11": 49
     }
   },
   {
@@ -2487,8 +2537,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 294800,
       "geekbenchVulkan": 248900,
-      "passmarkDX12": 38324,
-      "passmarkDX11": 35376
+      "passmarkDX12": 114,
+      "passmarkDX11": 286
     },
     "vastai": {
       "dlperf": 78.2,
@@ -2496,7 +2546,9 @@
       "dlperfPerDollar": 223.4,
       "availableOffers": 48,
       "verifiedFlops": 73.5
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2023-12-28 00:00:00"
   },
   {
     "id": "rtx-4070-gddr6",
@@ -2519,8 +2571,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 166200,
       "geekbenchVulkan": 151800,
-      "passmarkDX12": 27674,
-      "passmarkDX11": 25546
+      "passmarkDX12": 101,
+      "passmarkDX11": 239
     },
     "vastai": {
       "dlperf": 33.1,
@@ -2528,7 +2580,9 @@
       "dlperfPerDollar": 206.9,
       "availableOffers": 19,
       "verifiedFlops": 29.1
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2024-08-20 00:00:00"
   },
   {
     "id": "rtx-4050",
@@ -2551,8 +2605,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 84500,
       "geekbenchVulkan": 81200,
-      "passmarkDX12": 15891,
-      "passmarkDX11": 14669
+      "passmarkDX12": 58,
+      "passmarkDX11": 132
     },
     "vastai": {
       "dlperf": 14.8,
@@ -2583,8 +2637,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 186400,
       "geekbenchVulkan": 171200,
-      "passmarkDX12": 27165,
-      "passmarkDX11": 25075
+      "passmarkDX12": 109,
+      "passmarkDX11": 218
     },
     "vastai": {
       "dlperf": 35.8,
@@ -2592,7 +2646,9 @@
       "dlperfPerDollar": 238.7,
       "availableOffers": 41,
       "verifiedFlops": 30.6
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2022-01-11 00:00:00"
   },
   {
     "id": "rtx-3060-ti-gddr6x",
@@ -2615,8 +2671,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 124800,
       "geekbenchVulkan": 117900,
-      "passmarkDX12": 21986,
-      "passmarkDX11": 20294
+      "passmarkDX12": 79,
+      "passmarkDX11": 168
     },
     "vastai": {
       "dlperf": 21.4,
@@ -2624,7 +2680,9 @@
       "dlperfPerDollar": 214,
       "availableOffers": 28,
       "verifiedFlops": 16.2
-    }
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2022-10-19 00:00:00"
   },
   {
     "id": "rtx-3060-8gb",
@@ -2647,8 +2705,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 85400,
       "geekbenchVulkan": 81900,
-      "passmarkDX12": 16307,
-      "passmarkDX11": 15053
+      "passmarkDX12": 66,
+      "passmarkDX11": 106
     },
     "vastai": {
       "dlperf": 14.9,
@@ -2679,8 +2737,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 68400,
       "geekbenchVulkan": 65200,
-      "passmarkDX12": 13406,
-      "passmarkDX11": 12374
+      "passmarkDX12": 59,
+      "passmarkDX11": 90
     },
     "vastai": {
       "dlperf": 11.8,
@@ -2711,8 +2769,8 @@
     "benchmarks": {
       "geekbenchOpenCL": 62100,
       "geekbenchVulkan": 59800,
-      "passmarkDX12": 12397,
-      "passmarkDX11": 11443
+      "passmarkDX12": 55,
+      "passmarkDX11": 84
     }
   },
   {
@@ -2736,8 +2794,10 @@
     "benchmarks": {
       "geekbenchOpenCL": 51800,
       "geekbenchVulkan": 49600,
-      "passmarkDX12": 10754,
-      "passmarkDX11": 9926
-    }
+      "passmarkDX12": 53,
+      "passmarkDX11": 72
+    },
+    "rawSourceSynced": true,
+    "launchDate": "2024-02-02 00:00:00"
   }
 ]

@@ -3,11 +3,9 @@
     "id": "cyberpunk-2077",
     "steamAppId": 1091500,
     "name": "Cyberpunk 2077",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/e9047d8ec47ae3d94bb8b464fb0fc9e9972b4ac7/header.jpg?t=1784714077",
     "genres": [
-      "Rol",
-      "Acción",
-      "Mundo Abierto"
+      "Rol"
     ],
     "engine": "REDengine 4",
     "releaseYear": 2020,
@@ -39,20 +37,20 @@
       "tier": "gold",
       "trendingTier": "platinum",
       "bestReportedTier": "platinum",
-      "score": 0.84,
+      "score": 0.77,
       "confidence": "strong",
-      "totalReports": 7420
+      "totalReports": 2743
     }
   },
   {
     "id": "black-myth-wukong",
     "steamAppId": 2358720,
     "name": "Black Myth: Wukong",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg?t=1760601605",
     "genres": [
       "Acción",
-      "Rol",
-      "Mitología"
+      "Aventura",
+      "Rol"
     ],
     "engine": "Unreal Engine 5",
     "releaseYear": 2024,
@@ -86,18 +84,17 @@
       "bestReportedTier": "platinum",
       "score": 0.81,
       "confidence": "strong",
-      "totalReports": 1290
+      "totalReports": 209
     }
   },
   {
     "id": "elden-ring",
     "steamAppId": 1245620,
     "name": "ELDEN RING",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043",
     "genres": [
-      "Rol",
       "Acción",
-      "Souls-like"
+      "Rol"
     ],
     "engine": "FromSoftware Engine",
     "releaseYear": 2022,
@@ -122,23 +119,22 @@
       "engineFrameCap": 60
     },
     "protondb": {
-      "tier": "platinum",
+      "tier": "gold",
       "trendingTier": "platinum",
       "bestReportedTier": "platinum",
-      "score": 0.93,
+      "score": 0.79,
       "confidence": "strong",
-      "totalReports": 6840
+      "totalReports": 2106
     }
   },
   {
     "id": "counter-strike-2",
     "steamAppId": 730,
     "name": "Counter-Strike 2",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg?t=1791824795",
     "genres": [
-      "Shooter",
-      "Competitivo",
-      "eSports"
+      "Acción",
+      "Free to Play"
     ],
     "engine": "Source 2",
     "releaseYear": 2023,
@@ -166,23 +162,22 @@
       "engineFrameCap": null
     },
     "protondb": {
-      "tier": "native",
-      "trendingTier": "native",
-      "bestReportedTier": "native",
-      "score": 0.89,
+      "tier": "gold",
+      "trendingTier": "platinum",
+      "bestReportedTier": "platinum",
+      "score": 0.72,
       "confidence": "strong",
-      "totalReports": 12450
+      "totalReports": 2062
     }
   },
   {
     "id": "red-dead-redemption-2",
     "steamAppId": 1174180,
     "name": "Red Dead Redemption 2",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1759502961",
     "genres": [
       "Acción",
-      "Aventura",
-      "Mundo Abierto"
+      "Aventura"
     ],
     "engine": "RAGE",
     "releaseYear": 2019,
@@ -214,20 +209,20 @@
       "tier": "gold",
       "trendingTier": "platinum",
       "bestReportedTier": "platinum",
-      "score": 0.86,
+      "score": 0.78,
       "confidence": "strong",
-      "totalReports": 5930
+      "totalReports": 1465
     }
   },
   {
     "id": "baldurs-gate-3",
     "steamAppId": 1086940,
     "name": "Baldur's Gate 3",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1777363040",
     "genres": [
+      "Aventura",
       "Rol",
-      "Estrategia",
-      "Fantasía"
+      "Estrategia"
     ],
     "engine": "Divinity 4.0",
     "releaseYear": 2023,
@@ -256,23 +251,21 @@
       "engineFrameCap": null
     },
     "protondb": {
-      "tier": "platinum",
+      "tier": "gold",
       "trendingTier": "platinum",
       "bestReportedTier": "platinum",
-      "score": 0.94,
+      "score": 0.84,
       "confidence": "strong",
-      "totalReports": 4890
+      "totalReports": 1531
     }
   },
   {
     "id": "helldivers-2",
     "steamAppId": 553850,
-    "name": "HELLDIVERS 2",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/header.jpg",
+    "name": "HELLDIVERS™ 2",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/1ce535d4e78dacd9c834b3966eef37a25fc7cffb/header_spanish.jpg?t=1792487611",
     "genres": [
-      "Acción",
-      "Cooperativo",
-      "Shooter"
+      "Acción"
     ],
     "engine": "Autodesk Stingray",
     "releaseYear": 2024,
@@ -298,22 +291,21 @@
     },
     "protondb": {
       "tier": "gold",
-      "trendingTier": "platinum",
+      "trendingTier": "gold",
       "bestReportedTier": "platinum",
-      "score": 0.85,
+      "score": 0.81,
       "confidence": "strong",
-      "totalReports": 2610
+      "totalReports": 2125
     }
   },
   {
     "id": "ghost-of-tsushima",
     "steamAppId": 2215430,
-    "name": "Ghost of Tsushima DIRECTOR'S CUT",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg",
+    "name": "Ghost of Tsushima: VERSIÓN DEL DIRECTOR",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg?t=1763409398",
     "genres": [
       "Acción",
-      "Aventura",
-      "Mundo Abierto"
+      "Aventura"
     ],
     "engine": "Sucker Punch Engine",
     "releaseYear": 2024,
@@ -342,23 +334,23 @@
       "engineFrameCap": null
     },
     "protondb": {
-      "tier": "platinum",
-      "trendingTier": "platinum",
+      "tier": "gold",
+      "trendingTier": "gold",
       "bestReportedTier": "platinum",
-      "score": 0.92,
+      "score": 0.8,
       "confidence": "strong",
-      "totalReports": 1150
+      "totalReports": 360
     }
   },
   {
     "id": "hogwarts-legacy",
     "steamAppId": 990080,
     "name": "Hogwarts Legacy",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/be2971b1023bccb04f993887d70ef4d2060262cf/header.jpg?t=1790708992",
     "genres": [
-      "Rol",
+      "Acción",
       "Aventura",
-      "Magia"
+      "Rol"
     ],
     "engine": "Unreal Engine 4",
     "releaseYear": 2023,
@@ -388,22 +380,20 @@
     },
     "protondb": {
       "tier": "gold",
-      "trendingTier": "gold",
+      "trendingTier": "platinum",
       "bestReportedTier": "platinum",
-      "score": 0.83,
+      "score": 0.81,
       "confidence": "strong",
-      "totalReports": 3420
+      "totalReports": 809
     }
   },
   {
     "id": "starfield",
     "steamAppId": 1716740,
     "name": "Starfield",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1716740/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1716740/header.jpg?t=1786648030",
     "genres": [
-      "Rol",
-      "Espacio",
-      "Mundo Abierto"
+      "Rol"
     ],
     "engine": "Creation Engine 2",
     "releaseYear": 2023,
@@ -432,23 +422,23 @@
       "engineFrameCap": null
     },
     "protondb": {
-      "tier": "silver",
+      "tier": "gold",
       "trendingTier": "gold",
       "bestReportedTier": "platinum",
-      "score": 0.74,
+      "score": 0.62,
       "confidence": "strong",
-      "totalReports": 1980
+      "totalReports": 747
     }
   },
   {
     "id": "forza-horizon-5",
     "steamAppId": 1551360,
     "name": "Forza Horizon 5",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg?t=1788546569",
     "genres": [
-      "Carreras",
-      "Mundo Abierto",
-      "Simulación"
+      "Acción",
+      "Aventura",
+      "Carreras"
     ],
     "engine": "ForzaTech",
     "releaseYear": 2021,
@@ -478,22 +468,20 @@
     },
     "protondb": {
       "tier": "gold",
-      "trendingTier": "platinum",
+      "trendingTier": "gold",
       "bestReportedTier": "platinum",
-      "score": 0.85,
+      "score": 0.61,
       "confidence": "strong",
-      "totalReports": 3180
+      "totalReports": 903
     }
   },
   {
     "id": "the-witcher-3",
     "steamAppId": 292030,
-    "name": "The Witcher 3: Wild Hunt (Next-Gen)",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg",
+    "name": "The Witcher 3: Wild Hunt — Remastered",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/7157bc74e5fe3f48ab007b18a3d043009d877ec4/header_alt_assets_1_spanish.jpg?t=1790845156",
     "genres": [
-      "Rol",
-      "Fantasía",
-      "Mundo Abierto"
+      "Rol"
     ],
     "engine": "REDengine 3 (DX12)",
     "releaseYear": 2022,
@@ -526,20 +514,20 @@
       "tier": "platinum",
       "trendingTier": "platinum",
       "bestReportedTier": "platinum",
-      "score": 0.95,
+      "score": 0.87,
       "confidence": "strong",
-      "totalReports": 8650
+      "totalReports": 1876
     }
   },
   {
     "id": "god-of-war-ragnarok",
     "steamAppId": 2322010,
     "name": "God of War Ragnarök",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/header.jpg?t=1776465233",
     "genres": [
       "Acción",
       "Aventura",
-      "Mitología"
+      "Rol"
     ],
     "engine": "Santa Monica Proprietary",
     "releaseYear": 2024,
@@ -568,23 +556,22 @@
       "engineFrameCap": null
     },
     "protondb": {
-      "tier": "platinum",
+      "tier": "gold",
       "trendingTier": "platinum",
       "bestReportedTier": "platinum",
-      "score": 0.91,
+      "score": 0.77,
       "confidence": "strong",
-      "totalReports": 780
+      "totalReports": 147
     }
   },
   {
     "id": "gta-v",
     "steamAppId": 271590,
-    "name": "Grand Theft Auto V",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg",
+    "name": "Grand Theft Auto V Legacy",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725",
     "genres": [
       "Acción",
-      "Mundo Abierto",
-      "Crimen"
+      "Aventura"
     ],
     "engine": "RAGE",
     "releaseYear": 2015,
@@ -609,23 +596,23 @@
       "engineFrameCap": 188
     },
     "protondb": {
-      "tier": "silver",
-      "trendingTier": "silver",
-      "bestReportedTier": "gold",
-      "score": 0.72,
+      "tier": "gold",
+      "trendingTier": "gold",
+      "bestReportedTier": "platinum",
+      "score": 0.71,
       "confidence": "strong",
-      "totalReports": 9410
+      "totalReports": 2281
     }
   },
   {
     "id": "apex-legends",
     "steamAppId": 1172470,
-    "name": "Apex Legends",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/header.jpg",
+    "name": "Apex Legends™",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/6cf04767652d703b6050da84b82cfb1194258d7d/header.jpg?t=1790164440",
     "genres": [
-      "Battle Royale",
-      "Shooter",
-      "eSports"
+      "Acción",
+      "Aventura",
+      "Free to Play"
     ],
     "engine": "Source (DX12 Beta)",
     "releaseYear": 2020,
@@ -654,19 +641,19 @@
       "tier": "silver",
       "trendingTier": "bronze",
       "bestReportedTier": "platinum",
-      "score": 0.65,
+      "score": 0.52,
       "confidence": "strong",
-      "totalReports": 6120
+      "totalReports": 1792
     }
   },
   {
     "id": "resident-evil-4",
     "steamAppId": 2050650,
     "name": "Resident Evil 4",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2050650/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2050650/header.jpg?t=1772502922",
     "genres": [
-      "Survival Horror",
-      "Acción"
+      "Acción",
+      "Aventura"
     ],
     "engine": "RE Engine",
     "releaseYear": 2023,
@@ -696,20 +683,18 @@
       "tier": "gold",
       "trendingTier": "platinum",
       "bestReportedTier": "platinum",
-      "score": 0.88,
+      "score": 0.74,
       "confidence": "strong",
-      "totalReports": 2140
+      "totalReports": 376
     }
   },
   {
     "id": "doom-eternal",
     "steamAppId": 782330,
     "name": "DOOM Eternal",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/782330/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/782330/feaf8293bcd2d078422faa547bc0d707c08f606e/header.jpg?t=1783432602",
     "genres": [
-      "Shooter",
-      "Acción",
-      "FPS"
+      "Acción"
     ],
     "engine": "id Tech 7",
     "releaseYear": 2020,
@@ -736,23 +721,23 @@
       "engineFrameCap": 1000
     },
     "protondb": {
-      "tier": "platinum",
+      "tier": "gold",
       "trendingTier": "platinum",
       "bestReportedTier": "platinum",
-      "score": 0.97,
+      "score": 0.75,
       "confidence": "strong",
-      "totalReports": 4950
+      "totalReports": 1248
     }
   },
   {
     "id": "dota-2",
     "steamAppId": 570,
     "name": "Dota 2",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/header.jpg",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/header.jpg?t=1791407503",
     "genres": [
-      "MOBA",
+      "Acción",
       "Estrategia",
-      "eSports"
+      "Free to Play"
     ],
     "engine": "Source 2",
     "releaseYear": 2013,
@@ -780,12 +765,12 @@
       "engineFrameCap": null
     },
     "protondb": {
-      "tier": "native",
-      "trendingTier": "native",
-      "bestReportedTier": "native",
-      "score": 0.96,
+      "tier": "gold",
+      "trendingTier": "gold",
+      "bestReportedTier": "platinum",
+      "score": 0.69,
       "confidence": "strong",
-      "totalReports": 5820
+      "totalReports": 358
     }
   }
 ]

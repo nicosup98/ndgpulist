@@ -459,7 +459,7 @@ function getFpsBadgeColor(fps: number) {
                     DX12: {{ gpu.benchmarks.passmarkDX12.toLocaleString() }}
                   </span>
                   <span class="text-slate-400 text-[11px]">
-                    DX11: {{ (gpu.benchmarks.passmarkDX11 / 1000).toFixed(1) }}k
+                    DX11: {{ gpu.benchmarks.passmarkDX11.toLocaleString() }}
                   </span>
                 </div>
                 <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
@@ -513,7 +513,7 @@ function getFpsBadgeColor(fps: number) {
               <td class="py-3 px-4 text-right font-mono">
                 <span class="text-sm font-bold text-slate-900 dark:text-white">${{ gpu.msrpUSD }}</span>
                 <div class="text-[10px] text-slate-500">
-                  {{ (gpu.benchmarks.passmarkDX12 / gpu.msrpUSD).toFixed(1) }} DX12/$
+                  {{ (gpu.benchmarks.passmarkDX12 / gpu.msrpUSD).toFixed(2) }} DX12/$
                 </div>
               </td>
 

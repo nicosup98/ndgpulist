@@ -38,6 +38,21 @@ function normalizeGpuName(name) {
     .trim();
 }
 
+function normalizeBaseGpuName(name) {
+  return name
+    .toLowerCase()
+    .replace(/\(.*?\)/g, '')
+    .replace(/\b\d+\s*gb\b/gi, '')
+    .replace(/\bgddr6x?\b/gi, '')
+    .replace(/\b50th\s*anniversary\b/gi, '')
+    .replace(/nvidia|amd|intel|geforce|radeon|arc/gi, '')
+    .replace(/\bsuper\b/gi, 'super')
+    .replace(/(\d{4})s\b/gi, '$1super')
+    .replace(/(\d{4})ti\b/gi, '$1ti')
+    .replace(/[^a-z0-9]/g, '')
+    .trim();
+}
+
 async function fetchGeekbenchCompute() {
   console.log('⚡ [1/7] Consultando Geekbench 6 Compute Benchmarks (browser.geekbench.com/v6/compute)...');
   const scores = new Map();
@@ -102,7 +117,12 @@ async function fetchPassmarkDirectXChart(url, label) {
       const countText = $(li).find('span.count').text().trim();
       const score = parseFloat(countText.replace(/[^0-9.]/g, ''));
       if (name && !isNaN(score) && score > 0) {
-        scores.set(normalizeGpuName(name), Math.round(score));
+        const rounded = Math.round(score);
+        scores.set(normalizeGpuName(name), rounded);
+        const baseKey = normalizeBaseGpuName(name);
+        if (!scores.has(baseKey)) {
+          scores.set(baseKey, rounded);
+        }
       }
     });
     console.log(`✅ PassMark ${label}: ${scores.size} GPUs procesadas.`);
@@ -342,14 +362,21 @@ async function main() {
   // Actualizar GPUs con Geekbench, PassMark (DirectX 12 y DirectX 11), voidful y Vast.ai Cloud Bundles
   for (const gpu of gpus) {
     const normKey = normalizeGpuName(gpu.name);
+    const baseKey = normalizeBaseGpuName(gpu.name);
     if (geekbenchMap.has(normKey)) {
       gpu.benchmarks.geekbenchOpenCL = geekbenchMap.get(normKey);
+    } else if (geekbenchMap.has(baseKey)) {
+      gpu.benchmarks.geekbenchOpenCL = geekbenchMap.get(baseKey);
     }
     if (passmarkMap.dx12Map.has(normKey)) {
       gpu.benchmarks.passmarkDX12 = passmarkMap.dx12Map.get(normKey);
+    } else if (passmarkMap.dx12Map.has(baseKey)) {
+      gpu.benchmarks.passmarkDX12 = passmarkMap.dx12Map.get(baseKey);
     }
     if (passmarkMap.dx11Map.has(normKey)) {
       gpu.benchmarks.passmarkDX11 = passmarkMap.dx11Map.get(normKey);
+    } else if (passmarkMap.dx11Map.has(baseKey)) {
+      gpu.benchmarks.passmarkDX11 = passmarkMap.dx11Map.get(baseKey);
     }
     if (voidfulMap.has(normKey)) {
       const spec = voidfulMap.get(normKey);
