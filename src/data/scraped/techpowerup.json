@@ -6,7 +6,7 @@
     "https://raw.githubusercontent.com/voidful/gpu-info-api/gpu-data/gpu.json"
   ],
   "unit": "Rendimiento Relativo (%) (RTX 4090 = 100%) y Shaders/TMUs/ROPs",
-  "scrapedAt": "2026-10-21T14:50:21.212Z",
+  "scrapedAt": "2026-10-22T11:12:43.310Z",
   "count": 108,
   "entries": [
     {
@@ -1206,7 +1206,7 @@
       "tmus": 80,
       "rops": 112,
       "shadersTmusRops": "2560 / 80 / 112",
-      "relativePerformancePct": 29.6,
+      "relativePerformancePct": 27.3,
       "launchDate": "2017-04-20 00:00:00"
     },
     {
@@ -1254,7 +1254,7 @@
       "tmus": 36,
       "rops": 80,
       "shadersTmusRops": "1152 / 36 / 80",
-      "relativePerformancePct": 18.3,
+      "relativePerformancePct": 17,
       "launchDate": "2016"
     },
     {
@@ -1266,7 +1266,7 @@
       "tmus": 24,
       "rops": 64,
       "shadersTmusRops": "768 / 24 / 64",
-      "relativePerformancePct": 12.9,
+      "relativePerformancePct": 12,
       "launchDate": "2016-10-25 00:00:00"
     },
     {
@@ -1278,7 +1278,7 @@
       "tmus": 24,
       "rops": 32,
       "shadersTmusRops": "768 / 24 / 32",
-      "relativePerformancePct": 11.5,
+      "relativePerformancePct": 10.7,
       "launchDate": "2018"
     },
     {
@@ -1302,7 +1302,7 @@
       "tmus": 16,
       "rops": 32,
       "shadersTmusRops": "384 / 16 / 32",
-      "relativePerformancePct": 5.8,
+      "relativePerformancePct": 5.5,
       "launchDate": "2018-09-30 00:00:00"
     }
   ]

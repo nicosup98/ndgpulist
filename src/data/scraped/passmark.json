@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-10-21T14:00:39.179Z",
+  "scrapedAt": "2026-10-22T11:12:31.956Z",
   "count": 545,
   "entries": [
     {
@@ -111,8 +111,8 @@
     },
     {
       "name": "RTX PRO 5000 Blackwell",
-      "dx12": 118,
-      "dx11": 305
+      "dx12": 117,
+      "dx11": 304
     },
     {
       "name": "GeForce RTX 4070 Ti",
@@ -155,14 +155,14 @@
       "dx11": 300
     },
     {
-      "name": "Radeon RX 6900 XT",
-      "dx12": 111,
-      "dx11": 279
-    },
-    {
       "name": "RTX 5000 Ada Generation",
       "dx12": 111,
       "dx11": 272
+    },
+    {
+      "name": "Radeon RX 6900 XT",
+      "dx12": 111,
+      "dx11": 279
     },
     {
       "name": "Radeon Pro W6800X",
@@ -301,7 +301,7 @@
     },
     {
       "name": "RTX PRO 3000 Blackwell Generation Laptop GPU",
-      "dx12": 94,
+      "dx12": 93,
       "dx11": 212
     },
     {
@@ -316,7 +316,7 @@
     },
     {
       "name": "RTX PRO 4000 Blackwell",
-      "dx12": 93,
+      "dx12": 92,
       "dx11": 260
     },
     {
@@ -345,11 +345,6 @@
       "dx11": 192
     },
     {
-      "name": "RTX 4500 Ada Generation",
-      "dx12": 90,
-      "dx11": 260
-    },
-    {
       "name": "MPro Driver Device",
       "dx12": 90,
       "dx11": 95
@@ -365,6 +360,11 @@
       "dx11": 218
     },
     {
+      "name": "RTX 4500 Ada Generation",
+      "dx12": 89,
+      "dx11": 259
+    },
+    {
       "name": "GeForce RTX 4060 Ti 16GB",
       "dx12": 89,
       "dx11": 199
@@ -376,7 +376,7 @@
     },
     {
       "name": "Radeon RX 7800M",
-      "dx12": 88,
+      "dx12": 89,
       "dx11": 176
     },
     {
@@ -411,7 +411,7 @@
     },
     {
       "name": "GeForce RTX 4060 Ti",
-      "dx12": 85,
+      "dx12": 86,
       "dx11": 202
     },
     {
@@ -480,6 +480,16 @@
       "dx11": 170
     },
     {
+      "name": "RTX Spark N1X",
+      "dx12": 82,
+      "dx11": 176
+    },
+    {
+      "name": "Barco MXRV-7100",
+      "dx12": 81,
+      "dx11": 134
+    },
+    {
       "name": "Radeon RX 6750 XT",
       "dx12": 81,
       "dx11": 180
@@ -502,11 +512,6 @@
     {
       "name": "RTX PRO 4500 Blackwell Server Edition",
       "dx12": 81
-    },
-    {
-      "name": "Barco MXRV-7100",
-      "dx12": 80,
-      "dx11": 133
     },
     {
       "name": "Radeon RX 6850M XT",
@@ -579,14 +584,14 @@
       "dx11": 118
     },
     {
-      "name": "GeForce RTX 5060",
-      "dx12": 77,
-      "dx11": 200
-    },
-    {
       "name": "Quadro RTX 8000",
       "dx12": 77,
       "dx11": 187
+    },
+    {
+      "name": "GeForce RTX 5060",
+      "dx12": 77,
+      "dx11": 200
     },
     {
       "name": "Radeon RX 6700 XT",
@@ -642,11 +647,6 @@
       "name": "GeForce RTX 2080 SUPER",
       "dx12": 75,
       "dx11": 168
-    },
-    {
-      "name": "RTX Spark N1X",
-      "dx12": 75,
-      "dx11": 175
     },
     {
       "name": "Radeon Instinct MI60",
@@ -744,14 +744,14 @@
       "dx11": 228
     },
     {
-      "name": "Intel Arc B570",
-      "dx12": 70,
-      "dx11": 109
-    },
-    {
       "name": "A10-24Q",
       "dx12": 70,
       "dx11": 124
+    },
+    {
+      "name": "Intel Arc B570",
+      "dx12": 70,
+      "dx11": 109
     },
     {
       "name": "Intel Arc A750",
@@ -805,7 +805,7 @@
     },
     {
       "name": "Radeon RX 7700S",
-      "dx12": 68,
+      "dx12": 67,
       "dx11": 136
     },
     {
@@ -838,14 +838,14 @@
       "dx12": 66
     },
     {
-      "name": "RTX 2000 Ada Generation Laptop GPU",
-      "dx12": 66,
-      "dx11": 123
-    },
-    {
       "name": "Radeon RX 7600S",
       "dx12": 66,
       "dx11": 140
+    },
+    {
+      "name": "RTX 2000 Ada Generation Laptop GPU",
+      "dx12": 66,
+      "dx11": 123
     },
     {
       "name": "GeForce GTX 1080 Ti",
@@ -870,17 +870,17 @@
     {
       "name": "Quadro RTX 6000",
       "dx12": 66,
-      "dx11": 171
-    },
-    {
-      "name": "Radeon RX 6800S",
-      "dx12": 65,
-      "dx11": 137
+      "dx11": 172
     },
     {
       "name": "Radeon RX 6800M",
       "dx12": 65,
       "dx11": 129
+    },
+    {
+      "name": "Radeon RX 6800S",
+      "dx12": 65,
+      "dx11": 137
     },
     {
       "name": "GeForce RTX 5050 Laptop GPU",
@@ -1081,14 +1081,14 @@
       "dx11": 141
     },
     {
-      "name": "GeForce RTX 3050 OEM",
-      "dx12": 58,
-      "dx11": 86
-    },
-    {
       "name": "Radeon RX 9060 XT 16GB",
       "dx12": 58,
       "dx11": 185
+    },
+    {
+      "name": "GeForce RTX 3050 OEM",
+      "dx12": 58,
+      "dx11": 86
     },
     {
       "name": "Radeon RX 6600S",
@@ -1168,7 +1168,7 @@
     {
       "name": "MrIdd Device",
       "dx12": 56,
-      "dx11": 265
+      "dx11": 271
     },
     {
       "name": "Net Control 2 Video Hook Driver VHM",
@@ -1484,6 +1484,11 @@
       "dx11": 64
     },
     {
+      "name": "RTX 2000 Ada Generation Embedded GPU",
+      "dx12": 47,
+      "dx11": 117
+    },
+    {
       "name": "Radeon 8040S",
       "dx12": 47,
       "dx11": 80
@@ -1502,11 +1507,6 @@
       "name": "RTX A1000 Laptop GPU",
       "dx12": 47,
       "dx11": 64
-    },
-    {
-      "name": "RTX 2000 Ada Generation Embedded GPU",
-      "dx12": 47,
-      "dx11": 118
     },
     {
       "name": "Radeon Pro 5700",
@@ -1975,14 +1975,14 @@
       "dx11": 58
     },
     {
-      "name": "Quadro RTX 3000 with Max-Q Design",
-      "dx12": 35,
-      "dx11": 66
-    },
-    {
       "name": "Quadro P2200",
       "dx12": 35,
       "dx11": 69
+    },
+    {
+      "name": "Quadro RTX 3000 with Max-Q Design",
+      "dx12": 35,
+      "dx11": 66
     },
     {
       "name": "GeForce GTX 1060 5GB",
@@ -2020,13 +2020,13 @@
       "dx11": 49
     },
     {
-      "name": "GeForce MX570 A",
-      "dx12": 34
-    },
-    {
       "name": "Quadro T2000",
       "dx12": 34,
       "dx11": 50
+    },
+    {
+      "name": "GeForce MX570 A",
+      "dx12": 34
     },
     {
       "name": "GRID P40-3Q",
@@ -2039,12 +2039,12 @@
       "dx11": 92
     },
     {
-      "name": "NVIDIA T1000 8GB",
+      "name": "NVIDIA T1000",
       "dx12": 34,
       "dx11": 56
     },
     {
-      "name": "NVIDIA T1000",
+      "name": "NVIDIA T1000 8GB",
       "dx12": 34,
       "dx11": 56
     },
