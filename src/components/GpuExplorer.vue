@@ -1455,30 +1455,42 @@ onMounted(() => {
               />
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
 
-              <!-- Top Badges: ProtonDB Tier + Enlace PCGamingWiki -->
+              <!-- Top Badges: ProtonDB Tier + Enlace PCGamingWiki + Open GPU Benchmarks -->
               <div class="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
-                <a
-                  v-if="game.protondb"
-                  :href="`https://www.protondb.com/app/${game.steamAppId}`"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  :class="[
-                    'text-[10px] font-mono uppercase font-bold px-2 py-0.5 rounded border backdrop-blur-md transition-transform hover:scale-105',
-                    getProtonBadgeClass(game.protondb.tier),
-                  ]"
-                  :title="`ProtonDB Score: ${Math.round(game.protondb.score * 100)}% (${game.protondb.totalReports} reportes en Linux/SteamOS)`"
-                >
-                  🐧 ProtonDB: {{ game.protondb.tier }} ({{ game.protondb.totalReports.toLocaleString() }} reps)
-                </a>
+                <div class="flex items-center gap-1.5 overflow-hidden">
+                  <a
+                    v-if="game.opengpubenchmarks"
+                    :href="game.opengpubenchmarks.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-950/85 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-600 hover:text-white transition-all backdrop-blur-md truncate"
+                    :title="`Open GPU Benchmarks: ${game.opengpubenchmarks.benchmarkCount} ejecuciones verificadas en hardware real`"
+                  >
+                    ⚡ OpenGPU ({{ game.opengpubenchmarks.benchmarkCount }} runs)
+                  </a>
+                  <a
+                    v-if="game.protondb"
+                    :href="`https://www.protondb.com/app/${game.steamAppId}`"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    :class="[
+                      'text-[10px] font-mono uppercase font-bold px-2 py-0.5 rounded border backdrop-blur-md transition-transform hover:scale-105',
+                      getProtonBadgeClass(game.protondb.tier),
+                    ]"
+                    :title="`ProtonDB Score: ${Math.round(game.protondb.score * 100)}% (${game.protondb.totalReports} reportes en Linux/SteamOS)`"
+                  >
+                    🐧 {{ game.protondb.tier }}
+                  </a>
+                </div>
 
                 <a
                   v-if="game.pcgw?.wikiPage"
                   :href="`https://www.pcgamingwiki.com/wiki/${game.pcgw.wikiPage}`"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-slate-900/85 text-sky-300 border border-sky-500/30 hover:bg-sky-600 hover:text-white transition-colors"
+                  class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-slate-900/85 text-sky-300 border border-sky-500/30 hover:bg-sky-600 hover:text-white transition-colors shrink-0"
                 >
-                  PCGamingWiki ↗
+                  PCGW ↗
                 </a>
               </div>
 
@@ -1575,6 +1587,22 @@ onMounted(() => {
                 <div class="flex items-center justify-between text-xs gap-2">
                   <div class="flex flex-wrap items-center gap-1.5 min-w-0">
                     <span class="font-semibold text-slate-900 dark:text-white truncate">{{ gpu.name }}</span>
+
+                    <!-- Badge de Medición Real Open GPU Benchmarks -->
+                    <span
+                      v-if="getFpsForGpu(gpu, game).openGpuBenchmark"
+                      class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 font-semibold"
+                      :title="`Medición real oficial de Open GPU Benchmarks: ${getFpsForGpu(gpu, game).openGpuBenchmark?.preset} (${getFpsForGpu(gpu, game).openGpuBenchmark?.resolution})`"
+                    >
+                      ⚡ OpenGPU Real
+                    </span>
+                    <span
+                      v-else-if="getFpsForGpu(gpu, game).isCalibratedByOpenGpu"
+                      class="text-[9px] font-mono px-1 py-0.1 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
+                      title="Calibrado con mediciones de hardware de Open GPU Benchmarks"
+                    >
+                      OpenGPU Calibrado
+                    </span>
 
                     <!-- Badge de Upscaler Activo -->
                     <span

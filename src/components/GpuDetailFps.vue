@@ -266,8 +266,18 @@ function getProtonTierColor(tier: ProtonTier) {
               </span>
             </div>
 
-            <!-- Badges PCGamingWiki + ProtonDB -->
+            <!-- Badges PCGamingWiki + ProtonDB + Open GPU Benchmarks -->
             <div class="flex flex-wrap items-center gap-1 mt-1.5 text-[10px] font-mono">
+              <a
+                v-if="game.opengpubenchmarks"
+                :href="game.opengpubenchmarks.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-1.5 py-0.2 rounded border font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30 hover:underline"
+                title="Juego evaluado en Open GPU Benchmarks con capturas oficiales en hardware real"
+              >
+                ⚡ OpenGPU ({{ game.opengpubenchmarks.benchmarkCount }} runs)
+              </a>
               <span
                 v-if="game.protondb"
                 :class="['px-1.5 py-0.2 rounded border uppercase font-semibold', getProtonTierColor(game.protondb.tier)]"
@@ -306,6 +316,13 @@ function getProtonTierColor(tier: ProtonTier) {
               <div class="flex items-center gap-1.5">
                 <span class="font-bold text-blue-600 dark:text-blue-400">{{ gpu.name }}</span>
                 <span
+                  v-if="calcFps(gpu, game).openGpuBenchmark"
+                  class="text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 font-semibold"
+                  :title="`Medición real oficial de Open GPU Benchmarks: ${calcFps(gpu, game).openGpuBenchmark?.preset} (${calcFps(gpu, game).openGpuBenchmark?.resolution})`"
+                >
+                  ⚡ OpenGPU Real
+                </span>
+                <span
                   v-if="calcFps(gpu, game).activeUpscaler"
                   class="text-[10px] px-1 rounded bg-indigo-500/15 text-indigo-500"
                 >
@@ -340,6 +357,13 @@ function getProtonTierColor(tier: ProtonTier) {
             <div class="flex justify-between mb-1 text-slate-500 dark:text-slate-400">
               <div class="flex items-center gap-1.5">
                 <span>{{ rivalGpu.name }}</span>
+                <span
+                  v-if="calcFps(rivalGpu, game).openGpuBenchmark"
+                  class="text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 font-semibold"
+                  :title="`Medición real oficial de Open GPU Benchmarks: ${calcFps(rivalGpu, game).openGpuBenchmark?.preset} (${calcFps(rivalGpu, game).openGpuBenchmark?.resolution})`"
+                >
+                  ⚡ OpenGPU Real
+                </span>
                 <span
                   v-if="calcFps(rivalGpu, game).activeUpscaler"
                   class="text-[10px] px-1 rounded bg-slate-200 dark:bg-slate-800"

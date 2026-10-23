@@ -173,6 +173,13 @@ export interface SteamGame {
   rayTracingHeavy: boolean;
   pcgw: PCGamingWikiData;
   protondb: ProtonDbData;
+  opengpubenchmarks?: {
+    gameId: string;
+    name: string;
+    steamAppId?: number;
+    benchmarkCount: number;
+    url: string;
+  };
 }
 
 export type ResolutionKey = '1080p' | '1440p' | '4K';
@@ -187,6 +194,19 @@ export interface FpsCalculationOptions {
   unlockEngineCap?: boolean;
 }
 
+export interface OpenGpuBenchmarkMatch {
+  avgFps: number;
+  p1Low: number;
+  minFps?: number;
+  maxFps?: number;
+  preset: string;
+  resolution: string;
+  upscaling?: string;
+  source: 'official' | 'community';
+  runCount?: number;
+  isExactPreset: boolean;
+}
+
 export interface FpsEstimateResult {
   avgFps: number;
   onePercentLow: number;
@@ -196,6 +216,8 @@ export interface FpsEstimateResult {
   frameGenActive: boolean;
   performanceTier: 'competitive' | 'smooth' | 'playable' | 'struggling';
   relativeRatio: number;
+  openGpuBenchmark?: OpenGpuBenchmarkMatch | null;
+  isCalibratedByOpenGpu?: boolean;
 }
 
 const RESOLUTION_MULTIPLIERS: Record<ResolutionKey, number> = {
@@ -252,6 +274,64 @@ export function resolveSupportedUpscaler(gpu: GpuSpec, game: SteamGame): string 
     return 'XeSS';
   }
   return null;
+}
+
+/**
+ * Busca si existe un benchmark oficial/comunitario registrado en Open GPU Benchmarks (API v1)
+ * para esta combinación de GPU, Juego y Configuración.
+ */
+export function matchOpenGpuBenchmark(
+  gpu: GpuSpec,
+  game: SteamGame,
+  resolution: ResolutionKey,
+  quality: QualityPreset,
+  upscaling: UpscalingMode = 'off'
+): OpenGpuBenchmarkMatch | null {
+  if (!gpu.opengpubenchmarks?.gameSummaries?.length) return null;
+
+  const isMatchingGame =
+    game.steamAppId === 1091500 ||
+    game.id.includes('cyberpunk') ||
+    game.name.toLowerCase().includes('cyberpunk') ||
+    Boolean(game.opengpubenchmarks?.gameId && gpu.opengpubenchmarks.gameSummaries.some((s) => s.gameId === game.opengpubenchmarks?.gameId));
+
+  if (!isMatchingGame) return null;
+
+  const summaries = gpu.opengpubenchmarks.gameSummaries.filter(
+    (s) => s.resolution === resolution
+  );
+  if (!summaries.length) return null;
+
+  const qualityTarget = quality.toLowerCase();
+
+  // 1. Coincidencia exacta de preset
+  let candidate = summaries.find((s) => {
+    const p = s.preset.toLowerCase();
+    if (qualityTarget === 'ultra') {
+      return p === 'ultra' || p.includes('ray tracing: ultra') || p.includes('ultra');
+    }
+    return p === qualityTarget;
+  });
+
+  // 2. Si no coincide el preset exacto, buscar 'High' o el primer run disponible
+  if (!candidate) {
+    candidate = summaries.find((s) => s.preset.toLowerCase() === 'high') || summaries[0];
+  }
+
+  if (!candidate) return null;
+
+  return {
+    avgFps: candidate.avgFps,
+    p1Low: candidate.p1Low,
+    minFps: candidate.minFps,
+    maxFps: candidate.maxFps,
+    preset: candidate.preset,
+    resolution: candidate.resolution,
+    upscaling: candidate.upscaling,
+    source: candidate.source,
+    runCount: candidate.runCount,
+    isExactPreset: candidate.preset.toLowerCase().includes(qualityTarget) || candidate.preset.toLowerCase() === qualityTarget,
+  };
 }
 
 /**
@@ -387,18 +467,75 @@ export function calculateRelativeFps(
     Boolean(game.pcgw?.frameGeneration) &&
     (gpu.releaseYear >= 2021 || gpu.series.includes('RTX 40') || gpu.series.includes('RTX 50') || gpu.series.includes('RX 7000'));
 
+  // Límite de cuello de botella de CPU y límite de motor de PCGamingWiki (ej. 60 FPS en Elden Ring)
+  const engineCap = !unlockEngineCap && game.pcgw?.engineFrameCap ? game.pcgw.engineFrameCap : null;
+  const effectiveCap = engineCap
+    ? Math.min(game.cpuBottleneckCap, engineCap)
+    : game.cpuBottleneckCap;
+
+  // Verificación de Benchmarks Reales de Open GPU Benchmarks (API v1)
+  const openGpuDirectMatch = matchOpenGpuBenchmark(gpu, game, resolution, quality, upscaling);
+  const isGameInOpenGpu = Boolean(
+    game.steamAppId === 1091500 ||
+    game.opengpubenchmarks ||
+    game.id.includes('cyberpunk')
+  );
+
+  // Si existe una medición directa en Open GPU Benchmarks para esta GPU
+  if (openGpuDirectMatch) {
+    let directAvg = openGpuDirectMatch.avgFps;
+    let directP1Low = openGpuDirectMatch.p1Low;
+
+    // Si el preset evaluado difiere del medido en Open GPU Benchmarks, ajustar por ratio de calidad
+    if (!openGpuDirectMatch.isExactPreset) {
+      const targetMultiplier = QUALITY_MULTIPLIERS[quality];
+      const sourceMultiplier = openGpuDirectMatch.preset.toLowerCase().includes('low')
+        ? QUALITY_MULTIPLIERS.low
+        : openGpuDirectMatch.preset.toLowerCase().includes('medium')
+        ? QUALITY_MULTIPLIERS.medium
+        : openGpuDirectMatch.preset.toLowerCase().includes('ultra')
+        ? QUALITY_MULTIPLIERS.ultra
+        : QUALITY_MULTIPLIERS.high;
+      const ratio = targetMultiplier / sourceMultiplier;
+      directAvg = Math.round(directAvg * ratio);
+      directP1Low = Math.round(directP1Low * ratio);
+    }
+
+    // Si se activa Frame Generation (FG está expresamente desactivado en Open GPU Benchmarks)
+    if (canUseFrameGen) {
+      directAvg = Math.round(directAvg * 1.52);
+      directP1Low = Math.round(directP1Low * 1.12);
+    }
+
+    const cappedAvg = Math.min(effectiveCap, Math.max(12, directAvg));
+    const finalOnePercentLow = Math.min(cappedAvg - 2, Math.max(8, directP1Low));
+
+    let performanceTier: FpsEstimateResult['performanceTier'] = 'playable';
+    if (cappedAvg >= 120) performanceTier = 'competitive';
+    else if (cappedAvg >= 60) performanceTier = 'smooth';
+    else if (cappedAvg >= 35) performanceTier = 'playable';
+    else performanceTier = 'struggling';
+
+    return {
+      avgFps: cappedAvg,
+      onePercentLow: finalOnePercentLow,
+      vramLimited,
+      cappedByEngine: Boolean(engineCap && cappedAvg >= engineCap),
+      activeUpscaler,
+      frameGenActive: canUseFrameGen,
+      performanceTier,
+      relativeRatio: Number(rawRatio.toFixed(2)),
+      openGpuBenchmark: openGpuDirectMatch,
+      isCalibratedByOpenGpu: true,
+    };
+  }
+
   const baseLowFactor = vramLimited ? 0.64 : gpu.busWidthBit <= 128 ? 0.76 : 0.81;
   const rawOnePercentLow = computedFps * baseLowFactor;
 
   if (canUseFrameGen) {
     computedFps *= 1.52;
   }
-
-  // Límite de cuello de botella de CPU y límite de motor de PCGamingWiki (ej. 60 FPS en Elden Ring)
-  const engineCap = !unlockEngineCap && game.pcgw?.engineFrameCap ? game.pcgw.engineFrameCap : null;
-  const effectiveCap = engineCap
-    ? Math.min(game.cpuBottleneckCap, engineCap)
-    : game.cpuBottleneckCap;
 
   const cappedByEngine = Boolean(engineCap && Math.round(computedFps) >= engineCap);
   const avgFps = Math.min(effectiveCap, Math.max(12, Math.round(computedFps)));
@@ -422,5 +559,7 @@ export function calculateRelativeFps(
     frameGenActive: canUseFrameGen,
     performanceTier,
     relativeRatio: Number(rawRatio.toFixed(2)),
+    openGpuBenchmark: null,
+    isCalibratedByOpenGpu: isGameInOpenGpu,
   };
 }

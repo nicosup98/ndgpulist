@@ -214,6 +214,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "4K",
           "preset": "Ray Tracing: Ultra",
           "upscaling": "DLSS Auto",
@@ -227,6 +228,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "4K",
           "preset": "Steam Deck",
           "upscaling": "FSR 2.1 Balanced",
@@ -240,6 +242,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "4K",
           "preset": "Low",
           "upscaling": "FSR 2.1 Auto",
@@ -253,6 +256,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "4K",
           "preset": "Medium",
           "upscaling": "FSR 2.1 Auto",
@@ -266,6 +270,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "4K",
           "preset": "High",
           "upscaling": "FSR 2.1 Quality",
@@ -279,6 +284,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "4K",
           "preset": "Ultra",
           "upscaling": "FSR 2.1 Quality",
@@ -292,6 +298,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "4K",
           "preset": "Ray Tracing: Low",
           "upscaling": "DLSS Auto",
@@ -305,6 +312,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "4K",
           "preset": "Ray Tracing: Medium",
           "upscaling": "DLSS Auto",
@@ -318,6 +326,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "4K",
           "preset": "Ray Tracing: Overdrive",
           "upscaling": "DLSS Auto",
@@ -331,6 +340,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1440p",
           "preset": "Low",
           "upscaling": "FSR 2.1 Auto",
@@ -344,6 +354,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1440p",
           "preset": "Medium",
           "upscaling": "FSR 2.1 Auto",
@@ -357,6 +368,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1440p",
           "preset": "High",
           "upscaling": "FSR 2.1 Quality",
@@ -370,6 +382,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1440p",
           "preset": "Ultra",
           "upscaling": "FSR 2.1 Quality",
@@ -383,6 +396,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1440p",
           "preset": "Steam Deck",
           "upscaling": "FSR 2.1 Balanced",
@@ -396,6 +410,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1440p",
           "preset": "Ray Tracing: Low",
           "upscaling": "DLSS Auto",
@@ -409,6 +424,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1440p",
           "preset": "Ray Tracing: Medium",
           "upscaling": "DLSS Auto",
@@ -422,6 +438,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1440p",
           "preset": "Ray Tracing: Ultra",
           "upscaling": "DLSS Auto",
@@ -435,6 +452,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1440p",
           "preset": "Ray Tracing: Overdrive",
           "upscaling": "DLSS Auto",
@@ -448,6 +466,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1080p",
           "preset": "Low",
           "upscaling": "FSR 2.1 Auto",
@@ -461,6 +480,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1080p",
           "preset": "Medium",
           "upscaling": "FSR 2.1 Auto",
@@ -474,6 +494,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1080p",
           "preset": "High",
           "upscaling": "FSR 2.1 Quality",
@@ -487,6 +508,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1080p",
           "preset": "Ultra",
           "upscaling": "FSR 2.1 Quality",
@@ -500,6 +522,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1080p",
           "preset": "Steam Deck",
           "upscaling": "FSR 2.1 Balanced",
@@ -513,6 +536,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1080p",
           "preset": "Ray Tracing: Low",
           "upscaling": "DLSS Auto",
@@ -526,6 +550,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1080p",
           "preset": "Ray Tracing: Medium",
           "upscaling": "DLSS Auto",
@@ -539,6 +564,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1080p",
           "preset": "Ray Tracing: Ultra",
           "upscaling": "DLSS Auto",
@@ -552,6 +578,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1080p",
           "preset": "Ray Tracing: Overdrive",
           "upscaling": "DLSS Auto",
@@ -565,6 +592,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1440p",
           "preset": "High",
           "upscaling": "Native",
@@ -578,6 +606,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "4K",
           "preset": "High",
           "upscaling": "Native",
@@ -591,6 +620,7 @@
         {
           "game": "Cyberpunk 2077",
           "gameId": "cyberpunk_2077",
+          "steamAppId": 1091500,
           "resolution": "1080p",
           "preset": "High",
           "upscaling": "Native",

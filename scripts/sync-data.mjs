@@ -320,7 +320,7 @@ async function fetchProtonDbData(appIds) {
 /**
  * Consulta Open GPU Benchmarks API v1 (https://opengpubenchmarks.com/api/v1).
  * Descarga especificaciones de silicio oficiales (die size, transistores, cores, cache, etc.)
- * y resúmenes de benchmarks en juegos reales (Cyberpunk 2077, avg FPS, 1% low).
+ * y todos los benchmarks medidos en juegos (official.json, dashboard.json, games.json).
  */
 async function fetchOpenGpuBenchmarks() {
   console.log('⚡ [8/8] Consultando Open GPU Benchmarks API (https://opengpubenchmarks.com/api/v1)...');
@@ -328,25 +328,37 @@ async function fetchOpenGpuBenchmarks() {
   let data = null;
 
   try {
-    const [gpusRes, dashRes] = await Promise.all([
+    const [gpusRes, dashRes, gamesRes, officialRes, commRes] = await Promise.all([
       fetchWithTimeout('https://opengpubenchmarks.com/api/v1/gpus.json'),
-      fetchWithTimeout('https://opengpubenchmarks.com/api/v1/dashboard.json')
+      fetchWithTimeout('https://opengpubenchmarks.com/api/v1/dashboard.json'),
+      fetchWithTimeout('https://opengpubenchmarks.com/api/v1/games.json'),
+      fetchWithTimeout('https://opengpubenchmarks.com/api/v1/official.json'),
+      fetchWithTimeout('https://opengpubenchmarks.com/api/v1/community.json')
     ]);
 
-    if (gpusRes.ok && dashRes.ok) {
-      const gpusJson = await gpusRes.json();
-      const dashJson = await dashRes.json();
+    if (gpusRes.ok && dashRes.ok && gamesRes.ok && officialRes.ok && commRes.ok) {
+      const [gpusJson, dashJson, gamesJson, officialJson, commJson] = await Promise.all([
+        gpusRes.json(),
+        dashRes.json(),
+        gamesRes.json(),
+        officialRes.json(),
+        commRes.json()
+      ]);
+
       data = {
         source: 'https://opengpubenchmarks.com/api/v1',
         fetchedAt: new Date().toISOString(),
         metadata: dashJson.metadata,
         gpus: gpusJson.gpus || [],
-        dashboardRecords: dashJson.records || []
+        dashboardRecords: dashJson.records || [],
+        games: gamesJson.games || [],
+        officialRecords: officialJson.records || [],
+        communityRecords: commJson.records || []
       };
       await fs.writeFile(cachePath, JSON.stringify(data, null, 2), 'utf-8');
-      console.log(`✅ Open GPU Benchmarks API: ${data.gpus.length} GPUs y ${data.dashboardRecords.length} records descargados.`);
+      console.log(`✅ Open GPU Benchmarks API: ${data.gpus.length} GPUs, ${data.games.length} juegos y ${data.officialRecords.length} benchmarks oficiales descargados.`);
     } else {
-      throw new Error(`HTTP ${gpusRes.status}/${dashRes.status}`);
+      throw new Error(`HTTP status no satisfactorio en endpoints de Open GPU Benchmarks`);
     }
   } catch (err) {
     console.warn(`⚠️ Aviso al consultar Open GPU Benchmarks API: ${err.message}. Intentando cargar caché local...`);
@@ -356,12 +368,31 @@ async function fetchOpenGpuBenchmarks() {
       console.log(`📁 Open GPU Benchmarks cargado desde caché local: ${data.gpus?.length || 0} GPUs.`);
     } catch {
       console.warn('⚠️ No se pudo cargar caché local de Open GPU Benchmarks.');
-      return new Map();
+      return { openGpuMap: new Map(), openGpuGamesMap: new Map() };
     }
   }
 
   const openGpuMap = new Map();
-  if (!Array.isArray(data?.gpus)) return openGpuMap;
+  const openGpuGamesMap = new Map();
+
+  // Indexar juegos de Open GPU Benchmarks por steam_appid, id y nombre
+  if (Array.isArray(data?.games)) {
+    for (const g of data.games) {
+      const recordsForGame = (data.officialRecords || []).filter((r) => r.game_id === g.id);
+      const gameInfo = {
+        gameId: g.id,
+        name: g.name,
+        steamAppId: g.steam_appid,
+        benchmarkCount: recordsForGame.length || (data.dashboardRecords || []).filter((r) => r.game_id === g.id).length,
+        url: 'https://opengpubenchmarks.com'
+      };
+      if (g.steam_appid) openGpuGamesMap.set(g.steam_appid, gameInfo);
+      openGpuGamesMap.set(g.id, gameInfo);
+      openGpuGamesMap.set(normalizeGpuName(g.name), gameInfo);
+    }
+  }
+
+  if (!Array.isArray(data?.gpus)) return { openGpuMap, openGpuGamesMap };
 
   for (const item of data.gpus) {
     const namesToRegister = [
@@ -375,6 +406,7 @@ async function fetchOpenGpuBenchmarks() {
       ...(item.official?.game_summaries || []).map((s) => ({
         game: s.game,
         gameId: s.game_id,
+        steamAppId: s.game_id === 'cyberpunk_2077' ? 1091500 : undefined,
         resolution: s.resolution,
         preset: s.graphics_preset,
         upscaling: s.upscaling || 'Native',
@@ -388,6 +420,7 @@ async function fetchOpenGpuBenchmarks() {
       ...(item.community?.game_summaries || []).map((s) => ({
         game: s.game,
         gameId: s.game_id,
+        steamAppId: s.game_id === 'cyberpunk_2077' ? 1091500 : undefined,
         resolution: s.resolution,
         preset: s.graphics_preset,
         upscaling: s.upscaling || 'Native',
@@ -449,7 +482,7 @@ async function fetchOpenGpuBenchmarks() {
     }
   }
 
-  return openGpuMap;
+  return { openGpuMap, openGpuGamesMap };
 }
 
 async function main() {
@@ -466,7 +499,7 @@ async function main() {
 
   const scraped = await loadScrapedData();
 
-  const [voidfulMap, passmarkMap, vastMap, steamGamesMap, pcgwMap, protonMap, openGpuMap] = await Promise.all([
+  const [voidfulMap, passmarkMap, vastMap, steamGamesMap, pcgwMap, protonMap, openGpuData] = await Promise.all([
     fetchVoidfulGpuSpecs(),
     // Fallback con fetch + cheerio sólo si el scraper Puppeteer no generó datos de PassMark
     scraped.passmark ? Promise.resolve({ dx12Map: new Map(), dx11Map: new Map() }) : fetchPassmarkScores(),
@@ -476,6 +509,8 @@ async function main() {
     fetchProtonDbData(appIds),
     fetchOpenGpuBenchmarks()
   ]);
+
+  const { openGpuMap, openGpuGamesMap } = openGpuData || { openGpuMap: new Map(), openGpuGamesMap: new Map() };
 
   // Agrupar por nombre base para detectar variantes de VRAM (ej. RTX 3060 8GB vs 12GB)
   const maxVramByBase = new Map();
@@ -623,6 +658,11 @@ async function main() {
         ...game.protondb,
         ...pData
       };
+    }
+    if (openGpuGamesMap?.has(appid)) {
+      game.opengpubenchmarks = openGpuGamesMap.get(appid);
+    } else {
+      delete game.opengpubenchmarks;
     }
   }
 
