@@ -29,6 +29,7 @@ export function normalizeBaseGpuName(name) {
     .replace(/\bgddr6x?\b/gi, '')
     .replace(/\bhbm2?\b/gi, '')
     .replace(/\b50th\s*anniversary\b/gi, '')
+    .replace(/\b(founders edition|reference edition|edition|fe)\b/gi, '')
     .replace(/nvidia|amd|intel|geforce|radeon|arc/gi, '')
     .replace(/(\d+)\s*lc\b/gi, '$1 liquid')
     .replace(/\bliquid\s*cooled\b|\bliquid\s*cooling\b/gi, 'liquid')

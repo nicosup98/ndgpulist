@@ -10,6 +10,7 @@
  * 5. Steam Store API: https://store.steampowered.com/api/appdetails?appids={appid}
  * 6. PCGamingWiki Cargo API: https://www.pcgamingwiki.com/w/api.php?action=cargoquery
  * 7. ProtonDB Reports API: https://www.protondb.com/api/v1/reports/summaries/{appid}.json
+ * 8. Open GPU Benchmarks API v1: https://opengpubenchmarks.com/api/v1
  */
 
 import fs from 'node:fs/promises';
@@ -316,6 +317,141 @@ async function fetchProtonDbData(appIds) {
   return protonMap;
 }
 
+/**
+ * Consulta Open GPU Benchmarks API v1 (https://opengpubenchmarks.com/api/v1).
+ * Descarga especificaciones de silicio oficiales (die size, transistores, cores, cache, etc.)
+ * y resúmenes de benchmarks en juegos reales (Cyberpunk 2077, avg FPS, 1% low).
+ */
+async function fetchOpenGpuBenchmarks() {
+  console.log('⚡ [8/8] Consultando Open GPU Benchmarks API (https://opengpubenchmarks.com/api/v1)...');
+  const cachePath = path.join(SCRAPED_DIR, 'opengpubenchmarks.json');
+  let data = null;
+
+  try {
+    const [gpusRes, dashRes] = await Promise.all([
+      fetchWithTimeout('https://opengpubenchmarks.com/api/v1/gpus.json'),
+      fetchWithTimeout('https://opengpubenchmarks.com/api/v1/dashboard.json')
+    ]);
+
+    if (gpusRes.ok && dashRes.ok) {
+      const gpusJson = await gpusRes.json();
+      const dashJson = await dashRes.json();
+      data = {
+        source: 'https://opengpubenchmarks.com/api/v1',
+        fetchedAt: new Date().toISOString(),
+        metadata: dashJson.metadata,
+        gpus: gpusJson.gpus || [],
+        dashboardRecords: dashJson.records || []
+      };
+      await fs.writeFile(cachePath, JSON.stringify(data, null, 2), 'utf-8');
+      console.log(`✅ Open GPU Benchmarks API: ${data.gpus.length} GPUs y ${data.dashboardRecords.length} records descargados.`);
+    } else {
+      throw new Error(`HTTP ${gpusRes.status}/${dashRes.status}`);
+    }
+  } catch (err) {
+    console.warn(`⚠️ Aviso al consultar Open GPU Benchmarks API: ${err.message}. Intentando cargar caché local...`);
+    try {
+      const cachedRaw = await fs.readFile(cachePath, 'utf-8');
+      data = JSON.parse(cachedRaw);
+      console.log(`📁 Open GPU Benchmarks cargado desde caché local: ${data.gpus?.length || 0} GPUs.`);
+    } catch {
+      console.warn('⚠️ No se pudo cargar caché local de Open GPU Benchmarks.');
+      return new Map();
+    }
+  }
+
+  const openGpuMap = new Map();
+  if (!Array.isArray(data?.gpus)) return openGpuMap;
+
+  for (const item of data.gpus) {
+    const namesToRegister = [
+      item.identity?.name,
+      item.id,
+      item.base,
+      item.id?.replace(/_/g, ' ')
+    ].filter(Boolean);
+
+    const summaries = [
+      ...(item.official?.game_summaries || []).map((s) => ({
+        game: s.game,
+        gameId: s.game_id,
+        resolution: s.resolution,
+        preset: s.graphics_preset,
+        upscaling: s.upscaling || 'Native',
+        avgFps: Number(s.avg_fps?.toFixed?.(1) ?? s.avg_fps),
+        p1Low: Number(s.p1_low?.toFixed?.(1) ?? s.p1_low),
+        minFps: s.metrics?.min_fps ? Number(s.metrics.min_fps.toFixed(1)) : undefined,
+        maxFps: s.metrics?.max_fps ? Number(s.metrics.max_fps.toFixed(1)) : undefined,
+        source: 'official',
+        runCount: s.run_count
+      })),
+      ...(item.community?.game_summaries || []).map((s) => ({
+        game: s.game,
+        gameId: s.game_id,
+        resolution: s.resolution,
+        preset: s.graphics_preset,
+        upscaling: s.upscaling || 'Native',
+        avgFps: Number(s.avg_fps?.toFixed?.(1) ?? s.avg_fps),
+        p1Low: Number(s.p1_low?.toFixed?.(1) ?? s.p1_low),
+        minFps: s.metrics?.min_fps ? Number(s.metrics.min_fps.toFixed(1)) : undefined,
+        maxFps: s.metrics?.max_fps ? Number(s.metrics.max_fps.toFixed(1)) : undefined,
+        source: 'community',
+        runCount: s.run_count
+      }))
+    ];
+
+    const entry = {
+      id: item.id,
+      productName: item.identity?.name || item.id,
+      url: 'https://opengpubenchmarks.com',
+      apiEndpoint: 'https://opengpubenchmarks.com/api/v1',
+      runCount: (item.official?.run_count || 0) + (item.community?.run_count || 0),
+      silicon: item.silicon ? {
+        process: item.silicon.process,
+        dieSizeMm2: item.silicon.die_size_mm2,
+        transistorsB: item.silicon.transistors_b,
+        shaderCores: item.silicon.shader_cores,
+        rtCores: item.silicon.rt_cores,
+        tensorCores: item.silicon.tensor_cores,
+        tmus: item.silicon.tmus,
+        rops: item.silicon.rops,
+        cacheMb: item.silicon.cache_mb
+      } : undefined,
+      power: item.power ? {
+        tdpWatts: item.power.tdp_w,
+        psuWatts: item.power.psu_w,
+        pcie: item.power.pcie,
+        connectors: item.power.connectors
+      } : undefined,
+      features: item.features ? {
+        dlss: item.features.dlss,
+        rayTracing: item.features.ray_tracing,
+        aiTops: item.features.ai_tops,
+        encoder: item.features.encoder,
+        decoder: item.features.decoder,
+        directx: item.features.directx,
+        vulkan: item.features.vulkan,
+        technologies: item.features.technologies
+      } : undefined,
+      gameSummaries: summaries,
+      license: {
+        name: 'CC-BY-4.0',
+        url: 'https://creativecommons.org/licenses/by/4.0/',
+        attribution: 'Open GPU Benchmarks (https://opengpubenchmarks.com)'
+      }
+    };
+
+    for (const n of namesToRegister) {
+      const exactKey = normalizeGpuName(n);
+      const baseKey = normalizeBaseGpuName(n);
+      if (exactKey && !openGpuMap.has(exactKey)) openGpuMap.set(exactKey, entry);
+      if (baseKey && !openGpuMap.has(baseKey)) openGpuMap.set(baseKey, entry);
+    }
+  }
+
+  return openGpuMap;
+}
+
 async function main() {
   await fs.mkdir(DATA_DIR, { recursive: true });
   const gpusPath = path.join(DATA_DIR, 'gpus.json');
@@ -330,14 +466,15 @@ async function main() {
 
   const scraped = await loadScrapedData();
 
-  const [voidfulMap, passmarkMap, vastMap, steamGamesMap, pcgwMap, protonMap] = await Promise.all([
+  const [voidfulMap, passmarkMap, vastMap, steamGamesMap, pcgwMap, protonMap, openGpuMap] = await Promise.all([
     fetchVoidfulGpuSpecs(),
     // Fallback con fetch + cheerio sólo si el scraper Puppeteer no generó datos de PassMark
     scraped.passmark ? Promise.resolve({ dx12Map: new Map(), dx11Map: new Map() }) : fetchPassmarkScores(),
     fetchVastAiBundles(),
     fetchSteamGames(appIds),
     fetchPCGamingWikiCargo(appIds),
-    fetchProtonDbData(appIds)
+    fetchProtonDbData(appIds),
+    fetchOpenGpuBenchmarks()
   ]);
 
   // Agrupar por nombre base para detectar variantes de VRAM (ej. RTX 3060 8GB vs 12GB)
@@ -361,7 +498,7 @@ async function main() {
     return gpu.vramGB === maxVramByBase.get(base) ? candidate : undefined;
   }
 
-  const mergeStats = { passmark: 0, geekbench: 0, tomshardware: 0, techpowerup: 0, userbenchmark: 0 };
+  const mergeStats = { passmark: 0, geekbench: 0, tomshardware: 0, techpowerup: 0, userbenchmark: 0, opengpubenchmarks: 0 };
 
   // Actualizar GPUs con datos scrapeados (PassMark, Geekbench, Tom's Hardware), voidful y Vast.ai Cloud Bundles
   for (const gpu of gpus) {
@@ -449,6 +586,13 @@ async function main() {
     if (vastMap.has(normKey)) {
       gpu.vastai = vastMap.get(normKey);
     }
+    const ogb = openGpuMap.get(normKey) || openGpuMap.get(baseKey);
+    if (ogb) {
+      gpu.opengpubenchmarks = ogb;
+      mergeStats.opengpubenchmarks++;
+    } else {
+      delete gpu.opengpubenchmarks;
+    }
   }
 
   // Actualizar Juegos con Steam + PCGamingWiki Cargo + ProtonDB
@@ -485,9 +629,10 @@ async function main() {
   await fs.writeFile(gpusPath, JSON.stringify(gpus, null, 2), 'utf-8');
   await fs.writeFile(gamesPath, JSON.stringify(games, null, 2), 'utf-8');
   console.log(
-    `🔗 Fusión de datos scrapeados: PassMark ${mergeStats.passmark}/${gpus.length}, ` +
+    `🔗 Fusión de datos scrapeados y APIs: PassMark ${mergeStats.passmark}/${gpus.length}, ` +
       `Geekbench ${mergeStats.geekbench}/${gpus.length}, Tom's Hardware ${mergeStats.tomshardware}/${gpus.length}, ` +
-      `TechPowerUp ${mergeStats.techpowerup}/${gpus.length}, UserBenchmark ${mergeStats.userbenchmark}/${gpus.length}.`
+      `TechPowerUp ${mergeStats.techpowerup}/${gpus.length}, UserBenchmark ${mergeStats.userbenchmark}/${gpus.length}, ` +
+      `Open GPU Benchmarks ${mergeStats.opengpubenchmarks}/${gpus.length}.`
   );
   console.log(`🎉 Sincronización completada: ${gpus.length} GPUs (con Vast.ai Bundles) y ${games.length} juegos guardados.`);
 }

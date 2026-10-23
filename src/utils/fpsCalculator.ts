@@ -50,6 +50,63 @@ export interface UserBenchmarkData {
   url: string;
 }
 
+/** Resumen de benchmark por juego/resolución de Open GPU Benchmarks. */
+export interface OpenGpuBenchmarkSummary {
+  game: string;
+  gameId: string;
+  resolution: string;
+  preset: string;
+  upscaling: string;
+  avgFps: number;
+  p1Low: number;
+  minFps?: number;
+  maxFps?: number;
+  source: 'official' | 'community';
+  runCount?: number;
+}
+
+/** Datos oficiales y de comunidad de Open GPU Benchmarks (opengpubenchmarks.com/api/v1). */
+export interface OpenGpuBenchmarksData {
+  id: string;
+  productName: string;
+  url: string;
+  apiEndpoint: string;
+  runCount: number;
+  silicon?: {
+    process?: string;
+    dieSizeMm2?: number;
+    transistorsB?: number;
+    shaderCores?: number;
+    rtCores?: number;
+    tensorCores?: number;
+    tmus?: number;
+    rops?: number;
+    cacheMb?: number;
+  };
+  power?: {
+    tdpWatts?: number;
+    psuWatts?: number;
+    pcie?: string;
+    connectors?: string[];
+  };
+  features?: {
+    dlss?: string;
+    rayTracing?: string;
+    aiTops?: number;
+    encoder?: string;
+    decoder?: string;
+    directx?: string;
+    vulkan?: string;
+    technologies?: string[];
+  };
+  gameSummaries: OpenGpuBenchmarkSummary[];
+  license: {
+    name: string;
+    url: string;
+    attribution: string;
+  };
+}
+
 export interface GpuSpec {
   id: string;
   name: string;
@@ -73,6 +130,7 @@ export interface GpuSpec {
   tomshardware?: TomsHardwareData;
   techpowerup?: TechPowerUpData;
   userbenchmark?: UserBenchmarkData;
+  opengpubenchmarks?: OpenGpuBenchmarksData;
 }
 
 export interface PCGamingWikiData {

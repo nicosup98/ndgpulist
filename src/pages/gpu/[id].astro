@@ -159,6 +159,22 @@ const brandColorClass =
               </dd>
             </div>
           )}
+          {gpu.opengpubenchmarks?.silicon && (
+            <>
+              <div class="py-2.5 flex justify-between">
+                <dt class="text-slate-500 dark:text-slate-400 font-sans">Die / Transistores (OpenGPU)</dt>
+                <dd class="font-semibold text-slate-900 dark:text-white">
+                  {gpu.opengpubenchmarks.silicon.dieSizeMm2} mm² / {gpu.opengpubenchmarks.silicon.transistorsB}B
+                </dd>
+              </div>
+              <div class="py-2.5 flex justify-between">
+                <dt class="text-slate-500 dark:text-slate-400 font-sans">Caché L2 / RT Cores (OpenGPU)</dt>
+                <dd class="font-semibold text-slate-900 dark:text-white">
+                  {gpu.opengpubenchmarks.silicon.cacheMb} MB / {gpu.opengpubenchmarks.silicon.rtCores} RT
+                </dd>
+              </div>
+            </>
+          )}
           <div class="py-2.5 flex justify-between">
             <dt class="text-slate-500 dark:text-slate-400 font-sans">Reloj Base / Boost</dt>
             <dd class="font-semibold text-slate-900 dark:text-white">{gpu.baseClockMHz} MHz / {gpu.boostClockMHz} MHz</dd>
@@ -396,6 +412,56 @@ const brandColorClass =
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-1">
                 <span>Muestras evaluadas: <strong>{gpu.userbenchmark.samples.toLocaleString()} tests</strong></span>
                 <span class="text-slate-400">Escala de velocidad efectiva de usuarios</span>
+              </div>
+            </div>
+          )}
+
+          <!-- Open GPU Benchmarks (opengpubenchmarks.com / API v1) -->
+          {gpu.opengpubenchmarks && (
+            <div class="space-y-2.5 pt-2 border-t border-slate-100 dark:border-slate-800/80">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-sm font-bold text-slate-900 dark:text-white">Open GPU Benchmarks</span>
+                  <a
+                    href={gpu.opengpubenchmarks.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs text-emerald-600 dark:text-emerald-400 hover:underline ml-2 font-mono"
+                  >
+                    opengpubenchmarks.com ↗
+                  </a>
+                </div>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                  API v1 • {gpu.opengpubenchmarks.runCount} runs oficiales
+                </span>
+              </div>
+
+              <!-- Muestreo de resultados en juegos oficiales (ej. Cyberpunk 2077) -->
+              {gpu.opengpubenchmarks.gameSummaries.length > 0 && (
+                <div class="grid grid-cols-3 gap-2 text-xs font-mono">
+                  {['1080p', '1440p', '4K'].map((res) => {
+                    const run = gpu.opengpubenchmarks?.gameSummaries.find(
+                      (s) => s.resolution === res && s.preset === 'High' && s.upscaling === 'Native'
+                    ) || gpu.opengpubenchmarks?.gameSummaries.find((s) => s.resolution === res);
+                    return (
+                      <div class="p-2.5 rounded-lg bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/60 dark:border-emerald-900/40">
+                        <span class="text-[10px] text-slate-400 block uppercase font-bold">{res} {run?.preset || 'TEST'}</span>
+                        <span class="font-bold text-emerald-600 dark:text-emerald-400 text-sm">
+                          {run ? `${run.avgFps} FPS` : 'N/A'}
+                        </span>
+                        {run && (
+                          <span class="text-[10px] text-slate-500 dark:text-slate-400 block mt-0.5">
+                            1% Low: <strong>{run.p1Low} FPS</strong>
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400 pt-0.5">
+                <span>Producto: <strong>{gpu.opengpubenchmarks.productName}</strong></span>
+                <span class="text-slate-400">Licencia: {gpu.opengpubenchmarks.license.name}</span>
               </div>
             </div>
           )}
