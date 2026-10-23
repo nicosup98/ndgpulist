@@ -1179,31 +1179,6 @@ onMounted(() => {
               </td>
             </tr>
             <tr>
-              <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">Open GPU Benchmarks (Cyberpunk 1440p)</td>
-              <td v-for="gpu in comparedGpus" :key="gpu.id" class="py-3 px-4">
-                <template v-if="gpu.opengpubenchmarks">
-                  <a
-                    :href="gpu.opengpubenchmarks.url"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="font-bold text-emerald-600 dark:text-emerald-400 hover:underline"
-                  >
-                    {{
-                      gpu.opengpubenchmarks.gameSummaries.find(s => s.resolution === '1440p' && s.preset === 'High')?.avgFps ??
-                      gpu.opengpubenchmarks.gameSummaries[0]?.avgFps ?? '-'
-                    }} FPS
-                  </a>
-                  <span class="text-slate-400 ml-1 text-[11px]">
-                    (1% Low: {{
-                      gpu.opengpubenchmarks.gameSummaries.find(s => s.resolution === '1440p' && s.preset === 'High')?.p1Low ??
-                      gpu.opengpubenchmarks.gameSummaries[0]?.p1Low ?? '-'
-                    }} FPS)
-                  </span>
-                </template>
-                <span v-else class="text-slate-400 text-xs font-mono">N/A</span>
-              </td>
-            </tr>
-            <tr>
               <td class="py-3 px-4 font-sans font-medium text-slate-600 dark:text-slate-400">Vast.ai DLPerf (AI / Compute)</td>
               <td v-for="(gpu, i) in comparedGpus" :key="gpu.id" class="py-3 px-4">
                 <template v-if="gpu.vastai && baselineGpu.vastai">
