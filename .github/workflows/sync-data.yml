@@ -31,7 +31,7 @@ jobs:
       - name: Run Puppeteer benchmark scraper (PassMark, Geekbench, Tom's Hardware, TechPowerUp, UserBenchmark)
         run: npm run scrape
 
-      - name: Run data synchronization script (merge scraped data + Vast.ai, Steam, PCGamingWiki, ProtonDB)
+      - name: Run data synchronization script (merge scraped data + Open GPU Benchmarks, Vast.ai, Steam, PCGamingWiki, ProtonDB)
         run: npm run sync-data
 
       - name: Commit and push if data changed
@@ -42,6 +42,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No hay cambios nuevos en los datasets."
           else
-            git commit -m "chore(data): actualización automática de benchmarks (Puppeteer) y tarifas cloud"
+            git commit -m "chore(data): sincronización automática de benchmarks (OpenGPU, Puppeteer) y telemetría cloud"
             git push
           fi
