@@ -24,11 +24,11 @@
       "passmarkDX11": 340
     },
     "vastai": {
-      "dlperf": 199,
-      "hourlyRateUSD": 0.74,
-      "dlperfPerDollar": 270.6,
+      "dlperf": 198.9,
+      "hourlyRateUSD": 0.93,
+      "dlperfPerDollar": 214.1,
       "availableOffers": 2,
-      "verifiedFlops": 107.6
+      "verifiedFlops": 108.1
     },
     "rawSourceSynced": true,
     "launchDate": "2025-01-30 00:00:00",
@@ -105,8 +105,8 @@
     },
     "vastai": {
       "dlperf": 84,
-      "hourlyRateUSD": 0.67,
-      "dlperfPerDollar": 125.6,
+      "hourlyRateUSD": 0.6,
+      "dlperfPerDollar": 139.6,
       "availableOffers": 1,
       "verifiedFlops": 56.5
     },
@@ -715,8 +715,8 @@
     },
     "vastai": {
       "dlperf": 50.2,
-      "hourlyRateUSD": 0.2,
-      "dlperfPerDollar": 248.1,
+      "hourlyRateUSD": 0.48,
+      "dlperfPerDollar": 105,
       "availableOffers": 1,
       "verifiedFlops": 30.4
     },
@@ -794,11 +794,11 @@
       "passmarkDX11": 323
     },
     "vastai": {
-      "dlperf": 100.7,
-      "hourlyRateUSD": 0.67,
-      "dlperfPerDollar": 150.4,
-      "availableOffers": 4,
-      "verifiedFlops": 83
+      "dlperf": 106.6,
+      "hourlyRateUSD": 1,
+      "dlperfPerDollar": 106.2,
+      "availableOffers": 3,
+      "verifiedFlops": 81.4
     },
     "rawSourceSynced": true,
     "launchDate": "2022-10-12 00:00:00",
@@ -948,11 +948,11 @@
       "passmarkDX11": 313
     },
     "vastai": {
-      "dlperf": 53.2,
+      "dlperf": 54.4,
       "hourlyRateUSD": 0.33,
-      "dlperfPerDollar": 161.3,
+      "dlperfPerDollar": 164.8,
       "availableOffers": 1,
-      "verifiedFlops": 48.3
+      "verifiedFlops": 51.4
     },
     "rawSourceSynced": true,
     "launchDate": "2022-11-16 00:00:00",
@@ -1257,10 +1257,10 @@
     },
     "vastai": {
       "dlperf": 33.7,
-      "hourlyRateUSD": 0.38,
-      "dlperfPerDollar": 89.6,
+      "hourlyRateUSD": 0.2,
+      "dlperfPerDollar": 171.1,
       "availableOffers": 1,
-      "verifiedFlops": 29.3
+      "verifiedFlops": 29.4
     },
     "rawSourceSynced": true,
     "tomshardware": {
@@ -1567,8 +1567,8 @@
     },
     "vastai": {
       "dlperf": 46.2,
-      "hourlyRateUSD": 0.26,
-      "dlperfPerDollar": 180.7,
+      "hourlyRateUSD": 0.36,
+      "dlperfPerDollar": 126.8,
       "availableOffers": 1,
       "verifiedFlops": 36.4
     },
@@ -1646,11 +1646,11 @@
       "passmarkDX11": 218
     },
     "vastai": {
-      "dlperf": 44.6,
-      "hourlyRateUSD": 0.26,
-      "dlperfPerDollar": 171,
+      "dlperf": 44.5,
+      "hourlyRateUSD": 0.38,
+      "dlperfPerDollar": 118.2,
       "availableOffers": 2,
-      "verifiedFlops": 35.8
+      "verifiedFlops": 35.5
     },
     "rawSourceSynced": true,
     "launchDate": "2020-09-24 00:00:00",
@@ -1726,11 +1726,11 @@
       "passmarkDX11": 221
     },
     "vastai": {
-      "dlperf": 34,
-      "hourlyRateUSD": 0.27,
-      "dlperfPerDollar": 126.3,
+      "dlperf": 34.5,
+      "hourlyRateUSD": 0.22,
+      "dlperfPerDollar": 160.1,
       "availableOffers": 1,
-      "verifiedFlops": 34.4
+      "verifiedFlops": 35.1
     },
     "rawSourceSynced": true,
     "launchDate": "2021-06-03 00:00:00",
@@ -1806,11 +1806,11 @@
       "passmarkDX11": 207
     },
     "vastai": {
-      "dlperf": 28.2,
-      "hourlyRateUSD": 0.22,
-      "dlperfPerDollar": 126.7,
-      "availableOffers": 1,
-      "verifiedFlops": 31.8
+      "dlperf": 30.6,
+      "hourlyRateUSD": 0.19,
+      "dlperfPerDollar": 160.8,
+      "availableOffers": 2,
+      "verifiedFlops": 29.2
     },
     "rawSourceSynced": true,
     "launchDate": "2020-09-17 00:00:00",
@@ -1967,8 +1967,8 @@
     },
     "vastai": {
       "dlperf": 16.3,
-      "hourlyRateUSD": 0.16,
-      "dlperfPerDollar": 100.3,
+      "hourlyRateUSD": 0.23,
+      "dlperfPerDollar": 71.1,
       "availableOffers": 1,
       "verifiedFlops": 19.8
     },
@@ -3706,7 +3706,7 @@
     "vastai": {
       "dlperf": 28.2,
       "hourlyRateUSD": 0.34,
-      "dlperfPerDollar": 83.8,
+      "dlperfPerDollar": 83.7,
       "availableOffers": 1,
       "verifiedFlops": 19
     },
@@ -6168,9 +6168,9 @@
     "rawSourceSynced": true,
     "launchDate": "2017-04-06 00:00:00",
     "vastai": {
-      "dlperf": 5.8,
+      "dlperf": 5.7,
       "hourlyRateUSD": 0.07,
-      "dlperfPerDollar": 83.6,
+      "dlperfPerDollar": 83.4,
       "availableOffers": 1,
       "verifiedFlops": 11.7
     }
@@ -6216,11 +6216,11 @@
     "rawSourceSynced": true,
     "launchDate": "2017-03-05 00:00:00",
     "vastai": {
-      "dlperf": 5.5,
+      "dlperf": 5.4,
       "hourlyRateUSD": 0.07,
-      "dlperfPerDollar": 78.6,
+      "dlperfPerDollar": 81.1,
       "availableOffers": 1,
-      "verifiedFlops": 11.5
+      "verifiedFlops": 11.3
     }
   },
   {
@@ -6264,11 +6264,11 @@
     "rawSourceSynced": true,
     "launchDate": "2017-04-20 00:00:00",
     "vastai": {
-      "dlperf": 3.4,
+      "dlperf": 3.3,
       "hourlyRateUSD": 0.06,
-      "dlperfPerDollar": 60.3,
+      "dlperfPerDollar": 60,
       "availableOffers": 1,
-      "verifiedFlops": 7.9
+      "verifiedFlops": 7.8
     }
   },
   {
