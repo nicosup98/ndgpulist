@@ -1,11 +1,11 @@
 {
   "source": "https://opengpubenchmarks.com/api/v1",
-  "fetchedAt": "2026-10-23T18:03:04.174Z",
+  "fetchedAt": "2026-10-24T10:20:34.443Z",
   "metadata": {
     "schema_version": "0.18",
-    "release_version": "1.7.0.0",
-    "commit": "819da39987dd",
-    "generated_at": "2026-10-21T02:12:06.818735+00:00",
+    "release_version": "1.8.0.0",
+    "commit": "553539be72e1",
+    "generated_at": "2026-10-24T05:47:56.067690+00:00",
     "synthetic_data": false,
     "license": {
       "id": "CC-BY-4.0",
