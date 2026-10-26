@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-10-25T10:47:17.654Z",
+  "scrapedAt": "2026-10-26T12:18:38.358Z",
   "count": 546,
   "entries": [
     {
@@ -25,14 +25,14 @@
       "dx11": 228
     },
     {
-      "name": "RTX PRO 6000 Blackwell Workstation Edition",
-      "dx12": 152,
-      "dx11": 336
-    },
-    {
       "name": "nVidia L40-48Q",
       "dx12": 152,
       "dx11": 233
+    },
+    {
+      "name": "RTX PRO 6000 Blackwell Workstation Edition",
+      "dx12": 152,
+      "dx11": 336
     },
     {
       "name": "nVidia L40-4Q",
@@ -185,14 +185,14 @@
       "dx11": 252
     },
     {
-      "name": "GeForce RTX 3090",
-      "dx12": 109,
-      "dx11": 218
-    },
-    {
       "name": "Insignia USB3.0 to dual HDMI Adapter",
       "dx12": 109,
       "dx11": 295
+    },
+    {
+      "name": "GeForce RTX 3090",
+      "dx12": 109,
+      "dx11": 218
     },
     {
       "name": "GeForce RTX 3080 Ti",
@@ -270,14 +270,14 @@
       "dx11": 78
     },
     {
-      "name": "Intel Arc Pro B70",
-      "dx12": 98,
-      "dx11": 138
-    },
-    {
       "name": "Radeon RX 7900M",
       "dx12": 97,
       "dx11": 258
+    },
+    {
+      "name": "Intel Arc Pro B70",
+      "dx12": 97,
+      "dx11": 140
     },
     {
       "name": "Radeon PRO W7900",
@@ -306,7 +306,7 @@
     },
     {
       "name": "RTX PRO 3000 Blackwell Generation Laptop GPU",
-      "dx12": 93,
+      "dx12": 94,
       "dx11": 212
     },
     {
@@ -445,19 +445,14 @@
       "dx11": 181
     },
     {
-      "name": "Radeon 8060S",
-      "dx12": 84,
-      "dx11": 156
-    },
-    {
       "name": "GeForce RTX 3070",
       "dx12": 84,
       "dx11": 183
     },
     {
-      "name": "RTX 4000 SFF Ada Generation",
+      "name": "Radeon 8060S",
       "dx12": 84,
-      "dx11": 169
+      "dx11": 156
     },
     {
       "name": "RTX 3500 Ada Generation Laptop GPU",
@@ -468,6 +463,11 @@
       "name": "TITAN RTX",
       "dx12": 83,
       "dx11": 186
+    },
+    {
+      "name": "RTX 4000 SFF Ada Generation",
+      "dx12": 83,
+      "dx11": 169
     },
     {
       "name": "RTX 3500 Ada Generation Embedded GPU",
@@ -664,14 +664,14 @@
       "dx11": 78
     },
     {
-      "name": "RTX A5000 Laptop GPU",
-      "dx12": 73,
-      "dx11": 138
-    },
-    {
       "name": "Radeon RX 9070",
       "dx12": 73,
       "dx11": 280
+    },
+    {
+      "name": "RTX A5000 Laptop GPU",
+      "dx12": 73,
+      "dx11": 138
     },
     {
       "name": "Quadro GV100",
@@ -765,7 +765,7 @@
     },
     {
       "name": "Intel Arc A770M",
-      "dx12": 69,
+      "dx12": 70,
       "dx11": 70
     },
     {
@@ -918,14 +918,14 @@
       "dx11": 86
     },
     {
-      "name": "Intel Arc A580",
-      "dx12": 65,
-      "dx11": 72
-    },
-    {
       "name": "Radeon PRO W6600X",
       "dx12": 65,
       "dx11": 151
+    },
+    {
+      "name": "Intel Arc A580",
+      "dx12": 65,
+      "dx11": 72
     },
     {
       "name": "Radeon PRO W7600",
@@ -1236,14 +1236,14 @@
       "dx11": 139
     },
     {
-      "name": "RTX A2000 Embedded GPU",
-      "dx12": 53,
-      "dx11": 81
-    },
-    {
       "name": "GeForce RTX 3050 6GB",
       "dx12": 53,
       "dx11": 72
+    },
+    {
+      "name": "RTX A2000 Embedded GPU",
+      "dx12": 53,
+      "dx11": 81
     },
     {
       "name": "GRID RTX6000P-4Q",
@@ -1276,7 +1276,7 @@
     },
     {
       "name": "Quadro RTX 4000",
-      "dx12": 52,
+      "dx12": 53,
       "dx11": 127
     },
     {
@@ -1693,13 +1693,13 @@
       "dx11": 64
     },
     {
+      "name": "Radeon Pro WX 7130",
+      "dx12": 42
+    },
+    {
       "name": "Radeon RX590 GME",
       "dx12": 42,
       "dx11": 57
-    },
-    {
-      "name": "Radeon Pro WX 7130",
-      "dx12": 42
     },
     {
       "name": "Radeon RX 5600M",
@@ -2321,11 +2321,6 @@
       "dx11": 47
     },
     {
-      "name": "P106-100",
-      "dx12": 29,
-      "dx11": 65
-    },
-    {
       "name": "T550 Laptop GPU",
       "dx12": 29
     },
@@ -2335,6 +2330,11 @@
     },
     {
       "name": "Radeon 780M",
+      "dx12": 29,
+      "dx11": 65
+    },
+    {
+      "name": "P106-100",
       "dx12": 29,
       "dx11": 65
     },
