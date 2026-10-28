@@ -1,11 +1,11 @@
 {
   "source": "https://opengpubenchmarks.com/api/v1",
-  "fetchedAt": "2026-10-27T11:39:17.456Z",
+  "fetchedAt": "2026-10-28T12:10:18.031Z",
   "metadata": {
-    "schema_version": "0.19",
-    "release_version": "1.12.0.0",
-    "commit": "0bc95757f703",
-    "generated_at": "2026-10-26T22:58:45.775607+00:00",
+    "schema_version": "0.20",
+    "release_version": "1.13.0.0",
+    "commit": "fc94e56089f3",
+    "generated_at": "2026-10-27T16:54:38.141259+00:00",
     "synthetic_data": false,
     "license": {
       "id": "CC-BY-4.0",
@@ -169,6 +169,7 @@
         ]
       },
       "notes": "Full GB203 die with 16 GB of GDDR7, launched at the same $999 price as the RTX 4080 Super.",
+      "reference_overrides": [],
       "links": {
         "official_summary": "official/rtx_5080_16gb_fe/summary.json",
         "community_summary": "community/rtx_5080_16gb_fe/summary.json"
