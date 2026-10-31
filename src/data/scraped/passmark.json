@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-10-30T12:11:38.515Z",
+  "scrapedAt": "2026-10-31T11:43:30.835Z",
   "count": 546,
   "entries": [
     {
@@ -436,7 +436,7 @@
     },
     {
       "name": "RTX A5500 Laptop GPU",
-      "dx12": 85,
+      "dx12": 84,
       "dx11": 130
     },
     {
@@ -816,7 +816,7 @@
     {
       "name": "Radeon RX 7600 XT",
       "dx12": 67,
-      "dx11": 168
+      "dx11": 167
     },
     {
       "name": "Radeon RX 5700 XT 50th Anniversary",
@@ -888,14 +888,14 @@
       "dx11": 129
     },
     {
-      "name": "GeForce RTX 5050 Laptop GPU",
-      "dx12": 65,
-      "dx11": 126
-    },
-    {
       "name": "Radeon Pro Vega 56",
       "dx12": 65,
       "dx11": 64
+    },
+    {
+      "name": "GeForce RTX 5050 Laptop GPU",
+      "dx12": 65,
+      "dx11": 126
     },
     {
       "name": "Intel Arc Pro B50",
@@ -908,14 +908,14 @@
       "dx11": 130
     },
     {
-      "name": "GeForce RTX 5050",
-      "dx12": 65,
-      "dx11": 152
-    },
-    {
       "name": "Radeon RX Vega 64",
       "dx12": 65,
       "dx11": 86
+    },
+    {
+      "name": "GeForce RTX 5050",
+      "dx12": 65,
+      "dx11": 152
     },
     {
       "name": "Radeon PRO W6600X",
@@ -940,7 +940,7 @@
     {
       "name": "Radeon RX 7600M XT",
       "dx12": 63,
-      "dx11": 136
+      "dx11": 137
     },
     {
       "name": "Radeon Pro VII",
@@ -1076,11 +1076,6 @@
       "dx11": 83
     },
     {
-      "name": "AnyViewerIddDriver Device",
-      "dx12": 58,
-      "dx11": 88
-    },
-    {
       "name": "Quadro RTX 5000",
       "dx12": 58,
       "dx11": 141
@@ -1108,7 +1103,7 @@
     {
       "name": "Radeon RX 9070 GRE",
       "dx12": 58,
-      "dx11": 249
+      "dx11": 250
     },
     {
       "name": "Radeon RX 6700S",
@@ -1156,14 +1151,19 @@
       "dx11": 172
     },
     {
+      "name": "RTX A3000 Laptop GPU",
+      "dx12": 56,
+      "dx11": 102
+    },
+    {
       "name": "Quadro RTX 5000 (Mobile)",
       "dx12": 56,
       "dx11": 121
     },
     {
-      "name": "RTX A3000 Laptop GPU",
+      "name": "Radeon RX 9060 XT 8GB",
       "dx12": 56,
-      "dx11": 102
+      "dx11": 186
     },
     {
       "name": "MrIdd Device",
@@ -1174,11 +1174,6 @@
       "name": "Net Control 2 Video Hook Driver VHM",
       "dx12": 56,
       "dx11": 172
-    },
-    {
-      "name": "Radeon RX 9060 XT 8GB",
-      "dx12": 56,
-      "dx11": 186
     },
     {
       "name": "GeForce GTX 1080",
@@ -1318,6 +1313,11 @@
       "name": "CMP 40HX",
       "dx12": 52,
       "dx11": 130
+    },
+    {
+      "name": "AnyViewerIddDriver Device",
+      "dx12": 52,
+      "dx11": 78
     },
     {
       "name": "Radeon Pro W5700",
@@ -1863,14 +1863,14 @@
       "dx11": 49
     },
     {
-      "name": "NVIDIA T1200 Laptop GPU",
-      "dx12": 37,
-      "dx11": 58
-    },
-    {
       "name": "Radeon RX 5500",
       "dx12": 37,
       "dx11": 52
+    },
+    {
+      "name": "NVIDIA T1200 Laptop GPU",
+      "dx12": 37,
+      "dx11": 58
     },
     {
       "name": "GeForce GTX 1070 with Max-Q Design",
@@ -2202,14 +2202,14 @@
       "dx11": 71
     },
     {
-      "name": "GeForce GTX 1060 with Max-Q Design",
-      "dx12": 31,
-      "dx11": 59
-    },
-    {
       "name": "AMD Ryzen Z1 Extreme",
       "dx12": 31,
       "dx11": 60
+    },
+    {
+      "name": "GeForce GTX 1060 with Max-Q Design",
+      "dx12": 31,
+      "dx11": 59
     },
     {
       "name": "Tesla K40c",
@@ -2339,14 +2339,14 @@
       "dx11": 65
     },
     {
-      "name": "CMP 30HX",
-      "dx12": 29,
-      "dx11": 81
-    },
-    {
       "name": "Quadro T1000",
       "dx12": 29,
       "dx11": 47
+    },
+    {
+      "name": "CMP 30HX",
+      "dx12": 29,
+      "dx11": 81
     },
     {
       "name": "Tesla V100-PCIE-32GB",
@@ -2387,7 +2387,7 @@
     },
     {
       "name": "Quadro P2000",
-      "dx12": 28,
+      "dx12": 29,
       "dx11": 47
     },
     {
@@ -2544,11 +2544,11 @@
       "dx11": 51
     },
     {
-      "name": "Quadro P3000",
+      "name": "Radeon Ryzen 7 PRO 6850H",
       "dx11": 51
     },
     {
-      "name": "Radeon Ryzen 7 PRO 6850H",
+      "name": "Quadro P3000",
       "dx11": 51
     },
     {

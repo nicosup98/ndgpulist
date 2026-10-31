@@ -24,11 +24,11 @@
       "passmarkDX11": 340
     },
     "vastai": {
-      "dlperf": 199.4,
-      "hourlyRateUSD": 0.74,
-      "dlperfPerDollar": 269.7,
-      "availableOffers": 2,
-      "verifiedFlops": 111.8
+      "dlperf": 199.6,
+      "hourlyRateUSD": 0.69,
+      "dlperfPerDollar": 290.7,
+      "availableOffers": 3,
+      "verifiedFlops": 114.9
     },
     "rawSourceSynced": true,
     "launchDate": "2025-01-30 00:00:00",
@@ -62,7 +62,7 @@
           "fps": 64.1
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205090",
@@ -104,9 +104,9 @@
       "passmarkDX11": 327
     },
     "vastai": {
-      "dlperf": 83.7,
-      "hourlyRateUSD": 0.4,
-      "dlperfPerDollar": 208.6,
+      "dlperf": 83.8,
+      "hourlyRateUSD": 0.32,
+      "dlperfPerDollar": 258.2,
       "availableOffers": 1,
       "verifiedFlops": 53.2
     },
@@ -142,7 +142,7 @@
           "fps": 42.1
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205080",
@@ -713,7 +713,7 @@
           "fps": 36.7
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205070%20Ti",
@@ -755,9 +755,9 @@
       "passmarkDX11": 279
     },
     "vastai": {
-      "dlperf": 49.9,
-      "hourlyRateUSD": 0.22,
-      "dlperfPerDollar": 229.1,
+      "dlperf": 50,
+      "hourlyRateUSD": 0.24,
+      "dlperfPerDollar": 206.4,
       "availableOffers": 1,
       "verifiedFlops": 30.4
     },
@@ -793,7 +793,7 @@
           "fps": 22.7
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205070",
@@ -835,11 +835,11 @@
       "passmarkDX11": 323
     },
     "vastai": {
-      "dlperf": 112.7,
-      "hourlyRateUSD": 0.76,
-      "dlperfPerDollar": 147.9,
+      "dlperf": 101,
+      "hourlyRateUSD": 0.45,
+      "dlperfPerDollar": 223.9,
       "availableOffers": 4,
-      "verifiedFlops": 87.7
+      "verifiedFlops": 89.3
     },
     "rawSourceSynced": true,
     "launchDate": "2022-10-12 00:00:00",
@@ -873,7 +873,7 @@
           "fps": 52.2
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204090",
@@ -915,9 +915,9 @@
       "passmarkDX11": 299
     },
     "vastai": {
-      "dlperf": 72.9,
-      "hourlyRateUSD": 0.37,
-      "dlperfPerDollar": 198.8,
+      "dlperf": 70.9,
+      "hourlyRateUSD": 0.56,
+      "dlperfPerDollar": 125.8,
       "availableOffers": 1,
       "verifiedFlops": 50.9
     },
@@ -953,7 +953,7 @@
           "fps": 38.5
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204080%20SUPER",
@@ -1027,7 +1027,7 @@
           "fps": 37.4
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204080",
@@ -1107,7 +1107,7 @@
           "fps": 32.2
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204070%20Ti%20SUPER",
@@ -1143,9 +1143,9 @@
       "passmarkDX11": 287
     },
     "vastai": {
-      "dlperf": 28.2,
-      "hourlyRateUSD": 0.14,
-      "dlperfPerDollar": 206.9,
+      "dlperf": 35.6,
+      "hourlyRateUSD": 0.18,
+      "dlperfPerDollar": 195.5,
       "availableOffers": 1,
       "verifiedFlops": 38.2
     },
@@ -1181,7 +1181,7 @@
           "fps": 23.9
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204070%20Ti",
@@ -1261,7 +1261,7 @@
           "fps": 22.1
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204070%20SUPER",
@@ -1297,11 +1297,11 @@
       "passmarkDX11": 243
     },
     "vastai": {
-      "dlperf": 33.7,
-      "hourlyRateUSD": 0.18,
-      "dlperfPerDollar": 192.1,
+      "dlperf": 33.8,
+      "hourlyRateUSD": 0.2,
+      "dlperfPerDollar": 167.2,
       "availableOffers": 1,
-      "verifiedFlops": 29.4
+      "verifiedFlops": 29.7
     },
     "rawSourceSynced": true,
     "tomshardware": {
@@ -1334,7 +1334,7 @@
           "fps": 19.3
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204070",
@@ -1414,7 +1414,7 @@
           "fps": 16.8
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204060%20Ti%2016GB",
@@ -1492,7 +1492,7 @@
           "fps": 8.1
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204060%20Ti%208GB",
@@ -1528,9 +1528,9 @@
       "passmarkDX11": 174
     },
     "vastai": {
-      "dlperf": 15.9,
+      "dlperf": 15.6,
       "hourlyRateUSD": 0.08,
-      "dlperfPerDollar": 197.8,
+      "dlperfPerDollar": 188.5,
       "availableOffers": 1,
       "verifiedFlops": 15.3
     },
@@ -1565,7 +1565,7 @@
           "fps": 6.8
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204060",
@@ -1607,11 +1607,11 @@
       "passmarkDX11": 237
     },
     "vastai": {
-      "dlperf": 42.1,
-      "hourlyRateUSD": 0.4,
-      "dlperfPerDollar": 104.5,
+      "dlperf": 45.9,
+      "hourlyRateUSD": 0.27,
+      "dlperfPerDollar": 170.9,
       "availableOffers": 1,
-      "verifiedFlops": 36.6
+      "verifiedFlops": 36.1
     },
     "rawSourceSynced": true,
     "launchDate": "2022-03-29 00:00:00",
@@ -1645,7 +1645,7 @@
           "fps": 29.4
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203090%20Ti",
@@ -1688,10 +1688,10 @@
     },
     "vastai": {
       "dlperf": 44.6,
-      "hourlyRateUSD": 0.38,
-      "dlperfPerDollar": 118.5,
+      "hourlyRateUSD": 0.21,
+      "dlperfPerDollar": 215.7,
       "availableOffers": 2,
-      "verifiedFlops": 35.5
+      "verifiedFlops": 35.8
     },
     "rawSourceSynced": true,
     "launchDate": "2020-09-24 00:00:00",
@@ -1725,7 +1725,7 @@
           "fps": 26.3
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203090",
@@ -1767,11 +1767,11 @@
       "passmarkDX11": 221
     },
     "vastai": {
-      "dlperf": 34,
-      "hourlyRateUSD": 0.19,
-      "dlperfPerDollar": 180.5,
+      "dlperf": 33.8,
+      "hourlyRateUSD": 0.23,
+      "dlperfPerDollar": 147.7,
       "availableOffers": 1,
-      "verifiedFlops": 34.4
+      "verifiedFlops": 35.1
     },
     "rawSourceSynced": true,
     "launchDate": "2021-06-03 00:00:00",
@@ -1805,7 +1805,7 @@
           "fps": 18
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203080%20Ti",
@@ -1849,7 +1849,7 @@
     "vastai": {
       "dlperf": 34.4,
       "hourlyRateUSD": 0.14,
-      "dlperfPerDollar": 241.6,
+      "dlperfPerDollar": 249.3,
       "availableOffers": 1,
       "verifiedFlops": 29.2
     },
@@ -1885,7 +1885,7 @@
           "fps": 13.8
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203080",
@@ -1965,7 +1965,7 @@
           "fps": 8.8
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203070%20Ti",
@@ -2008,8 +2008,8 @@
     },
     "vastai": {
       "dlperf": 16.3,
-      "hourlyRateUSD": 0.18,
-      "dlperfPerDollar": 92.7,
+      "hourlyRateUSD": 0.12,
+      "dlperfPerDollar": 133.2,
       "availableOffers": 1,
       "verifiedFlops": 19.8
     },
@@ -2045,7 +2045,7 @@
           "fps": 8.3
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203070",
@@ -2125,7 +2125,7 @@
           "fps": 7.4
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203060%20Ti",
@@ -2205,7 +2205,7 @@
           "fps": 9.5
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203060%2012GB",
@@ -2379,7 +2379,7 @@
           "fps": 27.3
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207900%20XTX",
@@ -2457,7 +2457,7 @@
           "fps": 23.1
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207900%20XT",
@@ -2581,7 +2581,7 @@
           "fps": 15.1
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207800%20XT",
@@ -2659,7 +2659,7 @@
           "fps": 9.8
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207700%20XT",
@@ -2698,7 +2698,7 @@
       "geekbenchOpenCL": 90617,
       "geekbenchVulkan": 79363,
       "passmarkDX12": 67,
-      "passmarkDX11": 168
+      "passmarkDX11": 167
     },
     "vastai": {
       "dlperf": 21.8,
@@ -2737,7 +2737,7 @@
           "fps": 8.5
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207600%20XT",
@@ -2815,7 +2815,7 @@
           "fps": 4.1
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%207600",
@@ -2893,7 +2893,7 @@
           "fps": 15.6
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206950%20XT",
@@ -2971,7 +2971,7 @@
           "fps": 14.1
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206800%20XT",
@@ -3095,7 +3095,7 @@
           "fps": 8.1
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206750%20XT",
@@ -3173,7 +3173,7 @@
           "fps": 7.9
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206700%20XT",
@@ -3251,7 +3251,7 @@
           "fps": 3.4
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206600%20XT",
@@ -3329,7 +3329,7 @@
           "fps": 3.1
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206600",
@@ -3453,7 +3453,7 @@
           "fps": 3.8
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Intel%20Arc%20B580",
@@ -3531,7 +3531,7 @@
           "fps": 3.3
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Intel%20Arc%20B570",
@@ -3703,7 +3703,7 @@
           "fps": 20.6
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205060%20Ti%2016GB",
@@ -3746,8 +3746,8 @@
     },
     "vastai": {
       "dlperf": 28.2,
-      "hourlyRateUSD": 0.34,
-      "dlperfPerDollar": 83.8,
+      "hourlyRateUSD": 0.1,
+      "dlperfPerDollar": 270.6,
       "availableOffers": 1,
       "verifiedFlops": 19
     },
@@ -3783,7 +3783,7 @@
           "fps": 6.8
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205060",
@@ -3863,7 +3863,7 @@
           "fps": 6.2
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%205050",
@@ -4788,7 +4788,7 @@
           "fps": 15.1
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206900%20XT",
@@ -4985,7 +4985,7 @@
           "fps": 3.4
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=Radeon%20RX%206650%20XT",
@@ -5526,7 +5526,7 @@
           "fps": 19.3
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%204070%20GDDR6",
@@ -5652,7 +5652,7 @@
           "fps": 13.8
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203080%2012GB",
@@ -5732,7 +5732,7 @@
           "fps": 7.4
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203060%20Ti%20GDDR6X",
@@ -5850,7 +5850,7 @@
           "fps": 4.5
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203050%208GB",
@@ -5921,7 +5921,7 @@
           "fps": 4.5
         }
       },
-      "scrapedAt": "2026-10-30T12:11:45.927Z"
+      "scrapedAt": "2026-10-31T11:43:37.562Z"
     },
     "techpowerup": {
       "url": "https://www.techpowerup.com/gpu-specs/?q=GeForce%20RTX%203050%208GB%20(GA106%20OEM)",
