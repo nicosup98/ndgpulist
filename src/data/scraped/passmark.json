@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-10-31T11:43:30.835Z",
+  "scrapedAt": "2026-11-01T12:43:26.892Z",
   "count": 546,
   "entries": [
     {
@@ -46,7 +46,7 @@
     },
     {
       "name": "GeForce RTX 5080",
-      "dx12": 144,
+      "dx12": 145,
       "dx11": 327
     },
     {
@@ -80,6 +80,11 @@
       "dx11": 303
     },
     {
+      "name": "GeForce RTX 5090 D v2",
+      "dx12": 124,
+      "dx11": 337
+    },
+    {
       "name": "L20-8Q",
       "dx12": 123,
       "dx11": 186
@@ -90,14 +95,9 @@
       "dx11": 237
     },
     {
-      "name": "GeForce RTX 5090 D v2",
-      "dx12": 120,
-      "dx11": 337
-    },
-    {
       "name": "RTX PRO 4500 Blackwell",
-      "dx12": 120,
-      "dx11": 315
+      "dx12": 121,
+      "dx11": 314
     },
     {
       "name": "GeForce RTX 4070 Ti SUPER",
@@ -180,6 +180,11 @@
       "dx11": 293
     },
     {
+      "name": "RTX PRO 5000 Blackwell Generation Laptop GPU",
+      "dx12": 109,
+      "dx11": 252
+    },
+    {
       "name": "Insignia USB3.0 to dual HDMI Adapter",
       "dx12": 109,
       "dx11": 295
@@ -193,11 +198,6 @@
       "name": "GeForce RTX 3080 Ti",
       "dx12": 109,
       "dx11": 221
-    },
-    {
-      "name": "RTX PRO 5000 Blackwell Generation Laptop GPU",
-      "dx12": 109,
-      "dx11": 252
     },
     {
       "name": "GeForce RTX 3080 12GB",
@@ -387,7 +387,7 @@
     {
       "name": "Radeon 8065S",
       "dx12": 88,
-      "dx11": 160
+      "dx11": 159
     },
     {
       "name": "Radeon RX 7700",
@@ -729,6 +729,11 @@
       "dx11": 171
     },
     {
+      "name": "Radeon 8050S",
+      "dx12": 71,
+      "dx11": 149
+    },
+    {
       "name": "GeForce RTX 3070 Ti Laptop GPU",
       "dx12": 71,
       "dx11": 150
@@ -739,19 +744,14 @@
       "dx11": 145
     },
     {
-      "name": "Radeon 8050S",
+      "name": "Intel Arc B570",
       "dx12": 70,
-      "dx11": 149
+      "dx11": 109
     },
     {
       "name": "RTX 5880 Ada Generation",
       "dx12": 70,
       "dx11": 228
-    },
-    {
-      "name": "Intel Arc B570",
-      "dx12": 70,
-      "dx11": 109
     },
     {
       "name": "A10-24Q",
@@ -1103,7 +1103,7 @@
     {
       "name": "Radeon RX 9070 GRE",
       "dx12": 58,
-      "dx11": 250
+      "dx11": 249
     },
     {
       "name": "Radeon RX 6700S",
@@ -1290,14 +1290,14 @@
       "dx11": 70
     },
     {
-      "name": "Tesla P100-PCIE-12GB",
-      "dx12": 52,
-      "dx11": 92
-    },
-    {
       "name": "RTX 500 Ada Generation Laptop GPU",
       "dx12": 52,
       "dx11": 86
+    },
+    {
+      "name": "Tesla P100-PCIE-12GB",
+      "dx12": 52,
+      "dx11": 92
     },
     {
       "name": "GeForce RTX 2080 Super with Max-Q Design",
@@ -1520,11 +1520,6 @@
       "dx11": 110
     },
     {
-      "name": "GeForce RTX 3050 A Laptop GPU",
-      "dx12": 46,
-      "dx11": 90
-    },
-    {
       "name": "L4",
       "dx12": 46,
       "dx11": 71
@@ -1540,19 +1535,24 @@
       "dx11": 71
     },
     {
+      "name": "GeForce RTX 3050 A Laptop GPU",
+      "dx12": 46,
+      "dx11": 89
+    },
+    {
       "name": "Radeon Pro Duo",
       "dx12": 46,
       "dx11": 49
     },
     {
+      "name": "Radeon RX 5600",
+      "dx12": 46,
+      "dx11": 85
+    },
+    {
       "name": "Radeon RX 590",
       "dx12": 45,
       "dx11": 65
-    },
-    {
-      "name": "Radeon RX 5600",
-      "dx12": 45,
-      "dx11": 85
     },
     {
       "name": "Radeon PRO W6600M",
@@ -1697,14 +1697,14 @@
       "dx12": 42
     },
     {
-      "name": "Radeon RX590 GME",
-      "dx12": 42,
-      "dx11": 57
-    },
-    {
       "name": "Radeon RX 5600M",
       "dx12": 41,
       "dx11": 66
+    },
+    {
+      "name": "Radeon RX590 GME",
+      "dx12": 41,
+      "dx11": 57
     },
     {
       "name": "Radeon RX 7600M",
@@ -2339,14 +2339,14 @@
       "dx11": 65
     },
     {
-      "name": "Quadro T1000",
-      "dx12": 29,
-      "dx11": 47
-    },
-    {
       "name": "CMP 30HX",
       "dx12": 29,
       "dx11": 81
+    },
+    {
+      "name": "Quadro T1000",
+      "dx12": 29,
+      "dx11": 47
     },
     {
       "name": "Tesla V100-PCIE-32GB",
