@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-11-02T14:50:49.385Z",
+  "scrapedAt": "2026-11-03T13:40:56.499Z",
   "count": 546,
   "entries": [
     {
@@ -47,7 +47,7 @@
     {
       "name": "GeForce RTX 5080",
       "dx12": 145,
-      "dx11": 327
+      "dx11": 326
     },
     {
       "name": "Radeon Pro V620",
@@ -75,14 +75,14 @@
       "dx11": 313
     },
     {
+      "name": "GeForce RTX 5090 D v2",
+      "dx12": 128,
+      "dx11": 339
+    },
+    {
       "name": "GeForce RTX 5070 Ti",
       "dx12": 126,
       "dx11": 303
-    },
-    {
-      "name": "GeForce RTX 5090 D v2",
-      "dx12": 124,
-      "dx11": 337
     },
     {
       "name": "L20-8Q",
@@ -180,11 +180,6 @@
       "dx11": 293
     },
     {
-      "name": "RTX PRO 5000 Blackwell Generation Laptop GPU",
-      "dx12": 109,
-      "dx11": 252
-    },
-    {
       "name": "Insignia USB3.0 to dual HDMI Adapter",
       "dx12": 109,
       "dx11": 295
@@ -193,6 +188,11 @@
       "name": "GeForce RTX 3090",
       "dx12": 109,
       "dx11": 218
+    },
+    {
+      "name": "RTX PRO 5000 Blackwell Generation Laptop GPU",
+      "dx12": 109,
+      "dx11": 251
     },
     {
       "name": "GeForce RTX 3080 Ti",
@@ -210,14 +210,14 @@
       "dx11": 212
     },
     {
-      "name": "GeForce RTX 4090 Laptop GPU",
-      "dx12": 106,
-      "dx11": 257
-    },
-    {
       "name": "RTX PRO 4000 Blackwell Generation Laptop GPU",
       "dx12": 106,
       "dx11": 223
+    },
+    {
+      "name": "GeForce RTX 4090 Laptop GPU",
+      "dx12": 106,
+      "dx11": 257
     },
     {
       "name": "GeForce RTX 5070",
@@ -296,8 +296,8 @@
     },
     {
       "name": "RTX 4000 Ada Generation Laptop GPU",
-      "dx12": 95,
-      "dx11": 213
+      "dx12": 94,
+      "dx11": 212
     },
     {
       "name": "AicUsbDisplay Device",
@@ -316,7 +316,7 @@
     },
     {
       "name": "RTX PRO 3000 Blackwell Generation Laptop GPU",
-      "dx12": 93,
+      "dx12": 92,
       "dx11": 210
     },
     {
@@ -392,7 +392,7 @@
     {
       "name": "Radeon RX 7700",
       "dx12": 87,
-      "dx11": 186
+      "dx11": 187
     },
     {
       "name": "Radeon Pro W6900X",
@@ -769,11 +769,6 @@
       "dx11": 73
     },
     {
-      "name": "Radeon RX 7650 GRE",
-      "dx12": 69,
-      "dx11": 180
-    },
-    {
       "name": "RadeonT RX 6850M XT",
       "dx12": 69,
       "dx11": 150
@@ -797,6 +792,11 @@
       "name": "RTX 2000E Ada Generation",
       "dx12": 68,
       "dx11": 119
+    },
+    {
+      "name": "Radeon RX 7650 GRE",
+      "dx12": 68,
+      "dx11": 180
     },
     {
       "name": "GeForce RTX 3060",
@@ -840,7 +840,7 @@
     },
     {
       "name": "Radeon RX 7600S",
-      "dx12": 66,
+      "dx12": 67,
       "dx11": 140
     },
     {
@@ -888,6 +888,11 @@
       "dx11": 129
     },
     {
+      "name": "Intel Arc Pro B50",
+      "dx12": 65,
+      "dx11": 101
+    },
+    {
       "name": "GeForce RTX 5050 Laptop GPU",
       "dx12": 65,
       "dx11": 126
@@ -896,11 +901,6 @@
       "name": "Radeon Pro Vega 56",
       "dx12": 65,
       "dx11": 64
-    },
-    {
-      "name": "Intel Arc Pro B50",
-      "dx12": 65,
-      "dx11": 101
     },
     {
       "name": "Radeon RX 6700M",
@@ -1096,14 +1096,14 @@
       "dx11": 121
     },
     {
-      "name": "GeForce RTX 3060 Laptop GPU",
-      "dx12": 58,
-      "dx11": 109
-    },
-    {
       "name": "Radeon RX 9070 GRE",
       "dx12": 58,
       "dx11": 249
+    },
+    {
+      "name": "GeForce RTX 3060 Laptop GPU",
+      "dx12": 58,
+      "dx11": 109
     },
     {
       "name": "Radeon RX 6700S",
@@ -1116,11 +1116,6 @@
       "dx11": 157
     },
     {
-      "name": "GeForce RTX 3050 Laptop GPU",
-      "dx12": 57,
-      "dx11": 80
-    },
-    {
       "name": "Radeon V520 MxGPU",
       "dx12": 57,
       "dx11": 84
@@ -1129,6 +1124,11 @@
       "name": "Intel Arc Pro A60",
       "dx12": 57,
       "dx11": 55
+    },
+    {
+      "name": "GeForce RTX 3050 Laptop GPU",
+      "dx12": 57,
+      "dx11": 80
     },
     {
       "name": "Radeon Vega Frontier Edition",
@@ -1280,14 +1280,14 @@
       "dx11": 63
     },
     {
-      "name": "Quadro P6000",
-      "dx12": 52,
-      "dx11": 130
-    },
-    {
       "name": "RTX A2000 8GB Laptop GPU",
       "dx12": 52,
       "dx11": 70
+    },
+    {
+      "name": "Quadro P6000",
+      "dx12": 52,
+      "dx11": 130
     },
     {
       "name": "RTX 500 Ada Generation Laptop GPU",
@@ -1315,14 +1315,14 @@
       "dx11": 78
     },
     {
-      "name": "CMP 40HX",
-      "dx12": 52,
-      "dx11": 130
-    },
-    {
       "name": "Radeon Pro W5700",
       "dx12": 52,
       "dx11": 103
+    },
+    {
+      "name": "CMP 40HX",
+      "dx12": 52,
+      "dx11": 130
     },
     {
       "name": "GeForce RTX 3050 6GB Laptop GPU",
@@ -1555,6 +1555,11 @@
       "dx11": 65
     },
     {
+      "name": "Intel Arc B370 GPU",
+      "dx12": 45,
+      "dx11": 65
+    },
+    {
       "name": "Radeon PRO W6600M",
       "dx12": 45,
       "dx11": 101
@@ -1568,11 +1573,6 @@
       "name": "GeForce GTX 1650 SUPER",
       "dx12": 45,
       "dx11": 73
-    },
-    {
-      "name": "Intel Arc B370 GPU",
-      "dx12": 45,
-      "dx11": 65
     },
     {
       "name": "Radeon RX 9060",
@@ -1738,7 +1738,7 @@
     },
     {
       "name": "Radeon Pro 5600M",
-      "dx12": 40,
+      "dx12": 41,
       "dx11": 59
     },
     {
@@ -2025,13 +2025,13 @@
       "dx11": 49
     },
     {
-      "name": "GeForce MX570 A",
-      "dx12": 34
-    },
-    {
       "name": "Quadro T2000",
       "dx12": 34,
       "dx11": 50
+    },
+    {
+      "name": "GeForce MX570 A",
+      "dx12": 34
     },
     {
       "name": "GRID P40-3Q",
@@ -2114,7 +2114,7 @@
     {
       "name": "Quadro T2000 with Max-Q Design",
       "dx12": 32,
-      "dx11": 52
+      "dx11": 53
     },
     {
       "name": "Radeon 880M",
@@ -2165,13 +2165,13 @@
       "dx12": 32
     },
     {
-      "name": "L4-12Q",
-      "dx12": 31
-    },
-    {
       "name": "Radeon RX 9050",
       "dx12": 31,
       "dx11": 111
+    },
+    {
+      "name": "L4-12Q",
+      "dx12": 31
     },
     {
       "name": "Intel Arc Pro A40/A50",
@@ -2387,7 +2387,7 @@
     },
     {
       "name": "Quadro P2000",
-      "dx12": 29,
+      "dx12": 28,
       "dx11": 47
     },
     {

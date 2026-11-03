@@ -6,7 +6,7 @@
     "https://raw.githubusercontent.com/voidful/gpu-info-api/gpu-data/gpu.json"
   ],
   "unit": "Rendimiento Relativo (%) (RTX 4090 = 100%) y Shaders/TMUs/ROPs",
-  "scrapedAt": "2026-11-02T14:51:00.072Z",
+  "scrapedAt": "2026-11-03T13:41:07.333Z",
   "count": 108,
   "entries": [
     {
