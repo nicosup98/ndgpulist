@@ -39,7 +39,7 @@
       "bestReportedTier": "platinum",
       "score": 0.77,
       "confidence": "strong",
-      "totalReports": 2787
+      "totalReports": 2792
     },
     "opengpubenchmarks": {
       "gameId": "cyberpunk_2077",
@@ -174,7 +174,7 @@
       "bestReportedTier": "platinum",
       "score": 0.72,
       "confidence": "strong",
-      "totalReports": 2070
+      "totalReports": 2071
     }
   },
   {
@@ -302,7 +302,7 @@
       "bestReportedTier": "platinum",
       "score": 0.81,
       "confidence": "strong",
-      "totalReports": 2174
+      "totalReports": 2175
     }
   },
   {
@@ -523,7 +523,7 @@
       "bestReportedTier": "platinum",
       "score": 0.87,
       "confidence": "strong",
-      "totalReports": 1886
+      "totalReports": 1887
     }
   },
   {
@@ -650,7 +650,7 @@
       "bestReportedTier": "platinum",
       "score": 0.52,
       "confidence": "strong",
-      "totalReports": 1792
+      "totalReports": 1793
     }
   },
   {
@@ -864,7 +864,7 @@
       "bestReportedTier": "borked",
       "score": 0,
       "confidence": "strong",
-      "totalReports": 101
+      "totalReports": 102
     }
   },
   {
@@ -908,7 +908,7 @@
       "bestReportedTier": "platinum",
       "score": 0.82,
       "confidence": "strong",
-      "totalReports": 1782
+      "totalReports": 1784
     }
   },
   {
@@ -953,7 +953,7 @@
       "bestReportedTier": "platinum",
       "score": 0.82,
       "confidence": "strong",
-      "totalReports": 1648
+      "totalReports": 1649
     }
   }
 ]
