@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-11-08T12:48:47.450Z",
+  "scrapedAt": "2026-11-09T15:16:56.130Z",
   "count": 545,
   "entries": [
     {
@@ -41,7 +41,7 @@
     },
     {
       "name": "GeForce RTX 5080",
-      "dx12": 144,
+      "dx12": 145,
       "dx11": 326
     },
     {
@@ -155,14 +155,14 @@
       "dx11": 300
     },
     {
-      "name": "Radeon RX 6900 XT",
-      "dx12": 111,
-      "dx11": 279
-    },
-    {
       "name": "RTX 5000 Ada Generation",
       "dx12": 111,
       "dx11": 272
+    },
+    {
+      "name": "Radeon RX 6900 XT",
+      "dx12": 111,
+      "dx11": 279
     },
     {
       "name": "Radeon Pro W6800X",
@@ -216,7 +216,7 @@
     },
     {
       "name": "GeForce RTX 4090 Laptop GPU",
-      "dx12": 106,
+      "dx12": 107,
       "dx11": 257
     },
     {
@@ -262,7 +262,7 @@
     {
       "name": "RTX 5000 Ada Generation Laptop GPU",
       "dx12": 99,
-      "dx11": 229
+      "dx11": 230
     },
     {
       "name": "JMJWOA-Generic-GPU",
@@ -312,7 +312,7 @@
     {
       "name": "RTX 4000 Ada Generation",
       "dx12": 93,
-      "dx11": 202
+      "dx11": 203
     },
     {
       "name": "RTX PRO 4000 Blackwell",
@@ -873,14 +873,14 @@
       "dx11": 156
     },
     {
-      "name": "Radeon RX 6800S",
-      "dx12": 65,
-      "dx11": 137
-    },
-    {
       "name": "Radeon RX 6800M",
       "dx12": 65,
       "dx11": 129
+    },
+    {
+      "name": "Radeon RX 6800S",
+      "dx12": 65,
+      "dx11": 137
     },
     {
       "name": "Quadro RTX 6000",
@@ -893,14 +893,14 @@
       "dx11": 64
     },
     {
-      "name": "GeForce RTX 5050 Laptop GPU",
-      "dx12": 65,
-      "dx11": 126
-    },
-    {
       "name": "Intel Arc Pro B50",
       "dx12": 65,
       "dx11": 101
+    },
+    {
+      "name": "GeForce RTX 5050 Laptop GPU",
+      "dx12": 65,
+      "dx11": 126
     },
     {
       "name": "Radeon RX Vega 64",
@@ -1163,7 +1163,7 @@
     {
       "name": "Radeon RX 9060 XT 8GB",
       "dx12": 56,
-      "dx11": 187
+      "dx11": 186
     },
     {
       "name": "MrIdd Device",
@@ -1300,14 +1300,14 @@
       "dx11": 118
     },
     {
+      "name": "CMP 40HX",
+      "dx12": 52,
+      "dx11": 129
+    },
+    {
       "name": "Radeon RX 5600 XT",
       "dx12": 52,
       "dx11": 95
-    },
-    {
-      "name": "CMP 40HX",
-      "dx12": 52,
-      "dx11": 130
     },
     {
       "name": "AnyViewerIddDriver Device",
@@ -1452,7 +1452,7 @@
     {
       "name": "Intel Arc B390 GPU",
       "dx12": 48,
-      "dx11": 70
+      "dx11": 71
     },
     {
       "name": "Radeon R9 Fury + Fury X",
@@ -1853,6 +1853,11 @@
       "dx11": 77
     },
     {
+      "name": "Radeon RX 5500",
+      "dx12": 37,
+      "dx11": 52
+    },
+    {
       "name": "Radeon PRO W7800 48GB",
       "dx12": 37,
       "dx11": 120
@@ -1861,11 +1866,6 @@
       "name": "Tesla T4",
       "dx12": 37,
       "dx11": 49
-    },
-    {
-      "name": "Radeon RX 5500",
-      "dx12": 37,
-      "dx11": 52
     },
     {
       "name": "NVIDIA T1200 Laptop GPU",
