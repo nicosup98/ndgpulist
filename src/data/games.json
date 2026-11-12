@@ -3,7 +3,7 @@
     "id": "cyberpunk-2077",
     "steamAppId": 1091500,
     "name": "Cyberpunk 2077",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/48a93d6445a67520ea49833c93dae8f2e68fc540/header_alt_assets_9.jpg?t=1792682505",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/48a93d6445a67520ea49833c93dae8f2e68fc540/header_alt_assets_9.jpg?t=1794474878",
     "genres": [
       "Rol"
     ],
@@ -39,7 +39,7 @@
       "bestReportedTier": "platinum",
       "score": 0.77,
       "confidence": "strong",
-      "totalReports": 2795
+      "totalReports": 2797
     },
     "opengpubenchmarks": {
       "gameId": "cyberpunk_2077_benchmark",
@@ -174,7 +174,7 @@
       "bestReportedTier": "platinum",
       "score": 0.72,
       "confidence": "strong",
-      "totalReports": 2071
+      "totalReports": 2072
     }
   },
   {
@@ -302,7 +302,7 @@
       "bestReportedTier": "platinum",
       "score": 0.81,
       "confidence": "strong",
-      "totalReports": 2177
+      "totalReports": 2180
     }
   },
   {
@@ -346,7 +346,7 @@
       "bestReportedTier": "platinum",
       "score": 0.8,
       "confidence": "strong",
-      "totalReports": 360
+      "totalReports": 361
     }
   },
   {
@@ -391,7 +391,7 @@
       "bestReportedTier": "platinum",
       "score": 0.81,
       "confidence": "strong",
-      "totalReports": 813
+      "totalReports": 815
     }
   },
   {
@@ -650,7 +650,7 @@
       "bestReportedTier": "platinum",
       "score": 0.52,
       "confidence": "strong",
-      "totalReports": 1793
+      "totalReports": 1794
     }
   },
   {
@@ -692,7 +692,7 @@
       "bestReportedTier": "platinum",
       "score": 0.74,
       "confidence": "strong",
-      "totalReports": 379
+      "totalReports": 380
     }
   },
   {
@@ -777,7 +777,7 @@
       "bestReportedTier": "platinum",
       "score": 0.69,
       "confidence": "strong",
-      "totalReports": 360
+      "totalReports": 361
     }
   },
   {
@@ -908,7 +908,7 @@
       "bestReportedTier": "platinum",
       "score": 0.82,
       "confidence": "strong",
-      "totalReports": 1785
+      "totalReports": 1787
     }
   },
   {
@@ -953,7 +953,7 @@
       "bestReportedTier": "platinum",
       "score": 0.82,
       "confidence": "strong",
-      "totalReports": 1649
+      "totalReports": 1654
     }
   }
 ]
