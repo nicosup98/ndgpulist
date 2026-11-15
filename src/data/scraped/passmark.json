@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-11-14T12:59:45.059Z",
+  "scrapedAt": "2026-11-15T13:28:45.955Z",
   "count": 545,
   "entries": [
     {
@@ -111,8 +111,8 @@
     },
     {
       "name": "RTX PRO 4000 Blackwell SFF Edition",
-      "dx12": 117,
-      "dx11": 210
+      "dx12": 118,
+      "dx11": 211
     },
     {
       "name": "RTX PRO 5000 Blackwell",
@@ -215,14 +215,14 @@
       "dx11": 249
     },
     {
-      "name": "RTX PRO 4000 Blackwell Generation Laptop GPU",
-      "dx12": 107,
-      "dx11": 223
-    },
-    {
       "name": "GeForce RTX 4090 Laptop GPU",
       "dx12": 106,
       "dx11": 257
+    },
+    {
+      "name": "RTX PRO 4000 Blackwell Generation Laptop GPU",
+      "dx12": 106,
+      "dx11": 223
     },
     {
       "name": "GeForce RTX 5070",
@@ -435,24 +435,24 @@
       "dx11": 177
     },
     {
-      "name": "RTX A5500 Laptop GPU",
-      "dx12": 84,
-      "dx11": 131
-    },
-    {
       "name": "RTX A4000H",
       "dx12": 84,
       "dx11": 112
     },
     {
-      "name": "GeForce RTX 3070",
+      "name": "RTX A5500 Laptop GPU",
       "dx12": 84,
-      "dx11": 183
+      "dx11": 131
     },
     {
       "name": "Radeon 8060S",
       "dx12": 84,
       "dx11": 156
+    },
+    {
+      "name": "GeForce RTX 3070",
+      "dx12": 84,
+      "dx11": 183
     },
     {
       "name": "RTX 3500 Ada Generation Laptop GPU",
@@ -470,14 +470,14 @@
       "dx11": 186
     },
     {
-      "name": "RTX PRO 2000 Blackwell",
-      "dx12": 83,
-      "dx11": 170
-    },
-    {
       "name": "Radeon RX 7700 XT",
       "dx12": 83,
       "dx11": 232
+    },
+    {
+      "name": "RTX PRO 2000 Blackwell",
+      "dx12": 83,
+      "dx11": 170
     },
     {
       "name": "RTX 3500 Ada Generation Embedded GPU",
@@ -556,7 +556,7 @@
     {
       "name": "GeForce RTX 5060 Laptop GPU",
       "dx12": 79,
-      "dx11": 161
+      "dx11": 162
     },
     {
       "name": "L40S",
@@ -734,9 +734,9 @@
       "dx11": 171
     },
     {
-      "name": "Radeon 8050S",
+      "name": "GeForce RTX 3070 Ti Laptop GPU",
       "dx12": 71,
-      "dx11": 149
+      "dx11": 150
     },
     {
       "name": "GeForce RTX 3080 Laptop GPU",
@@ -744,9 +744,9 @@
       "dx11": 145
     },
     {
-      "name": "GeForce RTX 3070 Ti Laptop GPU",
+      "name": "Radeon 8050S",
       "dx12": 71,
-      "dx11": 150
+      "dx11": 149
     },
     {
       "name": "Intel Arc B570",
@@ -908,6 +908,11 @@
       "dx11": 126
     },
     {
+      "name": "GeForce RTX 5050",
+      "dx12": 65,
+      "dx11": 152
+    },
+    {
       "name": "Radeon RX Vega 64",
       "dx12": 65,
       "dx11": 86
@@ -916,11 +921,6 @@
       "name": "Radeon RX 6700M",
       "dx12": 65,
       "dx11": 130
-    },
-    {
-      "name": "GeForce RTX 5050",
-      "dx12": 65,
-      "dx11": 152
     },
     {
       "name": "Radeon PRO W6600X",
@@ -1086,24 +1086,24 @@
       "dx11": 185
     },
     {
-      "name": "Quadro RTX 5000",
-      "dx12": 58,
-      "dx11": 141
-    },
-    {
       "name": "GeForce RTX 3050 OEM",
       "dx12": 58,
       "dx11": 86
     },
     {
-      "name": "Radeon RX 6600S",
+      "name": "Quadro RTX 5000",
       "dx12": 58,
-      "dx11": 121
+      "dx11": 141
     },
     {
       "name": "Radeon RX 9070 GRE",
       "dx12": 58,
       "dx11": 249
+    },
+    {
+      "name": "Radeon RX 6600S",
+      "dx12": 58,
+      "dx11": 121
     },
     {
       "name": "GeForce RTX 3060 Laptop GPU",
@@ -1151,14 +1151,14 @@
       "dx11": 164
     },
     {
-      "name": "RTX A3000 Laptop GPU",
-      "dx12": 56,
-      "dx11": 102
-    },
-    {
       "name": "Radeon RX 7600",
       "dx12": 56,
       "dx11": 172
+    },
+    {
+      "name": "RTX A3000 Laptop GPU",
+      "dx12": 56,
+      "dx11": 102
     },
     {
       "name": "Quadro RTX 5000 (Mobile)",
@@ -1475,14 +1475,14 @@
       "dx11": 117
     },
     {
-      "name": "GeForce RTX 2080 with Max-Q Design",
-      "dx12": 47,
-      "dx11": 113
-    },
-    {
       "name": "A40-48Q",
       "dx12": 47,
       "dx11": 88
+    },
+    {
+      "name": "GeForce RTX 2080 with Max-Q Design",
+      "dx12": 47,
+      "dx11": 113
     },
     {
       "name": "RTX A2000 Laptop GPU",
@@ -1579,6 +1579,11 @@
       "dx12": 45
     },
     {
+      "name": "Radeon PRO W7500",
+      "dx12": 45,
+      "dx11": 125
+    },
+    {
       "name": "Quadro P5000",
       "dx12": 45,
       "dx11": 102
@@ -1587,11 +1592,6 @@
       "name": "nVidia L40S-4Q",
       "dx12": 45,
       "dx11": 64
-    },
-    {
-      "name": "Radeon PRO W7500",
-      "dx12": 45,
-      "dx11": 125
     },
     {
       "name": "Radeon Pro W5500X",
@@ -1603,14 +1603,14 @@
       "dx11": 97
     },
     {
-      "name": "Radeon RX 9060",
-      "dx12": 45,
-      "dx11": 181
-    },
-    {
       "name": "Quadro P4200 with Max-Q Design",
       "dx12": 44,
       "dx11": 87
+    },
+    {
+      "name": "Radeon RX 9060",
+      "dx12": 44,
+      "dx11": 181
     },
     {
       "name": "Radeon R9 Fury X",
@@ -1669,7 +1669,7 @@
     },
     {
       "name": "Quadro P5200",
-      "dx12": 42,
+      "dx12": 43,
       "dx11": 80
     },
     {
@@ -1858,11 +1858,6 @@
       "dx11": 51
     },
     {
-      "name": "Radeon RX 5500",
-      "dx12": 37,
-      "dx11": 52
-    },
-    {
       "name": "NVIDIA T1200 Laptop GPU",
       "dx12": 37,
       "dx11": 58
@@ -1876,6 +1871,11 @@
       "name": "Tesla T4",
       "dx12": 37,
       "dx11": 49
+    },
+    {
+      "name": "Radeon RX 5500",
+      "dx12": 37,
+      "dx11": 52
     },
     {
       "name": "GeForce GTX 1070 with Max-Q Design",
@@ -1903,14 +1903,14 @@
       "dx11": 79
     },
     {
-      "name": "Quadro P3200 with Max-Q Design",
-      "dx12": 37,
-      "dx11": 63
-    },
-    {
       "name": "L40S-6Q",
       "dx12": 37,
       "dx11": 72
+    },
+    {
+      "name": "Quadro P3200 with Max-Q Design",
+      "dx12": 37,
+      "dx11": 62
     },
     {
       "name": "Tesla P4",
@@ -2013,6 +2013,11 @@
       "name": "Ryzen 5 4600HS with Radeon Graphics",
       "dx12": 35,
       "dx11": 63
+    },
+    {
+      "name": "RadeonT 660M Ryzen 5 6600H",
+      "dx12": 34,
+      "dx11": 53
     },
     {
       "name": "Radeon RX 780",
@@ -2132,14 +2137,14 @@
       "dx11": 72
     },
     {
-      "name": "RTX A4500 Embedded GPU",
-      "dx12": 32,
-      "dx11": 81
-    },
-    {
       "name": "NVIDIA T600 Laptop GPU",
       "dx12": 32,
       "dx11": 51
+    },
+    {
+      "name": "RTX A4500 Embedded GPU",
+      "dx12": 32,
+      "dx11": 81
     },
     {
       "name": "Radeon R9 380",
@@ -2294,7 +2299,7 @@
     {
       "name": "Qualcomm Adreno X2-90 GPU",
       "dx12": 30,
-      "dx11": 61
+      "dx11": 62
     },
     {
       "name": "GeForce GTX 1650 Ti with Max-Q Design",
@@ -2331,11 +2336,11 @@
       "dx11": 47
     },
     {
-      "name": "T550 Laptop GPU",
+      "name": "Radeon Pro 5500M",
       "dx12": 29
     },
     {
-      "name": "Radeon Pro 5500M",
+      "name": "T550 Laptop GPU",
       "dx12": 29
     },
     {
@@ -2460,11 +2465,6 @@
       "dx11": 54
     },
     {
-      "name": "GeForce GTX 1650 (Mobile)",
-      "dx12": 27,
-      "dx11": 50
-    },
-    {
       "name": "Mirage Driver",
       "dx11": 122
     },
@@ -2561,6 +2561,10 @@
       "dx11": 51
     },
     {
+      "name": "GeForce GTX 1650 (Mobile)",
+      "dx11": 50
+    },
+    {
       "name": "Radeon Ryzen 7 7735H",
       "dx11": 49
     },
@@ -2589,6 +2593,10 @@
       "dx11": 49
     },
     {
+      "name": "Radeon Ryzen 7 7736U",
+      "dx11": 49
+    },
+    {
       "name": "Radeon Ryzen 7 6800HS Creator Edition",
       "dx11": 49
     },
@@ -2613,10 +2621,6 @@
       "dx11": 48
     },
     {
-      "name": "Radeon Ryzen 7 7736U",
-      "dx11": 48
-    },
-    {
       "name": "Radeon Pro Vega 16",
       "dx11": 48
     },
@@ -2634,10 +2638,6 @@
     },
     {
       "name": "Radeon PRO Ryzen 7 PRO 6850U",
-      "dx11": 47
-    },
-    {
-      "name": "RadeonT 660M Ryzen 5 6600H",
       "dx11": 47
     },
     {
