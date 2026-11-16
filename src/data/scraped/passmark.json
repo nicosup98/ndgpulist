@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-11-15T13:28:45.955Z",
+  "scrapedAt": "2026-11-16T14:52:46.866Z",
   "count": 545,
   "entries": [
     {
@@ -125,14 +125,14 @@
       "dx11": 287
     },
     {
-      "name": "Radeon RX 6950 XT",
-      "dx12": 115,
-      "dx11": 298
-    },
-    {
       "name": "GeForce RTX 5080 Laptop GPU",
       "dx12": 115,
       "dx11": 253
+    },
+    {
+      "name": "Radeon RX 6950 XT",
+      "dx12": 115,
+      "dx11": 298
     },
     {
       "name": "Radeon 610M Ryzen 7 7840HX",
@@ -142,7 +142,7 @@
     {
       "name": "GeForce RTX 4090 D",
       "dx12": 114,
-      "dx11": 286
+      "dx11": 287
     },
     {
       "name": "Inspiration CG620 MxGPU",
@@ -322,7 +322,7 @@
     {
       "name": "RTX 4000 Ada Generation",
       "dx12": 93,
-      "dx11": 203
+      "dx11": 202
     },
     {
       "name": "RTX PRO 3000 Blackwell Generation Laptop GPU",
@@ -490,14 +490,14 @@
       "dx11": 193
     },
     {
-      "name": "RTX Spark N1X",
-      "dx12": 82,
-      "dx11": 176
-    },
-    {
       "name": "Barco MXRV-7100",
       "dx12": 81,
       "dx11": 134
+    },
+    {
+      "name": "RTX Spark N1X",
+      "dx12": 81,
+      "dx11": 176
     },
     {
       "name": "Radeon RX 6750 XT",
@@ -510,13 +510,13 @@
       "dx11": 171
     },
     {
-      "name": "RTX PRO 4500 Blackwell Server Edition",
-      "dx12": 81
+      "name": "Radeon AI PRO R9700",
+      "dx12": 81,
+      "dx11": 283
     },
     {
-      "name": "Radeon AI PRO R9700",
-      "dx12": 80,
-      "dx11": 283
+      "name": "RTX PRO 4500 Blackwell Server Edition",
+      "dx12": 81
     },
     {
       "name": "Radeon RX 6850M XT",
@@ -556,7 +556,7 @@
     {
       "name": "GeForce RTX 5060 Laptop GPU",
       "dx12": 79,
-      "dx11": 162
+      "dx11": 161
     },
     {
       "name": "L40S",
@@ -826,7 +826,7 @@
     {
       "name": "Radeon RX 7600 XT",
       "dx12": 67,
-      "dx11": 167
+      "dx11": 168
     },
     {
       "name": "GeForce RTX 2070 SUPER",
@@ -948,14 +948,14 @@
       "dx11": 137
     },
     {
+      "name": "Radeon Pro VII",
+      "dx12": 64,
+      "dx11": 82
+    },
+    {
       "name": "Tesla V100-SXM2-16GB",
       "dx12": 64,
       "dx11": 98
-    },
-    {
-      "name": "Radeon Pro VII",
-      "dx12": 63,
-      "dx11": 82
     },
     {
       "name": "Radeon RX 5700 XT",
@@ -1081,9 +1081,19 @@
       "dx11": 83
     },
     {
+      "name": "Radeon RX 9070 GRE",
+      "dx12": 58,
+      "dx11": 249
+    },
+    {
       "name": "Radeon RX 9060 XT 16GB",
       "dx12": 58,
       "dx11": 185
+    },
+    {
+      "name": "OrayIddDriver Device",
+      "dx12": 58,
+      "dx11": 139
     },
     {
       "name": "GeForce RTX 3050 OEM",
@@ -1094,11 +1104,6 @@
       "name": "Quadro RTX 5000",
       "dx12": 58,
       "dx11": 141
-    },
-    {
-      "name": "Radeon RX 9070 GRE",
-      "dx12": 58,
-      "dx11": 249
     },
     {
       "name": "Radeon RX 6600S",
@@ -1285,14 +1290,14 @@
       "dx11": 130
     },
     {
-      "name": "RTX A2000 8GB Laptop GPU",
-      "dx12": 52,
-      "dx11": 70
-    },
-    {
       "name": "RTX 500 Ada Generation Laptop GPU",
       "dx12": 52,
       "dx11": 86
+    },
+    {
+      "name": "RTX A2000 8GB Laptop GPU",
+      "dx12": 52,
+      "dx11": 70
     },
     {
       "name": "Tesla P100-PCIE-12GB",
@@ -1338,11 +1343,6 @@
       "name": "Intel Arc Pro B370 GPU",
       "dx12": 51,
       "dx11": 67
-    },
-    {
-      "name": "OrayIddDriver Device",
-      "dx12": 51,
-      "dx11": 117
     },
     {
       "name": "Radeon RX Vega Ryzen 5 5600GT",
@@ -1855,7 +1855,7 @@
     {
       "name": "Radeon R9 290",
       "dx12": 38,
-      "dx11": 51
+      "dx11": 50
     },
     {
       "name": "NVIDIA T1200 Laptop GPU",
@@ -2000,14 +2000,14 @@
       "dx11": 69
     },
     {
-      "name": "GeForce GTX 1060 5GB",
-      "dx12": 35,
-      "dx11": 62
-    },
-    {
       "name": "Radeon Ryzen 9 6900HS",
       "dx12": 35,
       "dx11": 75
+    },
+    {
+      "name": "GeForce GTX 1060 5GB",
+      "dx12": 35,
+      "dx11": 62
     },
     {
       "name": "Ryzen 5 4600HS with Radeon Graphics",
@@ -2047,6 +2047,11 @@
       "name": "Quadro T2000",
       "dx12": 34,
       "dx11": 50
+    },
+    {
+      "name": "RTX A4500 Embedded GPU",
+      "dx12": 34,
+      "dx11": 84
     },
     {
       "name": "GRID P40-3Q",
@@ -2140,11 +2145,6 @@
       "name": "NVIDIA T600 Laptop GPU",
       "dx12": 32,
       "dx11": 51
-    },
-    {
-      "name": "RTX A4500 Embedded GPU",
-      "dx12": 32,
-      "dx11": 81
     },
     {
       "name": "Radeon R9 380",
@@ -2382,14 +2382,14 @@
       "dx12": 29
     },
     {
-      "name": "Ryzen 9 PRO 6950H",
-      "dx12": 29,
-      "dx11": 47
-    },
-    {
       "name": "Quadro T1000 with Max-Q Design",
       "dx12": 29,
       "dx11": 51
+    },
+    {
+      "name": "Ryzen 9 PRO 6950H",
+      "dx12": 29,
+      "dx11": 47
     },
     {
       "name": "EIZO Quadro MED-XN71",
