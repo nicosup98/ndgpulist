@@ -6,8 +6,8 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-11-16T14:52:46.866Z",
-  "count": 545,
+  "scrapedAt": "2026-11-17T15:32:08.443Z",
+  "count": 546,
   "entries": [
     {
       "name": "GeForce RTX 5090 D",
@@ -17,7 +17,7 @@
     {
       "name": "RTX PRO 4000 Blackwell Embedded GPU",
       "dx12": 180,
-      "dx11": 288
+      "dx11": 289
     },
     {
       "name": "GeForce RTX 5090",
@@ -85,14 +85,14 @@
       "dx11": 203
     },
     {
-      "name": "GeForce RTX 5090 D v2",
-      "dx12": 123,
-      "dx11": 341
-    },
-    {
       "name": "L20-8Q",
       "dx12": 123,
       "dx11": 186
+    },
+    {
+      "name": "GeForce RTX 5090 D v2",
+      "dx12": 122,
+      "dx11": 340
     },
     {
       "name": "RTX PRO 4500 Blackwell",
@@ -322,7 +322,7 @@
     {
       "name": "RTX 4000 Ada Generation",
       "dx12": 93,
-      "dx11": 202
+      "dx11": 203
     },
     {
       "name": "RTX PRO 3000 Blackwell Generation Laptop GPU",
@@ -332,7 +332,7 @@
     {
       "name": "RTX PRO 4000 Blackwell",
       "dx12": 92,
-      "dx11": 261
+      "dx11": 260
     },
     {
       "name": "GeForce RTX 5070 Laptop GPU",
@@ -380,14 +380,14 @@
       "dx11": 218
     },
     {
-      "name": "RTX A6000",
-      "dx12": 89,
-      "dx11": 190
-    },
-    {
       "name": "GeForce RTX 4060 Ti 16GB",
       "dx12": 89,
       "dx11": 199
+    },
+    {
+      "name": "RTX A6000",
+      "dx12": 89,
+      "dx11": 190
     },
     {
       "name": "Radeon RX 7800M",
@@ -470,14 +470,14 @@
       "dx11": 186
     },
     {
-      "name": "Radeon RX 7700 XT",
-      "dx12": 83,
-      "dx11": 232
-    },
-    {
       "name": "RTX PRO 2000 Blackwell",
       "dx12": 83,
       "dx11": 170
+    },
+    {
+      "name": "Radeon RX 7700 XT",
+      "dx12": 83,
+      "dx11": 232
     },
     {
       "name": "RTX 3500 Ada Generation Embedded GPU",
@@ -488,6 +488,11 @@
       "name": "GeForce RTX 2080 Ti",
       "dx12": 83,
       "dx11": 193
+    },
+    {
+      "name": "RTX PRO 2000 Blackwell Embedded GPU",
+      "dx12": 82,
+      "dx11": 166
     },
     {
       "name": "Barco MXRV-7100",
@@ -556,7 +561,7 @@
     {
       "name": "GeForce RTX 5060 Laptop GPU",
       "dx12": 79,
-      "dx11": 161
+      "dx11": 162
     },
     {
       "name": "L40S",
@@ -711,7 +716,7 @@
     {
       "name": "RTX 2000 Ada Generation",
       "dx12": 72,
-      "dx11": 137
+      "dx11": 138
     },
     {
       "name": "Radeon Pro Vega 64",
@@ -868,11 +873,6 @@
       "dx11": 106
     },
     {
-      "name": "RTX PRO 2000 Blackwell Embedded GPU",
-      "dx12": 66,
-      "dx11": 163
-    },
-    {
       "name": "TITAN Xp COLLECTORS EDITION",
       "dx12": 66,
       "dx11": 156
@@ -908,14 +908,14 @@
       "dx11": 126
     },
     {
-      "name": "GeForce RTX 5050",
-      "dx12": 65,
-      "dx11": 152
-    },
-    {
       "name": "Radeon RX Vega 64",
       "dx12": 65,
       "dx11": 86
+    },
+    {
+      "name": "GeForce RTX 5050",
+      "dx12": 65,
+      "dx11": 152
     },
     {
       "name": "Radeon RX 6700M",
@@ -1081,9 +1081,9 @@
       "dx11": 83
     },
     {
-      "name": "Radeon RX 9070 GRE",
+      "name": "OrayIddDriver Device",
       "dx12": 58,
-      "dx11": 249
+      "dx11": 139
     },
     {
       "name": "Radeon RX 9060 XT 16GB",
@@ -1091,19 +1091,14 @@
       "dx11": 185
     },
     {
-      "name": "OrayIddDriver Device",
+      "name": "Quadro RTX 5000",
       "dx12": 58,
-      "dx11": 139
+      "dx11": 141
     },
     {
       "name": "GeForce RTX 3050 OEM",
       "dx12": 58,
       "dx11": 86
-    },
-    {
-      "name": "Quadro RTX 5000",
-      "dx12": 58,
-      "dx11": 141
     },
     {
       "name": "Radeon RX 6600S",
@@ -1114,6 +1109,11 @@
       "name": "GeForce RTX 3060 Laptop GPU",
       "dx12": 58,
       "dx11": 109
+    },
+    {
+      "name": "Radeon RX 9070 GRE",
+      "dx12": 58,
+      "dx11": 249
     },
     {
       "name": "Radeon RX 6700S",
@@ -1290,14 +1290,14 @@
       "dx11": 130
     },
     {
-      "name": "RTX 500 Ada Generation Laptop GPU",
-      "dx12": 52,
-      "dx11": 86
-    },
-    {
       "name": "RTX A2000 8GB Laptop GPU",
       "dx12": 52,
       "dx11": 70
+    },
+    {
+      "name": "RTX 500 Ada Generation Laptop GPU",
+      "dx12": 52,
+      "dx11": 86
     },
     {
       "name": "Tesla P100-PCIE-12GB",
@@ -1325,14 +1325,14 @@
       "dx11": 78
     },
     {
-      "name": "Radeon Pro W5700",
-      "dx12": 52,
-      "dx11": 103
-    },
-    {
       "name": "GeForce RTX 3050 6GB Laptop GPU",
       "dx12": 52,
       "dx11": 68
+    },
+    {
+      "name": "Radeon Pro W5700",
+      "dx12": 52,
+      "dx11": 103
     },
     {
       "name": "RTX A1000",
@@ -1450,6 +1450,11 @@
       "dx11": 146
     },
     {
+      "name": "L4",
+      "dx12": 48,
+      "dx11": 78
+    },
+    {
       "name": "Tesla V100-PCIE-16GB",
       "dx12": 48,
       "dx11": 109
@@ -1480,14 +1485,14 @@
       "dx11": 88
     },
     {
-      "name": "GeForce RTX 2080 with Max-Q Design",
-      "dx12": 47,
-      "dx11": 113
-    },
-    {
       "name": "RTX A2000 Laptop GPU",
       "dx12": 47,
       "dx11": 64
+    },
+    {
+      "name": "GeForce RTX 2080 with Max-Q Design",
+      "dx12": 47,
+      "dx11": 113
     },
     {
       "name": "Radeon 8040S",
@@ -1518,11 +1523,6 @@
       "name": "Tesla P40",
       "dx12": 46,
       "dx11": 110
-    },
-    {
-      "name": "L4",
-      "dx12": 46,
-      "dx11": 71
     },
     {
       "name": "GeForce GTX 980",
@@ -1643,9 +1643,9 @@
       "dx11": 78
     },
     {
-      "name": "Radeon R9 Fury",
+      "name": "Quadro RTX 3000",
       "dx12": 43,
-      "dx11": 57
+      "dx11": 83
     },
     {
       "name": "Radeon RX 6550M",
@@ -1653,9 +1653,9 @@
       "dx11": 77
     },
     {
-      "name": "Quadro RTX 3000",
+      "name": "Radeon R9 Fury",
       "dx12": 43,
-      "dx11": 83
+      "dx11": 57
     },
     {
       "name": "Radeon RX 580",
@@ -1858,14 +1858,14 @@
       "dx11": 50
     },
     {
-      "name": "NVIDIA T1200 Laptop GPU",
-      "dx12": 37,
-      "dx11": 58
-    },
-    {
       "name": "Radeon PRO W7800 48GB",
       "dx12": 37,
       "dx11": 120
+    },
+    {
+      "name": "NVIDIA T1200 Laptop GPU",
+      "dx12": 37,
+      "dx11": 58
     },
     {
       "name": "Tesla T4",
@@ -2079,6 +2079,11 @@
       "dx11": 61
     },
     {
+      "name": "Red Hat VirtIO GPU 3D controller",
+      "dx12": 33,
+      "dx11": 51
+    },
+    {
       "name": "Radeon R9 380X",
       "dx12": 33
     },
@@ -2113,13 +2118,13 @@
       "dx11": 73
     },
     {
-      "name": "GRID RTX6000P-6Q",
-      "dx12": 33
-    },
-    {
       "name": "Radeon RX 6500M",
       "dx12": 33,
       "dx11": 68
+    },
+    {
+      "name": "GRID RTX6000P-6Q",
+      "dx12": 33
     },
     {
       "name": "Radeon RX Vega M GH",
@@ -2262,17 +2267,17 @@
       "dx11": 65
     },
     {
+      "name": "Quadro K6000",
+      "dx12": 30,
+      "dx11": 67
+    },
+    {
       "name": "Ryzen 7 6800HS with Radeon Graphics",
       "dx12": 30,
       "dx11": 62
     },
     {
       "name": "A40-3Q",
-      "dx12": 30,
-      "dx11": 67
-    },
-    {
-      "name": "Quadro K6000",
       "dx12": 30,
       "dx11": 67
     },
@@ -2340,13 +2345,13 @@
       "dx12": 29
     },
     {
-      "name": "T550 Laptop GPU",
-      "dx12": 29
-    },
-    {
       "name": "Radeon 780M",
       "dx12": 29,
       "dx11": 65
+    },
+    {
+      "name": "T550 Laptop GPU",
+      "dx12": 29
     },
     {
       "name": "Quadro T1000",
@@ -2393,8 +2398,7 @@
     },
     {
       "name": "EIZO Quadro MED-XN71",
-      "dx12": 29,
-      "dx11": 46
+      "dx12": 29
     },
     {
       "name": "Matrox LUMA A380P",
@@ -2451,18 +2455,13 @@
       "dx11": 54
     },
     {
-      "name": "Radeon Pro 5300",
-      "dx12": 28,
-      "dx11": 48
-    },
-    {
       "name": "VMware Horizon Indirect Display Driver",
       "dx12": 28
     },
     {
-      "name": "LuminonCore IDDCX Adapter",
+      "name": "Radeon Pro 5300",
       "dx12": 28,
-      "dx11": 54
+      "dx11": 48
     },
     {
       "name": "Mirage Driver",
@@ -2499,6 +2498,10 @@
     {
       "name": "A40-12Q",
       "dx11": 57
+    },
+    {
+      "name": "LuminonCore IDDCX Adapter",
+      "dx11": 54
     },
     {
       "name": "Radeon RX 6450M",
