@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-11-17T15:32:08.443Z",
+  "scrapedAt": "2026-11-18T15:09:29.974Z",
   "count": 546,
   "entries": [
     {
@@ -96,7 +96,7 @@
     },
     {
       "name": "RTX PRO 4500 Blackwell",
-      "dx12": 122,
+      "dx12": 121,
       "dx11": 313
     },
     {
@@ -116,7 +116,7 @@
     },
     {
       "name": "RTX PRO 5000 Blackwell",
-      "dx12": 117,
+      "dx12": 116,
       "dx11": 306
     },
     {
@@ -307,7 +307,7 @@
     {
       "name": "Radeon 8065S",
       "dx12": 94,
-      "dx11": 169
+      "dx11": 170
     },
     {
       "name": "AicUsbDisplay Device",
@@ -561,7 +561,7 @@
     {
       "name": "GeForce RTX 5060 Laptop GPU",
       "dx12": 79,
-      "dx11": 162
+      "dx11": 161
     },
     {
       "name": "L40S",
@@ -604,14 +604,14 @@
       "dx11": 279
     },
     {
-      "name": "Radeon RX 6700 XT",
-      "dx12": 77,
-      "dx11": 172
-    },
-    {
       "name": "GeForce RTX 5060",
       "dx12": 77,
       "dx11": 199
+    },
+    {
+      "name": "Radeon RX 6700 XT",
+      "dx12": 77,
+      "dx11": 172
     },
     {
       "name": "Radeon VII",
@@ -621,7 +621,7 @@
     {
       "name": "Intel Arc Pro B60",
       "dx12": 76,
-      "dx11": 120
+      "dx11": 121
     },
     {
       "name": "Radeon PRO W7700",
@@ -679,14 +679,14 @@
       "dx11": 280
     },
     {
-      "name": "RTX A5000 Laptop GPU",
-      "dx12": 73,
-      "dx11": 139
-    },
-    {
       "name": "Quadro GV100",
       "dx12": 73,
       "dx11": 164
+    },
+    {
+      "name": "RTX A5000 Laptop GPU",
+      "dx12": 73,
+      "dx11": 139
     },
     {
       "name": "Radeon RX 6750 GRE 10GB",
@@ -794,14 +794,14 @@
       "dx11": 87
     },
     {
-      "name": "NVIDIA TITAN Xp",
-      "dx12": 68,
-      "dx11": 152
-    },
-    {
       "name": "GeForce RTX 3060 12GB",
       "dx12": 68,
       "dx11": 127
+    },
+    {
+      "name": "NVIDIA TITAN Xp",
+      "dx12": 68,
+      "dx11": 152
     },
     {
       "name": "RTX 2000E Ada Generation",
@@ -863,14 +863,14 @@
       "dx11": 123
     },
     {
-      "name": "GeForce GTX 1080 Ti",
-      "dx12": 66,
-      "dx11": 152
-    },
-    {
       "name": "GeForce RTX 3060 8GB",
       "dx12": 66,
       "dx11": 106
+    },
+    {
+      "name": "GeForce GTX 1080 Ti",
+      "dx12": 66,
+      "dx11": 152
     },
     {
       "name": "TITAN Xp COLLECTORS EDITION",
@@ -913,14 +913,14 @@
       "dx11": 86
     },
     {
-      "name": "GeForce RTX 5050",
-      "dx12": 65,
-      "dx11": 152
-    },
-    {
       "name": "Radeon RX 6700M",
       "dx12": 65,
       "dx11": 130
+    },
+    {
+      "name": "GeForce RTX 5050",
+      "dx12": 65,
+      "dx11": 152
     },
     {
       "name": "Radeon PRO W6600X",
@@ -1069,7 +1069,7 @@
     {
       "name": "RTX A2000 12GB",
       "dx12": 59,
-      "dx11": 92
+      "dx11": 91
     },
     {
       "name": "A10-12Q",
@@ -1091,14 +1091,14 @@
       "dx11": 185
     },
     {
-      "name": "Quadro RTX 5000",
-      "dx12": 58,
-      "dx11": 141
-    },
-    {
       "name": "GeForce RTX 3050 OEM",
       "dx12": 58,
       "dx11": 86
+    },
+    {
+      "name": "Quadro RTX 5000",
+      "dx12": 58,
+      "dx11": 141
     },
     {
       "name": "Radeon RX 6600S",
@@ -1111,11 +1111,6 @@
       "dx11": 109
     },
     {
-      "name": "Radeon RX 9070 GRE",
-      "dx12": 58,
-      "dx11": 249
-    },
-    {
       "name": "Radeon RX 6700S",
       "dx12": 58,
       "dx11": 133
@@ -1124,6 +1119,11 @@
       "name": "EIZO Quadro MED-XN92",
       "dx12": 57,
       "dx11": 157
+    },
+    {
+      "name": "Radeon RX 9070 GRE",
+      "dx12": 57,
+      "dx11": 249
     },
     {
       "name": "Radeon V520 MxGPU",
@@ -1295,14 +1295,14 @@
       "dx11": 70
     },
     {
-      "name": "RTX 500 Ada Generation Laptop GPU",
-      "dx12": 52,
-      "dx11": 86
-    },
-    {
       "name": "Tesla P100-PCIE-12GB",
       "dx12": 52,
       "dx11": 92
+    },
+    {
+      "name": "RTX 500 Ada Generation Laptop GPU",
+      "dx12": 52,
+      "dx11": 86
     },
     {
       "name": "CMP 40HX",
@@ -1325,14 +1325,14 @@
       "dx11": 78
     },
     {
-      "name": "GeForce RTX 3050 6GB Laptop GPU",
-      "dx12": 52,
-      "dx11": 68
-    },
-    {
       "name": "Radeon Pro W5700",
       "dx12": 52,
       "dx11": 103
+    },
+    {
+      "name": "GeForce RTX 3050 6GB Laptop GPU",
+      "dx12": 52,
+      "dx11": 68
     },
     {
       "name": "RTX A1000",
@@ -1575,13 +1575,13 @@
       "dx11": 73
     },
     {
-      "name": "L4-8Q",
-      "dx12": 45
-    },
-    {
       "name": "Radeon PRO W7500",
       "dx12": 45,
       "dx11": 125
+    },
+    {
+      "name": "L4-8Q",
+      "dx12": 45
     },
     {
       "name": "Quadro P5000",
@@ -1858,14 +1858,14 @@
       "dx11": 50
     },
     {
-      "name": "Radeon PRO W7800 48GB",
-      "dx12": 37,
-      "dx11": 120
-    },
-    {
       "name": "NVIDIA T1200 Laptop GPU",
       "dx12": 37,
       "dx11": 58
+    },
+    {
+      "name": "Radeon PRO W7800 48GB",
+      "dx12": 37,
+      "dx11": 120
     },
     {
       "name": "Tesla T4",
@@ -2147,13 +2147,13 @@
       "dx11": 72
     },
     {
+      "name": "Radeon R9 380",
+      "dx12": 32
+    },
+    {
       "name": "NVIDIA T600 Laptop GPU",
       "dx12": 32,
       "dx11": 51
-    },
-    {
-      "name": "Radeon R9 380",
-      "dx12": 32
     },
     {
       "name": "FirePro W9000",
@@ -2240,13 +2240,13 @@
       "dx12": 31
     },
     {
-      "name": "GeForce MX570",
-      "dx12": 31
-    },
-    {
       "name": "Radeon RX 6400",
       "dx12": 31,
       "dx11": 70
+    },
+    {
+      "name": "GeForce MX570",
+      "dx12": 31
     },
     {
       "name": "RadeonT 780M",
@@ -2345,23 +2345,23 @@
       "dx12": 29
     },
     {
+      "name": "T550 Laptop GPU",
+      "dx12": 29
+    },
+    {
       "name": "Radeon 780M",
       "dx12": 29,
       "dx11": 65
     },
     {
-      "name": "T550 Laptop GPU",
-      "dx12": 29
+      "name": "P106-100",
+      "dx12": 29,
+      "dx11": 65
     },
     {
       "name": "Quadro T1000",
       "dx12": 29,
       "dx11": 47
-    },
-    {
-      "name": "P106-100",
-      "dx12": 29,
-      "dx11": 65
     },
     {
       "name": "CMP 30HX",

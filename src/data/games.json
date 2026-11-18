@@ -45,7 +45,7 @@
       "gameId": "cyberpunk_2077_benchmark",
       "name": "Cyberpunk 2077 (built-in benchmark)",
       "steamAppId": 1091500,
-      "benchmarkCount": 69,
+      "benchmarkCount": 119,
       "url": "https://opengpubenchmarks.com"
     }
   },
@@ -615,7 +615,7 @@
     "id": "apex-legends",
     "steamAppId": 1172470,
     "name": "Apex Legends™",
-    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/dc5c390e9a273a7248f75c1b2d59987f6179323c/header_alt_assets_7.jpg?t=1794339458",
+    "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/dc5c390e9a273a7248f75c1b2d59987f6179323c/header_alt_assets_7.jpg?t=1794958367",
     "genres": [
       "Acción",
       "Aventura",
