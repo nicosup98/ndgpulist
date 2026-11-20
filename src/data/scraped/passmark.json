@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-11-19T15:18:24.114Z",
+  "scrapedAt": "2026-11-20T14:56:47.054Z",
   "count": 546,
   "entries": [
     {
@@ -77,7 +77,7 @@
     {
       "name": "GeForce RTX 5070 Ti",
       "dx12": 126,
-      "dx11": 303
+      "dx11": 302
     },
     {
       "name": "RTX PRO 6000 Blackwell Server Edition",
@@ -220,14 +220,14 @@
       "dx11": 257
     },
     {
-      "name": "RTX PRO 4000 Blackwell Generation Laptop GPU",
-      "dx12": 106,
-      "dx11": 223
-    },
-    {
       "name": "GeForce RTX 5070",
       "dx12": 106,
       "dx11": 279
+    },
+    {
+      "name": "RTX PRO 4000 Blackwell Generation Laptop GPU",
+      "dx12": 106,
+      "dx11": 224
     },
     {
       "name": "GeForce RTX 4070",
@@ -242,17 +242,17 @@
     {
       "name": "GeForce RTX 5070 Ti Laptop GPU",
       "dx12": 100,
-      "dx11": 234
-    },
-    {
-      "name": "Radeon RX 6800 XT",
-      "dx12": 100,
-      "dx11": 265
+      "dx11": 235
     },
     {
       "name": "NVIDIA A10",
       "dx12": 100,
       "dx11": 152
+    },
+    {
+      "name": "Radeon RX 6800 XT",
+      "dx12": 100,
+      "dx11": 265
     },
     {
       "name": "RTX 6000 Ada Generation",
@@ -360,14 +360,14 @@
       "dx11": 192
     },
     {
-      "name": "MPro Driver Device",
-      "dx12": 90,
-      "dx11": 95
-    },
-    {
       "name": "RTX 4500 Ada Generation",
       "dx12": 90,
       "dx11": 260
+    },
+    {
+      "name": "MPro Driver Device",
+      "dx12": 90,
+      "dx11": 95
     },
     {
       "name": "Radeon RX 6800",
@@ -467,17 +467,17 @@
     {
       "name": "TITAN RTX",
       "dx12": 83,
-      "dx11": 186
-    },
-    {
-      "name": "RTX PRO 2000 Blackwell",
-      "dx12": 83,
-      "dx11": 170
+      "dx11": 187
     },
     {
       "name": "Radeon RX 7700 XT",
       "dx12": 83,
       "dx11": 232
+    },
+    {
+      "name": "RTX PRO 2000 Blackwell",
+      "dx12": 83,
+      "dx11": 170
     },
     {
       "name": "RTX 3500 Ada Generation Embedded GPU",
@@ -515,18 +515,13 @@
       "dx11": 283
     },
     {
-      "name": "RTX PRO 4500 Blackwell Server Edition",
-      "dx12": 81
-    },
-    {
       "name": "Radeon RX 6850M XT",
-      "dx12": 80,
+      "dx12": 81,
       "dx11": 151
     },
     {
-      "name": "RTX Spark N1X",
-      "dx12": 80,
-      "dx11": 176
+      "name": "RTX PRO 4500 Blackwell Server Edition",
+      "dx12": 81
     },
     {
       "name": "RTX A5500",
@@ -539,19 +534,24 @@
       "dx11": 220
     },
     {
+      "name": "RTX Spark N1X",
+      "dx12": 80,
+      "dx11": 176
+    },
+    {
       "name": "RTX A4500",
       "dx12": 80,
       "dx11": 171
     },
     {
-      "name": "TURZX Display",
-      "dx12": 80,
-      "dx11": 209
-    },
-    {
       "name": "RTX 3000 Ada Generation Laptop GPU",
       "dx12": 80,
       "dx11": 140
+    },
+    {
+      "name": "TURZX Display",
+      "dx12": 80,
+      "dx11": 209
     },
     {
       "name": "spacedesk Adapter",
@@ -701,7 +701,7 @@
     {
       "name": "RTX A4000",
       "dx12": 72,
-      "dx11": 157
+      "dx11": 156
     },
     {
       "name": "RTX6000-Ada-6Q",
@@ -918,11 +918,6 @@
       "dx11": 130
     },
     {
-      "name": "GeForce RTX 5050",
-      "dx12": 65,
-      "dx11": 152
-    },
-    {
       "name": "Radeon PRO W6600X",
       "dx12": 65,
       "dx11": 151
@@ -931,6 +926,11 @@
       "name": "Intel Arc A580",
       "dx12": 65,
       "dx11": 72
+    },
+    {
+      "name": "GeForce RTX 5050",
+      "dx12": 65,
+      "dx11": 152
     },
     {
       "name": "Radeon PRO W7600",
@@ -1057,24 +1057,24 @@
       "dx11": 138
     },
     {
-      "name": "Radeon Pro WX 9100",
-      "dx12": 59,
-      "dx11": 72
-    },
-    {
       "name": "GeForce RTX 3050 8GB",
       "dx12": 59,
       "dx11": 90
     },
     {
-      "name": "Radeon RX 6650M",
+      "name": "Radeon Pro WX 9100",
       "dx12": 59,
-      "dx11": 147
+      "dx11": 72
     },
     {
       "name": "RTX A2000 12GB",
       "dx12": 59,
       "dx11": 91
+    },
+    {
+      "name": "Radeon RX 6650M",
+      "dx12": 59,
+      "dx11": 148
     },
     {
       "name": "A10-12Q",
@@ -1101,14 +1101,14 @@
       "dx11": 86
     },
     {
-      "name": "Quadro RTX 5000",
-      "dx12": 58,
-      "dx11": 141
-    },
-    {
       "name": "Radeon RX 6600S",
       "dx12": 58,
       "dx11": 121
+    },
+    {
+      "name": "Quadro RTX 5000",
+      "dx12": 58,
+      "dx11": 141
     },
     {
       "name": "GeForce RTX 3060 Laptop GPU",
@@ -1407,7 +1407,7 @@
     {
       "name": "GeForce GTX TITAN X",
       "dx12": 50,
-      "dx11": 103
+      "dx11": 102
     },
     {
       "name": "L4",
@@ -1791,14 +1791,14 @@
       "dx11": 50
     },
     {
-      "name": "GeForce GTX 1660 Ti (Mobile)",
-      "dx12": 39,
-      "dx11": 87
-    },
-    {
       "name": "Quadro P4200",
       "dx12": 39,
       "dx11": 77
+    },
+    {
+      "name": "GeForce GTX 1660 Ti (Mobile)",
+      "dx12": 39,
+      "dx11": 87
     },
     {
       "name": "GRID RTX6000-2Q",
@@ -1858,14 +1858,14 @@
       "dx11": 77
     },
     {
-      "name": "Radeon PRO W7800 48GB",
-      "dx12": 37,
-      "dx11": 120
-    },
-    {
       "name": "NVIDIA T1200 Laptop GPU",
       "dx12": 37,
       "dx11": 58
+    },
+    {
+      "name": "Radeon PRO W7800 48GB",
+      "dx12": 37,
+      "dx11": 120
     },
     {
       "name": "Tesla T4",
@@ -2118,13 +2118,13 @@
       "dx11": 73
     },
     {
+      "name": "GRID RTX6000P-6Q",
+      "dx12": 33
+    },
+    {
       "name": "Radeon RX 6500M",
       "dx12": 33,
       "dx11": 68
-    },
-    {
-      "name": "GRID RTX6000P-6Q",
-      "dx12": 33
     },
     {
       "name": "Radeon RX Vega M GH",
