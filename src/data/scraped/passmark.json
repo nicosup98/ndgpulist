@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-11-20T14:56:47.054Z",
+  "scrapedAt": "2026-11-21T14:15:27.943Z",
   "count": 546,
   "entries": [
     {
@@ -156,7 +156,7 @@
     },
     {
       "name": "RTX 5000 Ada Generation",
-      "dx12": 111,
+      "dx12": 112,
       "dx11": 273
     },
     {
@@ -245,14 +245,14 @@
       "dx11": 235
     },
     {
-      "name": "NVIDIA A10",
-      "dx12": 100,
-      "dx11": 152
-    },
-    {
       "name": "Radeon RX 6800 XT",
       "dx12": 100,
       "dx11": 265
+    },
+    {
+      "name": "NVIDIA A10",
+      "dx12": 100,
+      "dx11": 152
     },
     {
       "name": "RTX 6000 Ada Generation",
@@ -275,14 +275,14 @@
       "dx11": 78
     },
     {
-      "name": "Intel Arc Pro B70",
-      "dx12": 98,
-      "dx11": 141
-    },
-    {
       "name": "Radeon RX 7900M",
       "dx12": 97,
       "dx11": 258
+    },
+    {
+      "name": "Intel Arc Pro B70",
+      "dx12": 97,
+      "dx11": 142
     },
     {
       "name": "Radeon PRO W7900",
@@ -307,7 +307,7 @@
     {
       "name": "Radeon 8065S",
       "dx12": 94,
-      "dx11": 170
+      "dx11": 171
     },
     {
       "name": "AicUsbDisplay Device",
@@ -360,14 +360,14 @@
       "dx11": 192
     },
     {
-      "name": "RTX 4500 Ada Generation",
-      "dx12": 90,
-      "dx11": 260
-    },
-    {
       "name": "MPro Driver Device",
       "dx12": 90,
       "dx11": 95
+    },
+    {
+      "name": "RTX 4500 Ada Generation",
+      "dx12": 89,
+      "dx11": 260
     },
     {
       "name": "Radeon RX 6800",
@@ -440,14 +440,14 @@
       "dx11": 112
     },
     {
-      "name": "RTX A5500 Laptop GPU",
-      "dx12": 84,
-      "dx11": 131
-    },
-    {
       "name": "Radeon 8060S",
       "dx12": 84,
       "dx11": 156
+    },
+    {
+      "name": "RTX A5500 Laptop GPU",
+      "dx12": 84,
+      "dx11": 131
     },
     {
       "name": "GeForce RTX 3070",
@@ -475,14 +475,14 @@
       "dx11": 232
     },
     {
-      "name": "RTX PRO 2000 Blackwell",
-      "dx12": 83,
-      "dx11": 170
-    },
-    {
       "name": "RTX 3500 Ada Generation Embedded GPU",
       "dx12": 83,
       "dx11": 229
+    },
+    {
+      "name": "RTX PRO 2000 Blackwell",
+      "dx12": 83,
+      "dx11": 170
     },
     {
       "name": "GeForce RTX 2080 Ti",
@@ -604,14 +604,14 @@
       "dx11": 279
     },
     {
-      "name": "Radeon RX 6700 XT",
-      "dx12": 77,
-      "dx11": 172
-    },
-    {
       "name": "GeForce RTX 5060",
       "dx12": 77,
       "dx11": 199
+    },
+    {
+      "name": "Radeon RX 6700 XT",
+      "dx12": 77,
+      "dx11": 172
     },
     {
       "name": "Radeon VII",
@@ -675,7 +675,7 @@
     },
     {
       "name": "Radeon RX 9070",
-      "dx12": 74,
+      "dx12": 73,
       "dx11": 280
     },
     {
@@ -923,14 +923,14 @@
       "dx11": 151
     },
     {
-      "name": "Intel Arc A580",
-      "dx12": 65,
-      "dx11": 72
-    },
-    {
       "name": "GeForce RTX 5050",
       "dx12": 65,
       "dx11": 152
+    },
+    {
+      "name": "Intel Arc A580",
+      "dx12": 65,
+      "dx11": 72
     },
     {
       "name": "Radeon PRO W7600",
@@ -966,11 +966,6 @@
       "name": "RTX 1000 Ada Generation Laptop GPU",
       "dx12": 63,
       "dx11": 109
-    },
-    {
-      "name": "Radeon RX 9060 XT LP",
-      "dx12": 63,
-      "dx11": 192
     },
     {
       "name": "nVidia L40",
@@ -1026,6 +1021,11 @@
       "name": "GeForce RTX 2070",
       "dx12": 61,
       "dx11": 130
+    },
+    {
+      "name": "Radeon RX 9060 XT LP",
+      "dx12": 60,
+      "dx11": 192
     },
     {
       "name": "Radeon RX 6600 XT",
@@ -1096,6 +1096,11 @@
       "dx11": 185
     },
     {
+      "name": "Quadro RTX 5000",
+      "dx12": 58,
+      "dx11": 141
+    },
+    {
       "name": "GeForce RTX 3050 OEM",
       "dx12": 58,
       "dx11": 86
@@ -1104,11 +1109,6 @@
       "name": "Radeon RX 6600S",
       "dx12": 58,
       "dx11": 121
-    },
-    {
-      "name": "Quadro RTX 5000",
-      "dx12": 58,
-      "dx11": 141
     },
     {
       "name": "GeForce RTX 3060 Laptop GPU",
@@ -1161,14 +1161,14 @@
       "dx11": 164
     },
     {
-      "name": "Radeon RX 7600",
-      "dx12": 56,
-      "dx11": 172
-    },
-    {
       "name": "Radeon RX 9060 XT 8GB",
       "dx12": 56,
       "dx11": 186
+    },
+    {
+      "name": "Radeon RX 7600",
+      "dx12": 56,
+      "dx11": 172
     },
     {
       "name": "RTX A3000 Laptop GPU",
@@ -1584,14 +1584,14 @@
       "dx12": 45
     },
     {
-      "name": "Quadro P5000",
-      "dx12": 45,
-      "dx11": 102
-    },
-    {
       "name": "nVidia L40S-4Q",
       "dx12": 45,
       "dx11": 64
+    },
+    {
+      "name": "Quadro P5000",
+      "dx12": 45,
+      "dx11": 102
     },
     {
       "name": "Radeon Pro W5500X",
@@ -1603,14 +1603,14 @@
       "dx11": 97
     },
     {
+      "name": "Radeon RX 9060",
+      "dx12": 45,
+      "dx11": 181
+    },
+    {
       "name": "Quadro P4200 with Max-Q Design",
       "dx12": 44,
       "dx11": 87
-    },
-    {
-      "name": "Radeon RX 9060",
-      "dx12": 44,
-      "dx11": 181
     },
     {
       "name": "Radeon R9 Fury X",
@@ -1985,14 +1985,14 @@
       "dx11": 48
     },
     {
-      "name": "GeForce GTX 1650",
-      "dx12": 35,
-      "dx11": 58
-    },
-    {
       "name": "Quadro P2200",
       "dx12": 35,
       "dx11": 69
+    },
+    {
+      "name": "GeForce GTX 1650",
+      "dx12": 35,
+      "dx11": 58
     },
     {
       "name": "Tesla P100-PCIE-16GB",
@@ -2098,14 +2098,14 @@
       "dx11": 95
     },
     {
-      "name": "EIZO Quadro MED-XN72",
-      "dx12": 33,
-      "dx11": 66
-    },
-    {
       "name": "Radeon RX 6500",
       "dx12": 33,
       "dx11": 64
+    },
+    {
+      "name": "EIZO Quadro MED-XN72",
+      "dx12": 33,
+      "dx11": 66
     },
     {
       "name": "L40-8Q",
@@ -2222,14 +2222,14 @@
       "dx11": 60
     },
     {
-      "name": "Radeon PRO W6400",
-      "dx12": 31,
-      "dx11": 71
-    },
-    {
       "name": "GeForce GTX 1060 with Max-Q Design",
       "dx12": 31,
       "dx11": 59
+    },
+    {
+      "name": "Radeon PRO W6400",
+      "dx12": 31,
+      "dx11": 71
     },
     {
       "name": "Tesla K40c",
@@ -2345,23 +2345,23 @@
       "dx12": 29
     },
     {
-      "name": "T550 Laptop GPU",
-      "dx12": 29
-    },
-    {
       "name": "Radeon 780M",
       "dx12": 29,
       "dx11": 65
     },
     {
-      "name": "P106-100",
-      "dx12": 29,
-      "dx11": 65
+      "name": "T550 Laptop GPU",
+      "dx12": 29
     },
     {
       "name": "Quadro T1000",
       "dx12": 29,
       "dx11": 47
+    },
+    {
+      "name": "P106-100",
+      "dx12": 29,
+      "dx11": 65
     },
     {
       "name": "CMP 30HX",
