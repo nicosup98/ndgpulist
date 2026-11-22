@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-11-21T14:15:27.943Z",
+  "scrapedAt": "2026-11-22T14:05:53.322Z",
   "count": 546,
   "entries": [
     {
@@ -150,14 +150,14 @@
       "dx11": 139
     },
     {
-      "name": "Radeon RX 7900 XT",
-      "dx12": 112,
-      "dx11": 341
-    },
-    {
       "name": "RTX 5000 Ada Generation",
       "dx12": 112,
       "dx11": 273
+    },
+    {
+      "name": "Radeon RX 7900 XT",
+      "dx12": 112,
+      "dx11": 341
     },
     {
       "name": "Radeon RX 7900 GRE",
@@ -242,7 +242,7 @@
     {
       "name": "GeForce RTX 5070 Ti Laptop GPU",
       "dx12": 100,
-      "dx11": 235
+      "dx11": 234
     },
     {
       "name": "Radeon RX 6800 XT",
@@ -372,7 +372,7 @@
     {
       "name": "Radeon RX 6800",
       "dx12": 89,
-      "dx11": 211
+      "dx11": 212
     },
     {
       "name": "GeForce RTX 5060 Ti 16GB",
@@ -604,14 +604,14 @@
       "dx11": 279
     },
     {
-      "name": "GeForce RTX 5060",
-      "dx12": 77,
-      "dx11": 199
-    },
-    {
       "name": "Radeon RX 6700 XT",
       "dx12": 77,
       "dx11": 172
+    },
+    {
+      "name": "GeForce RTX 5060",
+      "dx12": 77,
+      "dx11": 199
     },
     {
       "name": "Radeon VII",
@@ -1096,14 +1096,14 @@
       "dx11": 185
     },
     {
-      "name": "Quadro RTX 5000",
-      "dx12": 58,
-      "dx11": 141
-    },
-    {
       "name": "GeForce RTX 3050 OEM",
       "dx12": 58,
       "dx11": 86
+    },
+    {
+      "name": "Quadro RTX 5000",
+      "dx12": 58,
+      "dx11": 141
     },
     {
       "name": "Radeon RX 6600S",
@@ -1848,9 +1848,9 @@
       "dx12": 38
     },
     {
-      "name": "Radeon R9 290",
+      "name": "NVIDIA T1200 Laptop GPU",
       "dx12": 38,
-      "dx11": 50
+      "dx11": 58
     },
     {
       "name": "GRID P40-8Q",
@@ -1858,9 +1858,9 @@
       "dx11": 77
     },
     {
-      "name": "NVIDIA T1200 Laptop GPU",
+      "name": "Radeon R9 290",
       "dx12": 37,
-      "dx11": 58
+      "dx11": 50
     },
     {
       "name": "Radeon PRO W7800 48GB",
@@ -2035,13 +2035,13 @@
       "dx11": 65
     },
     {
+      "name": "GeForce MX570 A",
+      "dx12": 34
+    },
+    {
       "name": "Radeon RX 5300",
       "dx12": 34,
       "dx11": 49
-    },
-    {
-      "name": "GeForce MX570 A",
-      "dx12": 34
     },
     {
       "name": "Quadro T2000",
@@ -2128,7 +2128,7 @@
     },
     {
       "name": "Radeon RX Vega M GH",
-      "dx12": 33,
+      "dx12": 32,
       "dx11": 46
     },
     {
@@ -2222,14 +2222,14 @@
       "dx11": 60
     },
     {
-      "name": "GeForce GTX 1060 with Max-Q Design",
-      "dx12": 31,
-      "dx11": 59
-    },
-    {
       "name": "Radeon PRO W6400",
       "dx12": 31,
       "dx11": 71
+    },
+    {
+      "name": "GeForce GTX 1060 with Max-Q Design",
+      "dx12": 31,
+      "dx11": 59
     },
     {
       "name": "Tesla K40c",
@@ -2316,14 +2316,14 @@
       "dx12": 30
     },
     {
-      "name": "GRID P40-24Q",
-      "dx12": 30,
-      "dx11": 64
-    },
-    {
       "name": "GeForce GTX 1650 with Max-Q Design",
       "dx12": 30,
       "dx11": 48
+    },
+    {
+      "name": "GRID P40-24Q",
+      "dx12": 30,
+      "dx11": 64
     },
     {
       "name": "Radeon Ryzen 7 6800HS",
@@ -2359,14 +2359,14 @@
       "dx11": 47
     },
     {
-      "name": "P106-100",
-      "dx12": 29,
-      "dx11": 65
-    },
-    {
       "name": "CMP 30HX",
       "dx12": 29,
       "dx11": 81
+    },
+    {
+      "name": "P106-100",
+      "dx12": 29,
+      "dx11": 65
     },
     {
       "name": "Tesla V100-PCIE-32GB",
