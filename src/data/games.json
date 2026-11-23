@@ -39,13 +39,13 @@
       "bestReportedTier": "platinum",
       "score": 0.77,
       "confidence": "strong",
-      "totalReports": 2800
+      "totalReports": 2803
     },
     "opengpubenchmarks": {
       "gameId": "cyberpunk_2077_benchmark",
       "name": "Cyberpunk 2077 (built-in benchmark)",
       "steamAppId": 1091500,
-      "benchmarkCount": 119,
+      "benchmarkCount": 175,
       "url": "https://opengpubenchmarks.com"
     }
   },
@@ -131,7 +131,7 @@
       "bestReportedTier": "platinum",
       "score": 0.79,
       "confidence": "strong",
-      "totalReports": 2107
+      "totalReports": 2109
     }
   },
   {
@@ -216,9 +216,9 @@
       "tier": "gold",
       "trendingTier": "platinum",
       "bestReportedTier": "platinum",
-      "score": 0.78,
+      "score": 0.79,
       "confidence": "strong",
-      "totalReports": 1473
+      "totalReports": 1474
     }
   },
   {
@@ -302,7 +302,7 @@
       "bestReportedTier": "platinum",
       "score": 0.81,
       "confidence": "strong",
-      "totalReports": 2188
+      "totalReports": 2190
     }
   },
   {
@@ -346,7 +346,7 @@
       "bestReportedTier": "platinum",
       "score": 0.8,
       "confidence": "strong",
-      "totalReports": 361
+      "totalReports": 362
     }
   },
   {
@@ -479,7 +479,7 @@
       "bestReportedTier": "platinum",
       "score": 0.61,
       "confidence": "strong",
-      "totalReports": 904
+      "totalReports": 905
     }
   },
   {
@@ -523,7 +523,7 @@
       "bestReportedTier": "platinum",
       "score": 0.87,
       "confidence": "strong",
-      "totalReports": 1891
+      "totalReports": 1892
     }
   },
   {
@@ -608,7 +608,7 @@
       "bestReportedTier": "platinum",
       "score": 0.72,
       "confidence": "strong",
-      "totalReports": 2285
+      "totalReports": 2286
     }
   },
   {
@@ -733,7 +733,7 @@
       "bestReportedTier": "platinum",
       "score": 0.75,
       "confidence": "strong",
-      "totalReports": 1251
+      "totalReports": 1252
     }
   },
   {
@@ -953,7 +953,7 @@
       "bestReportedTier": "platinum",
       "score": 0.82,
       "confidence": "strong",
-      "totalReports": 1657
+      "totalReports": 1658
     }
   }
 ]
