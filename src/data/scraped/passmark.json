@@ -6,7 +6,7 @@
     "https://www.videocardbenchmark.net/directx-11.html"
   ],
   "unit": "FPS (PassMark DirectX 12 / DirectX 11 Benchmark)",
-  "scrapedAt": "2026-11-25T16:49:58.026Z",
+  "scrapedAt": "2026-11-26T16:26:50.419Z",
   "count": 546,
   "entries": [
     {
@@ -121,7 +121,7 @@
     },
     {
       "name": "GeForce RTX 4070 Ti",
-      "dx12": 115,
+      "dx12": 116,
       "dx11": 287
     },
     {
@@ -177,7 +177,7 @@
     {
       "name": "GeForce RTX 4070 SUPER",
       "dx12": 110,
-      "dx11": 271
+      "dx11": 270
     },
     {
       "name": "RTX PRO 6000 Blackwell Max-Q Workstation Edition",
@@ -186,8 +186,8 @@
     },
     {
       "name": "RTX PRO 5000 Blackwell Generation Laptop GPU",
-      "dx12": 110,
-      "dx11": 249
+      "dx12": 109,
+      "dx11": 248
     },
     {
       "name": "Insignia USB3.0 to dual HDMI Adapter",
@@ -327,7 +327,7 @@
     {
       "name": "RTX PRO 4000 Blackwell",
       "dx12": 92,
-      "dx11": 260
+      "dx11": 259
     },
     {
       "name": "GeForce RTX 5070 Laptop GPU",
@@ -362,7 +362,7 @@
     {
       "name": "Radeon RX 6800",
       "dx12": 89,
-      "dx11": 212
+      "dx11": 211
     },
     {
       "name": "RTX 4500 Ada Generation",
@@ -460,14 +460,14 @@
       "dx11": 185
     },
     {
-      "name": "TITAN RTX",
-      "dx12": 83,
-      "dx11": 187
-    },
-    {
       "name": "Radeon RX 7700 XT",
       "dx12": 83,
       "dx11": 232
+    },
+    {
+      "name": "TITAN RTX",
+      "dx12": 83,
+      "dx11": 187
     },
     {
       "name": "RTX 3500 Ada Generation Embedded GPU",
@@ -531,7 +531,7 @@
     {
       "name": "RTX Spark N1X",
       "dx12": 80,
-      "dx11": 176
+      "dx11": 175
     },
     {
       "name": "RTX A4500",
@@ -599,14 +599,14 @@
       "dx11": 279
     },
     {
-      "name": "GeForce RTX 5060",
-      "dx12": 77,
-      "dx11": 199
-    },
-    {
       "name": "Radeon RX 6700 XT",
       "dx12": 77,
       "dx11": 172
+    },
+    {
+      "name": "GeForce RTX 5060",
+      "dx12": 77,
+      "dx11": 199
     },
     {
       "name": "Radeon VII",
@@ -1081,14 +1081,14 @@
       "dx11": 83
     },
     {
-      "name": "Radeon RX 9060 XT 16GB",
-      "dx12": 58,
-      "dx11": 185
-    },
-    {
       "name": "OrayIddDriver Device",
       "dx12": 58,
       "dx11": 139
+    },
+    {
+      "name": "Radeon RX 9060 XT 16GB",
+      "dx12": 58,
+      "dx11": 185
     },
     {
       "name": "GeForce RTX 3050 OEM",
@@ -1111,6 +1111,11 @@
       "dx11": 109
     },
     {
+      "name": "Radeon RX 9070 GRE",
+      "dx12": 58,
+      "dx11": 250
+    },
+    {
       "name": "Radeon RX 6700S",
       "dx12": 58,
       "dx11": 133
@@ -1121,9 +1126,9 @@
       "dx11": 192
     },
     {
-      "name": "Radeon RX 9070 GRE",
+      "name": "Intel Arc Pro A60",
       "dx12": 57,
-      "dx11": 250
+      "dx11": 56
     },
     {
       "name": "EIZO Quadro MED-XN92",
@@ -1134,11 +1139,6 @@
       "name": "Radeon V520 MxGPU",
       "dx12": 57,
       "dx11": 84
-    },
-    {
-      "name": "Intel Arc Pro A60",
-      "dx12": 57,
-      "dx11": 55
     },
     {
       "name": "GeForce RTX 3050 Laptop GPU",
@@ -1197,7 +1197,7 @@
     },
     {
       "name": "RTX A2000",
-      "dx12": 55,
+      "dx12": 56,
       "dx11": 93
     },
     {
@@ -1280,14 +1280,14 @@
       "dx11": 107
     },
     {
-      "name": "Quadro RTX 4000",
-      "dx12": 52,
-      "dx11": 127
-    },
-    {
       "name": "RTX A1000 6GB Laptop GPU",
       "dx12": 52,
       "dx11": 63
+    },
+    {
+      "name": "Quadro RTX 4000",
+      "dx12": 52,
+      "dx11": 127
     },
     {
       "name": "Quadro P6000",
@@ -1325,6 +1325,11 @@
       "dx11": 95
     },
     {
+      "name": "Radeon Pro W5700",
+      "dx12": 52,
+      "dx11": 103
+    },
+    {
       "name": "AnyViewerIddDriver Device",
       "dx12": 52,
       "dx11": 78
@@ -1333,11 +1338,6 @@
       "name": "GeForce RTX 3050 6GB Laptop GPU",
       "dx12": 52,
       "dx11": 68
-    },
-    {
-      "name": "Radeon Pro W5700",
-      "dx12": 52,
-      "dx11": 103
     },
     {
       "name": "RTX A1000",
@@ -1407,7 +1407,7 @@
     {
       "name": "GeForce GTX TITAN X",
       "dx12": 50,
-      "dx11": 102
+      "dx11": 103
     },
     {
       "name": "L4",
@@ -1786,14 +1786,14 @@
       "dx12": 39
     },
     {
-      "name": "Radeon Pro WX 7100",
-      "dx12": 39,
-      "dx11": 50
-    },
-    {
       "name": "Quadro P4200",
       "dx12": 39,
       "dx11": 77
+    },
+    {
+      "name": "Radeon Pro WX 7100",
+      "dx12": 39,
+      "dx11": 50
     },
     {
       "name": "GeForce GTX 1660 Ti (Mobile)",
@@ -2137,14 +2137,14 @@
       "dx11": 60
     },
     {
-      "name": "Quadro T2000 with Max-Q Design",
-      "dx12": 32,
-      "dx11": 53
-    },
-    {
       "name": "Radeon 880M",
       "dx12": 32,
       "dx11": 72
+    },
+    {
+      "name": "Quadro T2000 with Max-Q Design",
+      "dx12": 32,
+      "dx11": 53
     },
     {
       "name": "Radeon R9 380",
@@ -2227,13 +2227,13 @@
       "dx11": 71
     },
     {
+      "name": "Tesla K40c",
+      "dx12": 31
+    },
+    {
       "name": "GeForce GTX 1060 with Max-Q Design",
       "dx12": 31,
       "dx11": 59
-    },
-    {
-      "name": "Tesla K40c",
-      "dx12": 31
     },
     {
       "name": "Intel Arc Pro 140T GPU",
@@ -2249,6 +2249,11 @@
       "dx12": 31
     },
     {
+      "name": "Quadro K6000",
+      "dx12": 30,
+      "dx11": 67
+    },
+    {
       "name": "RadeonT 780M",
       "dx12": 30,
       "dx11": 68
@@ -2260,11 +2265,6 @@
     {
       "name": "Radeon PRO V710 MxGPU",
       "dx12": 30
-    },
-    {
-      "name": "Quadro K6000",
-      "dx12": 30,
-      "dx11": 67
     },
     {
       "name": "GeForce GTX 780",
@@ -2407,7 +2407,7 @@
     {
       "name": "Quadro P2000",
       "dx12": 29,
-      "dx11": 47
+      "dx11": 46
     },
     {
       "name": "GRID RTX8000P-4Q",
